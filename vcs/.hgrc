@@ -1,0 +1,10 @@
+[ui]
+username = lxsameer <lxsameer@gnu.org>
+merge = kdiff3
+
+[extentions]
+hgext.eol =
+hgext.mq =
+hgext.graphlog =
+hgext.bookmarks =
+hggit=/home/lxsameer/src/hg-git/hggit/

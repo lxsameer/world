@@ -1,0 +1,12 @@
+[user]
+	name = Sameer Rahmani
+	email = lxsameer@gnu.org
+[alias]
+	hlog = log --color --graph --date-order
+	ci = commit -a -m
+	st = status
+
+[url "git://anongit.kde.org/"]
+    insteadOf = kde:
+[url "ssh://git@git.kde.org/"]
+    pushInsteadOf = kde:

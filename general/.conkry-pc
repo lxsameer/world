@@ -1,0 +1,47 @@
+alignment bottom_middle
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color 222222
+default_outline_color 222222
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Terminus:size=8
+double_buffer yes
+gap_x 0
+gap_y 0
+#minimum_size 1590 6
+#maximum_width 1590
+net_avg_samples 2
+no_buffers no
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window no
+own_window_class Conky
+own_window_type desktop
+own_window_transparent yes
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer left
+show_graph_scale no
+show_graph_range no
+format_human_readable yes
+
+color1 b1b1b1
+color2 ffffff
+color3 a1a1a1
+color4 fcaf3e
+color5 729fcf
+color6 8ae234
+color7 ef2929
+color8 e9b96e
+mpd_host 127.0.0.1
+mpd_port 5500
+
+TEXT
+${color1}Disk activity: ${diskiograph 10,50 999999 ef2929 -t}  ${color} ${color2}|${color} ${color1}CPU: ${color}${color8} ${cpu}% ${cpubar cpu0 5,50} ${color} ${color1}--${color} ${color1}CPU1: ${cpubar cpu1 5,50} CPU2: ${cpubar cpu2 5,50} CPU3: ${cpubar cpu3 5,50} CPU4: ${cpubar cpu4 5,50} ${color} ${color2}|${color} ${color1}eth0: [${color4}${addr eth0}${color}${color3}]:${color} ${color1}Up:${color}${color6} ${upspeed eth0} ${color} ${color1} - Down:${color}${color5} ${downspeed eth0} ${color}
