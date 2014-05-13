@@ -20,7 +20,6 @@ URxvt*loginShell: true
 !!URxvt.fading: 30
 !!URxvt*shading: 50
 !!URxvt.tintColor: true
-URxvt*loginShell: true
 
 ! URxvt.urgentOnBell: true
 ! URxvt.visualBell: true
@@ -61,7 +60,7 @@ URxvt.pointerBlank: true
 
 !!Source http://github.com/altercation/solarized
 *foreground:   #c5c8c6
-*background:   rgba:1d00/1f00/2100/d800
+*background:   rgba:1d00/1f00/2100/cf00
 *cursorColor:  #aeafad
 *color0:       #000000
 *color1:       #912226
