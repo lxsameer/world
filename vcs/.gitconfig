@@ -5,8 +5,19 @@
 	hlog = log --color --graph --date-order
 	ci = commit -a -m
 	st = status
+	co = checkout
+	br = branch
+	lc = log ORIG_HEAD.. --stat --no-merges
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+	abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
 
-[url "git://anongit.kde.org/"]
-    insteadOf = kde:
-[url "ssh://git@git.kde.org/"]
-    pushInsteadOf = kde:
+[sendmail]
+	smtpserver = mail.lxsameer.com
+	smtpserverport = 465
+	smtpuser = lxsameer@lxsameer.com
+	smtppass = sameeraS!
+	smtpfrom = lxsameer@lxsameer.com
+	smtpencryption = tls
+	chainreplyto = false
