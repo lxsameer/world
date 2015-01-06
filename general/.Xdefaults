@@ -2,9 +2,16 @@
 emacs*borderLess:	true
 
 !!## xterm config
-xterm*termName: xterm
-xterm*background: #000000
-xterm*foreground: #A8A8A8
+XTerm*termName: xterm-256color
+XTerm*locale: true
+XTerm*utf8: 1
+XTerm*metaSendsEscape: true
+XTerm*background: #000000
+XTerm*foreground: #A8A8A8
+XTerm*saveLines: 4096
+XTerm*faceName: Terminus:size=13:antialias=false
+!!XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+!!xterm*font: 7x13
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -20,6 +27,7 @@ URxvt*loginShell: true
 !!URxvt.fading: 30
 !!URxvt*shading: 50
 !!URxvt.tintColor: true
+URxvt*loginShell: true
 
 ! URxvt.urgentOnBell: true
 ! URxvt.visualBell: true
@@ -31,12 +39,12 @@ URxvt.lineSpace: 0
 ! Fonts
 URxvt.allow_bold: false
 !URxvt.font: -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1
-URxvt*font: xft:Terminus:pixelsize=16:antialias=true:hinting=true
-URxvt*boldFont: xft:Terminus:bold:pixelsize=16:antialias=true:hinting=true
-!URxvt*font: xft:Monaco:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:Terminus:pixelsize=20:antialias=true:hinting=true
+URxvt*boldFont: xft:Terminus:bold:pixelsize=20:antialias=true:hinting=true
+!URxvt*font: xft:Monaco:pixelsize=20:antialias=true:hinting=true
 !URxvt*boldFont: xft:Monaco:bold:pixelsize=14:antialias=true:hinting=true
-!URxvt*font: xft:Monospace:pixelsize=14
-!URxvt*boldFont: xft:Monospace:pixelsize=14
+!URxvt*font: xft:Monospace:pixelsize=45
+!URxvt*boldFont: xft:Monospace:pixelsize=45
 
 ! Fix font space
 URxvt*letterSpace: 1
@@ -59,33 +67,33 @@ URxvt.cursorUnderline: false
 URxvt.pointerBlank: true
 
 !!Source http://github.com/altercation/solarized
-*foreground:   #c5c8c6
-*background:   rgba:1d00/1f00/2100/cf00
-*cursorColor:  #aeafad
-*color0:       #000000
-*color1:       #912226
-*color2:       #778900
-*color3:       #ae7b00
-*color4:       #1d2594
-*color5:       #682a9b
-*color6:       #2b6651
-*color7:       #929593
-*color8:       #666666
-*color9:       #cc6666
-*color10:      #b5bd68
-*color11:      #f0c674
-*color12:      #81a2be
-*color13:      #b294bb
-*color14:      #8abeb7
-*color15:      #ecebec
+!1*foreground:   #c5c8c6
+!!*background:   rgba:1d00/1f00/2100/ef00
+!!*cursorColor:  #aeafad
+!1*color0:       #000000
+!!*color1:       #912226
+!!*color2:       #778900
+!!*color3:       #ae7b00
+!!*color4:       #1d2594
+!!*color5:       #682a9b
+!!*color6:       #2b6651
+!!*color7:       #929593
+!!*color8:       #666666
+!!*color9:       #cc6666
+!!*color10:      #b5bd68
+!!*color11:      #f0c674
+!!*color12:      #81a2be
+!!*color13:      #b294bb
+!!*color14:      #8abeb7
+!!*color15:      #ecebec
 
 !!*background: #002b36
 !!*foreground: #657b83
 !!*fading: 40
-*fadeColor: #002b36
-*cursorColor: #93a1a1
-*pointerColorBackground: #586e75
-*pointerColorForeground: #93a1a1
+!!*fadeColor: #002b36
+!!*cursorColor: #93a1a1
+!!*pointerColorBackground: #586e75
+!!*pointerColorForeground: #93a1a1
 
 !! black dark/light
 !!*color0: #073642
@@ -118,3 +126,27 @@ URxvt.pointerBlank: true
 !! white dark/light
 !!*color7: #eee8d5
 !!*color15: #fdf6e3
+
+
+!!xterm*Background:               black
+!!xterm*Foreground:               green
+!!xterm*cursorColor:              LightGreen
+!!xterm*pointerShape:             arrow
+!!xterm*pointerColor:             blue
+
+
+!!! Fonts
+!xterm*font: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+!xterm*boldFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+!xterm*italicFont: -*-terminus-*-*-*-*-*-*-*-*-*-*-iso10646-*
+!xterm*font: -misc-fixed-medium-r-*-*-18-*-*-*-*-*-*-*
+!xterm*boldFont: -misc-fixed-medium-r-*-*-18-*-*-*-*-*-*-*
+
+! Very surprising that now neglecting to specify font still renders
+! perfect misc-fixed font. Oh, it’s so lovely.
+!xterm*font: -*-*-*-*-*-*-*-100-*-*-*-60-iso10646-*
+!xterm*boldFont: -*-*-*-*-*-*-*-100-*-*-*-60-iso10646-*
+!xterm*italicFont: -*-*-*-*-*-*-*-100-*-
+!!xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+!xterm*font: xft:Terminus:pixelsize=20:antialias=true:hinting=true
