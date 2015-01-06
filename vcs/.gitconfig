@@ -12,6 +12,8 @@
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 	serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 	abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+	g = grep --break --heading --line-number
+	changeset = log --decorate --pretty='Commit: %Cgreen%s%n%CresetAuthor:%Cred %an%n%CresetDate:%Creset %cd%n %b' --color
 
 [sendmail]
 	smtpserver = mail.lxsameer.com
