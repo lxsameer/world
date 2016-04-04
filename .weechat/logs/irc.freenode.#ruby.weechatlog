@@ -1,0 +1,2012 @@
+2016-04-02 11:02:41	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #ruby
+2016-04-02 11:02:41	--	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.9: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || logs @ http://irclog.whitequark.org/ruby/"
+2016-04-02 11:02:41	--	Topic set by havenwood (~Havenn@ruby/staff/havenwood) on Sat, 02 Apr 2016 06:30:22
+2016-04-02 11:02:41	--	Channel #ruby: 962 nicks (1 op, 0 voices, 961 normals)
+2016-04-02 11:02:41	--	PvNotice(ChanServ): Welcome to the ruby channel. Please be nice. http://ruby-community.com || https://ruby-lang.org || Paste >3 lines: https://gist.github.com || Ask good questions: http://www.mikeash.com/getting_answers.html || log @ http://irclog.whitequark.org/ruby/
+2016-04-02 11:02:45	--	Channel created on Sun, 26 Nov 2006 10:12:45
+2016-04-02 11:02:57	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-02 11:02:59	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-02 11:03:13	-->	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has joined #ruby
+2016-04-02 11:03:36	<--	fullofcaffeine (~fullofcaf@201.164.235.197) has quit (Remote host closed the connection)
+2016-04-02 11:04:21	<--	tvw (~tv@2a02:2028:749:4f01:bd5b:308b:533f:cf50) has quit (Client Quit)
+2016-04-02 11:04:29	-->	tvw (~tv@port-52952.pppoe.wtnet.de) has joined #ruby
+2016-04-02 11:04:30	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-02 11:05:36	<--	tvw (~tv@port-52952.pppoe.wtnet.de) has quit (Client Quit)
+2016-04-02 11:05:52	<--	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has quit (Ping timeout: 264 seconds)
+2016-04-02 11:05:59	<--	T7rees (uid100308@gateway/web/irccloud.com/x-heyvdohqmagolnfj) has quit (Quit: Updating details, brb)
+2016-04-02 11:06:16	-->	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has joined #ruby
+2016-04-02 11:06:17	-->	K7 (uid100308@gateway/web/irccloud.com/x-nhwdgakuezckhklq) has joined #ruby
+2016-04-02 11:07:58	<--	Technodrome (~textual@unaffiliated/technodrome) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 11:08:00	<--	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has quit (Ping timeout: 250 seconds)
+2016-04-02 11:08:45	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-02 11:08:47	-->	chrislansing (80c753f5@gateway/web/freenode/ip.128.199.83.245) has joined #ruby
+2016-04-02 11:08:54	<--	chrislansing (80c753f5@gateway/web/freenode/ip.128.199.83.245) has left #ruby
+2016-04-02 11:09:29	-->	djbkd1 (~nodebot@98.248.67.209) has joined #ruby
+2016-04-02 11:09:31	--	djbkd1 is now known as djbkd3
+2016-04-02 11:10:19	<--	djbkd3 (~nodebot@98.248.67.209) has quit (Client Quit)
+2016-04-02 11:10:19	<--	djbkd2 (~nodebot@98.248.67.209) has quit (Quit: node-irc says goodbye)
+2016-04-02 11:10:41	-->	djbkd1 (~nodebot@98.248.67.209) has joined #ruby
+2016-04-02 11:10:42	-->	djbkd3 (~nodebot@98.248.67.209) has joined #ruby
+2016-04-02 11:10:43	--	djbkd1 is now known as djbkd4
+2016-04-02 11:10:57	<--	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has quit (Ping timeout: 260 seconds)
+2016-04-02 11:11:12	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-02 11:11:15	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 264 seconds)
+2016-04-02 11:11:28	<--	kariolee_ (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:12:51	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-02 11:13:21	-->	hxegon (~textual@ip24-254-85-40.sb.sd.cox.net) has joined #ruby
+2016-04-02 11:14:21	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 268 seconds)
+2016-04-02 11:14:32	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:15:34	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:17:28	-->	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has joined #ruby
+2016-04-02 11:17:33	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 11:18:35	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 248 seconds)
+2016-04-02 11:20:11	<--	^mtkd (~mtkd@88.96.93.52) has quit (Ping timeout: 248 seconds)
+2016-04-02 11:21:14	-->	mtkd (~mtkd@88.96.93.52) has joined #ruby
+2016-04-02 11:25:46	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 11:27:15	-->	jt__ (~jt__@103-224-128-82.flip.co.nz) has joined #ruby
+2016-04-02 11:28:34	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 252 seconds)
+2016-04-02 11:29:02	<--	Sammichmaker (~db@pool-96-241-54-182.washdc.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-04-02 11:30:04	-->	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has joined #ruby
+2016-04-02 11:30:13	-->	Inside (~Gary@cpe-173-173-120-11.satx.res.rr.com) has joined #ruby
+2016-04-02 11:30:13	<--	Inside (~Gary@cpe-173-173-120-11.satx.res.rr.com) has quit (Changing host)
+2016-04-02 11:30:13	-->	Inside (~Gary@unaffiliated/inside) has joined #ruby
+2016-04-02 11:30:27	<--	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has quit (Client Quit)
+2016-04-02 11:32:07	<--	Inside_ (~Gary@cpe-173-173-120-11.satx.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:35:00	<--	Inside (~Gary@unaffiliated/inside) has quit (Ping timeout: 246 seconds)
+2016-04-02 11:35:04	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-02 11:38:10	-->	Devalo (~devalo@c3FA65AC1.dhcp.as2116.net) has joined #ruby
+2016-04-02 11:38:20	<--	Don_John (~Don@251-223-114-134.nat.resnet.nau.edu) has quit (Read error: Connection reset by peer)
+2016-04-02 11:42:47	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-02 11:43:35	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Max SendQ exceeded)
+2016-04-02 11:44:00	-->	arup_r (~arup_r@116.203.203.252) has joined #ruby
+2016-04-02 11:44:08	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-02 11:44:36	<--	K7 (uid100308@gateway/web/irccloud.com/x-nhwdgakuezckhklq) has quit
+2016-04-02 11:44:40	--	saneax_AFK is now known as saneax
+2016-04-02 11:45:11	arup_r	We have File::basename. so File.basename("/home/gumby/work/ruby.rb") #=> "ruby.rb", but when I have File.new("/home/gumby/work/ruby.rb").what_method will give me the name of the file?
+2016-04-02 11:45:57	<--	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has quit (Quit: Computer has gone to sleep.)
+2016-04-02 11:46:23	<--	djbkd3 (~nodebot@98.248.67.209) has quit (Quit: node-irc says goodbye)
+2016-04-02 11:46:39	-->	last_staff (~Thunderbi@248-252-232.connect.netcom.no) has joined #ruby
+2016-04-02 11:47:49	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit
+2016-04-02 11:49:01	-->	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has joined #ruby
+2016-04-02 11:49:03	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-02 11:49:13	arup_r	for now I did like, file = File.new("/home/gumby/work/ruby.rb"); File.basename(file.path) .. and it worked. Let me know if better way to get it..
+2016-04-02 11:49:32	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-02 11:49:44	-->	LoneHerm_ (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-02 11:50:59	<--	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2016-04-02 11:51:58	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 11:52:35	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-02 11:53:49	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2016-04-02 11:54:03	<--	sudomarize (~sudomariz@141.70.115.180) has left #ruby ("WeeChat 1.2")
+2016-04-02 11:54:08	<--	brent_ (uid134494@gateway/web/irccloud.com/x-ybyxsnowzcdqnddn) has quit (Quit: Connection closed for inactivity)
+2016-04-02 11:55:04	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 264 seconds)
+2016-04-02 11:55:23	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 248 seconds)
+2016-04-02 11:56:17	-->	rippa (~rippa@ppp-vpdn-37.1.85.157.yarnet.ru) has joined #ruby
+2016-04-02 11:56:25	-->	mdw (~mdw@92.40.248.195.threembb.co.uk) has joined #ruby
+2016-04-02 11:57:19	-->	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has joined #ruby
+2016-04-02 11:57:24	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-02 11:58:17	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 250 seconds)
+2016-04-02 11:59:32	<--	gizmore (~gizmore@unaffiliated/gizmore) has quit (Quit: KVIrc 4.9.1 Aria http://www.kvirc.net/)
+2016-04-02 12:01:47	smathy	arup_r, `f = Pathname.new "/home/gumby/work/ruby.rb"` and then you can `f.basename` and `File.new f`
+2016-04-02 12:02:11	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-02 12:02:38	arup_r	smathy: thanks. I forgot about the lib. :D
+2016-04-02 12:04:31	smathy	Can even just `f.open` I think.
+2016-04-02 12:06:44	<--	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has quit (Ping timeout: 250 seconds)
+2016-04-02 12:07:01	<--	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has quit (Ping timeout: 248 seconds)
+2016-04-02 12:07:46	-->	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has joined #ruby
+2016-04-02 12:10:26	<--	smathy (~smathy@ruby/staff/smathy) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 12:10:52	-->	nachoman (~nachoman@unaffiliated/nachoman) has joined #ruby
+2016-04-02 12:11:13	-->	alexherbo2 (~alex@109.255.234.251) has joined #ruby
+2016-04-02 12:11:39	-->	chrislansing (80c753f5@gateway/web/freenode/ip.128.199.83.245) has joined #ruby
+2016-04-02 12:11:49	chrislansing	hi my code isn't working http://sh.st/Y8j6Y
+2016-04-02 12:11:57	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit (Client Quit)
+2016-04-02 12:12:34	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 260 seconds)
+2016-04-02 12:14:08	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-02 12:16:48	<--	Aviio (~aviio@cpc68263-seac23-2-0-cust381.7-2.cable.virginm.net) has quit (Remote host closed the connection)
+2016-04-02 12:16:58	<--	arup_r (~arup_r@116.203.203.252) has quit (Remote host closed the connection)
+2016-04-02 12:17:54	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 12:18:33	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Ping timeout: 240 seconds)
+2016-04-02 12:20:03	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:20:23	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 250 seconds)
+2016-04-02 12:22:36	<--	Devalo (~devalo@c3FA65AC1.dhcp.as2116.net) has quit (Remote host closed the connection)
+2016-04-02 12:22:40	-->	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has joined #ruby
+2016-04-02 12:26:33	-->	CausaMortis (~CausaMort@unaffiliated/causamortis) has joined #ruby
+2016-04-02 12:27:32	-->	My_Hearing (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-02 12:30:23	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-02 12:31:03	<--	Caerus (caerus@2a01:d0:ffff:4420::10) has quit (Ping timeout: 264 seconds)
+2016-04-02 12:31:35	<--	LoneHerm_ (~lonehermi@199.231.245.197) has quit (Remote host closed the connection)
+2016-04-02 12:31:36	-->	Sammichmaker (~db@pool-96-241-32-170.washdc.fios.verizon.net) has joined #ruby
+2016-04-02 12:33:29	<--	mdw (~mdw@92.40.248.195.threembb.co.uk) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 12:33:54	<--	ericlee (~ericlee@2601:647:4502:f510::4) has quit (Ping timeout: 268 seconds)
+2016-04-02 12:34:03	-->	workmad3 (~workmad3@cpc71475-bagu13-2-0-cust82.1-3.cable.virginm.net) has joined #ruby
+2016-04-02 12:34:45	-->	mr_oh (48188b4a@gateway/web/freenode/ip.72.24.139.74) has joined #ruby
+2016-04-02 12:35:22	mr_oh	stuck as heck
+2016-04-02 12:36:30	chrislansing	mr_oh: have you checked out this: http://sh.st/Y8j6Y
+2016-04-02 12:36:37	chrislansing	it's a handy resource to help you get unstuck
+2016-04-02 12:36:39	chrislansing	i use it all the time
+2016-04-02 12:36:45	-->	caerus (caerus@2a01:d0:ffff:4420::10) has joined #ruby
+2016-04-02 12:37:40	--	caerus is now known as Caerus
+2016-04-02 12:37:46	mr_oh	nope
+2016-04-02 12:39:01	chrislansing	check it out :)
+2016-04-02 12:39:25	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 12:39:29	mr_oh	check out addware?
+2016-04-02 12:39:29	<--	rmulligan (~user@2605:e000:6a4f:4c00:e1ba:5ecc:126:eda4) has quit (Ping timeout: 268 seconds)
+2016-04-02 12:39:40	chrislansing	it's a short link but the content is great
+2016-04-02 12:39:47	chrislansing	it helps support site authors
+2016-04-02 12:39:48	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 12:41:31	forcer	!ops
+2016-04-02 12:41:31	@ruby[bot]	forcer: ops currently in #ruby: adaedra, aredridel, havenwood, My_Hearing, Radar, apeiros, drbrain, jhass, ljarvis, miah, ruby[bot] and workmad3
+2016-04-02 12:42:22	forcer	chrislansing is spamming an ad link to meatspin.com
+2016-04-02 12:42:33	chrislansing	oh sorry i meant to paste this link http://sh.st/Y8b6V they look so similar
+2016-04-02 12:42:34	mr_oh	!seen mr_oh
+2016-04-02 12:42:35	<--	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has quit (Excess Flood)
+2016-04-02 12:42:58	My_Hearing	!troll chrislansing
+2016-04-02 12:42:58	--	Mode #ruby [+bbb $a:chrislansing$#ruby-banned chrislansing!*@*$#ruby-banned *!*@gateway/web/freenode/ip.128.199.83.245$#ruby-banned] by ruby[bot]
+2016-04-02 12:42:58	<--	ruby[bot] has kicked chrislansing (trolling is a bannable offense, see http://ruby-community.com/pages/user_rules)
+2016-04-02 12:43:10	--	My_Hearing is now known as Mon_Ouie
+2016-04-02 12:43:48	mr_oh	forcer: Yep, I'm not quite that dumb. (pretty dumb, but I knew what was up...)
+2016-04-02 12:43:57	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Ping timeout: 246 seconds)
+2016-04-02 12:44:16	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 12:45:04	mr_oh	What a dick.
+2016-04-02 12:45:05	-->	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has joined #ruby
+2016-04-02 12:45:06	Ox0dea	Mon_Ouie: Is there a story to your nick?
+2016-04-02 12:46:27	Mon_Ouie	I wanted to pick something unusual, so I picked something with a space and a non-ascii character (ï). Then I just adapted it for IRC.
+2016-04-02 12:46:31	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 244 seconds)
+2016-04-02 12:46:43	-->	mrgrieves (~mrgrieves@0547ad74.skybroadband.com) has joined #ruby
+2016-04-02 12:47:34	<--	ncopa (~test@229.63.200.37.customer.cdi.no) has quit (Ping timeout: 240 seconds)
+2016-04-02 12:47:58	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 12:48:45	-->	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has joined #ruby
+2016-04-02 12:49:21	-->	ta_ (~ta@87.104.212.29) has joined #ruby
+2016-04-02 12:49:29	forcer	mr_oh: I was just letting the ops know why I called :-)
+2016-04-02 12:50:54	mr_oh	forcer: I'm thankful.  I was calling chrislansing a dick.
+2016-04-02 12:51:18	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 12:51:20	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-02 12:52:18	forcer	:-)
+2016-04-02 12:52:25	<--	rkazak (~rkazak@67.170.253.182) has quit (Quit: Sleep.....ing....)
+2016-04-02 12:53:05	-->	Lomex_ (~Lomex@ip1f1358b9.dynamic.kabel-deutschland.de) has joined #ruby
+2016-04-02 12:53:17	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-02 12:54:35	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-02 12:55:09	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #ruby
+2016-04-02 12:55:12	-->	arlek (~arlek@cpe-69-204-11-79.buffalo.res.rr.com) has joined #ruby
+2016-04-02 12:55:17	<--	youch (~paul@ip174-70-124-39.no.no.cox.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 12:56:52	<--	mrgrieves (~mrgrieves@0547ad74.skybroadband.com) has quit (Ping timeout: 264 seconds)
+2016-04-02 12:57:07	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 12:57:12	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-02 12:58:23	<--	quazimodo (~quazimodo@155.143.14.28) has quit (Ping timeout: 244 seconds)
+2016-04-02 12:58:37	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-02 12:58:49	-->	nanoz (~nanoz@117.192.167.110) has joined #ruby
+2016-04-02 12:59:56	<--	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has quit (Quit: sigurding)
+2016-04-02 13:02:44	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit
+2016-04-02 13:03:02	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 248 seconds)
+2016-04-02 13:04:21	-->	dn` (~dn@b2b-94-79-140-106.unitymedia.biz) has joined #ruby
+2016-04-02 13:05:18	-->	Lumia930 (Lumia930@1.22.153.231) has joined #ruby
+2016-04-02 13:05:40	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 13:06:03	<--	lkba (~AndChat43@aepv108.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 240 seconds)
+2016-04-02 13:06:15	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 13:07:53	-->	marr (~ccc@87-205-244-48.adsl.inetia.pl) has joined #ruby
+2016-04-02 13:08:22	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-02 13:10:54	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 13:10:56	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-02 13:11:49	<--	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has quit (Quit: Computer has gone to sleep.)
+2016-04-02 13:12:40	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-02 13:12:57	<--	Lumia930 (Lumia930@1.22.153.231) has left #ruby
+2016-04-02 13:13:02	<--	mr_oh (48188b4a@gateway/web/freenode/ip.72.24.139.74) has left #ruby
+2016-04-02 13:13:15	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 248 seconds)
+2016-04-02 13:13:25	<--	djbkd4 (~nodebot@98.248.67.209) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:13:37	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 252 seconds)
+2016-04-02 13:13:47	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 248 seconds)
+2016-04-02 13:17:41	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 268 seconds)
+2016-04-02 13:21:18	-->	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has joined #ruby
+2016-04-02 13:21:46	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-02 13:22:13	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-02 13:22:42	<--	blackgoat (~blackgoat@221.157.123.200) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:23:39	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-02 13:28:04	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-02 13:28:22	-->	mdw (~mdw@185.53.226.249) has joined #ruby
+2016-04-02 13:28:26	-->	sepp2k (~Sepp2k@x55b3e903.dyn.telefonica.de) has joined #ruby
+2016-04-02 13:28:33	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-02 13:30:08	<--	hk238 (~kvirc@t224.ip7.netikka.fi) has quit (Quit: http://www.kvirc.net/ 4.9.1 Aria)
+2016-04-02 13:33:14	<--	millerti (~millerti@cpe-69-204-199-109.stny.res.rr.com) has quit (Read error: Connection reset by peer)
+2016-04-02 13:35:35	<--	CausaMortis (~CausaMort@unaffiliated/causamortis) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:36:22	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-02 13:36:29	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-02 13:37:41	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 13:37:43	<--	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has quit (Read error: Connection reset by peer)
+2016-04-02 13:38:08	-->	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has joined #ruby
+2016-04-02 13:40:16	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:41:49	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-02 13:47:24	ruurd	OK help me please how on earth can I get rid of the libv8 dependency. Every time I want to use it it breaks building the native extensions. What is that? A gaping quality problem?
+2016-04-02 13:48:22	-->	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has joined #ruby
+2016-04-02 13:48:59	workmad3	ruurd: stop using therubyracer or the ruby less gem?
+2016-04-02 13:49:33	ruurd	can I replace rubyracer somehow?
+2016-04-02 13:49:55	workmad3	ruurd: depends on what you're using it for
+2016-04-02 13:50:33	ruurd	to be able to use less
+2016-04-02 13:50:45	-->	mhoungbo (~mhoungbo@41.85.189.163) has joined #ruby
+2016-04-02 13:50:46	workmad3	ruurd: in which case, not if you want to keep using ruby
+2016-04-02 13:50:48	ruurd	can one instruct the less gem to use rubyrhino?
+2016-04-02 13:51:16	workmad3	therubyrhino is for jruby
+2016-04-02 13:51:33	ruurd	Ah. Clear.
+2016-04-02 13:51:47	-->	FastJack (~fastjack@maciaszek.net) has joined #ruby
+2016-04-02 13:52:21	workmad3	and less needs either therubyracer on MRI or therubyrhino on jruby... it can't use node.js or other external JS runtimes last time I checked
+2016-04-02 13:53:02	ruurd	that's a pity because for as long as I have been doing rails it's a PITA
+2016-04-02 13:53:15	workmad3	yeah... I avoid using less for that reason :)
+2016-04-02 13:53:29	ruurd	sass not using it then?
+2016-04-02 13:53:41	workmad3	nope
+2016-04-02 13:54:35	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-02 13:54:38	<--	Rasi (~carnager@archlinux/support/rasi) has left #ruby ("WeeChat 1.4")
+2016-04-02 13:54:44	-->	mofoyo (~mofoyo@a9.48.caa1.ip4.static.sl-reverse.com) has joined #ruby
+2016-04-02 13:55:36	<--	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has quit (Remote host closed the connection)
+2016-04-02 13:56:05	-->	zeroDivisible (~zeroDivis@87-198-38-181.ptr.magnet.ie) has joined #ruby
+2016-04-02 13:58:19	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 13:59:30	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 13:59:54	ruurd	workmad3 I'm using OSX and when I have a look at brew it says v8 is version 4.9.something
+2016-04-02 14:00:23	ruurd	While libv8 is 3.16.something
+2016-04-02 14:00:47	--	GitGud is now known as DugTig
+2016-04-02 14:01:24	ruurd	Shouldn't they be roughly the same to work together?
+2016-04-02 14:02:05	workmad3	ruurd: latest seems to be 4.5.95.5 in rubygems: https://rubygems.org/gems/libv8
+2016-04-02 14:02:33	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 240 seconds)
+2016-04-02 14:02:34	ruurd	why then pull in such an old version?
+2016-04-02 14:02:53	workmad3	ruurd: no idea... could be a locked dependency in your Gemfile.lock?
+2016-04-02 14:03:05	ruurd	Killed the lockfile.
+2016-04-02 14:03:12	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 14:03:19	workmad3	or it could be therubyracer is locked to an ancient version because it hasn't been updated in ages
+2016-04-02 14:03:22	ruurd	(if it does not work force it if it breaks it needed replacement anyway)
+2016-04-02 14:03:24	workmad3	https://rubygems.org/gems/therubyracer
+2016-04-02 14:04:22	workmad3	ruurd: personally, I prefer to never delete Gemfile.lock... if I'm curious about something not updating, I find opening it and searching for that gem to be more useful (as the lockfile will list version restrictions underneath the gem they're a dependency of :) )
+2016-04-02 14:05:52	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 252 seconds)
+2016-04-02 14:06:25	ruurd	drats this is one of the few experiments that is not in git.
+2016-04-02 14:09:22	-->	Guest58 (~textual@host86-168-65-207.range86-168.btcentralplus.com) has joined #ruby
+2016-04-02 14:09:25	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Quit: WeeChat 1.3)
+2016-04-02 14:10:07	--	hxegon is now known as hxegon_AFK
+2016-04-02 14:10:08	<--	hxegon_AFK (~textual@ip24-254-85-40.sb.sd.cox.net) has quit (Quit: BRB)
+2016-04-02 14:10:13	-->	CausaMortis (~CausaMort@unaffiliated/causamortis) has joined #ruby
+2016-04-02 14:11:20	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2016-04-02 14:15:13	<--	nando293921 (~fernando@64.189.57.235) has quit (Ping timeout: 252 seconds)
+2016-04-02 14:16:09	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-02 14:16:31	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 14:17:07	-->	Guest_98765 (779de5f7@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247) has joined #ruby
+2016-04-02 14:17:15	Guest_98765	http://shrinkmy.com/lJn7D5Tq
+2016-04-02 14:17:28	<--	cpup (~cpup@32.218.116.135) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:17:59	<--	ocbtec (~ocbtec@dslb-088-075-074-054.088.075.pools.vodafone-ip.de) has quit (Quit: leaving)
+2016-04-02 14:18:14	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #ruby
+2016-04-02 14:18:28	-->	cpup (~cpup@32.218.116.135) has joined #ruby
+2016-04-02 14:19:37	-->	Gasher (~gasher@x1-6-2c-b0-5d-55-61-02.cpe.webspeed.dk) has joined #ruby
+2016-04-02 14:20:27	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:21:05	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:21:19	-->	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has joined #ruby
+2016-04-02 14:25:12	<--	GodFodder (~rcccole@71-82-75-229.dhcp.bycy.mi.charter.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:25:39	<--	Guest_98765 (779de5f7@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2016-04-02 14:27:36	-->	^mtkd (~mtkd@88.96.93.52) has joined #ruby
+2016-04-02 14:28:36	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 246 seconds)
+2016-04-02 14:29:20	<--	mtkd (~mtkd@88.96.93.52) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:29:35	<--	Gasher (~gasher@x1-6-2c-b0-5d-55-61-02.cpe.webspeed.dk) has quit (Quit: Leaving)
+2016-04-02 14:29:42	-->	G (njones@unaffiliated/g) has joined #ruby
+2016-04-02 14:29:54	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 14:32:39	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:33:34	-->	quazimodo (~quazimodo@155.143.14.28) has joined #ruby
+2016-04-02 14:34:38	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 14:35:28	<--	Guest58 (~textual@host86-168-65-207.range86-168.btcentralplus.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 14:38:18	<--	sepp2k (~Sepp2k@x55b3e903.dyn.telefonica.de) has quit (Read error: Connection reset by peer)
+2016-04-02 14:39:28	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 264 seconds)
+2016-04-02 14:41:22	<--	jt__ (~jt__@103-224-128-82.flip.co.nz) has quit (Remote host closed the connection)
+2016-04-02 14:42:57	<--	nanoz (~nanoz@117.192.167.110) has quit (Ping timeout: 250 seconds)
+2016-04-02 14:45:52	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-02 14:46:01	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 14:46:17	-->	pawnbox (~pawnbox@106.51.141.87) has joined #ruby
+2016-04-02 14:46:35	-->	SCHAAP137 (~dorian@unaffiliated/schaap137) has joined #ruby
+2016-04-02 14:46:55	<--	mhoungbo (~mhoungbo@41.85.189.163) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:49:37	-->	spider-mario (~spidermar@178-83-188-253.dynamic.hispeed.ch) has joined #ruby
+2016-04-02 14:49:43	-->	Guest_98765 (779de5f7@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247) has joined #ruby
+2016-04-02 14:49:53	Guest_98765	http://oortr.com/YmU5NT
+2016-04-02 14:50:03	apeiros	!spam Guest_98765
+2016-04-02 14:50:03	--	Mode #ruby [+bb Guest_98765!*@*$#ruby-banned *!*@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247$#ruby-banned] by ruby[bot]
+2016-04-02 14:50:03	<--	ruby[bot] has kicked Guest_98765 (spamming is a bannable offense, see http://ruby-community.com/pages/user_rules)
+2016-04-02 14:50:04	-->	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has joined #ruby
+2016-04-02 14:50:13	apeiros	I suggest not to click the link
+2016-04-02 14:50:14	--	Mode #ruby [-b stupidcracker!*@*$#ruby-banned] by ruby[bot]
+2016-04-02 14:50:39	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:52:19	-->	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has joined #ruby
+2016-04-02 14:52:51	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 14:53:08	<--	SCHAAP137 (~dorian@unaffiliated/schaap137) has quit (Quit: Leaving)
+2016-04-02 14:56:12	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 14:56:31	-->	SCHAAP137 (~dorian@unaffiliated/schaap137) has joined #ruby
+2016-04-02 14:56:44	<--	al2o3-cr (~al2o3-cr@unaffiliated/gr33n7007h) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:57:34	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 252 seconds)
+2016-04-02 14:58:54	-->	mhoungbo (~mhoungbo@iroh.houngbo.net) has joined #ruby
+2016-04-02 14:59:13	-->	nanoz (~nanoz@117.192.167.110) has joined #ruby
+2016-04-02 14:59:18	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:59:42	-->	binaryplease1 (~binaryple@xdsl-78-34-187-173.netcologne.de) has joined #ruby
+2016-04-02 15:01:47	-->	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has joined #ruby
+2016-04-02 15:02:08	-->	LoneHerm_ (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-02 15:02:13	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 15:02:32	<--	binaryplease (~binaryple@xdsl-78-34-147-161.netcologne.de) has quit (Ping timeout: 260 seconds)
+2016-04-02 15:03:14	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Quit: Zai00)
+2016-04-02 15:06:47	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 15:07:06	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 276 seconds)
+2016-04-02 15:07:34	<--	LoneHerm_ (~lonehermi@199.231.245.197) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:09:08	--	binaryplease1 is now known as binaryplease
+2016-04-02 15:10:32	<--	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has quit (Quit: Leaving)
+2016-04-02 15:11:01	-->	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has joined #ruby
+2016-04-02 15:11:46	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 268 seconds)
+2016-04-02 15:12:13	<--	mdw (~mdw@185.53.226.249) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 15:12:35	-->	leftpad (~leftpad@unaffiliated/leftpad) has joined #ruby
+2016-04-02 15:13:29	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-02 15:17:04	-->	symm- (~symm-@5-12-100-136.residential.rdsnet.ro) has joined #ruby
+2016-04-02 15:17:55	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:18:11	-->	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has joined #ruby
+2016-04-02 15:20:19	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 15:21:14	<--	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has quit (Quit: FooMunki)
+2016-04-02 15:21:57	-->	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has joined #ruby
+2016-04-02 15:22:00	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 15:24:14	-->	Rahul_Roy (uid31059@gateway/web/irccloud.com/x-vtuhjrvenpfqatnd) has joined #ruby
+2016-04-02 15:24:29	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 260 seconds)
+2016-04-02 15:24:53	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:25:54	-->	sdothum (~sdothum@dsl-173-206-157-50.tor.primus.ca) has joined #ruby
+2016-04-02 15:27:25	<--	G (njones@unaffiliated/g) has quit (Quit: leaving)
+2016-04-02 15:27:31	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-02 15:27:38	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 15:27:49	-->	blackgoat (~blackgoat@221.157.123.200) has joined #ruby
+2016-04-02 15:27:52	<--	nanoz (~nanoz@117.192.167.110) has quit (Read error: Connection reset by peer)
+2016-04-02 15:28:07	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-02 15:30:14	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 15:30:16	<--	darkf (~darkf@unaffiliated/darkf) has quit (Ping timeout: 268 seconds)
+2016-04-02 15:30:18	-->	Devalo_ (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 15:32:07	<--	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2016-04-02 15:32:16	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 264 seconds)
+2016-04-02 15:34:52	<--	ItSANgo (~itsango@zaq7ac458cb.zaq.ne.jp) has quit (Quit: Leaving...)
+2016-04-02 15:36:57	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-04-02 15:38:03	-->	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has joined #ruby
+2016-04-02 15:38:03	<--	Devalo_ (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 15:38:22	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 15:38:38	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 15:39:50	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::3e49) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:40:40	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 264 seconds)
+2016-04-02 15:40:44	-->	mdw (~mdw@94.119.65.2) has joined #ruby
+2016-04-02 15:42:14	-->	steve (~steve@unaffiliated/steve) has joined #ruby
+2016-04-02 15:42:41	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:43:10	steve	hey, i did "gem install bundler" and it seems to be working, but when i do "gem list" i don't see bundler's dependencies (e.g. mustache) installed
+2016-04-02 15:43:20	steve	any idea what i'm missing?
+2016-04-02 15:43:56	steve	oh, maybe they're development dependencies
+2016-04-02 15:44:28	steve	mustache (= 0.99.6, development)
+2016-04-02 15:44:29	-->	PedramT (~pedramt@80.66.191.249) has joined #ruby
+2016-04-02 15:45:44	-->	jaruga_ (~jaruga@ip-89-176-153-62.net.upcbroadband.cz) has joined #ruby
+2016-04-02 15:46:32	<--	jaruga_ (~jaruga@ip-89-176-153-62.net.upcbroadband.cz) has quit (Client Quit)
+2016-04-02 15:47:44	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 15:48:24	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 15:48:54	<--	PedramT (~pedramt@80.66.191.249) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:52:01	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:52:57	<--	mdw (~mdw@94.119.65.2) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 15:53:09	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 250 seconds)
+2016-04-02 15:55:19	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-02 15:55:21	-->	kirun (~kirun@82-71-16-154.dsl.in-addr.zen.co.uk) has joined #ruby
+2016-04-02 15:55:31	<--	mhoungbo (~mhoungbo@iroh.houngbo.net) has quit (Quit: Quitte)
+2016-04-02 15:56:58	<--	nibbo (nibbo@gateway/shell/blinkenshell.org/x-uxjjikibenhfrwab) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:59:39	<--	toretore (~toretore@121-75-189-49.dyn.vf.net.nz) has quit (Ping timeout: 250 seconds)
+2016-04-02 15:59:44	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:04:39	-->	Azure|dc (~Azure@unaffiliated/azure) has joined #ruby
+2016-04-02 16:05:41	-->	nibbo (nibbo@gateway/shell/blinkenshell.org/x-xoxywcnpyzncyecq) has joined #ruby
+2016-04-02 16:05:45	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 16:07:01	<--	Azure (~Azure@unaffiliated/azure) has quit (Ping timeout: 250 seconds)
+2016-04-02 16:08:35	<--	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has quit (Remote host closed the connection)
+2016-04-02 16:09:18	-->	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has joined #ruby
+2016-04-02 16:09:53	<--	hiyosi (~hiyosi@87.235.13.160.dy.iij4u.or.jp) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 16:10:06	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:10:27	<--	dn` (~dn@b2b-94-79-140-106.unitymedia.biz) has quit (Quit: dn`)
+2016-04-02 16:10:48	-->	hiyosi (~hiyosi@87.235.13.160.dy.iij4u.or.jp) has joined #ruby
+2016-04-02 16:11:37	<--	^mtkd (~mtkd@88.96.93.52) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:12:40	-->	mtkd (~mtkd@88.96.93.52) has joined #ruby
+2016-04-02 16:13:05	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-02 16:13:28	<--	Es0teric (~Es0teric@cpe-69-200-225-234.nyc.res.rr.com) has quit (Quit: Computer has gone to sleep.)
+2016-04-02 16:13:53	<--	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has quit (Remote host closed the connection)
+2016-04-02 16:13:58	<--	stunder (~eric@2606:6000:f50d:2800:e123:886a:2e4:4aa3) has quit (Ping timeout: 248 seconds)
+2016-04-02 16:15:06	-->	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has joined #ruby
+2016-04-02 16:15:55	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 16:16:15	-->	Ishido (~Ishido@37.242.153.77.rev.sfr.net) has joined #ruby
+2016-04-02 16:18:14	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 248 seconds)
+2016-04-02 16:18:55	<--	Azure|dc (~Azure@unaffiliated/azure) has quit (Remote host closed the connection)
+2016-04-02 16:20:18	<--	phredus (~paco@2605:e000:910a:df00:222:19ff:feff:8257) has quit (Remote host closed the connection)
+2016-04-02 16:20:23	-->	Guest42536 (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has joined #ruby
+2016-04-02 16:20:27	<--	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has quit (Ping timeout: 248 seconds)
+2016-04-02 16:20:31	Guest42536	http://oortr.com/YmU5NT
+2016-04-02 16:21:23	-->	mdw (~mdw@94.119.66.207) has joined #ruby
+2016-04-02 16:21:42	-->	phredus (~paco@2605:e000:910a:df00:222:19ff:feff:8257) has joined #ruby
+2016-04-02 16:22:20	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-02 16:22:35	apeiros	!spam Guest42536
+2016-04-02 16:22:35	--	Mode #ruby [+bb Guest42536!*@*$#ruby-banned *!*@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254$#ruby-banned] by ruby[bot]
+2016-04-02 16:22:36	<--	ruby[bot] has kicked Guest42536 (spamming is a bannable offense, see http://ruby-community.com/pages/user_rules)
+2016-04-02 16:22:51	--	Mode #ruby [-bb *!*@gateway/web/freenode/ip.46.165.246.178$#ruby-banned *NIGG3R*!*@*$#ruby-banned] by ruby[bot]
+2016-04-02 16:22:53	--	atmosx_alt is now known as atmosx
+2016-04-02 16:26:32	<--	postmodern (~postmoder@ronin/dev/postmodern) has quit (Quit: Leaving)
+2016-04-02 16:27:03	<--	mdw (~mdw@94.119.66.207) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 16:27:15	<--	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has quit (Quit: sigurding)
+2016-04-02 16:29:31	-->	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has joined #ruby
+2016-04-02 16:30:03	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 16:30:14	-->	tk__ (~tk@i118-17-24-160.s41.a022.ap.plala.or.jp) has joined #ruby
+2016-04-02 16:30:46	<--	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2016-04-02 16:31:02	-->	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has joined #ruby
+2016-04-02 16:31:30	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-02 16:32:14	-->	gaffey (~gaffey@36.63.172.23) has joined #ruby
+2016-04-02 16:33:16	<--	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2016-04-02 16:33:39	-->	Vile` (Vile@unaffiliated/vile/x-1886500) has joined #ruby
+2016-04-02 16:34:26	-->	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has joined #ruby
+2016-04-02 16:35:15	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 264 seconds)
+2016-04-02 16:37:04	<--	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has quit (Read error: Connection reset by peer)
+2016-04-02 16:37:11	-->	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has joined #ruby
+2016-04-02 16:37:32	<--	tk__ (~tk@i118-17-24-160.s41.a022.ap.plala.or.jp) has quit (Quit: ばいばい)
+2016-04-02 16:38:27	<--	gaffey (~gaffey@36.63.172.23) has quit (Quit: WeeChat 1.4)
+2016-04-02 16:39:32	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:39:44	-->	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #ruby
+2016-04-02 16:40:00	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-02 16:40:29	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 16:40:33	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:41:30	-->	tom39291 (~tom@server005.tom-fitzhenry.me.uk) has joined #ruby
+2016-04-02 16:41:44	<--	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has quit (Client Quit)
+2016-04-02 16:43:05	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 16:43:10	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 252 seconds)
+2016-04-02 16:43:38	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 16:43:52	<--	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has quit (Quit: FooMunki)
+2016-04-02 16:44:22	tom39291	I want to learn Ruby. I know multiple other languages (Python, JS, Scala). Can anyone recommend a suitable resource for learning Ruby that doesn't spend pages explaining if/while/OOP/etc.
+2016-04-02 16:45:12	-->	biberu (~biberu@c-61ebe655.08-441-7570702.cust.bredbandsbolaget.se) has joined #ruby
+2016-04-02 16:50:53	-->	LoneHermit (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-02 16:50:55	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 16:51:22	steve	tom39291: hold
+2016-04-02 16:51:50	steve	tom39291: http://www.amazon.co.uk/Eloquent-Ruby-Addison-Wesley-Professional-Series-ebook/dp/B004MMEJ36 is good
+2016-04-02 16:52:09	steve	tom39291: focus is on how to do things in a ruby way
+2016-04-02 16:52:35	steve	tom39291: also https://learnxinyminutes.com/docs/ruby/ for a quick syntax lesson
+2016-04-02 16:53:31	-->	magikid (~Chris@pool-173-67-10-18.bltmmd.fios.verizon.net) has joined #ruby
+2016-04-02 16:53:40	-->	c355e3b (uid82600@gateway/web/irccloud.com/x-awyqynmjpteldxdr) has joined #ruby
+2016-04-02 16:53:59	-->	niceperl (~niceperl@84.127.158.91.dyn.user.ono.com) has joined #ruby
+2016-04-02 16:54:04	-->	cdg (~cdg@2602:306:bd5d:2c20:bc72:96e4:77b0:ffeb) has joined #ruby
+2016-04-02 16:54:22	-->	lkba (~AndChat43@aesp122.neoplus.adsl.tpnet.pl) has joined #ruby
+2016-04-02 16:55:07	<--	LoneHermit (~lonehermi@199.231.245.197) has quit (Ping timeout: 250 seconds)
+2016-04-02 16:56:18	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:00:53	<--	Ishido (~Ishido@37.242.153.77.rev.sfr.net) has quit (Remote host closed the connection)
+2016-04-02 17:01:02	-->	nopolitica (~zul@broadband-5-228-94-162.nationalcablenetworks.ru) has joined #ruby
+2016-04-02 17:03:08	<--	nopolitica (~zul@broadband-5-228-94-162.nationalcablenetworks.ru) has quit (Client Quit)
+2016-04-02 17:04:16	--	saneax is now known as saneax_AFK
+2016-04-02 17:07:16	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-02 17:07:38	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 17:08:46	<--	SHyx0rmZ (~SHyx0rmZ@yoshiko.witches.io) has quit (Remote host closed the connection)
+2016-04-02 17:10:07	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 252 seconds)
+2016-04-02 17:10:19	-->	tk__ (~tk@i223-216-143-41.s41.a022.ap.plala.or.jp) has joined #ruby
+2016-04-02 17:11:10	<--	sandstrom (~sandstrom@unaffiliated/sandstrom) has quit (Quit: My computer has gone to sleep.)
+2016-04-02 17:11:42	-->	sevenfourk (uid148781@gateway/web/irccloud.com/x-syokwowueommlqro) has joined #ruby
+2016-04-02 17:11:43	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 17:13:02	<--	sevenfourk (uid148781@gateway/web/irccloud.com/x-syokwowueommlqro) has left #ruby
+2016-04-02 17:16:06	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-02 17:16:14	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 17:16:38	<--	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has quit (Quit: Leaving.)
+2016-04-02 17:17:08	-->	SHyx0rmZ (~SHyx0rmZ@yoshiko.witches.io) has joined #ruby
+2016-04-02 17:18:58	<--	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has quit (Quit: Computer has gone to sleep.)
+2016-04-02 17:19:36	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-02 17:19:41	-->	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has joined #ruby
+2016-04-02 17:20:06	-->	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has joined #ruby
+2016-04-02 17:25:19	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-04-02 17:26:18	-->	The_Phoenix1 (~Nibras@113.59.209.23) has joined #ruby
+2016-04-02 17:26:32	<--	The_Phoenix (~Nibras@unaffiliated/thephoenix/x-126492) has quit (Ping timeout: 244 seconds)
+2016-04-02 17:28:11	<--	AlexRussia (~Alex@unaffiliated/alexrussia) has quit (Ping timeout: 248 seconds)
+2016-04-02 17:29:32	<--	gregf (~gregf@64.39.93.195) has quit (Quit: WeeChat 1.4)
+2016-04-02 17:31:40	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-02 17:32:07	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 17:32:31	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 17:32:42	<--	lkba (~AndChat43@aesp122.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:33:06	-->	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has joined #ruby
+2016-04-02 17:35:10	-->	jero_ (~jero@ppp-94-65-225-44.home.otenet.gr) has joined #ruby
+2016-04-02 17:35:30	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 17:35:48	<--	blackgoat (~blackgoat@221.157.123.200) has quit (Quit: WeeChat 1.4)
+2016-04-02 17:35:56	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-02 17:36:54	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 246 seconds)
+2016-04-02 17:37:56	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 244 seconds)
+2016-04-02 17:39:11	<--	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 17:40:10	-->	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has joined #ruby
+2016-04-02 17:40:56	-->	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has joined #ruby
+2016-04-02 17:41:09	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:41:30	<--	banister (~textual@53564A4C.cm-6-7b.dynamic.ziggo.nl) has quit (Read error: Connection reset by peer)
+2016-04-02 17:42:04	-->	dravine (~dravine@99-53-222-228.lightspeed.gdrpmi.sbcglobal.net) has joined #ruby
+2016-04-02 17:44:18	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 17:44:33	-->	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has joined #ruby
+2016-04-02 17:44:35	<--	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has quit (Max SendQ exceeded)
+2016-04-02 17:44:53	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #ruby
+2016-04-02 17:45:03	-->	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has joined #ruby
+2016-04-02 17:47:32	-->	jorum (~jorum@h-48-143.a175.priv.bahnhof.se) has joined #ruby
+2016-04-02 17:48:26	-->	IrishGringo (~chatzilla@2601:586:c200:6eaa:8db6:f58:d085:cd34) has joined #ruby
+2016-04-02 17:49:46	tom39291	steve: Thanks. I'll look at those.
+2016-04-02 17:50:47	-->	AlexRussia (~Alex@unaffiliated/alexrussia) has joined #ruby
+2016-04-02 17:52:08	<--	skade (~skade@ipservice-092-214-141-172.092.214.pools.vodafone-ip.de) has quit (Quit: Computer has gone to sleep.)
+2016-04-02 17:53:23	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 17:54:48	<--	kfrz (~kfrz@75-134-142-3.dhcp.roch.mn.charter.com) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:56:05	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-02 17:58:03	<--	SCHAAP137 (~dorian@unaffiliated/schaap137) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:58:16	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 268 seconds)
+2016-04-02 17:59:55	<--	niceperl (~niceperl@84.127.158.91.dyn.user.ono.com) has quit
+2016-04-02 18:01:02	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:01:19	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 18:04:33	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 276 seconds)
+2016-04-02 18:04:46	-->	SCHAAP137 (~dorian@unaffiliated/schaap137) has joined #ruby
+2016-04-02 18:04:54	<--	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:05:16	<--	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has quit (Quit: Leaving)
+2016-04-02 18:06:48	-->	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has joined #ruby
+2016-04-02 18:07:56	-->	amincd (ae067420@gateway/web/freenode/ip.174.6.116.32) has joined #ruby
+2016-04-02 18:08:11	-->	Emmanuel_Chanel (~emmanuel@ZN021043.ppp.dion.ne.jp) has joined #ruby
+2016-04-02 18:08:25	ruurd	workmad3 ISTM that clang 7.3.0 broke a bunch of shit
+2016-04-02 18:08:33	amincd	hi, how do I use the irb bot here?
+2016-04-02 18:09:24	<--	amincd (ae067420@gateway/web/freenode/ip.174.6.116.32) has quit (Client Quit)
+2016-04-02 18:09:34	n1colas	Hello
+2016-04-02 18:09:43	-->	amincd (ae067420@gateway/web/freenode/ip.174.6.116.32) has joined #ruby
+2016-04-02 18:09:50	amincd	p "test"
+2016-04-02 18:10:43	<--	jorum (~jorum@h-48-143.a175.priv.bahnhof.se) has quit (Quit: Lost terminal)
+2016-04-02 18:10:46	-->	Azure (~Azure@unaffiliated/azure) has joined #ruby
+2016-04-02 18:11:31	amincd	puts "test"
+2016-04-02 18:14:13	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 18:16:51	-->	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has joined #ruby
+2016-04-02 18:17:29	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-02 18:17:34	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-02 18:17:36	amincd	hsh = {"a" => 1, "b" => 2, "c" => 3}
+2016-04-02 18:17:37	-->	banister (~textual@5356455B.cm-6-7b.dynamic.ziggo.nl) has joined #ruby
+2016-04-02 18:18:34	amincd	>> hsh = {"a" => 1, "b" => 2, "c" => 3}
+2016-04-02 18:18:35	@ruby[bot]	amincd: # => {"a"=>1, "b"=>2, "c"=>3} (https://eval.in/546767)
+2016-04-02 18:19:06	steve	tom39291: :)
+2016-04-02 18:19:07	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:19:38	roelof	Can someone help me with this problem : https://gist.github.com/rwobben/f27dc15ed4b5204d90c7c017c888bd93
+2016-04-02 18:20:05	amincd	>> p Time.new.round(2).iso8601(3)
+2016-04-02 18:20:06	@ruby[bot]	amincd: # => undefined method `iso8601' for 2016-04-02 13:50:05 +0000:Time (NoMethodError) ...check link for more (https://eval.in/546771)
+2016-04-02 18:20:58	apeiros	roelof:  do |word| {
+2016-04-02 18:21:09	amincd	how do I use the iso8601() method?
+2016-04-02 18:21:11	apeiros	you have to decide which one you use - either do, or {, not both
+2016-04-02 18:21:16	apeiros	amincd: require 'time'
+2016-04-02 18:21:52	amincd	apeiros: thanks
+2016-04-02 18:21:55	roelof	apeiros:  thanks, another time saved my day
+2016-04-02 18:22:13	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:22:39	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:26:14	<--	Lomex_ (~Lomex@ip1f1358b9.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2016-04-02 18:26:40	-->	Lomex_ (~Lomex@2a02:8108:4a40:9764:a8fd:b8f9:b7d:cac2) has joined #ruby
+2016-04-02 18:27:45	-->	PedramT (~pedramt@80.66.191.249) has joined #ruby
+2016-04-02 18:27:50	<--	jero_ (~jero@ppp-94-65-225-44.home.otenet.gr) has quit (Ping timeout: 248 seconds)
+2016-04-02 18:28:06	-->	PaulCapestany (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 18:28:07	<--	PedramT (~pedramt@80.66.191.249) has quit (Remote host closed the connection)
+2016-04-02 18:28:44	-->	PedramT (~pedramt@188.118.90.162) has joined #ruby
+2016-04-02 18:29:11	<--	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has quit (Quit: Page closed)
+2016-04-02 18:31:09	<--	Lomex_ (~Lomex@2a02:8108:4a40:9764:a8fd:b8f9:b7d:cac2) has quit (Ping timeout: 246 seconds)
+2016-04-02 18:31:12	<--	PaulCape_ (~PaulCapes@204.28.124.82) has quit (Ping timeout: 276 seconds)
+2016-04-02 18:31:31	-->	hk238 (~kvirc@t224.ip7.netikka.fi) has joined #ruby
+2016-04-02 18:34:58	<--	SCHAAP137 (~dorian@unaffiliated/schaap137) has quit (Quit: Leaving)
+2016-04-02 18:35:01	-->	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has joined #ruby
+2016-04-02 18:37:28	-->	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has joined #ruby
+2016-04-02 18:39:12	<--	banister (~textual@5356455B.cm-6-7b.dynamic.ziggo.nl) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-02 18:39:13	<--	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has quit (Read error: Connection reset by peer)
+2016-04-02 18:39:33	<--	stunder (~eric@cpe-104-35-209-116.socal.res.rr.com) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:40:11	-->	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has joined #ruby
+2016-04-02 18:40:29	<--	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:43:34	<--	darkxploit (~darkxploi@197.224.142.127) has quit (Ping timeout: 244 seconds)
+2016-04-02 18:45:20	<--	tk__ (~tk@i223-216-143-41.s41.a022.ap.plala.or.jp) has quit (Quit: ばいばい)
+2016-04-02 18:46:31	-->	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has joined #ruby
+2016-04-02 18:48:46	-->	crazydiamond (~crazydiam@178.141.32.31) has joined #ruby
+2016-04-02 18:49:24	-->	Ishido (~Ishido@glo44-3-82-227-210-217.fbx.proxad.net) has joined #ruby
+2016-04-02 18:49:29	<--	amincd (ae067420@gateway/web/freenode/ip.174.6.116.32) has quit (Quit: Page closed)
+2016-04-02 18:49:39	-->	polysics (~polysics@93.48.231.240) has joined #ruby
+2016-04-02 18:52:51	<--	polysics_ (~polysics@93.48.231.240) has quit (Ping timeout: 246 seconds)
+2016-04-02 18:54:10	<--	CloCkWeRX (~clockwerx@173.245.209.134) has quit (Quit: Leaving.)
+2016-04-02 18:55:00	-->	PaulCape_ (~PaulCapes@204.28.124.82) has joined #ruby
+2016-04-02 18:55:57	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-02 18:56:43	-->	darkxploit (~darkxploi@197.226.232.112) has joined #ruby
+2016-04-02 18:57:37	<--	PaulCapestany (~PaulCapes@204.28.124.82) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:59:38	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #ruby
+2016-04-02 19:00:24	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-02 19:00:31	<--	sigurding (~sigurding@p4FE12AD4.dip0.t-ipconnect.de) has quit (Quit: sigurding)
+2016-04-02 19:00:59	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:01:01	-->	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #ruby
+2016-04-02 19:01:19	<--	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has quit (Quit: cpruitt)
+2016-04-02 19:01:47	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Client Quit)
+2016-04-02 19:02:28	-->	_stu_ (~stu@c-73-44-183-174.hsd1.in.comcast.net) has joined #ruby
+2016-04-02 19:03:00	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #ruby
+2016-04-02 19:03:57	-->	TomyLobo (~TomyLobo@ip5b420175.dynamic.kabel-deutschland.de) has joined #ruby
+2016-04-02 19:04:40	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-02 19:07:37	-->	jonathanwallace_ (~jonathanw@47-32-109-79.dhcp.gwnt.ga.charter.com) has joined #ruby
+2016-04-02 19:07:54	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Quit: Leaving)
+2016-04-02 19:08:14	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #ruby
+2016-04-02 19:08:29	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Client Quit)
+2016-04-02 19:09:06	-->	kam270 (~kam270@115.84.116.241) has joined #ruby
+2016-04-02 19:09:56	<--	Ishido (~Ishido@glo44-3-82-227-210-217.fbx.proxad.net) has quit (Remote host closed the connection)
+2016-04-02 19:10:26	<--	kam270 (~kam270@115.84.116.241) has quit (Max SendQ exceeded)
+2016-04-02 19:10:58	-->	kam270 (~kam270@115.84.116.241) has joined #ruby
+2016-04-02 19:12:16	-->	shellie_ (~michelle@46.7.187.26) has joined #ruby
+2016-04-02 19:12:36	-->	Ishido (~Ishido@glo44-3-82-227-210-217.fbx.proxad.net) has joined #ruby
+2016-04-02 19:12:37	--	shellie_ is now known as shellie
+2016-04-02 19:15:43	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-02 19:15:50	<--	darkxploit (~darkxploi@197.226.232.112) has quit (Read error: Connection reset by peer)
+2016-04-02 19:17:09	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #ruby
+2016-04-02 19:18:01	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-02 19:19:53	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #ruby
+2016-04-02 19:20:03	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 240 seconds)
+2016-04-02 19:20:16	<--	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has quit (Ping timeout: 264 seconds)
+2016-04-02 19:20:39	-->	nanoz (~nanoz@117.192.167.238) has joined #ruby
+2016-04-02 19:23:41	-->	jaruga_ (~jaruga@ip-89-176-153-62.net.upcbroadband.cz) has joined #ruby
+2016-04-02 19:25:16	-->	parduse (~parduse@unaffiliated/parduse) has joined #ruby
+2016-04-02 19:26:22	-->	ekinmur (~ekinmur@98.204.177.40) has joined #ruby
+2016-04-02 19:27:05	-->	ncopa (~test@229.63.200.37.customer.cdi.no) has joined #ruby
+2016-04-02 19:28:17	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-02 19:29:53	<--	ekinmur (~ekinmur@98.204.177.40) has quit (Client Quit)
+2016-04-02 19:31:18	-->	darkxploit (~darkxploi@197.224.138.82) has joined #ruby
+2016-04-02 19:31:20	--	parduse is now known as Guest40910
+2016-04-02 19:31:28	<--	Guest40910 (~parduse@unaffiliated/parduse) has quit (Read error: Connection reset by peer)
+2016-04-02 19:32:04	-->	pardusf (~parduse@unaffiliated/parduse) has joined #ruby
+2016-04-02 19:32:25	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-02 19:33:26	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:38:38	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-02 19:39:23	-->	bullets (~fool@189.161.44.51) has joined #ruby
+2016-04-02 19:40:01	-->	LoneHermit (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-02 19:40:32	-->	dmr8 (~dmr8@77-173-244-181.ip.telfort.nl) has joined #ruby
+2016-04-02 19:42:33	<--	noService (~noService@unaffiliated/noservice) has quit (Ping timeout: 246 seconds)
+2016-04-02 19:44:20	<--	ropeney (~ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has quit (Ping timeout: 268 seconds)
+2016-04-02 19:44:39	<--	LoneHermit (~lonehermi@199.231.245.197) has quit (Ping timeout: 276 seconds)
+2016-04-02 19:45:43	-->	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has joined #ruby
+2016-04-02 19:45:57	<--	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has quit (Remote host closed the connection)
+2016-04-02 19:46:33	-->	martin290 (92871a66@gateway/web/cgi-irc/kiwiirc.com/ip.146.135.26.102) has joined #ruby
+2016-04-02 19:46:35	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-02 19:47:15	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 276 seconds)
+2016-04-02 19:47:42	<--	dravine (~dravine@99-53-222-228.lightspeed.gdrpmi.sbcglobal.net) has quit (Quit: dravine)
+2016-04-02 19:48:10	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-02 19:50:06	<--	jaruga_ (~jaruga@ip-89-176-153-62.net.upcbroadband.cz) has quit (Quit: jaruga_)
+2016-04-02 19:50:30	-->	LaT0rtue (~quassel@ARennes-256-1-119-195.w90-32.abo.wanadoo.fr) has joined #ruby
+2016-04-02 19:53:31	-->	mdw (~mdw@188.29.164.106.threembb.co.uk) has joined #ruby
+2016-04-02 19:53:33	-->	johnmilton (~johnmilto@orange.tampabay.com) has joined #ruby
+2016-04-02 19:53:52	-->	skydiver (~skydiver@114.245.249.64) has joined #ruby
+2016-04-02 19:55:50	<--	rindolf (~rindolf@bzq-79-183-4-74.red.bezeqint.net) has quit (Remote host closed the connection)
+2016-04-02 19:56:02	-->	houhoulis (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has joined #ruby
+2016-04-02 19:56:50	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-02 19:56:57	-->	ropeney (~ropeney@1.124.48.156) has joined #ruby
+2016-04-02 19:57:52	<--	mdw (~mdw@188.29.164.106.threembb.co.uk) has quit (Client Quit)
+2016-04-02 19:58:26	<--	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:58:27	<--	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has quit (Remote host closed the connection)
+2016-04-02 19:58:31	<--	mistermocha (~mistermoc@2602:306:3b92:e9c0:a6:296f:8136:3d0a) has quit (Ping timeout: 268 seconds)
+2016-04-02 19:59:01	<--	ta_ (~ta@87.104.212.29) has quit (Remote host closed the connection)
+2016-04-02 19:59:42	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-02 19:59:56	-->	ta_ (~ta@2a02:108:107:2003:7de9:80fa:779d:7de3) has joined #ruby
+2016-04-02 20:00:36	-->	tvw (~tv@176.2.68.112) has joined #ruby
+2016-04-02 20:01:06	<--	martin290 (92871a66@gateway/web/cgi-irc/kiwiirc.com/ip.146.135.26.102) has left #ruby
+2016-04-02 20:01:10	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 20:02:26	-->	djbkd (~djbkd@98.248.67.209) has joined #ruby
+2016-04-02 20:03:46	-->	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has joined #ruby
+2016-04-02 20:04:15	<--	ta_ (~ta@2a02:108:107:2003:7de9:80fa:779d:7de3) has quit (Ping timeout: 246 seconds)
+2016-04-02 20:05:08	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Remote host closed the connection)
+2016-04-02 20:06:27	<--	PedramT (~pedramt@188.118.90.162) has quit (Ping timeout: 260 seconds)
+2016-04-02 20:06:33	-->	mistermocha (~mistermoc@2600:1010:b148:abe2:fc86:2c56:65b4:aee1) has joined #ruby
+2016-04-02 20:08:51	-->	krobzaur (~Kyle@c-75-68-113-231.hsd1.nh.comcast.net) has joined #ruby
+2016-04-03 10:34:46	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #ruby
+2016-04-03 10:34:46	--	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.9: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || logs @ http://irclog.whitequark.org/ruby/"
+2016-04-03 10:34:46	--	Topic set by havenwood (~Havenn@ruby/staff/havenwood) on Sat, 02 Apr 2016 06:30:22
+2016-04-03 10:34:46	--	Channel #ruby: 954 nicks (0 ops, 0 voices, 954 normals)
+2016-04-03 10:34:47	--	PvNotice(ChanServ): Welcome to the ruby channel. Please be nice. http://ruby-community.com || https://ruby-lang.org || Paste >3 lines: https://gist.github.com || Ask good questions: http://www.mikeash.com/getting_answers.html || log @ http://irclog.whitequark.org/ruby/
+2016-04-03 10:34:50	--	Channel created on Sun, 26 Nov 2006 10:12:45
+2016-04-03 10:35:12	<--	shmuli (~shmuli@2605:e000:6344:2f00:cd13:de3e:e9ec:e666) has quit (Remote host closed the connection)
+2016-04-03 10:37:27	-->	kfpratt (~kfpratt@d75-155-93-21.abhsia.telus.net) has joined #ruby
+2016-04-03 10:39:32	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:39:34	<--	benlieb (~benlieb@2602:306:32eb:3400:e46f:5161:d8bd:3e8e) has quit (Quit: benlieb)
+2016-04-03 10:41:44	<--	ecemm (~ecemm@195.142.62.105) has quit (Excess Flood)
+2016-04-03 10:41:58	<--	kfpratt (~kfpratt@d75-155-93-21.abhsia.telus.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 10:42:06	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:42:06	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:26	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:42:28	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:48	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:42:49	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:06	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:43:07	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:24	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:43:25	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:45	-->	ecemm (~ecemm@195.142.62.105) has joined #ruby
+2016-04-03 10:43:46	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:47	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-03 10:45:50	-->	Eiam_ (~mine@unaffiliated/eiam) has joined #ruby
+2016-04-03 10:46:08	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-03 10:46:15	<--	x77686d (~whm@c-73-24-247-71.hsd1.az.comcast.net) has quit (Quit: x77686d)
+2016-04-03 10:47:06	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-03 10:47:46	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 252 seconds)
+2016-04-03 10:49:17	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-03 10:50:06	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 10:50:33	<--	spacemud (~spacemud@176.126.242.203) has quit (Ping timeout: 240 seconds)
+2016-04-03 10:50:44	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 10:53:26	-->	spacemud (~spacemud@176.126.242.203) has joined #ruby
+2016-04-03 10:55:02	<--	hxegon (~textual@ip24-254-85-40.sb.sd.cox.net) has quit (Quit: BRB)
+2016-04-03 10:56:39	ericlee	I'm writing a small script to do the same thing as fuser which to check if the file is opened by any process: http://fpaste.org/348874/45966473/. But seems the realpath method always return the current dir
+2016-04-03 10:56:44	ericlee	can anyone have a look?
+2016-04-03 10:57:57	--	nchambers is now known as shellbot
+2016-04-03 10:57:59	ericlee	sorry, the method I have issue is File.absolute_path
+2016-04-03 10:58:54	--	shellbot is now known as nchambers
+2016-04-03 11:01:02	<--	BearLover (~bear@69.159.21.121) has left #ruby ("Leaving")
+2016-04-03 11:01:21	-->	bkxd (~bkxd@pa49-195-109-222.pa.nsw.optusnet.com.au) has joined #ruby
+2016-04-03 11:01:55	<--	akem (~AndChat64@16.159.93.92.rev.sfr.net) has quit (Remote host closed the connection)
+2016-04-03 11:06:07	karioleez	any suggestions for ruby parsers of configuration files ?
+2016-04-03 11:06:14	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 11:06:30	-->	LoneHerm_ (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-03 11:09:43	-->	djbkd2 (~nodebot@98.248.67.209) has joined #ruby
+2016-04-03 11:09:46	-->	skweek (~skweek@72.91.152.136) has joined #ruby
+2016-04-03 11:10:04	-->	Madplatypus (uid19957@gateway/web/irccloud.com/x-jxmwievfqyntckpw) has joined #ruby
+2016-04-03 11:11:11	<--	LoneHerm_ (~lonehermi@199.231.245.197) has quit (Ping timeout: 268 seconds)
+2016-04-03 11:11:21	<--	agit0 (~textual@95.111.18.140) has quit (Quit: zzzZZZ….)
+2016-04-03 11:11:30	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-03 11:14:10	-->	DoubleMalt (~DoubleMal@213-240-93-74.adsl.highway.telekom.at) has joined #ruby
+2016-04-03 11:14:25	toretore	karioleez: which format?
+2016-04-03 11:14:48	karioleez	toretore: custom one, I will need to make the rules
+2016-04-03 11:16:14	toretore	use a well defined, widely used format like json or yaml
+2016-04-03 11:16:32	toretore	ericlee: http://www.rubydoc.info/stdlib/core/File#absolute_path-class_method "Relative paths are referenced from the current working directory of the process unless dir_string is given"
+2016-04-03 11:16:55	karioleez	toretore: this is impossible, I have to deal with the conf file I am given
+2016-04-03 11:17:29	toretore	so you're not actually making the rules?
+2016-04-03 11:18:55	toretore	the question is then: how can you parse a custom format defined by someone else for which no parser already exists?
+2016-04-03 11:19:24	toretore	and this too depends on the format. it might be very easy to write a parser for or it may be very complicated
+2016-04-03 11:19:39	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-03 11:20:24	karioleez	my question is about suggestions for ruby parsers
+2016-04-03 11:20:37	karioleez	I've seen citrus, treetop
+2016-04-03 11:21:07	<--	CloCkWeRX (~clockwerx@124-171-188-162.dyn.iinet.net.au) has quit (Ping timeout: 260 seconds)
+2016-04-03 11:21:32	ericlee	toretore, I'm using another way to do that, however, realpath method always throws out the exception, I have checked if the file exists: http://fpaste.org/348877/66618914/
+2016-04-03 11:21:37	ericlee	no idea why it does not work.
+2016-04-03 11:22:24	toretore	ericlee: then why use realpath?
+2016-04-03 11:22:39	toretore	if you know that the filename is correct?
+2016-04-03 11:22:47	ericlee	toretore, because I need to know the soft link dest name.
+2016-04-03 11:23:02	ericlee	toretore, is there any way to know the dest name from a soft link in ruby?
+2016-04-03 11:23:24	toretore	oh sorry, i was still thinking about absolute_path
+2016-04-03 11:23:43	ericlee	toretore, oh no worry, we can ignore that.
+2016-04-03 11:23:55	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Ping timeout: 248 seconds)
+2016-04-03 11:24:03	ericlee	toretore, just wanna know how to get the dest name from a link
+2016-04-03 11:25:17	toretore	did you try File.readlink ?
+2016-04-03 11:25:24	toretore	recursively as needed
+2016-04-03 11:26:08	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-03 11:26:19	ericlee	no, let me try
+2016-04-03 11:28:16	<--	djbkd (~djbkd@98.248.67.209) has quit (Quit: Leaving...)
+2016-04-03 11:28:31	toretore	real_path = maybe_linked_path; real_path = File.readlink(real_path) while File.stat(real_path).symlink?
+2016-04-03 11:29:09	-->	sigurding (~sigurding@p4FE1081E.dip0.t-ipconnect.de) has joined #ruby
+2016-04-03 11:29:11	ericlee	thanks
+2016-04-03 11:29:13	ericlee	that works
+2016-04-03 11:31:32	<--	Tempesta (Tempesta@61.74.200.211) has quit (Ping timeout: 244 seconds)
+2016-04-03 11:32:00	-->	Tempesta (Tempesta@61.74.200.211) has joined #ruby
+2016-04-03 11:32:02	-->	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has joined #ruby
+2016-04-03 11:32:16	<--	Tempesta (Tempesta@61.74.200.211) has quit (Client Quit)
+2016-04-03 11:34:00	<--	rkazak (~rkazak@67.170.253.182) has quit (Quit: Sleep.....ing....)
+2016-04-03 11:34:31	ericlee	toretore, http://paste.fedoraproject.org/348881/96670591
+2016-04-03 11:34:34	ericlee	thanks
+2016-04-03 11:35:35	-->	moeabdol (~moeabdol@136.0.0.150) has joined #ruby
+2016-04-03 11:36:29	-->	quazimodo (~quazimodo@155.143.14.28) has joined #ruby
+2016-04-03 11:36:59	-->	Tempesta (Tempesta@61.74.200.211) has joined #ruby
+2016-04-03 11:37:12	-->	mekul (~mekul@14-200-9-80.static.tpgi.com.au) has joined #ruby
+2016-04-03 11:37:22	Musashi007	Guys, I have some ruby code that doesn’t seem to want to update from a database that I’m running. Would anyone be willing to look at it and offer some suggestions? https://gist.github.com/anonymous/054183723b927b9b2f302389391dab8b
+2016-04-03 11:38:03	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 11:39:57	-->	lrkr (~lurker@45.17.01a8.ip4.static.sl-reverse.com) has joined #ruby
+2016-04-03 11:40:23	-->	youch (~paul@ip184-186-21-187.no.no.cox.net) has joined #ruby
+2016-04-03 11:40:31	<--	Tempesta (Tempesta@61.74.200.211) has quit (Read error: Connection reset by peer)
+2016-04-03 11:40:44	-->	sergey_makagon (~sergey_ma@93.75.221.250) has joined #ruby
+2016-04-03 11:41:06	-->	Tempesta (Tempesta@61.74.200.211) has joined #ruby
+2016-04-03 11:41:29	Musashi007	I’m completely at a loss - It doesn’t work on heroku or locally
+2016-04-03 11:43:15	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2016-04-03 11:43:43	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 11:43:49	-->	djbkd_ (~djbkd@98.248.67.209) has joined #ruby
+2016-04-03 11:44:09	-->	Lomex_ (~Lomex@ip1f1358b9.dynamic.kabel-deutschland.de) has joined #ruby
+2016-04-03 11:44:12	-->	mr_oh (48188b4a@gateway/web/freenode/ip.72.24.139.74) has joined #ruby
+2016-04-03 11:46:51	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-03 11:47:07	-->	agit0 (~textual@lan.initlab.org) has joined #ruby
+2016-04-03 11:47:32	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-03 11:49:07	-->	kam270 (~kam270@115.84.116.236) has joined #ruby
+2016-04-03 11:49:10	<--	agit0 (~textual@lan.initlab.org) has quit (Read error: Connection reset by peer)
+2016-04-03 11:49:48	mr_oh	:-o
+2016-04-03 11:50:35	Musashi007	^.^
+2016-04-03 11:50:53	<--	Lomex_ (~Lomex@ip1f1358b9.dynamic.kabel-deutschland.de) has quit (Quit: Leaving...)
+2016-04-03 11:51:05	-->	Lomex_ (~Lomex@2a02:8108:4a40:9764:bdf8:8b63:6f8:3a8e) has joined #ruby
+2016-04-03 11:53:03	-->	blt (~blt@unaffiliated/swedishfish) has joined #ruby
+2016-04-03 11:53:10	-->	vale_tudo (~valetudo@cpe-75-190-176-87.carolina.res.rr.com) has joined #ruby
+2016-04-03 11:53:12	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 11:53:23	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has quit (Remote host closed the connection)
+2016-04-03 11:53:44	-->	Dios|2 (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has joined #ruby
+2016-04-03 11:54:42	-->	redasus (~redasus@183.82.43.68) has joined #ruby
+2016-04-03 11:55:11	<--	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 11:55:13	<--	axisys (~axisys@unaffiliated/axisys) has quit (Read error: Connection reset by peer)
+2016-04-03 11:55:25	<--	Dios (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 11:55:50	-->	dn` (~dn@b2b-94-79-140-106.unitymedia.biz) has joined #ruby
+2016-04-03 11:55:55	-->	Dios (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has joined #ruby
+2016-04-03 11:56:01	-->	LowLifePerv (~GitGud@unaffiliated/gitgud) has joined #ruby
+2016-04-03 11:56:40	<--	GitGud (~GitGud@unaffiliated/gitgud) has quit (Killed (leguin.freenode.net (Nickname regained by services)))
+2016-04-03 11:56:40	--	LowLifePerv is now known as gitgud
+2016-04-03 11:57:26	<--	djbkd_ (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 11:58:43	<--	Dios|2 (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 11:59:16	--	gitgud is now known as SpikeSpiegel
+2016-04-03 11:59:30	--	SpikeSpiegel is now known as GitGud
+2016-04-03 12:00:55	<--	Dios (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 12:01:42	<--	djbkd2 (~nodebot@98.248.67.209) has quit (Ping timeout: 250 seconds)
+2016-04-03 12:04:26	-->	firstdayonthejob (~firstdayo@cpc9-croy22-2-0-cust203.19-2.cable.virginm.net) has joined #ruby
+2016-04-03 12:04:59	<--	nando293921 (~fernando@64.189.57.235) has quit (Quit: Lost terminal)
+2016-04-03 12:05:34	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:07:05	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-03 12:07:41	<--	nando293921 (~fernando@64.189.57.235) has quit (Client Quit)
+2016-04-03 12:08:06	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:08:35	<--	GitGud (~GitGud@unaffiliated/gitgud) has quit (Excess Flood)
+2016-04-03 12:08:52	-->	solars (~solars@84-115-247-2.cable.dynamic.surfer.at) has joined #ruby
+2016-04-03 12:08:58	-->	GitGud (~GitGud@unaffiliated/gitgud) has joined #ruby
+2016-04-03 12:10:02	-->	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has joined #ruby
+2016-04-03 12:10:59	<--	nando293921 (~fernando@64.189.57.235) has quit (Client Quit)
+2016-04-03 12:11:23	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:11:32	-->	Dios (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has joined #ruby
+2016-04-03 12:11:51	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:12:00	-->	houhouli_ (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has joined #ruby
+2016-04-03 12:14:34	-->	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has joined #ruby
+2016-04-03 12:14:40	<--	joonty (~joonty@cpc4-harb9-2-0-cust194.perr.cable.virginm.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 12:15:06	<--	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has left #ruby
+2016-04-03 12:15:17	<--	nando293921 (~fernando@64.189.57.235) has quit (Client Quit)
+2016-04-03 12:15:22	<--	houhoulis (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 12:15:50	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:17:51	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 276 seconds)
+2016-04-03 12:18:54	-->	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has joined #ruby
+2016-04-03 12:19:35	mr_oh	Anyone willing to give me a nude in the right direction? Breaking a method up into 2 or more seperate methods. Current method has bothe variables/valculations, and 'printing' results.
+2016-04-03 12:19:44	mr_oh	a *nudge
+2016-04-03 12:20:08	mr_oh	jeebus... I can't type
+2016-04-03 12:20:53	 *	baweaver puts down ban hammer slowly
+2016-04-03 12:21:00	baweaver	have a gist?
+2016-04-03 12:21:07	-->	howdoi (uid224@gateway/web/irccloud.com/x-sclznwnjvpsydfej) has joined #ruby
+2016-04-03 12:22:02	mr_oh	yes
+2016-04-03 12:22:06	mr_oh	https://gist.github.com/c0ldT/3d34dc98b40ef3290ecf9ec79a8c746f
+2016-04-03 12:22:23	mr_oh	It's long. process_brands method, specifically
+2016-04-03 12:22:28	<--	the_drow (~the_drow@192.116.165.226) has quit (Read error: Connection reset by peer)
+2016-04-03 12:23:31	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-03 12:23:36	baweaver	https://coderpad.io/FCRZN9WR - let's work through it. Collab editor
+2016-04-03 12:24:56	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-03 12:24:57	-->	Dios|2 (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has joined #ruby
+2016-04-03 12:27:52	<--	Dios (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 12:32:19	-->	futilegames (~futilegam@146.185.20.156) has joined #ruby
+2016-04-03 12:32:54	mr_oh	baweaver: Is there chat in that, or just have to type comments?
+2016-04-03 12:32:58	-->	Jandre (~jhayes@163.47.16.94) has joined #ruby
+2016-04-03 12:33:00	<--	nando293921 (~fernando@64.189.57.235) has quit (Quit: Lost terminal)
+2016-04-03 12:33:09	baweaver	comments works. I have two monitors so either way works for me
+2016-04-03 12:33:23	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:33:35	-->	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has joined #ruby
+2016-04-03 12:33:55	<--	Jandre (~jhayes@163.47.16.94) has quit (Changing host)
+2016-04-03 12:33:55	-->	Jandre (~jhayes@unaffiliated/iamzim) has joined #ruby
+2016-04-03 12:36:30	<--	lrkr (~lurker@45.17.01a8.ip4.static.sl-reverse.com) has quit (Ping timeout: 246 seconds)
+2016-04-03 12:37:06	mr_oh	baweaver: is there a way to load the json in there?
+2016-04-03 12:37:15	<--	futilegames (~futilegam@146.185.20.156) has quit (Quit: futilegames)
+2016-04-03 12:38:40	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #ruby
+2016-04-03 12:38:54	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 12:39:13	baweaver	always forget that cmd q is quit on mac....
+2016-04-03 12:40:30	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:40:37	baweaver	there we go, got it in there.
+2016-04-03 12:40:55	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #ruby
+2016-04-03 12:43:09	-->	jt__ (~jt__@103-224-128-82.flip.co.nz) has joined #ruby
+2016-04-03 12:43:18	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 12:45:34	<--	nando293921 (~fernando@64.189.57.235) has quit (Quit: Lost terminal)
+2016-04-03 12:45:41	--	saneax_AFK is now known as saneax
+2016-04-03 12:45:59	-->	nando293921 (~fernando@64.189.57.235) has joined #ruby
+2016-04-03 12:46:01	<--	Dios|2 (~Dios@c-76-16-105-196.hsd1.in.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 12:46:27	-->	ljames (~ln@unaffiliated/ljames) has joined #ruby
+2016-04-03 12:46:51	-->	jkahn (~jkahn@209.197.20.216) has joined #ruby
+2016-04-03 12:46:53	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-03 12:47:29	<--	bkxd (~bkxd@pa49-195-109-222.pa.nsw.optusnet.com.au) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:48:22	<--	sigurding (~sigurding@p4FE1081E.dip0.t-ipconnect.de) has quit (Quit: sigurding)
+2016-04-03 12:48:36	<--	nando293921 (~fernando@64.189.57.235) has quit (Client Quit)
+2016-04-03 12:48:55	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Disconnected by services)
+2016-04-03 12:49:04	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #ruby
+2016-04-03 12:49:12	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:49:36	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #ruby
+2016-04-03 12:49:54	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-03 12:49:57	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Disconnected by services)
+2016-04-03 12:50:16	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #ruby
+2016-04-03 12:50:45	-->	codenamepod (~mdnb@103.198.172.184) has joined #ruby
+2016-04-03 12:51:43	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 268 seconds)
+2016-04-03 12:53:46	-->	CloCkWeRX (~clockwerx@124-171-188-162.dyn.iinet.net.au) has joined #ruby
+2016-04-03 12:54:12	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Remote host closed the connection)
+2016-04-03 12:54:47	-->	codecop (~codecop@86.100.62.63) has joined #ruby
+2016-04-03 12:54:52	<--	gh (~gh@unaffiliated/gh) has quit (Quit: Leaving)
+2016-04-03 12:54:52	-->	LoneHermit (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-03 12:54:53	<--	DoubleMalt (~DoubleMal@213-240-93-74.adsl.highway.telekom.at) has quit (Remote host closed the connection)
+2016-04-03 12:55:00	<--	codenamepod (~mdnb@103.198.172.184) has quit (Read error: No route to host)
+2016-04-03 12:55:13	-->	codenamepod (~mdnb@103.198.172.184) has joined #ruby
+2016-04-03 12:56:12	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 12:56:26	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-03 12:56:39	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:56:56	-->	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #ruby
+2016-04-03 12:57:01	-->	pawnbox (~pawnbox@106.51.141.87) has joined #ruby
+2016-04-03 12:57:18	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:58:36	<--	codenamepod (~mdnb@103.198.172.184) has quit (Read error: Connection reset by peer)
+2016-04-03 12:59:27	<--	LoneHermit (~lonehermi@199.231.245.197) has quit (Ping timeout: 276 seconds)
+2016-04-03 13:00:21	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-03 13:00:34	-->	pawnbox (~pawnbox@106.51.141.87) has joined #ruby
+2016-04-03 13:00:36	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-03 13:03:09	Eiam_	baweaver: coderpad.io is really cool
+2016-04-03 13:03:15	Eiam_	never thought I'd see it used on IRC
+2016-04-03 13:03:25	baweaver	indeed. I just wish it were free overall.
+2016-04-03 13:03:31	baweaver	I can make a few a month free at least.
+2016-04-03 13:03:43	-->	noService (~noService@unaffiliated/noservice) has joined #ruby
+2016-04-03 13:04:12	-->	car (~chroiss@p5B11D326.dip0.t-ipconnect.de) has joined #ruby
+2016-04-03 13:05:51	Eiam_	eh, gotta pay the bills
+2016-04-03 13:06:08	baweaver	indeed
+2016-04-03 13:06:25	baweaver	If it was something like $5 a month I'd gladly pay in
+2016-04-03 13:06:30	baweaver	I think it was 50 though
+2016-04-03 13:06:32	<--	jkahn (~jkahn@209.197.20.216) has quit (Remote host closed the connection)
+2016-04-03 13:06:58	-->	ruby[bot] (~butler@ruby/bot/ruboto) has joined #ruby
+2016-04-03 13:06:58	--	Mode #ruby [+o ruby[bot]] by ChanServ
+2016-04-03 13:07:12	Eiam_	oh, wow thats really steep
+2016-04-03 13:07:25	baweaver	Corps would pay it.
+2016-04-03 13:07:35	Eiam_	corps would want their own internal deploy ;)
+2016-04-03 13:07:44	<--	redasus (~redasus@183.82.43.68) has quit (Ping timeout: 268 seconds)
+2016-04-03 13:07:45	 *	baweaver sighs
+2016-04-03 13:07:48	Eiam_	(speaking as a corporate user, I'd never be allowed to use this outside our firewall)
+2016-04-03 13:07:51	baweaver	well you're not wrong
+2016-04-03 13:08:05	baweaver	I'm definitely in enterprise as well.
+2016-04-03 13:08:07	Eiam_	I know ;) Doesn't mean I enjoy being right
+2016-04-03 13:09:59	<--	codecop (~codecop@86.100.62.63) has quit (Remote host closed the connection)
+2016-04-03 13:12:17	mr_oh	I didn't know about coderpad. I'm shocked.. :)
+2016-04-03 13:13:07	-->	jackjackdripper (~Adium@c-73-15-62-30.hsd1.ca.comcast.net) has joined #ruby
+2016-04-03 13:13:22	Eiam_	the downside is it takes the discussion out of IRC
+2016-04-03 13:13:24	baweaver	do note I rarely have time to go this in depth on something.
+2016-04-03 13:13:28	Eiam_	where others could potentially contribute.
+2016-04-03 13:13:32	<--	jackjackdripper (~Adium@c-73-15-62-30.hsd1.ca.comcast.net) has quit (Client Quit)
+2016-04-03 13:13:41	baweaver	which is great
+2016-04-03 13:13:46	Eiam_	and if anything shows just another area where IRC really should be innovating
+2016-04-03 13:14:03	baweaver	I don't have Ox0dea or apeiros around to tell me I did something stupid :D
+2016-04-03 13:14:10	Eiam_	haha
+2016-04-03 13:14:20	Eiam_	well I joined the session and could have commented!
+2016-04-03 13:14:28	<--	Es0teric (~Es0teric@cpe-69-200-225-234.nyc.res.rr.com) has quit (Quit: Computer has gone to sleep.)
+2016-04-03 13:14:35	Eiam_	but my brain currently has swift paged in
+2016-04-03 13:14:35	baweaver	yeah, figured it was someone else on channel
+2016-04-03 13:15:15	baweaver	I'm reading the new Site Reliability Engineering book from O'Reilly while doing most of this.
+2016-04-03 13:15:38	mr_oh	If a bunch of folks from the irc channel jumped in, I could see it getting pretty chaotic though
+2016-04-03 13:15:56	mr_oh	If communication is just via #comments
+2016-04-03 13:16:13	-->	darkf_ (~darkf@unaffiliated/darkf) has joined #ruby
+2016-04-03 13:16:34	mr_oh	Well you've already given me a bunch to dig into
+2016-04-03 13:17:07	baweaver	Read through ruby enumerable
+2016-04-03 13:17:16	baweaver	&ri Enumerable#reduce
+2016-04-03 13:17:16	`derpy	http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-reduce
+2016-04-03 13:17:20	-->	sepp2k (~Sepp2k@x5ce0972e.dyn.telefonica.de) has joined #ruby
+2016-04-03 13:17:31	baweaver	that one especially, you can rewrite every single other function in there with reduce
+2016-04-03 13:17:33	<--	PlasmaStar (Plasma@unaffiliated/plasmastar) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:17:47	baweaver	in fact, give that a shot.
+2016-04-03 13:17:55	baweaver	that'd be one heck of an exercise
+2016-04-03 13:18:02	 *	baweaver goes to see if any of them can't be
+2016-04-03 13:18:13	<--	darkf (~darkf@unaffiliated/darkf) has quit (Ping timeout: 268 seconds)
+2016-04-03 13:18:36	forcer	Just because you can do something does not necessarily mean it's a good idea to do ...
+2016-04-03 13:19:03	baweaver	It doesn't, but it's more of a thought exercise than anything
+2016-04-03 13:19:13	forcer	Now, THAT is almost always a good idea! :-D
+2016-04-03 13:19:16	baweaver	one that's fairly common around Haskell exercises
+2016-04-03 13:19:50	baweaver	and also reveals the fact that reduce is one of the most versatile functions in Ruby
+2016-04-03 13:19:59	Eiam_	reduce is aweesome
+2016-04-03 13:20:07	mr_oh	I'll try it
+2016-04-03 13:20:08	baweaver	foldLeft tends to have a prominent place in FP as well.
+2016-04-03 13:20:26	Eiam_	reduce & map are probably my two most invoked methods
+2016-04-03 13:20:27	baweaver	remember you can return early
+2016-04-03 13:20:29	Eiam_	(in ruby anyway)
+2016-04-03 13:20:43	forcer	The more relevant question is usually which implementation is more readable.
+2016-04-03 13:20:48	baweaver	I think Lazy is the only one that can't be done.
+2016-04-03 13:20:53	Eiam_	mr_oh: there are plenty of ways to manage over commenting, IRC has implemented multiple.
+2016-04-03 13:21:03	Eiam_	ops, voices, mutes, etc etc
+2016-04-03 13:21:35	mr_oh	chatting in coderpad, I meant
+2016-04-03 13:21:35	baweaver	most of the ops can be found easy enough from their hostmask
+2016-04-03 13:21:47	baweaver	ruby/staff/nick
+2016-04-03 13:21:52	<--	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:22:09	Eiam_	mr_oh: same response. =) anyway, bedtime 2am
+2016-04-03 13:22:17	baweaver	which can be seen on join or by a /whois nick
+2016-04-03 13:22:33	baweaver	Eiam_: Cali?
+2016-04-03 13:22:35	-->	PlasmaStar (Plasma@unaffiliated/plasmastar) has joined #ruby
+2016-04-03 13:22:58	mr_oh	speaking of the FP world... I have all of the current Elixer.tv videos for future learning.  However, it might be a lonnng time learning ruby first
+2016-04-03 13:22:59	baweaver	well, west coast at least.
+2016-04-03 13:23:09	baweaver	Ruby will help
+2016-04-03 13:23:19	baweaver	and that reduce exercise will make a lot of things make sense.
+2016-04-03 13:23:38	baweaver	when going straight FP that is.
+2016-04-03 13:23:54	baweaver	because reduce is effectively tail recursion.
+2016-04-03 13:24:00	-->	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has joined #ruby
+2016-04-03 13:24:23	mr_oh	I'm kind of excited about the reduce excercise.  I'm sure I will stumble a lot, but oh well
+2016-04-03 13:24:36	baweaver	So implementing all those functions leads to insights in recursion.
+2016-04-03 13:25:24	-->	hinbody (~harley@64-71-8-179.static.wiline.com) has joined #ruby
+2016-04-03 13:26:12	<--	noService (~noService@unaffiliated/noservice) has quit (Ping timeout: 246 seconds)
+2016-04-03 13:29:07	-->	redasus (~redasus@183.82.43.68) has joined #ruby
+2016-04-03 13:29:45	-->	bkxd (~bkxd@pa49-195-112-151.pa.nsw.optusnet.com.au) has joined #ruby
+2016-04-03 13:29:49	<--	jt__ (~jt__@103-224-128-82.flip.co.nz) has quit (Remote host closed the connection)
+2016-04-03 13:32:52	--	darkf_ is now known as darkf
+2016-04-03 13:32:52	mr_oh	I owe you a coke
+2016-04-03 13:33:18	baweaver	don't sweat it mate.
+2016-04-03 13:33:19	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 13:33:25	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 13:33:35	baweaver	just pass it forward to the next person you see needing help
+2016-04-03 13:34:14	-->	ni291187 (~u931732@42-72-157-178.EMOME-IP.hinet.net) has joined #ruby
+2016-04-03 13:34:24	mr_oh	I will do my best
+2016-04-03 13:34:34	<--	ni291187 (~u931732@42-72-157-178.EMOME-IP.hinet.net) has left #ruby
+2016-04-03 13:35:44	<--	redasus (~redasus@183.82.43.68) has quit (Quit: Leaving)
+2016-04-03 13:35:51	<--	dnewkerk (~dnewkerk@108-212-133-154.lightspeed.irvnca.sbcglobal.net) has quit (Quit: dnewkerk)
+2016-04-03 13:36:30	<--	hinbody (~harley@64-71-8-179.static.wiline.com) has quit (Quit: leaving)
+2016-04-03 13:38:14	<--	sergey_makagon (~sergey_ma@93.75.221.250) has quit
+2016-04-03 13:38:20	-->	darkxploit (~darkxploi@197.224.151.239) has joined #ruby
+2016-04-03 13:39:36	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 13:40:14	<--	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has quit (Excess Flood)
+2016-04-03 13:40:14	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-03 13:41:43	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Remote host closed the connection)
+2016-04-03 13:42:43	-->	karioleez (~karioleez@ppp141255051016.access.hol.gr) has joined #ruby
+2016-04-03 13:42:53	-->	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has joined #ruby
+2016-04-03 13:43:54	<--	ropeney (~ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has quit (Remote host closed the connection)
+2016-04-03 13:44:05	-->	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has joined #ruby
+2016-04-03 13:44:06	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 13:44:07	<--	abyx (~abyx@pool-108-46-37-57.nycmny.fios.verizon.net) has quit (Client Quit)
+2016-04-03 13:44:37	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-03 13:44:46	-->	weemsledeux (~textual@unaffiliated/weems) has joined #ruby
+2016-04-03 13:45:02	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 13:45:59	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #ruby
+2016-04-03 13:46:01	<--	mr_oh (48188b4a@gateway/web/freenode/ip.72.24.139.74) has quit (Quit: Page closed)
+2016-04-03 13:46:45	-->	futilegames (~futilegam@146.185.20.156) has joined #ruby
+2016-04-03 13:46:54	<--	youch (~paul@ip184-186-21-187.no.no.cox.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 13:47:35	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-03 13:52:09	-->	lkba_ (~AndChat43@bpc219.neoplus.adsl.tpnet.pl) has joined #ruby
+2016-04-03 13:52:51	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-03 13:53:36	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-03 13:53:51	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-03 13:54:06	Musashi007	Guys, I have some ruby code that doesn’t seem to want to update from a database that I’m running. Would anyone be willing to look at it and offer some suggestions? https://gist.github.com/anonymous/054183723b927b9b2f302389391dab8b
+2016-04-03 13:54:14	<--	lkba (~AndChat43@aesp122.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 248 seconds)
+2016-04-03 13:56:37	<--	meal (meal@ns304336.ip-94-23-211.eu) has quit (Quit: Reconnecting)
+2016-04-03 13:56:44	-->	meal (meal@secure.enyuka-studio.com) has joined #ruby
+2016-04-03 13:58:17	<--	d0nn1e (~d0nn1e@cpe-75-183-8-113.triad.res.rr.com) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:59:06	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 13:59:52	-->	spider-mario (~spidermar@178-83-188-253.dynamic.hispeed.ch) has joined #ruby
+2016-04-03 14:00:09	<--	skweek (~skweek@72.91.152.136) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:00:36	-->	d0nn1e (~d0nn1e@cpe-75-183-8-113.triad.res.rr.com) has joined #ruby
+2016-04-03 14:02:30	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-04-03 14:04:34	-->	SCHAAP137 (~dorian@unaffiliated/schaap137) has joined #ruby
+2016-04-03 14:04:53	-->	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has joined #ruby
+2016-04-03 14:05:13	<--	skydiver (~skydiver@114.245.249.64) has quit (Ping timeout: 252 seconds)
+2016-04-03 14:06:09	-->	skade (~skade@ipservice-092-214-167-187.092.214.pools.vodafone-ip.de) has joined #ruby
+2016-04-03 14:07:05	-->	skydiver (~skydiver@222.128.150.18) has joined #ruby
+2016-04-03 14:11:36	<--	futilegames (~futilegam@146.185.20.156) has quit (Quit: futilegames)
+2016-04-03 14:12:12	<--	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-03 14:13:38	-->	hightower2 (~hightower@78-0-4-76.adsl.net.t-com.hr) has joined #ruby
+2016-04-03 14:13:48	<--	mekul (~mekul@14-200-9-80.static.tpgi.com.au) has quit (Ping timeout: 246 seconds)
+2016-04-03 14:15:18	<--	nhhc (~nhhc@14.169.111.215) has quit (Quit: Leaving)
+2016-04-03 14:16:53	-->	Meow-J (uid69628@gateway/web/irccloud.com/x-esozcdxxhixjfmrj) has joined #ruby
+2016-04-03 14:17:17	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:18:51	-->	DoubleMalt (~DoubleMal@mail.check-point.at) has joined #ruby
+2016-04-03 14:19:43	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-03 14:20:27	<--	eljimador (~James@24-52-219-146.cable.teksavvy.com) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:20:27	<--	eljimmy (~jimador@24-52-219-146.cable.teksavvy.com) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:21:13	-->	eljimmy (~James@24-52-219-146.cable.teksavvy.com) has joined #ruby
+2016-04-03 14:21:34	-->	zeroDivisible (~zeroDivis@87-198-38-181.ptr.magnet.ie) has joined #ruby
+2016-04-03 14:22:50	-->	eljimbo (~jimador@24-52-219-146.cable.teksavvy.com) has joined #ruby
+2016-04-03 14:23:11	<--	Eiam_ (~mine@unaffiliated/eiam) has quit (Quit: ╯°□°）╯︵ǝpouǝǝɹɟ)
+2016-04-03 14:23:33	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-03 14:24:03	<--	preyalone (uid21561@gateway/web/irccloud.com/x-wywamiibgstxccbj) has quit (Quit: Connection closed for inactivity)
+2016-04-03 14:24:04	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:24:56	-->	kirun (~kirun@82-71-16-154.dsl.in-addr.zen.co.uk) has joined #ruby
+2016-04-03 14:26:01	tildes	Musashi007: can you show MixerOptions::Workouts?
+2016-04-03 14:26:12	Musashi007	yes one sec
+2016-04-03 14:27:26	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Quit: Zai00)
+2016-04-03 14:30:02	Musashi007	https://gist.github.com/anonymous/2b652df6fd15561b021e2e9f0825fd36
+2016-04-03 14:31:10	<--	minimalism (~minimalis@unaffiliated/minimalism) has quit (Quit: minimalism)
+2016-04-03 14:31:52	<--	skydiver (~skydiver@222.128.150.18) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:32:12	<--	bkxd (~bkxd@pa49-195-112-151.pa.nsw.optusnet.com.au) has quit (Read error: Connection reset by peer)
+2016-04-03 14:34:02	tildes	Musashi007: I think normally you would use a controller to serve models to the view, rather than a module
+2016-04-03 14:34:15	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 14:34:15	-->	mekul (~mekul@14-200-9-80.static.tpgi.com.au) has joined #ruby
+2016-04-03 14:34:34	tildes	So you update Workout table somehow, and then can't see the effect in the view?
+2016-04-03 14:34:55	Musashi007	correct
+2016-04-03 14:34:59	Musashi007	Using pgadmin3
+2016-04-03 14:36:01	Musashi007	cute pgadmin is crashing atm lol
+2016-04-03 14:36:22	tildes	can you show YogaModels::Workout?
+2016-04-03 14:36:28	Musashi007	Well I’ll be
+2016-04-03 14:36:38	Musashi007	So I made these changes about 4 hours ago and couldn’t figure it out
+2016-04-03 14:36:43	Musashi007	I just reloaded it and it’s updated
+2016-04-03 14:36:50	Musashi007	I apologize for wasting your time
+2016-04-03 14:37:36	<--	lkba_ (~AndChat43@bpc219.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 276 seconds)
+2016-04-03 14:38:23	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-03 14:38:26	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-03 14:39:43	-->	Gasher (~gasher@x1-6-2c-b0-5d-55-61-02.cpe.webspeed.dk) has joined #ruby
+2016-04-03 14:40:25	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 14:40:42	tildes	Musashi007: I think it's good you asked. what do you see here? http://pastie.org/private/ebveidgimr1wto2fri2unq
+2016-04-03 14:41:07	tildes	(this could well explain what you saw earlier with your app)
+2016-04-03 14:41:15	Musashi007	oh jesus
+2016-04-03 14:41:29	tildes	amen :D
+2016-04-03 14:41:47	tildes	I any case, I would recommend using a Controller for serving the models to your views
+2016-04-03 14:41:53	-->	solocshaw (~Thunderbi@2601:2c6:4302:f131:98c8:730:d1b1:3fe6) has joined #ruby
+2016-04-03 14:42:06	Musashi007	I see mymodule::thing not getting updated to the current time?
+2016-04-03 14:42:22	tildes	it's not just more rails, it's more crud, more standard in every way
+2016-04-03 14:42:34	Musashi007	What do you mean?
+2016-04-03 14:42:45	-->	LoneHerm_ (~lonehermi@199.231.245.197) has joined #ruby
+2016-04-03 14:42:50	tildes	Musashi007: I had to try it myself, because I haven't used module constants much. but indeed, it seems that once loaded, the constant doesn't reload
+2016-04-03 14:43:13	-->	skweek (~skweek@72.91.152.136) has joined #ruby
+2016-04-03 14:43:19	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 268 seconds)
+2016-04-03 14:43:34	tildes	Musashi007: oh, I forgot it's not #rubyonrails. there you would use controllers, as per the model-view-controller thing
+2016-04-03 14:43:38	Musashi007	Not sure if this is something I should fix
+2016-04-03 14:43:41	-->	PedramT (~pedramt@80.66.191.249) has joined #ruby
+2016-04-03 14:43:43	tildes	so I don't really take a stand there
+2016-04-03 14:43:45	Musashi007	Or can..
+2016-04-03 14:44:06	tildes	Musashi007: what is your stack, as it is?
+2016-04-03 14:44:31	Musashi007	Gonna -try- to answer that and say that it’s heroku with an amazon db..
+2016-04-03 14:44:47	<--	diegoviola (~diego@unaffiliated/diegoviola) has quit (Quit: WeeChat 1.4)
+2016-04-03 14:44:54	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:45:37	--	saneax is now known as saneax_AFK
+2016-04-03 14:47:07	<--	LoneHerm_ (~lonehermi@199.231.245.197) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:47:13	-->	gh (~gh@unaffiliated/gh) has joined #ruby
+2016-04-03 14:47:39	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-03 14:50:16	<--	makufiru (uid67373@gateway/web/irccloud.com/x-barglzcwzhpkfviz) has quit (Quit: Connection closed for inactivity)
+2016-04-03 14:50:52	--	Mode #ruby [-bb Guest_98765!*@*$#ruby-banned *!*@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247$#ruby-banned] by ruby[bot]
+2016-04-03 14:52:01	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 14:52:17	<--	^mtkd (~mtkd@88.96.93.52) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:52:27	<--	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 14:52:34	-->	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has joined #ruby
+2016-04-03 14:52:56	-->	mtkd (~mtkd@88.96.93.52) has joined #ruby
+2016-04-03 14:53:52	-->	mdw (~mdw@94.119.65.2) has joined #ruby
+2016-04-03 14:54:02	Musashi007	@tildes thank you again
+2016-04-03 14:54:12	-->	m8 (~m8@unaffiliated/m8) has joined #ruby
+2016-04-03 14:54:26	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-03 14:55:27	-->	G (~njones@unaffiliated/g) has joined #ruby
+2016-04-03 14:55:29	-->	shafire (2573d886@gateway/web/freenode/ip.37.115.216.134) has joined #ruby
+2016-04-03 14:55:30	shafire	hi
+2016-04-03 14:55:40	shafire	does ruby have pipes or similar?
+2016-04-03 14:56:28	apeiros	shafire: it has pipes in its syntax. I suspect that's not what you're asking for, so maybe you want to be more specific?
+2016-04-03 14:58:00	-->	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has joined #ruby
+2016-04-03 14:58:04	<--	skade (~skade@ipservice-092-214-167-187.092.214.pools.vodafone-ip.de) has quit (Quit: Computer has gone to sleep.)
+2016-04-03 14:58:37	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-03 14:58:56	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-03 14:59:49	<--	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Ping timeout: 250 seconds)
+2016-04-03 15:01:01	<--	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has quit (Quit: Musashi007)
+2016-04-03 15:02:07	yxhuvud	apeiros: I'd guess he asks for what he would get as the first answer if he would google for it.
+2016-04-03 15:02:21	shafire	yxhuvud: yes
+2016-04-03 15:02:54	shafire	I am after chainable methods which ruby has when I remember correctly
+2016-04-03 15:03:43	-->	Chunlea_ (~chunlea@114.244.8.84) has joined #ruby
+2016-04-03 15:03:57	shafire	I am just thinking about the |> pipe operator in elixir if I could overload it in ruby with the same behaviour like in elixir
+2016-04-03 15:06:29	<--	Chunlea (~chunlea@114.244.9.39) has quit (Ping timeout: 244 seconds)
+2016-04-03 15:07:45	-->	dmr8 (~dmr8@77-173-244-181.ip.telfort.nl) has joined #ruby
+2016-04-03 15:08:38	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 15:08:44	<--	User458764 (~textual@62.147.220.187) has quit (Max SendQ exceeded)
+2016-04-03 15:09:13	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 15:10:45	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-03 15:10:48	-->	symm- (~symm-@5-12-100-136.residential.rdsnet.ro) has joined #ruby
+2016-04-03 15:11:58	-->	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has joined #ruby
+2016-04-03 15:12:19	-->	skade (~skade@ipservice-092-214-167-187.092.214.pools.vodafone-ip.de) has joined #ruby
+2016-04-03 15:12:47	<--	skade (~skade@ipservice-092-214-167-187.092.214.pools.vodafone-ip.de) has quit (Client Quit)
+2016-04-03 15:14:01	-->	sigurding (~sigurding@p4FE1081E.dip0.t-ipconnect.de) has joined #ruby
+2016-04-03 15:15:04	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:16:06	<--	PedramT (~pedramt@80.66.191.249) has quit (Remote host closed the connection)
+2016-04-03 15:16:59	<--	houhouli_ (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2016-04-03 15:18:27	<--	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 15:19:23	-->	Jackneill (~Jackneill@gateway/vpn/privateinternetaccess/jackneill) has joined #ruby
+2016-04-03 15:20:23	<--	Lomex_ (~Lomex@2a02:8108:4a40:9764:bdf8:8b63:6f8:3a8e) has quit (Remote host closed the connection)
+2016-04-03 15:20:34	-->	Lomex_ (~Lomex@2a02:8108:4a40:9764:bdf8:8b63:6f8:3a8e) has joined #ruby
+2016-04-03 15:21:07	-->	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #ruby
+2016-04-03 15:21:28	-->	PedramT (~pedramt@80.66.191.249) has joined #ruby
+2016-04-03 15:21:41	-->	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has joined #ruby
+2016-04-03 15:22:12	-->	x0f (~x0f@unaffiliated/x0f) has joined #ruby
+2016-04-03 15:22:35	<--	vikas027 (~textual@14-202-158-106.static.tpgi.com.au) has quit (Read error: Connection reset by peer)
+2016-04-03 15:24:23	-->	Asher (~asher@c-24-99-204-98.hsd1.ga.comcast.net) has joined #ruby
+2016-04-03 15:24:48	<--	Asher (~asher@c-24-99-204-98.hsd1.ga.comcast.net) has quit (Client Quit)
+2016-04-03 15:25:00	-->	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has joined #ruby
+2016-04-03 15:26:04	<--	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:26:37	<--	darkf (~darkf@unaffiliated/darkf) has quit (Read error: Connection reset by peer)
+2016-04-03 15:27:07	-->	darkf (~darkf@unaffiliated/darkf) has joined #ruby
+2016-04-03 15:27:12	-->	Asher (~asher@c-24-99-204-98.hsd1.ga.comcast.net) has joined #ruby
+2016-04-03 15:27:36	-->	binaryplease1 (~binaryple@xdsl-78-34-174-159.netcologne.de) has joined #ruby
+2016-04-03 15:28:37	<--	nanoz] (~nanoz@117.192.173.33) has quit (Read error: Connection reset by peer)
+2016-04-03 15:29:09	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 15:30:12	<--	binaryplease (~binaryple@xdsl-78-34-187-173.netcologne.de) has quit (Ping timeout: 260 seconds)
+2016-04-03 15:30:49	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 15:31:07	<--	Musashi007 (~Musashi1@c-67-188-182-196.hsd1.ca.comcast.net) has quit (Quit: Musashi007)
+2016-04-03 15:31:33	<--	workmad3 (~workmad3@cpc71475-bagu13-2-0-cust82.1-3.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2016-04-03 15:32:03	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-03 15:34:03	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 264 seconds)
+2016-04-03 15:35:30	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 15:37:04	--	binaryplease1 is now known as binaryplease
+2016-04-03 15:38:24	<--	gh (~gh@unaffiliated/gh) has quit (Quit: Leaving)
+2016-04-03 15:38:32	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-03 15:39:43	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-03 15:41:09	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 15:42:05	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-03 15:42:08	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-03 15:43:01	-->	cisco (~cisco@138.36.2.4) has joined #ruby
+2016-04-03 15:44:00	-->	PedramT_ (~pedramt@80.66.191.249) has joined #ruby
+2016-04-03 15:44:26	-->	Xiti (~Xiti-@unaffiliated/xiti) has joined #ruby
+2016-04-03 15:44:40	<--	PedramT (~pedramt@80.66.191.249) has quit (Read error: Connection reset by peer)
+2016-04-03 15:45:43	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 15:46:39	<--	CloCkWeRX (~clockwerx@124-171-188-162.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-03 15:47:16	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #ruby
+2016-04-03 15:47:17	-->	PedramT (~pedramt@80.66.191.250) has joined #ruby
+2016-04-03 15:48:52	<--	PedramT_ (~pedramt@80.66.191.249) has quit (Ping timeout: 260 seconds)
+2016-04-03 15:50:45	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-04-03 15:51:39	<--	PedramT (~pedramt@80.66.191.250) has quit (Ping timeout: 248 seconds)
+2016-04-03 15:51:53	<--	weemsledeux (~textual@unaffiliated/weems) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 15:55:51	<--	Asher (~asher@c-24-99-204-98.hsd1.ga.comcast.net) has quit (Quit: Leaving.)
+2016-04-03 15:57:03	<--	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2016-04-03 15:57:26	-->	solocshaw1 (~Thunderbi@c-98-201-200-223.hsd1.tx.comcast.net) has joined #ruby
+2016-04-03 15:57:45	<--	solocshaw (~Thunderbi@2601:2c6:4302:f131:98c8:730:d1b1:3fe6) has quit (Remote host closed the connection)
+2016-04-03 15:57:45	--	solocshaw1 is now known as solocshaw
+2016-04-03 15:58:44	-->	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has joined #ruby
+2016-04-03 15:59:26	-->	lalalaaa (~lalala@206.90-149-228.nextgentel.com) has joined #ruby
+2016-04-03 16:00:08	lalalaaa	Hi! Anybody know why I can't ruby-install without certificates anymore? % ruby-install ruby 2.3.0 --no-check-certificate
+2016-04-03 16:00:11	lalalaaa	ruby-install: unrecognized option --no-check-certificate
+2016-04-03 16:01:32	-->	CloCkWeRX (~clockwerx@173.245.209.133) has joined #ruby
+2016-04-03 16:01:51	<--	gheegh (~textual@pool-96-255-20-180.washdc.ftas.verizon.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-03 16:03:18	<--	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has quit (Ping timeout: 244 seconds)
+2016-04-03 16:05:54	<--	CloCkWeRX (~clockwerx@173.245.209.133) has quit (Client Quit)
+2016-04-03 16:11:33	<--	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has quit (Read error: Connection reset by peer)
+2016-04-03 16:12:34	-->	rolha (~textual@94.1.167.93) has joined #ruby
+2016-04-03 16:14:00	-->	Asher (~asher@c-24-99-204-98.hsd1.ga.comcast.net) has joined #ruby
+2016-04-03 16:15:02	<--	mekul (~mekul@14-200-9-80.static.tpgi.com.au) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:15:26	<--	shafire (2573d886@gateway/web/freenode/ip.37.115.216.134) has quit (Ping timeout: 250 seconds)
+2016-04-03 16:15:27	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:15:33	<--	darkxploit (~darkxploi@197.224.151.239) has quit (Ping timeout: 240 seconds)
+2016-04-03 16:15:34	<--	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has quit (Ping timeout: 252 seconds)
+2016-04-03 16:16:24	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-04-03 16:17:52	-->	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has joined #ruby
+2016-04-03 16:22:52	--	Mode #ruby [-bb Guest42536!*@*$#ruby-banned *!*@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254$#ruby-banned] by ruby[bot]
+2016-04-03 16:24:10	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-03 16:29:04	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has quit (Ping timeout: 250 seconds)
+2016-04-03 16:29:07	-->	darkxploit (~darkxploi@197.224.133.178) has joined #ruby
+2016-04-03 16:31:25	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:31:34	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-03 16:31:56	-->	darkxploit (~darkxploi@197.224.133.178) has joined #ruby
+2016-04-03 16:32:57	-->	scepticulous (~dsivia@x4e32f6cb.dyn.telefonica.de) has joined #ruby
+2016-04-03 16:33:34	<--	karioleez (~karioleez@ppp141255051016.access.hol.gr) has quit (Remote host closed the connection)
+2016-04-03 16:34:14	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:34:33	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 16:34:44	-->	darkxploit (~darkxploi@197.224.133.178) has joined #ruby
+2016-04-03 16:35:16	-->	dling` (~na@c83-251-125-158.bredband.comhem.se) has joined #ruby
+2016-04-03 16:35:16	<--	dling` (~na@c83-251-125-158.bredband.comhem.se) has quit (Client Quit)
+2016-04-03 16:35:16	-->	StyXman (~mdione@grulic/root/StyXman) has joined #ruby
+2016-04-03 16:35:52	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 244 seconds)
+2016-04-03 16:35:54	<--	bry4n_ (~brya2090@2602:306:805d:9c70:a4e7:a399:1927:1b80) has quit (Ping timeout: 246 seconds)
+2016-04-03 16:36:34	-->	djbkd (~djbkd@98.248.67.209) has joined #ruby
+2016-04-03 16:37:03	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:37:34	-->	darkxploit (~darkxploi@197.224.133.178) has joined #ruby
+2016-04-03 16:37:43	<--	darkf (~darkf@unaffiliated/darkf) has quit (Quit: Leaving)
+2016-04-03 16:38:57	-->	dling` (~na@c83-251-125-158.bredband.comhem.se) has joined #ruby
+2016-04-03 16:39:09	<--	dling (~na@c83-251-125-158.bredband.comhem.se) has quit (Ping timeout: 276 seconds)
+2016-04-03 16:39:33	<--	mdw (~mdw@94.119.65.2) has quit (Quit: Sleeping Zzzzz)
+2016-04-03 16:39:54	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:40:12	<--	peteykun (~Petey@14.139.128.19) has quit (Quit: Leaving)
+2016-04-03 16:41:15	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:42:03	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 16:42:59	-->	mdw (~mdw@94.119.66.57) has joined #ruby
+2016-04-03 16:43:49	StyXman	ah, drbrain, finally. someone in this channel pointed me to you as the go-to guy about extending rdoc. I found your rdoc-rake and I'm trying to use it as reference (is so far the more coplex extension I found), but it's rather difficult for me to read and understand it, as I'm rather new to Ruby: I came to it because we're using Chef. do you know of aguide or doc I could read abut it?
+2016-04-03 16:45:19	StyXman	what I'm trying to do is documente chef repos in a way that makes more sense to this kind of ruby code
+2016-04-03 16:45:28	<--	kith (~kith@unaffiliated/kith) has quit (Quit: kith)
+2016-04-03 16:45:56	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 16:46:18	<--	skweek (~skweek@72.91.152.136) has quit (Ping timeout: 276 seconds)
+2016-04-03 16:46:30	<--	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:46:30	<--	scepticulous (~dsivia@x4e32f6cb.dyn.telefonica.de) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:46:39	<--	toretore (~toretore@121-75-189-49.dyn.vf.net.nz) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:47:25	-->	TomyLobo (~TomyLobo@ip5b420175.dynamic.kabel-deutschland.de) has joined #ruby
+2016-04-03 16:47:47	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 16:47:57	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #ruby
+2016-04-03 16:48:26	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-03 16:48:43	-->	djbkd (~djbkd@98.248.67.209) has joined #ruby
+2016-04-03 16:50:03	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-03 16:51:22	<--	rolha (~textual@94.1.167.93) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 16:51:27	--	GitGud is now known as GG
+2016-04-03 16:52:36	-->	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #ruby
+2016-04-03 16:52:42	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 16:53:15	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #ruby
+2016-04-03 16:55:05	-->	tk__ (~tk@i223-216-16-224.s41.a022.ap.plala.or.jp) has joined #ruby
+2016-04-03 16:55:31	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-03 16:56:16	<--	jsaak (~jsaak@catv-176-63-198-232.catv.broadband.hu) has quit (Ping timeout: 252 seconds)
+2016-04-03 16:56:28	-->	freerobby1 (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #ruby
+2016-04-03 16:56:31	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 268 seconds)
+2016-04-03 16:57:29	<--	freerobby (~Adium@209-6-49-44.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has quit (Ping timeout: 260 seconds)
+2016-04-03 16:58:58	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-03 16:59:01	<--	dmr8 (~dmr8@77-173-244-181.ip.telfort.nl) has quit (Ping timeout: 252 seconds)
+2016-04-03 16:59:16	-->	User458764 (~textual@62.147.220.187) has joined #ruby
+2016-04-03 16:59:24	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-03 16:59:25	-->	dmr8 (~dmr8@77-173-244-181.ip.telfort.nl) has joined #ruby
+2016-04-03 17:00:18	<--	sigurding (~sigurding@p4FE1081E.dip0.t-ipconnect.de) has quit (Quit: sigurding)
+2016-04-03 17:00:39	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:01:21	-->	biberu (~biberu@c-88df71d5.08-441-7570702.cust.bredbandsbolaget.se) has joined #ruby
+2016-04-03 17:04:31	<--	nodejunkie (~nodejunki@S0106001c102395a9.vc.shawcable.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 17:04:33	<--	symm- (~symm-@5-12-100-136.residential.rdsnet.ro) has quit (Ping timeout: 240 seconds)
+2016-04-03 17:05:14	-->	adham128 (c1e33965@gateway/web/freenode/ip.193.227.57.101) has joined #ruby
+2016-04-03 17:05:17	<--	adham128 (c1e33965@gateway/web/freenode/ip.193.227.57.101) has left #ruby
+2016-04-03 17:05:20	-->	downlwil (~william@78-69-69-133-no170.tbcn.telia.com) has joined #ruby
+2016-04-03 17:05:20	-->	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has joined #ruby
+2016-04-03 17:05:31	downlwil	How do i convert Ruby to python?
+2016-04-03 17:06:05	apeiros	you read the code, then write python code
+2016-04-03 17:06:19	roelof	How to solve this one : https://gist.github.com/rwobben/8d9ec5376ae3e3d1b45c2ce2105cb163
+2016-04-03 17:06:20	<--	downlwil (~william@78-69-69-133-no170.tbcn.telia.com) has quit (Client Quit)
+2016-04-03 17:06:49	apeiros	roelof: define a method named `reverse_word`?
+2016-04-03 17:07:02	-->	madgen (~mistralco@global-5-146.nat-2.net.cam.ac.uk) has joined #ruby
+2016-04-03 17:07:41	--	GG is now known as timeup
+2016-04-03 17:07:46	roelof	apeiros: oke, but I have to use a block. and def reverse_word { |item| item.reverse }  is not working
+2016-04-03 17:08:05	-->	AndChat643025 (~AndChat64@16.159.93.92.rev.sfr.net) has joined #ruby
+2016-04-03 17:08:05	--	AndChat643025 is now known as akem
+2016-04-03 17:08:18	apeiros	and what do you think, why is it not working?
+2016-04-03 17:08:52	-->	noService (~noService@unaffiliated/noservice) has joined #ruby
+2016-04-03 17:09:17	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-03 17:09:19	roelof	A function needs a parameter and you cannot do {   ...  } in a function ?
+2016-04-03 17:09:48	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:09:49	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-03 17:10:08	roelof	but I just learned that a block looks like { ..... }
+2016-04-03 17:10:10	apeiros	the { … } is a parameter to a method. and you can define methods which do not require arguments.
+2016-04-03 17:10:23	<--	IrishGringo (~chatzilla@2601:586:c200:6eaa:8db6:f58:d085:cd34) has quit (Remote host closed the connection)
+2016-04-03 17:11:05	roelof	apeiros:  sorry, still confused
+2016-04-03 17:11:06	<--	car (~chroiss@p5B11D326.dip0.t-ipconnect.de) has quit (Quit: Leaving)
+2016-04-03 17:11:08	<--	camilasan (~quassel@ip5b42f499.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2016-04-03 17:11:37	--	timeup is now known as GitGud
+2016-04-03 17:11:46	apeiros	you can't use { … } in a method *definition*. and `def reverse_word` is a method definition.
+2016-04-03 17:11:55	apeiros	you do not need to declare that your method takes a block.
+2016-04-03 17:12:02	apeiros	it's just `def reverse_word`
+2016-04-03 17:12:09	apeiros	(+ method body, obv.)
+2016-04-03 17:12:44	-->	camilasan (~quassel@ip5b42f499.dynamic.kabel-deutschland.de) has joined #ruby
+2016-04-03 17:13:05	<--	robbyoconnor (~wakawaka@guifications/user/r0bby) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:13:14	<--	lalalaaa (~lalala@206.90-149-228.nextgentel.com) has quit (Ping timeout: 260 seconds)
+2016-04-03 17:13:43	<--	noService (~noService@unaffiliated/noservice) has quit (Ping timeout: 246 seconds)
+2016-04-03 17:14:06	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:15:27	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:17:06	roelof	apeiros:  oke, after some trying this seems to work : https://gist.github.com/rwobben/24e4b6f330aee08553953c307aac1521
+2016-04-03 17:17:41	adaedra	maybe if you tell us what you're trying to do it would be easier to understand
+2016-04-03 17:18:15	-->	IrishGringo (~chatzilla@2601:586:c200:6eaa:b49e:4133:96b7:1765) has joined #ruby
+2016-04-03 17:19:15	apeiros	roelof: this in all likeliness does not do what you think it does
+2016-04-03 17:19:22	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-03 17:19:22	apeiros	despite it being seemingly working
+2016-04-03 17:19:34	apeiros	but /me afk for now
+2016-04-03 17:21:05	-->	codecop (~codecop@86.100.62.63) has joined #ruby
+2016-04-03 17:21:24	<--	quazimodo (~quazimodo@155.143.14.28) has quit (Ping timeout: 276 seconds)
+2016-04-03 17:22:16	<--	akem (~AndChat64@16.159.93.92.rev.sfr.net) has quit (Remote host closed the connection)
+2016-04-03 17:22:44	roelof	apeiros:  oke.. what do I wrong then, I use a block and reverse the word
+2016-04-03 17:26:56	<--	r1nuz (~r1nuz@s529df19b.adsl.online.nl) has quit (Quit: l8rz)
+2016-04-03 17:27:21	<--	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Ping timeout: 246 seconds)
+2016-04-03 17:27:28	-->	krobzaur (~Kyle@c-75-68-113-231.hsd1.nh.comcast.net) has joined #ruby
+2016-04-03 17:29:02	<--	ohcibi (~quassel@2a01:4f8:171:e02::6) has quit (Remote host closed the connection)
+2016-04-03 17:29:12	roelof	adaedra:  as a challenge I have to write a function which reverse a word but I need to use a block
+2016-04-03 17:29:50	adaedra	you have to use a block where? As a parameter of your method, or in your method?
+2016-04-03 17:31:43	-->	mdw_ (~mdw@188.29.165.183.threembb.co.uk) has joined #ruby
+2016-04-03 17:31:46	-->	ohcibi (~quassel@2a01:4f8:171:e02::6) has joined #ruby
+2016-04-03 17:32:15	-->	PedramT (~pedramt@80.66.191.249) has joined #ruby
+2016-04-03 17:32:19	-->	bry4n_ (~brya2090@2602:306:805d:9c70:a4e7:a399:1927:1b80) has joined #ruby
+2016-04-03 17:33:02	-->	mdw__ (~mdw@188.29.165.33.threembb.co.uk) has joined #ruby
+2016-04-03 17:33:30	-->	rolha (~textual@94.1.167.93) has joined #ruby
+2016-04-03 17:33:35	roelof	adaedra: here is the spec file of the challenge ?
+2016-04-03 17:33:55	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-03 17:34:05	adaedra	what?
+2016-04-03 17:34:46	roelof	adaedra:  the challenge I try to solve
+2016-04-03 17:34:55	roelof	the reverse is the first rspec part
+2016-04-03 17:35:10	adaedra	where is your challenge?
+2016-04-03 17:35:21	-->	mdw___ (~mdw@94.119.66.57) has joined #ruby
+2016-04-03 17:35:24	<--	mdw (~mdw@94.119.66.57) has quit (Ping timeout: 260 seconds)
+2016-04-03 17:35:32	-->	_stu_ (~stu@c-68-41-9-195.hsd1.mi.comcast.net) has joined #ruby
+2016-04-03 17:36:15	<--	mdw_ (~mdw@188.29.165.183.threembb.co.uk) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:36:33	<--	PedramT (~pedramt@80.66.191.249) has quit (Ping timeout: 240 seconds)
+2016-04-03 17:36:37	<--	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 17:36:40	roelof	sorry I forget the link : https://github.com/zazenergy/Learn-Ruby/blob/master/05_silly_blocks/silly_blocks_spec.rb
+2016-04-03 17:37:06	<--	bry4n_ (~brya2090@2602:306:805d:9c70:a4e7:a399:1927:1b80) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:37:07	adaedra	ah.
+2016-04-03 17:37:43	<--	mdw__ (~mdw@188.29.165.33.threembb.co.uk) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:37:45	adaedra	ok, so you have to write a method that takes a block
+2016-04-03 17:38:34	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #ruby
+2016-04-03 17:39:18	<--	codecop (~codecop@86.100.62.63) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:39:55	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-04-03 17:40:08	-->	Ox0dea (~dea@unaffiliated/ox0dea) has joined #ruby
+2016-04-03 17:40:11	-->	Xeago (~Xeago@unaffiliated/xeago) has joined #ruby
+2016-04-03 17:40:15	<--	jonathanwallace_ (~jonathanw@47-32-109-79.dhcp.gwnt.ga.charter.com) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 17:40:23	Ox0dea	All methods take a block. :P
+2016-04-03 17:40:33	adaedra	shoo.
+2016-04-03 17:40:40	<--	Xeago (~Xeago@unaffiliated/xeago) has quit (Remote host closed the connection)
+2016-04-03 17:41:02	Ox0dea	And, but, well, the exercise seems like a better introduction to `yield` than Proc.
+2016-04-03 17:41:37	<--	polysics_ (~polysics@93.48.231.240) has quit (Remote host closed the connection)
+2016-04-03 17:41:45	adaedra	It clearly look that yield is to be used.
+2016-04-03 17:41:48	roelof	yep, so I tried yield but then I see a message that the method reverse is missing
+2016-04-03 17:41:58	adaedra	what did you try?
+2016-04-03 17:42:03	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:42:12	roelof	yield   , block.call
+2016-04-03 17:42:30	roelof	bu then every time a message that reverse is missing :(
+2016-04-03 17:42:34	adaedra	the complete file with all declarations that you run with your spec.
+2016-04-03 17:42:44	-->	kfpratt (~kfpratt@node-1w7jr9ya3pf6l8v9qvstx6nnj.ipv6.telus.net) has joined #ruby
+2016-04-03 17:42:44	roelof	oke, moment
+2016-04-03 17:43:40	roelof	adaedra:  you mean this : https://gist.github.com/rwobben/1981289b4cf28e13cc5713b4535d8df7
+2016-04-03 17:44:07	-->	GodFather (~rcc@71-82-75-229.dhcp.bycy.mi.charter.com) has joined #ruby
+2016-04-04 10:56:50	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #ruby
+2016-04-04 10:56:50	--	Topic for #ruby is "Rules & more: http://ruby-community.com || Ruby 2.3.0; 2.2.4; 2.1.9: https://ruby-lang.org || Paste >3 lines of text on https://gist.github.com || logs @ http://irclog.whitequark.org/ruby/"
+2016-04-04 10:56:50	--	Topic set by havenwood (~Havenn@ruby/staff/havenwood) on Sat, 02 Apr 2016 06:30:22
+2016-04-04 10:56:51	--	Channel #ruby: 960 nicks (1 op, 0 voices, 959 normals)
+2016-04-04 10:56:51	--	PvNotice(ChanServ): Welcome to the ruby channel. Please be nice. http://ruby-community.com || https://ruby-lang.org || Paste >3 lines: https://gist.github.com || Ask good questions: http://www.mikeash.com/getting_answers.html || log @ http://irclog.whitequark.org/ruby/
+2016-04-04 10:56:55	--	Channel created on Sun, 26 Nov 2006 10:12:45
+2016-04-04 10:57:31	-->	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has joined #ruby
+2016-04-04 10:59:18	<--	shmuli (~shmuli@2605:e000:6344:2f00:787c:b598:daed:b6df) has quit (Remote host closed the connection)
+2016-04-04 10:59:34	-->	brt (~brt@87.116.18.16) has joined #ruby
+2016-04-04 10:59:55	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 248 seconds)
+2016-04-04 11:01:09	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Remote host closed the connection)
+2016-04-04 11:01:45	-->	mistermocha (~mistermoc@99-185-46-156.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-04 11:03:10	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 11:03:38	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:04:44	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-04 11:05:42	-->	neanderslob_ (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has joined #ruby
+2016-04-04 11:05:52	-->	anisha (~anisha@123.252.232.207) has joined #ruby
+2016-04-04 11:06:10	<--	mistermocha (~mistermoc@99-185-46-156.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:06:20	-->	astrobun_ (~astrobunn@p4367024-ipngn23601marunouchi.tokyo.ocn.ne.jp) has joined #ruby
+2016-04-04 11:06:29	roelof	baweaver:  thanks again and have a good evening/day
+2016-04-04 11:06:37	baweaver	np
+2016-04-04 11:07:01	<--	brt (~brt@87.116.18.16) has quit (Quit: peace)
+2016-04-04 11:07:43	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:09:16	<--	nando293921 (~fernando@64.189.57.242) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:09:22	<--	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has quit (Read error: Connection reset by peer)
+2016-04-04 11:11:06	<--	firstdayonthejob (~firstdayo@cpc9-croy22-2-0-cust203.19-2.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:11:07	-->	pandaant (~batman@149.201.240.93) has joined #ruby
+2016-04-04 11:11:28	-->	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has joined #ruby
+2016-04-04 11:11:54	<--	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has quit (Quit: Page closed)
+2016-04-04 11:13:10	<--	Cohedrin (~textual@c-50-131-222-27.hsd1.ca.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:13:40	-->	hk238 (~kvirc@t224.ip7.netikka.fi) has joined #ruby
+2016-04-04 11:13:54	<--	bluOxigen (a@unaffiliated/bluOxigen) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:14:35	<--	sekrit (charitwo@freenode/staff/c) has quit (Changing host)
+2016-04-04 11:14:35	-->	sekrit (charitwo@freenode/staff/wikimedia.charitwo) has joined #ruby
+2016-04-04 11:14:58	<--	Musashi007 (~Musashi1@173.241.31.85) has quit (Quit: Musashi007)
+2016-04-04 11:15:07	-->	jdelaney (~textual@cpe-76-88-60-48.san.res.rr.com) has joined #ruby
+2016-04-04 11:15:19	-->	andikr (quassel@nat/ibm/x-vcteyqkrqlvlyify) has joined #ruby
+2016-04-04 11:15:36	-->	Musashi007 (~Musashi1@173.241.31.85) has joined #ruby
+2016-04-04 11:16:27	-->	RubyPadawan_ (~RubyPadaw@121.121.81.77) has joined #ruby
+2016-04-04 11:16:33	-->	atmosx (~bsd@nikki.convalesco.org) has joined #ruby
+2016-04-04 11:16:40	<--	edwinvdgraaf (~edwinvdgr@095-096-024-193.static.chello.nl) has quit (Remote host closed the connection)
+2016-04-04 11:17:19	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-04 11:17:41	-->	Dimik (~Dimik@pool-108-41-42-179.nycmny.fios.verizon.net) has joined #ruby
+2016-04-04 11:17:57	--	RubyPadawan_ is now known as RubyJedi-ing
+2016-04-04 11:20:20	-->	bigkevmcd (~kevin@cpc83611-ruth10-2-0-cust205.14-1.cable.virginm.net) has joined #ruby
+2016-04-04 11:20:56	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #ruby
+2016-04-04 11:21:02	<--	sandstrom (~sandstrom@unaffiliated/sandstrom) has quit (Client Quit)
+2016-04-04 11:21:09	<--	langy (~langy@38.4b.01a8.ip4.static.sl-reverse.com) has quit (Ping timeout: 248 seconds)
+2016-04-04 11:21:41	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:22:09	-->	codecop (~codecop@86.100.62.63) has joined #ruby
+2016-04-04 11:22:11	-->	codecop_ (~codecop@86.100.62.63) has joined #ruby
+2016-04-04 11:22:23	<--	codecop_ (~codecop@86.100.62.63) has quit (Remote host closed the connection)
+2016-04-04 11:22:42	-->	dn` (~dn@b2b-94-79-140-106.unitymedia.biz) has joined #ruby
+2016-04-04 11:22:46	-->	shmuli (~shmuli@cpe-76-89-174-85.socal.res.rr.com) has joined #ruby
+2016-04-04 11:24:16	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:24:25	<--	tristanp (~tristanp@c-50-159-71-64.hsd1.wa.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 11:24:38	<--	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:25:28	<--	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has quit (Quit: cheerio)
+2016-04-04 11:25:57	-->	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has joined #ruby
+2016-04-04 11:26:41	<--	astrobun_ (~astrobunn@p4367024-ipngn23601marunouchi.tokyo.ocn.ne.jp) has quit (Remote host closed the connection)
+2016-04-04 11:27:54	-->	ta_ (~ta@0133901099.0.fullrate.ninja) has joined #ruby
+2016-04-04 11:28:07	<--	statelesscode (~stateless@cpe-71-70-139-81.nc.res.rr.com) has quit (Quit: statelesscode)
+2016-04-04 11:29:35	-->	tristanp (~tristanp@c-50-159-71-64.hsd1.wa.comcast.net) has joined #ruby
+2016-04-04 11:30:10	-->	biberu (~biberu@c-7fd871d5.08-441-7570702.cust.bredbandsbolaget.se) has joined #ruby
+2016-04-04 11:30:29	<--	jdelaney (~textual@cpe-76-88-60-48.san.res.rr.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:31:03	<--	CloCkWeRX (~clockwerx@173.245.209.140) has quit (Ping timeout: 264 seconds)
+2016-04-04 11:31:11	zenspider	baweaver: .call or []... so adder[3] would work
+2016-04-04 11:31:19	zenspider	and... I think .() ?
+2016-04-04 11:31:24	baweaver	yeah, I was getting used to scala again
+2016-04-04 11:31:28	zenspider	but that's newfangled ruby
+2016-04-04 11:31:30	baweaver	all 3 work
+2016-04-04 11:31:32	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 11:31:39	zenspider	and I rather don't like it :)
+2016-04-04 11:31:45	baweaver	I just have a habit of using parens for it
+2016-04-04 11:31:55	<--	x0f (~x0f@unaffiliated/x0f) has quit (Ping timeout: 248 seconds)
+2016-04-04 11:32:07	-->	pawnbox (~pawnbox@106.51.37.116) has joined #ruby
+2016-04-04 11:32:41	baweaver	then I see the error and wonder for a few minutes, remember, and then realize what I did.
+2016-04-04 11:32:44	-->	bluOxigen (~a@unaffiliated/bluOxigen) has joined #ruby
+2016-04-04 11:32:56	-->	x0f (~x0f@unaffiliated/x0f) has joined #ruby
+2016-04-04 11:33:07	zenspider	*nod* me too
+2016-04-04 11:33:09	baweaver	here's to hoping ruby 3 fixes that.
+2016-04-04 11:33:18	zenspider	I just like [] over .call... just uglier
+2016-04-04 11:33:26	<--	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has quit (Remote host closed the connection)
+2016-04-04 11:33:28	baweaver	or .()
+2016-04-04 11:33:36	baweaver	that'd really confuse me at a glance
+2016-04-04 11:33:40	-->	ta__ (~ta@80-62-116-17-mobile.dk.customer.tdc.net) has joined #ruby
+2016-04-04 11:33:41	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 11:34:01	baweaver	call is the most explicit, [] almost gets me to think array/hash from a glance
+2016-04-04 11:34:15	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-04 11:34:20	baweaver	then again I'm using Scala heavily instead of Ruby for work now.
+2016-04-04 11:34:24	<--	cd-rum (~textual@167.160.116.61) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-04 11:34:53	baweaver	about the same as using semicolons in ruby or accidentally console.log()ing everything
+2016-04-04 11:35:08	<--	vsdfs (~vsdfs@155.254.33.177) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:35:09	<--	ericlee (~ericlee@2601:647:4502:f510::4) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:36:00	<--	ta_ (~ta@0133901099.0.fullrate.ninja) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:36:14	baweaver	context switch leads to interesting code some times.
+2016-04-04 11:36:15	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #ruby
+2016-04-04 11:36:39	<--	vondruch (~vondruch@ip-94-112-83-153.net.upcbroadband.cz) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:38:17	<--	fedexo (~quassel@2602:30a:c021:5bf0:85e8:b498:1dd8:f795) has quit (Ping timeout: 250 seconds)
+2016-04-04 11:38:26	-->	madgen (~mistralco@cpc92876-cmbg18-2-0-cust31.5-4.cable.virginm.net) has joined #ruby
+2016-04-04 11:39:28	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:40:58	-->	haxrbyte (~haxrbyte@vc-gp-n-105-246-14-228.umts.vodacom.co.za) has joined #ruby
+2016-04-04 11:41:24	<--	haxrbyte (~haxrbyte@vc-gp-n-105-246-14-228.umts.vodacom.co.za) has quit (Client Quit)
+2016-04-04 11:42:23	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #ruby
+2016-04-04 11:42:29	<--	Ropeney (~Ropeney@tank.mindvision.com.au) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:42:58	<--	bluOxigen (~a@unaffiliated/bluOxigen) has quit (Read error: Connection reset by peer)
+2016-04-04 11:43:10	-->	bluOxigen (~a@unaffiliated/bluOxigen) has joined #ruby
+2016-04-04 11:44:23	--	GitGud is now known as GG
+2016-04-04 11:45:03	<--	rmulliga` (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has quit (Remote host closed the connection)
+2016-04-04 11:45:16	-->	mark2 (~petruilie@62.231.92.162) has joined #ruby
+2016-04-04 11:45:38	<--	tristanp (~tristanp@c-50-159-71-64.hsd1.wa.comcast.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:45:38	-->	Alayde (~saint@c-67-171-250-207.hsd1.wa.comcast.net) has joined #ruby
+2016-04-04 11:45:41	colegatron	Hello.
+2016-04-04 11:46:12	-->	ericlee (~ericlee@2601:647:4502:f510:6e88:14ff:fef4:da90) has joined #ruby
+2016-04-04 11:47:01	-->	tristanp (~tristanp@c-50-159-71-64.hsd1.wa.comcast.net) has joined #ruby
+2016-04-04 11:48:29	-->	jdelaney (~textual@cpe-76-88-60-48.san.res.rr.com) has joined #ruby
+2016-04-04 11:48:36	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:48:52	-->	mhoungbo (~mhoungbo@41.85.189.161) has joined #ruby
+2016-04-04 11:48:58	-->	pwnd_nsfw (~pwnd_@2606:a000:f884:fa00:1938:9271:2dbb:27a4) has joined #ruby
+2016-04-04 11:49:00	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 11:49:13	-->	pawnbox (~pawnbox@106.51.37.116) has joined #ruby
+2016-04-04 11:49:37	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-04 11:49:55	-->	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has joined #ruby
+2016-04-04 11:50:19	<--	jdelaney (~textual@cpe-76-88-60-48.san.res.rr.com) has quit (Client Quit)
+2016-04-04 11:50:30	-->	htmldrum (~htmldrum@49.255.234.58) has joined #ruby
+2016-04-04 11:51:36	-->	SCHAAP137 (~dorian@unaffiliated/schaap137) has joined #ruby
+2016-04-04 11:51:56	-->	lkba_ (~AndChat43@aepx75.neoplus.adsl.tpnet.pl) has joined #ruby
+2016-04-04 11:51:56	<--	lkba_ (~AndChat43@aepx75.neoplus.adsl.tpnet.pl) has quit (Remote host closed the connection)
+2016-04-04 11:52:01	-->	AndChat-43764 (~AndChat43@aepx75.neoplus.adsl.tpnet.pl) has joined #ruby
+2016-04-04 11:52:28	<--	shmuli (~shmuli@cpe-76-89-174-85.socal.res.rr.com) has quit (Remote host closed the connection)
+2016-04-04 11:53:18	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 11:53:30	<--	mwlang (~mwlang@ip72-199-114-191.sd.sd.cox.net) has quit (Quit: mwlang)
+2016-04-04 11:53:54	<--	anisha (~anisha@123.252.232.207) has quit (Quit: Leaving)
+2016-04-04 11:54:56	<--	berserk_ren (~berserk_r@217.117.18.139) has quit (Remote host closed the connection)
+2016-04-04 11:54:59	<--	Alayde (~saint@c-67-171-250-207.hsd1.wa.comcast.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:55:12	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:55:27	<--	lkba (~AndChat43@bpc219.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 246 seconds)
+2016-04-04 11:56:58	-->	CloCkWeRX (~clockwerx@124-171-188-162.dyn.iinet.net.au) has joined #ruby
+2016-04-04 11:57:56	-->	kam270 (~kam270@115.84.116.228) has joined #ruby
+2016-04-04 11:58:00	-->	last_staff (~Thunderbi@195.18.146.5) has joined #ruby
+2016-04-04 11:58:50	-->	David_H_Smith (~dhsmith@206-212-235-34.dynamic.onlinenw.com) has joined #ruby
+2016-04-04 12:00:27	<--	dnewkerk (~dnewkerk@23.240.6.98) has quit (Quit: dnewkerk)
+2016-04-04 12:01:03	<--	David_H__ (~dhsmith@206-212-235-34.dynamic.onlinenw.com) has quit (Ping timeout: 240 seconds)
+2016-04-04 12:02:44	-->	astrobun_ (~astrobunn@p4367024-ipngn23601marunouchi.tokyo.ocn.ne.jp) has joined #ruby
+2016-04-04 12:03:02	-->	full_throttle (~yan@108-214-81-103.lightspeed.irvnca.sbcglobal.net) has joined #ruby
+2016-04-04 12:03:11	-->	vondruch (vondruch@nat/redhat/x-cuvoshqdmnawhqlf) has joined #ruby
+2016-04-04 12:03:35	-->	null__ (~null@unaffiliated/null/x-1905186) has joined #ruby
+2016-04-04 12:04:02	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 12:04:28	<--	Musashi007 (~Musashi1@173.241.31.85) has quit (Quit: Musashi007)
+2016-04-04 12:04:45	-->	atmosx_alt (~bsd@nikki.convalesco.org) has joined #ruby
+2016-04-04 12:04:53	-->	ItSAN____ (~itsango@zaq7ac458cb.zaq.ne.jp) has joined #ruby
+2016-04-04 12:05:35	<--	DrCode (~DrCode@5.28.134.3) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:05:54	<--	Papierkorb (papierkorb@endless-aerospace.de) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:06:01	<--	crank1988 (~crank1988@ip-217-103-58-150.ip.prioritytelecom.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:06:36	<--	ItSANgo (~itsango@zaq7ac458cb.zaq.ne.jp) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:06:36	<--	M-Kodo (kodomatrix@gateway/shell/matrix.org/x-ztpgatmxuhngjxxz) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:06:53	<--	duderonomy (~duderonom@c-73-189-177-212.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:06:53	<--	Cyrus (~Cyrus@unaffiliated/cyrus) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:13	<--	majuscule (~majuscule@disinclined.org) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:13	<--	apeiros (~apeiros@ruby/staff/apeiros) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:19	<--	jinie (~jimmy@vile.thoughtcrime.dk) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:45	<--	pikajude (~ident@unaffiliated/otters) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:50	<--	atmosx (~bsd@nikki.convalesco.org) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:56	-->	RubyJedi-ing_ (~RubyJedii@121.121.81.77) has joined #ruby
+2016-04-04 12:08:03	-->	armyriad (~armyriad@198.8.80.73) has joined #ruby
+2016-04-04 12:08:11	<--	colegatron (~colegatro@126.Red-79-150-204.dynamicIP.rima-tde.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:08:30	<--	kam270 (~kam270@115.84.116.228) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:08:59	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:08:59	-->	DrCode (~DrCode@5.28.134.3) has joined #ruby
+2016-04-04 12:09:03	<--	smoose (~cinch@unixy.org) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:12	<--	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has quit (Remote host closed the connection)
+2016-04-04 12:09:21	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-04 12:09:23	-->	smoose (~cinch@unixy.org) has joined #ruby
+2016-04-04 12:09:29	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:29	<--	iNs (~ins@krowkirobia.mooo.com) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:29	<--	speakingcode (~unknown@173-12-244-146-memphis.hfc.comcastbusiness.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:34	-->	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has joined #ruby
+2016-04-04 12:09:41	<--	RubyJedi-ing (~RubyPadaw@121.121.81.77) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:41	<--	Guest70829 (~C0deMaver@host-184-174-150-34.FAROLT1.epbfi.com) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:41	<--	djellemah (~djellemah@dsl-197-245-182-26.voxdsl.co.za) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:48	<--	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has quit (Remote host closed the connection)
+2016-04-04 12:09:50	-->	Some-body_ (~Vetinari@znc/developer/DarthGandalf) has joined #ruby
+2016-04-04 12:09:56	-->	crank1988 (~crank1988@ip-217-103-58-150.ip.prioritytelecom.net) has joined #ruby
+2016-04-04 12:10:02	--	atmosx_alt is now known as atmosx
+2016-04-04 12:10:09	-->	Papierkorb (papierkorb@endless-aerospace.de) has joined #ruby
+2016-04-04 12:10:21	-->	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has joined #ruby
+2016-04-04 12:10:45	-->	htmldrum (~htmldrum@49.255.234.58) has joined #ruby
+2016-04-04 12:10:47	<--	bweston92 (~bweston92@188-39-106-2.static.enta.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:10:47	<--	DarthGandalf (~Vetinari@znc/developer/DarthGandalf) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:10:52	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-04 12:10:54	-->	pikajude (~fox_mcclo@jude.bio) has joined #ruby
+2016-04-04 12:10:54	<--	pikajude (~fox_mcclo@jude.bio) has quit (Changing host)
+2016-04-04 12:10:54	-->	pikajude (~fox_mcclo@unaffiliated/otters) has joined #ruby
+2016-04-04 12:11:00	--	Some-body_ is now known as DarthGandalf
+2016-04-04 12:11:31	-->	speakingcode (~unknown@173-12-244-146-memphis.hfc.comcastbusiness.net) has joined #ruby
+2016-04-04 12:11:34	-->	C0deMaver1ck (~C0deMaver@host-184-174-150-34.FAROLT1.epbfi.com) has joined #ruby
+2016-04-04 12:11:57	--	C0deMaver1ck is now known as Guest63020
+2016-04-04 12:11:58	-->	M-Kodo (kodomatrix@gateway/shell/matrix.org/x-dspabxebnzryajdq) has joined #ruby
+2016-04-04 12:12:09	-->	jinie (~jimmy@vile.thoughtcrime.dk) has joined #ruby
+2016-04-04 12:12:43	-->	iNs (~ins@krowkirobia.mooo.com) has joined #ruby
+2016-04-04 12:13:05	-->	djellemah (~djellemah@dsl-197-245-182-26.voxdsl.co.za) has joined #ruby
+2016-04-04 12:13:06	-->	Cyrus (~Cyrus@unixy.org) has joined #ruby
+2016-04-04 12:13:10	-->	apeiros (~apeiros@ruby/staff/apeiros) has joined #ruby
+2016-04-04 12:13:22	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-04 12:13:29	--	Cyrus is now known as Guest78435
+2016-04-04 12:13:36	-->	_blizzy_ (~Blizzard@2607:fcc8:be4f:d100:20cb:dfce:2f95:e999) has joined #ruby
+2016-04-04 12:14:09	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-04 12:14:24	-->	majuscule (~majuscule@disinclined.org) has joined #ruby
+2016-04-04 12:14:47	-->	colegatron (~colegatro@126.red-79-150-204.dynamicip.rima-tde.net) has joined #ruby
+2016-04-04 12:15:01	-->	bweston92 (~bweston92@188-39-106-2.static.enta.net) has joined #ruby
+2016-04-04 12:15:59	-->	shmuli (~shmuli@2605:e000:6344:2f00:840c:cae1:a6c5:b7) has joined #ruby
+2016-04-04 12:17:04	-->	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has joined #ruby
+2016-04-04 12:17:17	<--	rmulligan (~user@2605:e000:6a4f:4c00:1995:5f58:31f0:bb7) has quit (Remote host closed the connection)
+2016-04-04 12:18:19	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:19:09	-->	TheHodge (uid4647@gateway/web/irccloud.com/x-lainzfcsufycmrwt) has joined #ruby
+2016-04-04 12:22:03	-->	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-04 12:22:15	-->	edwinvdgraaf (~edwinvdgr@31.223.173.138) has joined #ruby
+2016-04-04 12:25:15	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:28:09	<--	skade (~skade@62.225.39.28) has quit (Quit: Computer has gone to sleep.)
+2016-04-04 12:28:43	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-04 12:29:28	-->	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has joined #ruby
+2016-04-04 12:29:34	<--	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has left #ruby
+2016-04-04 12:29:42	-->	tmtwd (~tmtwd@104.247.236.230) has joined #ruby
+2016-04-04 12:31:31	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 12:32:07	-->	ferr (~ferr@81-7-68-230.static.zebra.lt) has joined #ruby
+2016-04-04 12:32:48	<--	skade (~skade@62.225.39.28) has quit (Read error: Connection reset by peer)
+2016-04-04 12:33:06	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 12:34:11	-->	jaruga_ (jaruga@nat/redhat/x-tfkgqgfccbgaklll) has joined #ruby
+2016-04-04 12:34:19	<--	skade (~skade@62.225.39.28) has quit (Client Quit)
+2016-04-04 12:35:00	-->	moeabdol (~moeabdol@2.91.133.165) has joined #ruby
+2016-04-04 12:35:04	<--	jaruga_ (jaruga@nat/redhat/x-tfkgqgfccbgaklll) has quit (Client Quit)
+2016-04-04 12:35:24	<--	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has quit (Quit: benlieb)
+2016-04-04 12:35:46	-->	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-04 12:35:59	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #ruby
+2016-04-04 12:36:00	<--	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has quit (Client Quit)
+2016-04-04 12:36:52	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 12:37:06	-->	anisha (~anisha@123.252.232.207) has joined #ruby
+2016-04-04 12:38:28	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 12:39:31	-->	htmldrum (~htmldrum@49.255.234.58) has joined #ruby
+2016-04-04 12:39:34	-->	c4ss1e (~Cassie@c.06.01a8.ip4.static.sl-reverse.com) has joined #ruby
+2016-04-04 12:40:03	<--	full_throttle (~yan@108-214-81-103.lightspeed.irvnca.sbcglobal.net) has left #ruby
+2016-04-04 12:41:47	<--	Skelz0r (delmaire20@perso.iiens.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:42:00	-->	blaxter (~blaxter@83.138.254.246.dyn.user.ono.com) has joined #ruby
+2016-04-04 12:42:52	<--	jt__ (~jt__@103-224-128-63.flip.co.nz) has quit (Remote host closed the connection)
+2016-04-04 12:43:57	-->	yardenbar (~yarden@82.166.98.41) has joined #ruby
+2016-04-04 12:45:09	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:45:46	<--	ta__ (~ta@80-62-116-17-mobile.dk.customer.tdc.net) has quit (Remote host closed the connection)
+2016-04-04 12:46:43	-->	ta_ (~ta@0133902281.0.fullrate.ninja) has joined #ruby
+2016-04-04 12:48:58	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-04 12:50:02	<--	armyriad (~armyriad@198.8.80.73) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:50:28	-->	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has joined #ruby
+2016-04-04 12:51:01	<--	smathy (~smathy@ruby/staff/smathy) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 12:51:23	<--	mtkd (~mtkd@88.96.93.52) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:52:01	-->	ta__ (~ta@0133902281.0.fullrate.ninja) has joined #ruby
+2016-04-04 12:52:31	<--	ssiris (~siris@2601:640:8305:1a:1f8b:1541:d97e:f583) has quit (Quit: End of Line)
+2016-04-04 12:52:34	-->	mtkd (~mtkd@88.96.93.52) has joined #ruby
+2016-04-04 12:53:28	<--	ta_ (~ta@0133902281.0.fullrate.ninja) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:53:47	-->	Skelz0r (delmaire20@perso.iiens.net) has joined #ruby
+2016-04-04 12:53:52	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 264 seconds)
+2016-04-04 12:56:04	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-04 12:57:47	<--	ta__ (~ta@0133902281.0.fullrate.ninja) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:57:48	<--	blt (~blt@unaffiliated/swedishfish) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:58:29	-->	htmldrum (~htmldrum@49.255.234.58) has joined #ruby
+2016-04-04 12:58:33	<--	Dimik (~Dimik@pool-108-41-42-179.nycmny.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:59:45	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:00:28	-->	full_throttle (~yan@108-214-81-103.lightspeed.irvnca.sbcglobal.net) has joined #ruby
+2016-04-04 13:00:30	<--	full_throttle (~yan@108-214-81-103.lightspeed.irvnca.sbcglobal.net) has left #ruby
+2016-04-04 13:00:38	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 246 seconds)
+2016-04-04 13:01:43	-->	jmorgado (~jmorgado@150.70.30.213.rev.vodafone.pt) has joined #ruby
+2016-04-04 13:02:15	-->	ta_ (~ta@0133902281.0.fullrate.ninja) has joined #ruby
+2016-04-04 13:03:27	<--	the_drow (~the_drow@192.116.165.226) has quit (Read error: Connection reset by peer)
+2016-04-04 13:03:51	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:05:00	<--	karioleez (~karioleez@o6cp1d.static.otenet.gr) has quit (Remote host closed the connection)
+2016-04-04 13:05:40	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 13:06:25	-->	karioleez (~karioleez@o6cp1d.static.otenet.gr) has joined #ruby
+2016-04-04 13:06:27	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-04 13:06:45	<--	shmuli (~shmuli@2605:e000:6344:2f00:840c:cae1:a6c5:b7) has quit (Remote host closed the connection)
+2016-04-04 13:07:11	<--	alexherbo2 (~alex@109.255.234.251) has quit (Quit: WeeChat 1.4)
+2016-04-04 13:07:55	-->	duderonomy (~duderonom@c-73-189-177-212.hsd1.ca.comcast.net) has joined #ruby
+2016-04-04 13:07:58	<--	ta_ (~ta@0133902281.0.fullrate.ninja) has quit (Remote host closed the connection)
+2016-04-04 13:09:16	<--	the_drow (~the_drow@192.116.165.226) has quit (Read error: Connection reset by peer)
+2016-04-04 13:09:29	-->	clauswitt (~clauswitt@89.221.173.158) has joined #ruby
+2016-04-04 13:09:39	<--	rvchangue (~rvchangue@unaffiliated/rvchangue) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:09:50	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #ruby
+2016-04-04 13:09:56	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #ruby
+2016-04-04 13:10:08	-->	ta_ (~ta@0133902281.0.fullrate.ninja) has joined #ruby
+2016-04-04 13:10:15	-->	blt (~blt@unaffiliated/swedishfish) has joined #ruby
+2016-04-04 13:10:54	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 13:11:15	-->	shmuli (~shmuli@2605:e000:6344:2f00:10b9:b8bf:94f2:d440) has joined #ruby
+2016-04-04 13:12:49	-->	Musashi007 (~Musashi1@173.241.31.85) has joined #ruby
+2016-04-04 13:14:03	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:14:06	-->	zeroDivisible (~zeroDivis@188.166.92.187) has joined #ruby
+2016-04-04 13:14:12	<--	shmuli (~shmuli@2605:e000:6344:2f00:10b9:b8bf:94f2:d440) has quit (Remote host closed the connection)
+2016-04-04 13:14:55	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:15:13	-->	ruid (~ruid@unaffiliated/ruid) has joined #ruby
+2016-04-04 13:16:16	-->	marr (~ccc@87-205-203-209.adsl.inetia.pl) has joined #ruby
+2016-04-04 13:18:58	<--	tmtwd (~tmtwd@104.247.236.230) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:20:25	<--	Musashi007 (~Musashi1@173.241.31.85) has quit (Quit: Musashi007)
+2016-04-04 13:22:17	-->	benlieb (~benlieb@2602:306:32eb:3400:c1a:5c36:7e6e:c8f2) has joined #ruby
+2016-04-04 13:22:29	<--	nhhc (~nhhc@14.169.111.215) has quit (Ping timeout: 260 seconds)
+2016-04-04 13:23:07	-->	tmtwd (~tmtwd@104.247.236.230) has joined #ruby
+2016-04-04 13:25:59	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-04 13:26:02	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-04 13:26:04	<--	codecop (~codecop@86.100.62.63) has quit (Ping timeout: 252 seconds)
+2016-04-04 13:28:04	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:28:58	-->	moeabdol1 (~moeabdol@136.0.0.214) has joined #ruby
+2016-04-04 13:29:45	<--	nano- (nano@xmms2/developer/nano) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:29:58	-->	nano- (nano@xmms2/developer/nano) has joined #ruby
+2016-04-04 13:31:03	<--	moeabdol (~moeabdol@2.91.133.165) has quit (Ping timeout: 240 seconds)
+2016-04-04 13:31:14	-->	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has joined #ruby
+2016-04-04 13:31:16	<--	benlieb (~benlieb@2602:306:32eb:3400:c1a:5c36:7e6e:c8f2) has quit (Quit: benlieb)
+2016-04-04 13:31:49	-->	blackgoat (~blackgoat@221.157.123.200) has joined #ruby
+2016-04-04 13:32:59	<--	karioleez (~karioleez@o6cp1d.static.otenet.gr) has quit (Remote host closed the connection)
+2016-04-04 13:33:05	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 13:33:27	-->	karioleez (~karioleez@o6cp1d.static.otenet.gr) has joined #ruby
+2016-04-04 13:33:56	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-04 13:34:18	<--	AndChat-43764 (~AndChat43@aepx75.neoplus.adsl.tpnet.pl) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:34:44	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 13:35:31	<--	tmtwd (~tmtwd@104.247.236.230) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:35:51	<--	skydiver (~skydiver@222.128.150.18) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:36:31	<--	blackgoat (~blackgoat@221.157.123.200) has quit (Client Quit)
+2016-04-04 13:37:35	-->	mistermocha (~mistermoc@99-185-46-156.lightspeed.sntcca.sbcglobal.net) has joined #ruby
+2016-04-04 13:37:40	-->	blackgoat (~blackgoat@221.157.123.200) has joined #ruby
+2016-04-04 13:37:51	<--	blackgoat (~blackgoat@221.157.123.200) has quit (Client Quit)
+2016-04-04 13:38:06	-->	platzhirsch (~konrad@84.19.41.82) has joined #ruby
+2016-04-04 13:38:21	-->	terlar (~terje@h-37-123-145-122.na.cust.bahnhof.se) has joined #ruby
+2016-04-04 13:38:42	-->	blackgoat (~blackgoat@221.157.123.200) has joined #ruby
+2016-04-04 13:39:24	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 260 seconds)
+2016-04-04 13:39:32	-->	codecop (~codecop@86.100.62.63) has joined #ruby
+2016-04-04 13:40:54	<--	Nahra (~user@unaffiliated/nahra) has quit (Ping timeout: 248 seconds)
+2016-04-04 13:41:13	<--	the_drow (~the_drow@192.116.165.226) has quit (Read error: Connection reset by peer)
+2016-04-04 13:41:47	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 13:42:12	<--	mistermocha (~mistermoc@99-185-46-156.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:42:19	<--	platzhirsch (~konrad@84.19.41.82) has left #ruby
+2016-04-04 13:43:01	-->	rvchangue (~rvchangue@unaffiliated/rvchangue) has joined #ruby
+2016-04-04 13:43:42	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-04 13:46:02	-->	akkmaxon (~maxim@2a02:2698:4c24:2e6c:224:d2ff:fecf:29ab) has joined #ruby
+2016-04-04 13:46:19	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 13:47:05	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-04 13:48:03	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 240 seconds)
+2016-04-04 13:48:39	<--	akkmaxon (~maxim@2a02:2698:4c24:2e6c:224:d2ff:fecf:29ab) has quit (Client Quit)
+2016-04-04 13:48:43	-->	maxim__ (~maxim@2a02:2698:4c24:2e6c:224:d2ff:fecf:29ab) has joined #ruby
+2016-04-04 13:49:30	-->	skydiver (~skydiver@211.151.229.101) has joined #ruby
+2016-04-04 13:50:00	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-04 13:50:12	-->	Snowy (~Snowy@unaffiliated/snowy) has joined #ruby
+2016-04-04 13:52:23	-->	kam270 (~kam270@115.84.116.241) has joined #ruby
+2016-04-04 13:52:29	<--	Snowy (~Snowy@unaffiliated/snowy) has quit (Remote host closed the connection)
+2016-04-04 13:52:44	-->	Snowy (~Snowy@unaffiliated/snowy) has joined #ruby
+2016-04-04 13:52:44	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-04 13:54:28	<--	terlar (~terje@h-37-123-145-122.na.cust.bahnhof.se) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:54:58	<--	skade (~skade@62.225.39.28) has quit (Quit: Computer has gone to sleep.)
+2016-04-04 13:56:16	<--	skydiver (~skydiver@211.151.229.101) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:56:29	-->	pawnbox (~pawnbox@106.51.37.116) has joined #ruby
+2016-04-04 13:56:58	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-04 13:59:34	-->	patrick_star_2 (~patrick_s@93.85.65.38) has joined #ruby
+2016-04-04 14:00:54	<--	rkazak (~rkazak@67.170.253.182) has quit (Quit: Sleep.....ing....)
+2016-04-04 14:01:02	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 14:01:12	<--	dasher00 (~dasher00@161.79.125.91.dyn.plus.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:01:27	-->	auzty (~auzty@202.148.7.130) has joined #ruby
+2016-04-04 14:01:28	-->	dasher00 (~dasher00@176.33.200.146.dyn.plus.net) has joined #ruby
+2016-04-04 14:01:41	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::2669) has quit (Ping timeout: 248 seconds)
+2016-04-04 14:02:16	-->	Nahra (~user@unaffiliated/nahra) has joined #ruby
+2016-04-04 14:02:51	<--	patrick_star_3 (~patrick_s@93.84.68.92) has quit (Ping timeout: 264 seconds)
+2016-04-04 14:04:14	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #ruby
+2016-04-04 14:06:15	<--	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has quit (Quit: Vlat-)
+2016-04-04 14:07:02	<--	colegatron (~colegatro@126.red-79-150-204.dynamicip.rima-tde.net) has quit (Remote host closed the connection)
+2016-04-04 14:07:18	-->	RubyJedi-ing (~RubyJedii@121.121.81.167) has joined #ruby
+2016-04-04 14:09:56	--	saneax is now known as saneax_AFK
+2016-04-04 14:10:36	-->	evidex (~evidex@193.120.90.48) has joined #ruby
+2016-04-04 14:10:37	<--	RubyJedi-ing_ (~RubyJedii@121.121.81.77) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:13:04	<--	emilkarl (~emilkarl@217-211-53-110-no218.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 14:14:09	<--	astrobun_ (~astrobunn@p4367024-ipngn23601marunouchi.tokyo.ocn.ne.jp) has quit (Remote host closed the connection)
+2016-04-04 14:14:44	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 14:15:53	-->	Gasher (~gasher@x1-6-2c-b0-5d-55-61-02.cpe.webspeed.dk) has joined #ruby
+2016-04-04 14:16:06	-->	skydiver (~skydiver@222.128.150.18) has joined #ruby
+2016-04-04 14:18:12	--	saneax_AFK is now known as saneax
+2016-04-04 14:18:17	Steve_Jobs	I can't seem to show the braille character on the command line that's part of the output of a program
+2016-04-04 14:18:22	Steve_Jobs	⡤
+2016-04-04 14:18:32	Steve_Jobs	that looks like a square to me but should be braille
+2016-04-04 14:18:40	Steve_Jobs	any ideas?
+2016-04-04 14:21:16	Mon_Ouie	Looks fine here, probably just your terminal settings that don't render it as you'd expect it
+2016-04-04 14:21:22	workmad3	Steve_Jobs: it's 3 dots here... sounds like you don't have a font installed with full unicode codepoints for your terminal
+2016-04-04 14:21:37	<--	anisha (~anisha@123.252.232.207) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:22:22	Steve_Jobs	workmad3: I tried all fonts.. which one are you using?
+2016-04-04 14:22:45	Steve_Jobs	Mon_Ouie: what font are you using?
+2016-04-04 14:22:46	workmad3	"I tried all fonts" really? There are millions of them :P
+2016-04-04 14:22:52	Steve_Jobs	is it just the font?
+2016-04-04 14:23:00	Steve_Jobs	workmad3: well the ones on this machine...
+2016-04-04 14:23:02	-->	anisha (~anisha@123.252.232.207) has joined #ruby
+2016-04-04 14:23:18	Mon_Ouie	My terminal uses Deja Vu
+2016-04-04 14:23:38	workmad3	Steve_Jobs: I use OS X monaco for unicode code-points in iterm2 on my mac
+2016-04-04 14:24:51	Steve_Jobs	ok.. xterm shows it.. weird
+2016-04-04 14:25:03	<--	TvL2386 (~tom@185.24.48.180) has quit (Ping timeout: 240 seconds)
+2016-04-04 14:25:28	<--	skydiver (~skydiver@222.128.150.18) has quit (Ping timeout: 252 seconds)
+2016-04-04 14:30:15	-->	sepp2k (~sepp2k@pcclt32.isp.uni-luebeck.de) has joined #ruby
+2016-04-04 14:30:16	-->	terlar (~terje@h-37-123-145-122.na.cust.bahnhof.se) has joined #ruby
+2016-04-04 14:31:41	-->	TvL2386 (~tom@185.24.48.180) has joined #ruby
+2016-04-04 14:33:14	-->	tvw (~tv@212.79.9.150) has joined #ruby
+2016-04-04 14:33:17	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 14:33:19	-->	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has joined #ruby
+2016-04-04 14:33:54	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:34:46	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-04 14:34:49	<--	the_drow (~the_drow@192.116.165.226) has quit (Ping timeout: 252 seconds)
+2016-04-04 14:35:59	<--	Vlat- (~vladimir@188-143-84-113.pool.digikabel.hu) has quit (Client Quit)
+2016-04-04 14:36:14	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 14:36:41	lxsameer	hey people, does ruby store or cache the VM bytecodes any where ?
+2016-04-04 14:37:19	-->	dmolina (~Adium@dmolina.fdi.ucm.es) has joined #ruby
+2016-04-04 14:39:10	Mon_Ouie	No, it recompiles everytime
+2016-04-04 14:39:59	lxsameer	Mon_Ouie: hmm does ruby provides any solution to just run the bytecode ? I mean we give it to ruby as a param
+2016-04-04 14:41:55	Mon_Ouie	Last time I check there was code to store/load bytecode to/from a file, but it's commented out for some reason
+2016-04-04 14:42:39	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:42:51	-->	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has joined #ruby
+2016-04-04 14:44:38	<--	the_drow (~the_drow@192.116.165.226) has quit (Read error: Connection reset by peer)
+2016-04-04 14:44:44	<--	bronson_ (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:45:59	-->	Emmanuel_Chanel (~emmanuel@ZN018100.ppp.dion.ne.jp) has joined #ruby
+2016-04-04 14:46:07	-->	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has joined #ruby
+2016-04-04 14:46:11	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #ruby
+2016-04-04 14:46:43	lxsameer	Mon_Ouie: hmmm thanks for the info, but I was wondering why ruby does not use such solution ( similar to python byte codes ) ?
+2016-04-04 14:48:15	-->	Couch (~tdeveliog@proxy-gw-a.booking.com) has joined #ruby
+2016-04-04 14:48:41	Mon_Ouie	I don't know the answer to that, unfortunately
+2016-04-04 14:49:11	workmad3	lxsameer: mostly because they're still moving towards it... ruby only went fully bytecode internally in 1.9, and hasn't hashed out all the details of what saved bytecode should look like yet
+2016-04-04 14:49:11	-->	the_drow (~the_drow@192.116.165.226) has joined #ruby
+2016-04-04 14:49:23	lxsameer	Mon_Ouie: thanks
+2016-04-04 14:49:36	workmad3	the code Mon_Ouie pointed out for saving/loading bytecode is a step towards it (it was introduced in 2.3 iirc)
+2016-04-04 14:49:49	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #ruby
+2016-04-04 14:49:50	lxsameer	workmad3: happy to hear it
+2016-04-04 14:49:58	lxsameer	workmad3: thanks for the info man
+2016-04-04 14:50:41	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 14:51:31	<--	skade (~skade@62.225.39.28) has quit (Quit: Computer has gone to sleep.)
+2016-04-04 14:52:12	aep	is there a quick and dirty way to generate a rest commandline app that litteraly just calls some http stuff?
+2016-04-04 14:54:17	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:54:18	-->	ocbtec (~ocbtec@x4db4c69b.dyn.telefonica.de) has joined #ruby
+2016-04-04 14:54:36	lxsameer	aep: on top of my head you can do it with e small hack on tor classes
+2016-04-04 14:55:16	aep	tor?
+2016-04-04 14:55:31	lxsameer	aep: yeah Tor gem
+2016-04-04 14:55:35	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:55:42	-->	slackbotgz (~nodebot@ec2-54-234-250-140.compute-1.amazonaws.com) has joined #ruby
+2016-04-04 14:55:53	aep	uuuh
+2016-04-04 14:55:54	lxsameer	it's a utility which allows you write cli apps more easily 
+2016-04-04 14:56:15	aep	ah!
+2016-04-04 14:56:22	_ko1	lxsameer: FYI: https://github.com/ko1/yomikomu
+2016-04-04 14:56:48	-->	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has joined #ruby
+2016-04-04 14:57:16	lxsameer	_ko1: thanks koichi-san
+2016-04-04 14:59:46	<--	poguez_ (uid15583@gateway/web/irccloud.com/x-guafhfdoozzalobb) has quit (Quit: Connection closed for inactivity)
+2016-04-04 15:00:08	--	elaptics`away is now known as elaptics
+2016-04-04 15:00:39	-->	dANOKELOFF (~danokelof@AMontsouris-654-1-128-42.w90-2.abo.wanadoo.fr) has joined #ruby
+2016-04-04 15:01:15	<--	duckpuppy (~patrickai@h43.108.18.98.dynamic.ip.windstream.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:01:24	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:05:01	--	saneax is now known as saneax_AFK
+2016-04-04 15:08:39	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 246 seconds)
+2016-04-04 15:09:51	-->	c0x (~c0x@202.133.48.62) has joined #ruby
+2016-04-04 15:11:59	--	saneax_AFK is now known as saneax
+2016-04-04 15:12:05	-->	araujo (~araujo@gentoo/developer/araujo) has joined #ruby
+2016-04-04 15:12:15	<--	araujo (~araujo@gentoo/developer/araujo) has quit (Max SendQ exceeded)
+2016-04-04 15:12:25	-->	bollullera (~anuxi@84.120.65.127.dyn.user.ono.com) has joined #ruby
+2016-04-04 15:12:42	-->	araujo (~araujo@gentoo/developer/araujo) has joined #ruby
+2016-04-04 15:13:17	<--	araujo (~araujo@gentoo/developer/araujo) has quit (Max SendQ exceeded)
+2016-04-04 15:13:49	-->	araujo (~araujo@gentoo/developer/araujo) has joined #ruby
+2016-04-04 15:14:29	<--	jmignault (~jmignault@pool-173-56-23-236.nycmny.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 15:14:36	-->	Spami (~Spami@unaffiliated/spami) has joined #ruby
+2016-04-04 15:16:14	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-04 15:16:22	-->	drptbl (~drptbl@213-241-25-178.static.ip.netia.com.pl) has joined #ruby
+2016-04-04 15:16:51	<--	Suntzu (~Suntzu@5.154.237.63) has quit (Read error: Connection reset by peer)
+2016-04-04 15:16:52	rahc	how can I intercept any addition to an array object using a proxy?
+2016-04-04 15:17:10	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 15:17:51	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 264 seconds)
+2016-04-04 15:18:29	rahc	apeiros recommended SimpleDelegator but I can't see how that will help beyond providing pre-made method_missing methods, etc.
+2016-04-04 15:18:52	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #ruby
+2016-04-04 15:19:55	jhass	rahc: redefine the methods you want to intercept on your SimpleDelegator subclass
+2016-04-04 15:20:11	rahc	jhass: which methods would I need to intercept?
+2016-04-04 15:20:25	jhass	&ri Array
+2016-04-04 15:20:25	`derpy	http://ruby-doc.org/core-2.3.0/Array.html
+2016-04-04 15:20:44	rahc	jhass: do you know which methods?
+2016-04-04 15:21:06	jhass	go through the list, I'd probably miss a couple
+2016-04-04 15:21:26	rahc	so you don't know
+2016-04-04 15:21:40	rahc	thanks anyway
+2016-04-04 15:21:58	-->	dipnlik (~dipnlik@189.38.236.80) has joined #ruby
+2016-04-04 15:22:17	<--	jtdowney (~jtdowney@unaffiliated/jtdowney) has quit (Quit: ZNC)
+2016-04-04 15:22:45	jhass	I'm simply not doing your work for you ;)
+2016-04-04 15:23:30	<--	RubyJedi-ing (~RubyJedii@121.121.81.167) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:23:33	rahc	jhass: there are no expectations on you to do anything
+2016-04-04 15:24:05	toretore	there isn't a single entry-point to adding values to an array
+2016-04-04 15:24:09	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:24:11	rahc	toretore: thank you
+2016-04-04 15:24:19	<--	nodejunkie (~nodejunki@S0106001c102395a9.vc.shawcable.net) has quit (Ping timeout: 252 seconds)
+2016-04-04 15:24:24	jhass	right, like compiling a comprehensive list of methods that could add elements to an array ;)
+2016-04-04 15:24:36	-->	Suntzu (~Suntzu@5.154.237.63) has joined #ruby
+2016-04-04 15:24:37	-->	emilkarl (~emilkarl@213.115.244.180) has joined #ruby
+2016-04-04 15:25:03	-->	astrobun_ (~astrobunn@p4321244-ipngn25001marunouchi.tokyo.ocn.ne.jp) has joined #ruby
+2016-04-04 15:25:09	rahc	jhass: there is an exepectation on you to *not* do some things
+2016-04-04 15:25:55	rahc	jhass: in particular, there is an expectation that you will refrain from responding to someone's question if you can't help them
+2016-04-04 15:27:20	jhass	well, your question didn't contain the fact I added, that you should redefine the methods which add elements to your array
+2016-04-04 15:27:38	rahc	jhass: you can't help me
+2016-04-04 15:27:41	<--	slackbotgz (~nodebot@ec2-54-234-250-140.compute-1.amazonaws.com) has quit (Remote host closed the connection)
+2016-04-04 15:28:43	<--	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has quit (Ping timeout: 252 seconds)
+2016-04-04 15:29:03	<--	ncopa (~test@229.63.200.37.customer.cdi.no) has quit (Ping timeout: 240 seconds)
+2016-04-04 15:29:41	<--	astrobun_ (~astrobunn@p4321244-ipngn25001marunouchi.tokyo.ocn.ne.jp) has quit (Ping timeout: 248 seconds)
+2016-04-04 15:30:06	toretore	rahc: these are the methods you have to override on Array to properly subclass or proxy it w/r to addition, afaik: ["self.from_array", "self.try_convert", "<<", "[]=", "collect!", "map!", "concat", "fill", "replace", "insert", "push", "unshift"]
+2016-04-04 15:30:42	toretore	now stop being an ass
+2016-04-04 15:30:46	-->	ncopa (~test@229.63.200.37.customer.cdi.no) has joined #ruby
+2016-04-04 15:30:53	rahc	umm.. thanks
+2016-04-04 15:31:08	rahc	I wasn't expecting someone to come out with a list but thanks :-)
+2016-04-04 15:31:19	toretore	+ initialize which takes args too
+2016-04-04 15:31:50	<--	dANOKELOFF (~danokelof@AMontsouris-654-1-128-42.w90-2.abo.wanadoo.fr) has quit
+2016-04-04 15:31:56	-->	rodfersou (~RoADRuNNE@189.115.38.51) has joined #ruby
+2016-04-04 15:32:20	toretore	and Array.from_array doesn't exist
+2016-04-04 15:33:15	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-04 15:34:08	-->	weckl (~weckl@124.231.28.37.rev.vodafone.pt) has joined #ruby
+2016-04-04 15:35:10	gregf_	should'nt implementing method_missing be enough?
+2016-04-04 15:36:21	gregf_	>> class Foo; attr_accessor :arr;def initialize; @arr = [];end; def [](ind); @arr[ind];end; def method_missing(meth, *args, &bl); m = @arr.method(meth); m.(*args) if m;end;end;f = Foo.new();f.push(1).push(2).push(3).pop; p f # like that?
+2016-04-04 15:36:22	@ruby[bot]	gregf_: # => #<Foo:0x41c792f0 @arr=[1, 2]> ...check link for more (https://eval.in/547339)
+2016-04-04 15:36:37	-->	sergey_makagon (~sergey_ma@91.245.223.12) has joined #ruby
+2016-04-04 15:37:06	rahc	gregf_: be enough for what?
+2016-04-04 15:37:15	rahc	gregf_: that class doesn't solve my problem
+2016-04-04 15:37:21	-->	Rickmasta (~Rick@pool-98-116-225-120.nycmny.fios.verizon.net) has joined #ruby
+2016-04-04 15:37:49	gregf_	rahc: then im afraid you'll have to think a bit more ;)
+2016-04-04 15:38:06	gregf_	btw, what jhass suggested was quite helpful imho :|
+2016-04-04 15:38:07	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 15:38:25	rahc	gregf_: you're confused
+2016-04-04 15:38:34	rahc	gregf_: I'm not looking for help solving my problem
+2016-04-04 15:38:44	rahc	I've moved on from the few minutes ago when I asked
+2016-04-04 15:38:48	rahc	toretore was helpful
+2016-04-04 15:39:15	-->	bluOxigen_ (a@139.190.216.135) has joined #ruby
+2016-04-04 15:40:10	gregf_	rahc: looks like you're being a bit too curt.. when anyone suggests something .. you need to appreciate for what they do.. else no one will want to help :| *runs*
+2016-04-04 15:41:04	<--	bluOxigen (~a@unaffiliated/bluOxigen) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:41:06	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 15:42:25	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #ruby
+2016-04-04 15:42:30	rahc	gregf_: on IRC, I've found there are two types of people: (1) people who are helpful, and (2) people who need to sit on IRC channels interacting with people giving obvious, useless or unhelpful suggestions in order to feed their own egos
+2016-04-04 15:42:51	rahc	gregf_: I feel I don't need to appreciate the latter type
+2016-04-04 15:42:54	sandelius	rahc BINGO
+2016-04-04 15:43:00	<--	arthurnn (~arthurnn@159.203.2.15) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:43:19	manveru	rahc: i can be both :D
+2016-04-04 15:43:22	gregf_	rahc: so , which one do you belong to?
+2016-04-04 15:44:08	gregf_	but meh.. *goes off to do some better work*
+2016-04-04 15:45:19	<--	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has quit (Quit: cheerio)
+2016-04-04 15:45:52	-->	skislak (~serge@77.94.56.2) has joined #ruby
+2016-04-04 15:49:17	<--	dipnlik (~dipnlik@189.38.236.80) has quit (Quit: dipnlik)
+2016-04-04 15:53:33	-->	GodFather (~rcc@96.92.43.9) has joined #ruby
+2016-04-04 15:53:33	-->	BlackW0lf (~BlackW0lf@2a03:b0c0:1:d0::6c:3001) has joined #ruby
+2016-04-04 15:54:00	-->	johnmilton (~johnmilto@tpc4a.sptimes.com) has joined #ruby
+2016-04-04 15:54:21	<--	auzty (~auzty@202.148.7.130) has quit (Quit: Leaving)
+2016-04-04 15:54:28	BlackW0lf	hi all im having an issue after i settup ruby for an application on my vps last week,
+2016-04-04 15:54:57	-->	dipnlik (~dipnlik@189.38.236.80) has joined #ruby
+2016-04-04 15:55:11	BlackW0lf	/usr/bin/env: ruby: No such file or directory
+2016-04-04 15:55:22	<--	araujo (~araujo@gentoo/developer/araujo) has quit (Quit: Leaving)
+2016-04-04 15:55:24	BlackW0lf	its ruby 2.1.5 and im running as root
+2016-04-04 15:55:43	-->	araujo (~araujo@gentoo/developer/araujo) has joined #ruby
+2016-04-04 15:56:00	BlackW0lf	looking around the internet ive found afew people having this issues with multiple solutions but none seam to work for me
+2016-04-04 15:57:09	-->	r0b3rt (~r0b3rt@190.19.190.121) has joined #ruby
+2016-04-04 15:57:36	--	gagrio|trng is now known as gagrio
+2016-04-04 15:58:04	-->	Ropeney (~Ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has joined #ruby
+2016-04-04 15:58:05	BlackW0lf	anyone have any surgestions?
+2016-04-04 15:58:12	djellemah	BlackW0lf: there are several ways to install ruby. Which one did you use?
+2016-04-04 15:58:30	-->	binaryplease1 (~binaryple@xdsl-87-78-59-18.netcologne.de) has joined #ruby
+2016-04-04 15:58:32	-->	ldnunes (~ldnunes_@187.23.154.250) has joined #ruby
+2016-04-04 15:58:58	BlackW0lf	http://samiux.blogspot.co.uk/2015/08/howto-beef-on-ubuntu-1404-lts.html
+2016-04-04 15:59:32	BlackW0lf	generaly followed that guide, i worked untill i restarted the server now to run the app it just errors
+2016-04-04 16:01:12	<--	binaryplease (~binaryple@xdsl-78-34-174-159.netcologne.de) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:01:21	-->	skade (~skade@62.225.39.28) has joined #ruby
+2016-04-04 16:02:45	<--	ldnunes (~ldnunes_@187.23.154.250) has quit (Client Quit)
+2016-04-04 16:03:10	-->	ldnunes (~ldnunes_@187.23.154.250) has joined #ruby
+2016-04-04 16:04:13	<--	TvL2386 (~tom@185.24.48.180) has quit (Quit: Ex-Chat)
+2016-04-04 16:04:55	jhass	you did the RVM step as root too?
+2016-04-04 16:05:05	-->	krz (~foo@unaffiliated/krz) has joined #ruby
+2016-04-04 16:05:32	BlackW0lf	yeah i would have
+2016-04-04 16:05:47	jhass	well, you weren't supposed to
+2016-04-04 16:06:01	BlackW0lf	ahh
+2016-04-04 16:06:14	BlackW0lf	ok how do i restart quickly?
+2016-04-04 16:06:34	jhass	https://rvm.io/support/troubleshooting second to last step to get rid of RVM
+2016-04-04 16:06:50	jhass	s/step/entry/
+2016-04-04 16:07:12	jhass	then just redo as user
+2016-04-04 16:07:31	BlackW0lf	ty
+2016-04-04 16:07:58	--	binaryplease1 is now known as binaryplease
+2016-04-04 16:08:48	<--	maxim__ (~maxim@2a02:2698:4c24:2e6c:224:d2ff:fecf:29ab) has quit (Remote host closed the connection)
+2016-04-04 16:09:57	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #ruby
+2016-04-04 16:10:49	-->	platzhirsch (~konrad@84.19.41.82) has joined #ruby
+2016-04-04 16:11:42	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-04 16:13:35	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #ruby
+2016-04-04 16:13:43	--	pwnd_nsfw is now known as xX_i_love_Elixir
+2016-04-04 16:14:17	--	xX_i_love_Elixir is now known as pwnd_nsfw
+2016-04-04 16:14:47	<--	ruid (~ruid@unaffiliated/ruid) has quit (Ping timeout: 260 seconds)
+2016-04-04 16:15:05	-->	willc (~spmd12345@122.161.69.134) has joined #ruby
+2016-04-04 16:15:14	<--	willc (~spmd12345@122.161.69.134) has left #ruby
+2016-04-04 16:15:29	-->	Chagel (~mike@222.67.96.147) has joined #ruby
+2016-04-04 16:15:37	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Ping timeout: 250 seconds)
+2016-04-04 16:16:08	-->	Mon_Ouie (~Mon_Ouie@subtle/user/MonOuie) has joined #ruby
+2016-04-04 16:17:27	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 16:20:24	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 260 seconds)
+2016-04-04 16:21:34	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 16:22:16	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #ruby
+2016-04-04 16:22:39	-->	trinaldi (~note1zaez@unaffiliated/trinaldi) has joined #ruby
+2016-04-04 16:23:44	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #ruby
+2016-04-04 16:23:45	-->	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has joined #ruby
+2016-04-04 16:23:46	<--	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has quit (Max SendQ exceeded)
+2016-04-04 16:23:49	<--	M-mistake (mistakemat@gateway/shell/matrix.org/x-tptzcckzwbxvsfbq) has quit (Remote host closed the connection)
+2016-04-04 16:23:50	<--	M-Kodo (kodomatrix@gateway/shell/matrix.org/x-dspabxebnzryajdq) has quit (Remote host closed the connection)
+2016-04-04 16:23:50	<--	M-shine (shinematri@gateway/shell/matrix.org/x-uhswrqswkcovldcx) has quit (Remote host closed the connection)
+2016-04-04 16:24:17	-->	dvinciguerra_ (~dvincigue@187-55-194-175.bnut3700.dsl.brasiltelecom.net.br) has joined #ruby
+2016-04-04 16:24:40	-->	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has joined #ruby
+2016-04-04 16:25:59	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:26:00	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #ruby
+2016-04-04 16:26:02	<--	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has quit (Max SendQ exceeded)
+2016-04-04 16:26:12	--	gagrio is now known as gagrio-mtg
+2016-04-04 16:28:36	<--	andywojo (~andywojo@pool-72-92-22-163.phlapa.fios.verizon.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:28:37	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #ruby
+2016-04-04 16:29:31	<--	hanmac (~hanmac@p4FCCADC8.dip0.t-ipconnect.de) has quit (Ping timeout: 248 seconds)
+2016-04-04 16:29:33	-->	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has joined #ruby
+2016-04-04 16:30:19	<--	c0x (~c0x@202.133.48.62) has quit (Ping timeout: 260 seconds)
+2016-04-04 16:31:42	<--	gagrio-mtg (gagrio@nat/redhat/x-mxgkdmpeercrrfnd) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:31:43	<--	dipnlik (~dipnlik@189.38.236.80) has quit (Quit: dipnlik)
+2016-04-04 16:32:12	-->	dipnlik (~dipnlik@189.38.236.80) has joined #ruby
+2016-04-04 16:33:51	<--	BlackW0lf (~BlackW0lf@2a03:b0c0:1:d0::6c:3001) has left #ruby
+2016-04-04 16:34:27	-->	hanmac (~hanmac@p2003005F2C59136952465DFFFE0A9B89.dip0.t-ipconnect.de) has joined #ruby
+2016-04-04 16:34:40	<--	bkxd (~bkxd@123-243-84-114.tpgi.com.au) has quit (Ping timeout: 264 seconds)
+2016-04-04 16:34:44	-->	jorum (~jorum@83.68.231.162) has joined #ruby
+2016-04-04 16:35:32	-->	antgel (~topdog@82.166.98.41) has joined #ruby
+2016-04-04 16:38:52	-->	M-shine (shinematri@gateway/shell/matrix.org/x-hertyulswqtzjeph) has joined #ruby
+2016-04-04 16:39:03	<--	dc4 (~dcunit3d@c-73-148-46-229.hsd1.va.comcast.net) has quit (Ping timeout: 240 seconds)
+2016-04-04 16:39:10	<--	bry4n_ (~brya2090@2602:306:805d:9c70:a4e7:a399:1927:1b80) has quit (Ping timeout: 268 seconds)
+2016-04-04 16:39:27	-->	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has joined #ruby
+2016-04-04 16:40:12	-->	gagrio (gagrio@nat/redhat/x-xaptuflexvgqlxby) has joined #ruby
+2016-04-04 16:40:37	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Remote host closed the connection)

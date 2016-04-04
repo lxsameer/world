@@ -1,0 +1,287 @@
+2016-04-02 09:30:10	--	irc: connecting to server irc.freenode.net/6697 (SSL)...
+2016-04-02 09:30:11	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2016-04-02 09:30:11	--	gnutls: receiving 3 certificates
+2016-04-02 09:30:11	--	 - certificate[1] info:
+2016-04-02 09:30:11	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-12-14 00:00:00 UTC', expires `2017-02-16 23:59:59 UTC', SHA-1 fingerprint `b0c1578208ed07682b9439a0b010f32b290c1956'
+2016-04-02 09:30:11	--	 - certificate[2] info:
+2016-04-02 09:30:11	--	   - subject `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', issuer `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', RSA key 2048 bits, signed using RSA-SHA384, activated `2014-09-12 00:00:00 UTC', expires `2024-09-11 23:59:59 UTC', SHA-1 fingerprint `247106a405b288a46e70a0262717162d0903e734'
+2016-04-02 09:30:11	--	 - certificate[3] info:
+2016-04-02 09:30:11	--	   - subject `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', issuer `C=SE,O=AddTrust AB,OU=AddTrust External TTP Network,CN=AddTrust External CA Root', RSA key 4096 bits, signed using RSA-SHA384, activated `2000-05-30 10:48:38 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `eab040689a0d805b5d6fd654fc168cff00b78be3'
+2016-04-02 09:30:11	--	gnutls: peer's certificate is trusted
+2016-04-02 09:30:11	--	irc: connected to irc.freenode.net/6697 (83.170.73.249)
+2016-04-02 09:30:11	--	holmes.freenode.net: *** Looking up your hostname...
+2016-04-02 09:30:11	--	holmes.freenode.net: *** Checking Ident
+2016-04-02 09:30:11	--	holmes.freenode.net: *** No Ident response
+2016-04-02 09:30:11	--	holmes.freenode.net: *** Couldn't look up your hostname
+2016-04-02 09:30:11	--	Welcome to the freenode Internet Relay Chat Network lxsameer
+2016-04-02 09:30:11	--	Your host is holmes.freenode.net[83.170.73.249/6697], running version ircd-seven-1.1.3
+2016-04-02 09:30:11	--	This server was created Wed Jan 20 2016 at 23:42:23 UTC
+2016-04-02 09:30:11	--	holmes.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-04-02 09:30:11	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-04-02 09:30:11	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-04-02 09:30:11	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-04-02 09:30:11	--	There are 148 users and 79819 invisible on 24 servers
+2016-04-02 09:30:11	--	22 :IRC Operators online
+2016-04-02 09:30:11	--	8 :unknown connection(s)
+2016-04-02 09:30:11	--	53545 :channels formed
+2016-04-02 09:30:11	--	I have 3552 clients and 1 servers
+2016-04-02 09:30:11	--	3552 8737 :Current local users 3552, max 8737
+2016-04-02 09:30:11	--	79967 97578 :Current global users 79967, max 97578
+2016-04-02 09:30:11	--	Highest connection count: 8738 (8737 clients) (490364 connections received)
+2016-04-02 09:30:11	--	- holmes.freenode.net Message of the Day -
+2016-04-02 09:30:11	--	- Welcome to holmes.freenode.net in London, UK! Massive thanks to
+2016-04-02 09:30:11	--	- UK2 (http://www.uk2.net) for sponsoring this server.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	- HOLMES, ROBERT (1928-1986). An English television scriptwriter,
+2016-04-02 09:30:11	--	- most notably remembered for his work on the sci-fi series;
+2016-04-02 09:30:11	--	- Doctor Who.
+2016-04-02 09:30:11	--	- Welcome to freenode - supporting the free and open source
+2016-04-02 09:30:11	--	- software communities since 1998.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	- By connecting to freenode you indicate that you have read and
+2016-04-02 09:30:11	--	- accept our policies as set out on http://www.freenode.net
+2016-04-02 09:30:11	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-04-02 09:30:11	--	- any network-related questions or queries, where a number of
+2016-04-02 09:30:11	--	- volunteer staff and helpful users will be happy to assist you.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-04-02 09:30:11	--	- together with like-minded FOSS enthusiasts for talks and
+2016-04-02 09:30:11	--	- real-life collaboration.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	- We would like to thank Private Internet Access
+2016-04-02 09:30:11	--	- (https://www.privateinternetaccess.com/) and the other
+2016-04-02 09:30:11	--	- organisations that help keep freenode and our other projects
+2016-04-02 09:30:11	--	- running for their sustained support.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	- In particular we would like to thank the sponsor
+2016-04-02 09:30:11	--	- of this server, details of which can be found above.
+2016-04-02 09:30:11	--	-
+2016-04-02 09:30:11	--	End of /MOTD command.
+2016-04-02 09:30:11	--	User mode [+Zi] by lxsameer
+2016-04-02 09:30:11	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2016-04-02 09:30:11	--	NickServ (NickServ@services.): You have 30 seconds to identify to your nickname before it is changed.
+2016-04-02 09:30:24	--	MSG(nickserv): identify *********
+2016-04-02 09:30:24	--	NickServ (NickServ@services.): Invalid password for lxsameer.
+2016-04-02 09:30:28	--	MSG(nickserv): identify ********
+2016-04-02 09:30:28	--	NickServ (NickServ@services.): Invalid password for lxsameer.
+2016-04-02 09:30:33	--	MSG(nickserv): identify ********
+2016-04-02 09:30:34	--	NickServ (NickServ@services.): You are now identified for lxsameer.
+2016-04-02 09:30:34	--	NickServ (NickServ@services.): 2 failed logins since last login.
+2016-04-02 09:30:34	--	NickServ (NickServ@services.): Last failed attempt from: lxsameer!~lxsameer@151.247.189.229 on Apr 02 05:00:28 2016.
+2016-04-02 09:30:34	--	unaffiliated/lxsameer :is now your hidden host (set by services.)
+2016-04-02 11:02:31	--	irc: connecting to server irc.freenode.net/6697 (SSL)...
+2016-04-02 11:02:32	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2016-04-02 11:02:32	--	gnutls: receiving 3 certificates
+2016-04-02 11:02:32	--	 - certificate[1] info:
+2016-04-02 11:02:32	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-12-14 00:00:00 UTC', expires `2017-02-16 23:59:59 UTC', SHA-1 fingerprint `b0c1578208ed07682b9439a0b010f32b290c1956'
+2016-04-02 11:02:32	--	 - certificate[2] info:
+2016-04-02 11:02:32	--	   - subject `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', issuer `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', RSA key 2048 bits, signed using RSA-SHA384, activated `2014-09-12 00:00:00 UTC', expires `2024-09-11 23:59:59 UTC', SHA-1 fingerprint `247106a405b288a46e70a0262717162d0903e734'
+2016-04-02 11:02:32	--	 - certificate[3] info:
+2016-04-02 11:02:32	--	   - subject `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', issuer `C=SE,O=AddTrust AB,OU=AddTrust External TTP Network,CN=AddTrust External CA Root', RSA key 4096 bits, signed using RSA-SHA384, activated `2000-05-30 10:48:38 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `eab040689a0d805b5d6fd654fc168cff00b78be3'
+2016-04-02 11:02:32	--	gnutls: peer's certificate is trusted
+2016-04-02 11:02:33	--	irc: connected to irc.freenode.net/6697 (94.125.182.252)
+2016-04-02 11:02:33	--	adams.freenode.net: *** Looking up your hostname...
+2016-04-02 11:02:33	--	adams.freenode.net: *** Checking Ident
+2016-04-02 11:02:33	--	adams.freenode.net: *** No Ident response
+2016-04-02 11:02:33	--	adams.freenode.net: *** Couldn't look up your hostname
+2016-04-02 11:02:33	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2016-04-02 11:02:33	--	irc: client capability, requesting: sasl
+2016-04-02 11:02:33	--	irc: client capability, enabled: sasl
+2016-04-02 11:02:34	--	You are now logged in as lxsameer. (lxsameer!lxsameer@unaffiliated/lxsameer)
+2016-04-02 11:02:34	--	SASL authentication successful
+2016-04-02 11:02:35	--	Welcome to the freenode Internet Relay Chat Network lxsameer
+2016-04-02 11:02:35	--	MSG(nickserv): identify ********
+2016-04-02 11:02:35	--	Your host is adams.freenode.net[94.125.182.252/6697], running version ircd-seven-1.1.3
+2016-04-02 11:02:35	--	This server was created Mon Jul 20 2015 at 16:58:36 UTC
+2016-04-02 11:02:35	--	adams.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-04-02 11:02:35	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-04-02 11:02:35	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-04-02 11:02:35	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-04-02 11:02:35	--	There are 149 users and 79791 invisible on 24 servers
+2016-04-02 11:02:35	--	22 :IRC Operators online
+2016-04-02 11:02:35	--	6 :unknown connection(s)
+2016-04-02 11:02:35	--	53533 :channels formed
+2016-04-02 11:02:35	--	I have 6070 clients and 1 servers
+2016-04-02 11:02:35	--	6070 12000 :Current local users 6070, max 12000
+2016-04-02 11:02:35	--	79940 97578 :Current global users 79940, max 97578
+2016-04-02 11:02:35	--	Highest connection count: 12001 (12000 clients) (464125 connections received)
+2016-04-02 11:02:35	--	- adams.freenode.net Message of the Day -
+2016-04-02 11:02:35	--	- Welcome to adams.freenode.net. Thanks to ATW Internet Kft
+2016-04-02 11:02:35	--	- (http://www.atw.hu) for sponsoring this server!
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- ADAMS, DOUGLAS (1952-2001).  Author of The Hitch Hikers Guide
+2016-04-02 11:02:35	--	- to the Galaxy and many other witty and humourous books,
+2016-04-02 11:02:35	--	- portrayed in his uniquely British irony. He is sorely missed
+2016-04-02 11:02:35	--	- by many millions of devoted fans. "So long and thanks for all
+2016-04-02 11:02:35	--	- the books!"
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- Welcome to freenode - supporting the free and open source
+2016-04-02 11:02:35	--	- software communities since 1998.
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- By connecting to freenode you indicate that you have read and
+2016-04-02 11:02:35	--	- accept our policies as set out on http://www.freenode.net
+2016-04-02 11:02:35	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-04-02 11:02:35	--	- any network-related questions or queries, where a number of
+2016-04-02 11:02:35	--	- volunteer staff and helpful users will be happy to assist you.
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-04-02 11:02:35	--	- together with like-minded FOSS enthusiasts for talks and
+2016-04-02 11:02:35	--	- real-life collaboration.
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- We would like to thank Private Internet Access
+2016-04-02 11:02:35	--	- (https://www.privateinternetaccess.com/) and the other
+2016-04-02 11:02:35	--	- organisations that help keep freenode and our other projects
+2016-04-02 11:02:35	--	- running for their sustained support.
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	- In particular we would like to thank the sponsor
+2016-04-02 11:02:35	--	- of this server, details of which can be found above.
+2016-04-02 11:02:35	--	-
+2016-04-02 11:02:35	--	End of /MOTD command.
+2016-04-02 11:02:35	--	User mode [+Zi] by lxsameer
+2016-04-02 11:02:41	--	NickServ (NickServ@services.): You are already logged in as lxsameer.
+2016-04-03 10:34:38	--	irc: connecting to server irc.freenode.net/6697 (SSL)...
+2016-04-03 10:34:39	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2016-04-03 10:34:39	--	gnutls: receiving 3 certificates
+2016-04-03 10:34:39	--	 - certificate[1] info:
+2016-04-03 10:34:39	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-12-14 00:00:00 UTC', expires `2017-02-16 23:59:59 UTC', SHA-1 fingerprint `b0c1578208ed07682b9439a0b010f32b290c1956'
+2016-04-03 10:34:39	--	 - certificate[2] info:
+2016-04-03 10:34:39	--	   - subject `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', issuer `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', RSA key 2048 bits, signed using RSA-SHA384, activated `2014-09-12 00:00:00 UTC', expires `2024-09-11 23:59:59 UTC', SHA-1 fingerprint `247106a405b288a46e70a0262717162d0903e734'
+2016-04-03 10:34:39	--	 - certificate[3] info:
+2016-04-03 10:34:39	--	   - subject `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', issuer `C=SE,O=AddTrust AB,OU=AddTrust External TTP Network,CN=AddTrust External CA Root', RSA key 4096 bits, signed using RSA-SHA384, activated `2000-05-30 10:48:38 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `eab040689a0d805b5d6fd654fc168cff00b78be3'
+2016-04-03 10:34:39	--	gnutls: peer's certificate is trusted
+2016-04-03 10:34:39	--	irc: connected to irc.freenode.net/6697 (91.217.189.42)
+2016-04-03 10:34:39	--	sinisalo.freenode.net: *** Looking up your hostname...
+2016-04-03 10:34:39	--	sinisalo.freenode.net: *** Checking Ident
+2016-04-03 10:34:39	--	sinisalo.freenode.net: *** No Ident response
+2016-04-03 10:34:39	--	sinisalo.freenode.net: *** Couldn't look up your hostname
+2016-04-03 10:34:39	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2016-04-03 10:34:39	--	irc: client capability, requesting: sasl
+2016-04-03 10:34:40	--	irc: client capability, enabled: sasl
+2016-04-03 10:34:40	--	You are now logged in as lxsameer. (lxsameer!lxsameer@unaffiliated/lxsameer)
+2016-04-03 10:34:40	--	SASL authentication successful
+2016-04-03 10:34:40	--	Welcome to the freenode Internet Relay Chat Network lxsameer
+2016-04-03 10:34:40	--	MSG(nickserv): identify ********
+2016-04-03 10:34:40	--	Your host is sinisalo.freenode.net[91.217.189.42/6697], running version ircd-seven-1.1.3
+2016-04-03 10:34:40	--	This server was created Sun Aug 2 2015 at 19:12:22 UTC
+2016-04-03 10:34:40	--	sinisalo.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-04-03 10:34:40	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-04-03 10:34:40	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-04-03 10:34:40	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-04-03 10:34:40	--	There are 145 users and 79167 invisible on 24 servers
+2016-04-03 10:34:40	--	22 :IRC Operators online
+2016-04-03 10:34:40	--	6 :unknown connection(s)
+2016-04-03 10:34:40	--	53539 :channels formed
+2016-04-03 10:34:40	--	I have 7805 clients and 1 servers
+2016-04-03 10:34:40	--	7805 12000 :Current local users 7805, max 12000
+2016-04-03 10:34:40	--	79312 97578 :Current global users 79312, max 97578
+2016-04-03 10:34:40	--	Highest connection count: 12001 (12000 clients) (515287 connections received)
+2016-04-03 10:34:40	--	- sinisalo.freenode.net Message of the Day -
+2016-04-03 10:34:40	--	- Welcome to sinisalo.freenode.net in Stockholm, SE.
+2016-04-03 10:34:40	--	- Thanks to http://www.portlane.com/ for sponsoring
+2016-04-03 10:34:40	--	- this server!
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:40	--	- SINISALO, (ANNA) JOHANNA (1958-), a Finnish science fiction
+2016-04-03 10:34:40	--	- and fantasy novelist and a script writer. Her novel 'Not
+2016-04-03 10:34:40	--	- Before Sundown' (orig. 'Ennen päivänlaskua ei voi'
+2016-04-03 10:34:40	--	- published in Finnish in 2000, when it also won the biggest
+2016-04-03 10:34:40	--	- literature award of Finland) was awarded The James Tiptree
+2016-04-03 10:34:40	--	- Jr. award in 2004.  She was nominated for a Nebula award in
+2016-04-03 10:34:40	--	- 2009 for her short story Baby Doll.  Their most recent work
+2016-04-03 10:34:40	--	- includes screenwriting for the film 'Iron Sky'.
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:40	--	- Welcome to freenode - supporting the free and open source
+2016-04-03 10:34:40	--	- software communities since 1998.
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:40	--	- By connecting to freenode you indicate that you have read and
+2016-04-03 10:34:40	--	- accept our policies as set out on http://www.freenode.net
+2016-04-03 10:34:40	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-04-03 10:34:40	--	- any network-related questions or queries, where a number of
+2016-04-03 10:34:40	--	- volunteer staff and helpful users will be happy to assist you.
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:40	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-04-03 10:34:40	--	- together with like-minded FOSS enthusiasts for talks and
+2016-04-03 10:34:40	--	- real-life collaboration.
+2016-04-03 10:34:40	--	-
+2016-04-03 10:34:41	--	- We would like to thank Private Internet Access
+2016-04-03 10:34:41	--	- (https://www.privateinternetaccess.com/) and the other
+2016-04-03 10:34:41	--	- organisations that help keep freenode and our other projects
+2016-04-03 10:34:41	--	- running for their sustained support.
+2016-04-03 10:34:41	--	-
+2016-04-03 10:34:41	--	- In particular we would like to thank the sponsor
+2016-04-03 10:34:41	--	- of this server, details of which can be found above.
+2016-04-03 10:34:41	--	-
+2016-04-03 10:34:41	--	End of /MOTD command.
+2016-04-03 10:34:41	--	User mode [+Zi] by lxsameer
+2016-04-03 10:34:47	--	NickServ (NickServ@services.): You are already logged in as lxsameer.
+2016-04-04 10:56:42	--	irc: connecting to server irc.freenode.net/6697 (SSL)...
+2016-04-04 10:56:42	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2016-04-04 10:56:42	--	gnutls: receiving 3 certificates
+2016-04-04 10:56:42	--	 - certificate[1] info:
+2016-04-04 10:56:42	--	   - subject `OU=Domain Control Validated,OU=Gandi Standard Wildcard SSL,CN=*.freenode.net', issuer `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-12-14 00:00:00 UTC', expires `2017-02-16 23:59:59 UTC', SHA-1 fingerprint `b0c1578208ed07682b9439a0b010f32b290c1956'
+2016-04-04 10:56:42	--	 - certificate[2] info:
+2016-04-04 10:56:42	--	   - subject `C=FR,ST=Paris,L=Paris,O=Gandi,CN=Gandi Standard SSL CA 2', issuer `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', RSA key 2048 bits, signed using RSA-SHA384, activated `2014-09-12 00:00:00 UTC', expires `2024-09-11 23:59:59 UTC', SHA-1 fingerprint `247106a405b288a46e70a0262717162d0903e734'
+2016-04-04 10:56:42	--	 - certificate[3] info:
+2016-04-04 10:56:42	--	   - subject `C=US,ST=New Jersey,L=Jersey City,O=The USERTRUST Network,CN=USERTrust RSA Certification Authority', issuer `C=SE,O=AddTrust AB,OU=AddTrust External TTP Network,CN=AddTrust External CA Root', RSA key 4096 bits, signed using RSA-SHA384, activated `2000-05-30 10:48:38 UTC', expires `2020-05-30 10:48:38 UTC', SHA-1 fingerprint `eab040689a0d805b5d6fd654fc168cff00b78be3'
+2016-04-04 10:56:42	--	gnutls: peer's certificate is trusted
+2016-04-04 10:56:42	--	irc: connected to irc.freenode.net/6697 (193.219.128.49)
+2016-04-04 10:56:43	--	sendak.freenode.net: *** Looking up your hostname...
+2016-04-04 10:56:43	--	sendak.freenode.net: *** Checking Ident
+2016-04-04 10:56:43	--	sendak.freenode.net: *** No Ident response
+2016-04-04 10:56:43	--	sendak.freenode.net: *** Couldn't look up your hostname
+2016-04-04 10:56:43	--	irc: client capability, server supports: account-notify extended-join identify-msg multi-prefix sasl
+2016-04-04 10:56:43	--	irc: client capability, requesting: sasl
+2016-04-04 10:56:43	--	irc: client capability, enabled: sasl
+2016-04-04 10:56:43	--	You are now logged in as lxsameer. (lxsameer!lxsameer@unaffiliated/lxsameer)
+2016-04-04 10:56:44	--	SASL authentication successful
+2016-04-04 10:56:44	--	Welcome to the freenode Internet Relay Chat Network lxsameer
+2016-04-04 10:56:44	--	MSG(nickserv): identify ********
+2016-04-04 10:56:44	--	Your host is sendak.freenode.net[193.219.128.49/6697], running version ircd-seven-1.1.3
+2016-04-04 10:56:44	--	This server was created Wed Jul 15 2015 at 16:52:09 UTC
+2016-04-04 10:56:44	--	sendak.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2016-04-04 10:56:44	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2016-04-04 10:56:44	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2016-04-04 10:56:44	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2016-04-04 10:56:44	--	There are 144 users and 80789 invisible on 24 servers
+2016-04-04 10:56:44	--	24 :IRC Operators online
+2016-04-04 10:56:44	--	7 :unknown connection(s)
+2016-04-04 10:56:44	--	53795 :channels formed
+2016-04-04 10:56:44	--	I have 6950 clients and 1 servers
+2016-04-04 10:56:44	--	6950 8152 :Current local users 6950, max 8152
+2016-04-04 10:56:44	--	80933 95835 :Current global users 80933, max 95835
+2016-04-04 10:56:44	--	Highest connection count: 8153 (8152 clients) (466311 connections received)
+2016-04-04 10:56:44	--	- sendak.freenode.net Message of the Day -
+2016-04-04 10:56:44	--	- Welcome to sendak.freenode.net in Vilnius, Lithuania, EU.
+2016-04-04 10:56:44	--	- Thanks to Microlink Lietuva (http://www.microlink.lt) for providing this
+2016-04-04 10:56:44	--	- server!
+2016-04-04 10:56:44	--	-
+2016-04-04 10:56:44	--	- SENDAK, MAURICE [1928-2012].  The author of Seven Little
+2016-04-04 10:56:44	--	- Monsters and Where the Wild Things Are, Maurice Sendak was
+2016-04-04 10:56:44	--	- born in Brooklyn, NY, US, to a family of poor Polish
+2016-04-04 10:56:44	--	- immigrants who moved to the US before World War II.  He
+2016-04-04 10:56:44	--	- became an illustrator while in high school.
+2016-04-04 10:56:44	--	-
+2016-04-04 10:56:44	--	- Welcome to freenode - supporting the free and open source
+2016-04-04 10:56:44	--	- software communities since 1998.
+2016-04-04 10:56:44	--	-
+2016-04-04 10:56:44	--	- By connecting to freenode you indicate that you have read and
+2016-04-04 10:56:44	--	- accept our policies as set out on http://www.freenode.net
+2016-04-04 10:56:44	--	- freenode runs an open proxy scanner. Please join #freenode for
+2016-04-04 10:56:44	--	- any network-related questions or queries, where a number of
+2016-04-04 10:56:44	--	- volunteer staff and helpful users will be happy to assist you.
+2016-04-04 10:56:44	--	-
+2016-04-04 10:56:45	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2016-04-04 10:56:45	--	- together with like-minded FOSS enthusiasts for talks and
+2016-04-04 10:56:45	--	- real-life collaboration.
+2016-04-04 10:56:45	--	-
+2016-04-04 10:56:45	--	- We would like to thank Private Internet Access
+2016-04-04 10:56:45	--	- (https://www.privateinternetaccess.com/) and the other
+2016-04-04 10:56:45	--	- organisations that help keep freenode and our other projects
+2016-04-04 10:56:45	--	- running for their sustained support.
+2016-04-04 10:56:45	--	-
+2016-04-04 10:56:45	--	- In particular we would like to thank the sponsor
+2016-04-04 10:56:45	--	- of this server, details of which can be found above.
+2016-04-04 10:56:45	--	-
+2016-04-04 10:56:45	--	End of /MOTD command.
+2016-04-04 10:56:45	--	User mode [+Zi] by lxsameer
+2016-04-04 10:56:51	--	NickServ (NickServ@services.): You are already logged in as lxsameer.

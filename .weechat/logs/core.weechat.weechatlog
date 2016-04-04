@@ -1,0 +1,166 @@
+2016-04-02 09:26:36		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-04-02 09:27:14		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-04-02 09:28:15		[irc]  /server  list|listfull [<server>]
+2016-04-02 09:28:15		                add <server> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2016-04-02 09:28:15		                copy|rename <server> <new_name>
+2016-04-02 09:28:15		                reorder <server> [<server>...]
+2016-04-02 09:28:15		                del|keep <server>
+2016-04-02 09:28:15		                deloutq|jump|raw
+2016-04-02 09:28:15		list, add or remove IRC servers
+2016-04-02 09:28:15		    list: list servers (without argument, this list is displayed)
+2016-04-02 09:28:15		listfull: list servers with detailed info for each server
+2016-04-02 09:28:15		     add: add a new server
+2016-04-02 09:28:15		  server: server name, for internal and display use
+2016-04-02 09:28:15		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2016-04-02 09:28:15		    temp: add a temporary server (not saved)
+2016-04-02 09:28:15		  option: set option for server (for boolean option, value can be omitted)
+2016-04-02 09:28:15		nooption: set boolean option to 'off' (for example: -nossl)
+2016-04-02 09:28:15		    copy: duplicate a server
+2016-04-02 09:28:15		  rename: rename a server
+2016-04-02 09:28:15		 reorder: reorder list of servers
+2016-04-02 09:28:15		    keep: keep server in config file (for temporary servers only)
+2016-04-02 09:28:15		     del: delete a server
+2016-04-02 09:28:15		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2016-04-02 09:28:15		    jump: jump to server buffer
+2016-04-02 09:28:15		     raw: open buffer with raw IRC data
+2016-04-02 09:28:15		Examples:
+2016-04-02 09:28:15		  /server listfull
+2016-04-02 09:28:15		  /server add freenode chat.freenode.net
+2016-04-02 09:28:15		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2016-04-02 09:28:15		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2016-04-02 09:28:15		  /server copy freenode freenode-test
+2016-04-02 09:28:15		  /server rename freenode-test freenode2
+2016-04-02 09:28:15		  /server reorder freenode2 freenode
+2016-04-02 09:28:15		  /server del freenode
+2016-04-02 09:28:15		  /server deloutq
+2016-04-02 09:28:55		irc: server freenode added
+2016-04-02 09:31:11		[irc]  /join  [-noswitch] [-server <server>] [<channel1>[,<channel2>...]] [<key1>[,<key2>...]]
+2016-04-02 09:31:11		join a channel
+2016-04-02 09:31:11		-noswitch: do not switch to new buffer
+2016-04-02 09:31:11		   server: send to this server (internal name)
+2016-04-02 09:31:11		  channel: channel name to join
+2016-04-02 09:31:11		      key: key to join the channel (channels with a key must be the first in list)
+2016-04-02 09:31:11		Examples:
+2016-04-02 09:31:11		  /join #weechat
+2016-04-02 09:31:11		  /join #protectedchan,#weechat key
+2016-04-02 09:31:11		  /join -server freenode #weechat
+2016-04-02 09:31:11		  /join -noswitch #weechat
+2016-04-02 09:31:20	=!=	No help available, "option" is not a command or an option
+2016-04-02 09:31:23	=!=	No help available, "options" is not a command or an option
+2016-04-02 09:31:26		[core]  /set  [<option> [<value>]]
+2016-04-02 09:31:26		              diff [<option> [<option>...]]
+2016-04-02 09:31:26		              env [<variable> [<value>]]
+2016-04-02 09:31:26		set config options and environment variables
+2016-04-02 09:31:26		option: name of an option (wildcard "*" is allowed)
+2016-04-02 09:31:26		 value: new value for option, according to type:
+2016-04-02 09:31:26		          boolean: on, off or toggle
+2016-04-02 09:31:26		          integer: number, ++number or --number
+2016-04-02 09:31:26		           string: any string ("" for empty string)
+2016-04-02 09:31:26		            color: color name, ++number or --number
+2016-04-02 09:31:26		        Note: for all types, you can use null to remove option value (undefined value). This works only for some special plugin variables.
+2016-04-02 09:31:26		  diff: display only changed options
+2016-04-02 09:31:26		   env: display or set an environment variable (use value "" to unset a variable)
+2016-04-02 09:31:26		Examples:
+2016-04-02 09:31:26		  display options about highlight:
+2016-04-02 09:31:26		    /set *highlight*
+2016-04-02 09:31:26		  add a word to highlight:
+2016-04-02 09:31:26		    /set weechat.look.highlight "word"
+2016-04-02 09:31:26		  display changed options:
+2016-04-02 09:31:26		    /set diff
+2016-04-02 09:31:26		  display changed options in irc plugin:
+2016-04-02 09:31:26		    /set diff irc.*
+2016-04-02 09:31:26		  display value of environment variable LANG:
+2016-04-02 09:31:26		    /set env LANG
+2016-04-02 09:31:26		  set environment variable LANG and use it:
+2016-04-02 09:31:26		    /set env LANG fr_FR.UTF-8
+2016-04-02 09:31:26		    /upgrade
+2016-04-02 09:31:26		  unset environment variable ABC:
+2016-04-02 09:31:26		    /set env ABC ""
+2016-04-02 09:33:37		Option changed: irc.server.freenode.nicks = "lxsameer,sameerynho,lxsameer_, lxsameer__"  (default if null: "lxsameer,lxsameer1,lxsameer2,lxsameer3,lxsameer4")
+2016-04-02 09:34:43		[server] (irc.conf)
+2016-04-02 09:34:43		  irc.server.freenode.username = null -> "lxsameer"
+2016-04-02 09:34:43		1 option (matching with "irc.server.freenode.username")
+2016-04-02 09:34:48		Option changed: irc.server.freenode.username = "lxsameer"  (default if null: "lxsameer")
+2016-04-02 09:35:01		Option changed: irc.server.freenode.autoconnect = on  (default if null: off)
+2016-04-02 09:35:56		Option changed: irc.server.freenode.sasl_username = "lxsameer"  (default if null: "")
+2016-04-02 09:36:56		Option changed: irc.server.freenode.sasl_password = "maryanaS"  (default if null: "")
+2016-04-02 09:38:00		Option changed: irc.server.freenode.command = "/msg nickserv identify maryanaS"  (default if null: "")
+2016-04-02 09:40:04		Option changed: irc.server.freenode.autojoin = "#5hit,#5hit-life,#ruby,#rubyonrails,#faalis,#technotux,#clojure,#emacs,#rails-contrib,#python-ir"  (default if null: "")
+2016-04-02 10:59:12		script: downloading list of scripts...
+2016-04-02 10:59:13		script: 300 scripts for WeeChat 1.4
+2016-04-02 10:59:14		perl: loading script "/home/lxsameer/.weechat/perl/iset.pl"
+2016-04-02 10:59:14		perl: registered script "iset", version 4.1 (Interactive Set for configuration options)
+2016-04-02 10:59:14		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2016-04-02 10:59:14		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2016-04-02 10:59:14		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2016-04-02 10:59:14		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2016-04-02 10:59:30		python: loading script "/home/lxsameer/.weechat/python/notify.py"
+2016-04-02 10:59:30		python: registered script "notify", version 0.0.8 (notify: A real time notification system for weechat)
+2016-04-02 10:59:39		script: autoload enabled for script "notify.py"
+2016-04-02 10:59:46		script: autoload enabled for script "iset.pl"
+2016-04-02 10:59:54		script: script "buffer.po" not found
+2016-04-02 10:59:57		script: script "buffer.pl" not found
+2016-04-02 11:00:19		perl: loading script "/home/lxsameer/.weechat/perl/buffers.pl"
+2016-04-02 11:00:20		perl: registered script "buffers", version 5.1 (Sidebar with list of buffers)
+2016-04-02 11:00:20		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2016-04-02 11:00:20		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2016-04-02 11:00:20		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2016-04-02 11:00:20		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2016-04-02 11:01:33	=!=	Error: unknown command "/quite" (type /help for help)
+2016-04-02 11:01:39	=!=	Error: unknown command "/quite" (type /help for help)
+2016-04-02 11:01:46	=!=	Error: unknown command "/quite" (type /help for help)
+2016-04-02 11:01:48		python: scripts unloaded
+2016-04-02 11:01:48		perl: scripts unloaded
+2016-04-02 11:02:31		perl scripts loaded: buffers, iset
+2016-04-02 11:02:31		python scripts loaded: notify
+2016-04-02 11:02:31		script: 300 scripts for WeeChat 1.4
+2016-04-02 11:02:31		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-04-02 11:02:56		[alias]  /alias  list [<alias>]
+2016-04-02 11:02:56		                 add <alias> [<command>[;<command>...]]
+2016-04-02 11:02:56		                 addcompletion <completion> <alias> [<command>[;<command>...]]
+2016-04-02 11:02:56		                 del <alias> [<alias>...]
+2016-04-02 11:02:56		list, add or remove command aliases
+2016-04-02 11:02:56		         list: list aliases (without argument, this list is displayed)
+2016-04-02 11:02:56		          add: add an alias
+2016-04-02 11:02:56		addcompletion: add an alias with a custom completion
+2016-04-02 11:02:56		          del: delete an alias
+2016-04-02 11:02:56		   completion: completion for alias: by default completion is done with target command
+2016-04-02 11:02:56		               note: you can use %%command to use completion of an existing command
+2016-04-02 11:02:56		        alias: name of alias
+2016-04-02 11:02:56		      command: command name with arguments (many commands can be separated by semicolons)
+2016-04-02 11:02:56		Note: in command, special variables are replaced:
+2016-04-02 11:02:56		        $n: argument 'n' (between 1 and 9)
+2016-04-02 11:02:56		       $-m: arguments from 1 to 'm'
+2016-04-02 11:02:56		       $n-: arguments from 'n' to last
+2016-04-02 11:02:56		      $n-m: arguments from 'n' to 'm'
+2016-04-02 11:02:56		        $*: all arguments
+2016-04-02 11:02:56		        $~: last argument
+2016-04-02 11:02:56		      $var: where "var" is a local variable of buffer (see /buffer localvar)
+2016-04-02 11:02:56		            examples: $nick, $channel, $server, $plugin, $name
+2016-04-02 11:02:56		Examples:
+2016-04-02 11:02:56		  alias /split to split window horizontally:
+2016-04-02 11:02:56		    /alias add split /window splith
+2016-04-02 11:02:56		  alias /hello to say "hello" on all channels but not on #weechat:
+2016-04-02 11:02:56		    /alias add hello /allchan -exclude=#weechat msg * hello
+2016-04-02 11:02:56		  alias /forcejoin to send IRC command "forcejoin" with completion of /sajoin:
+2016-04-02 11:02:56		    /alias addcompletion %%sajoin forcejoin /quote forcejoin
+2016-04-02 11:03:22	=!=	Error: unknown command "/b" (type /help for help)
+2016-04-02 11:03:37	=!=	Error with command "/alias /b /buffer #" (help on command: /help alias)
+2016-04-02 11:03:53		Alias "b" => "/buffer #" created
+2016-04-02 11:04:00	=!=	Error with command "/buffer # 5hit" (help on command: /help buffer)
+2016-04-02 11:04:07	=!=	Error with command "/buffer # #5hit" (help on command: /help buffer)
+2016-04-02 11:04:46		Alias "b" removed
+2016-04-02 11:04:52		Alias "b" => "buffer" created
+2016-04-02 20:10:11		python: scripts unloaded
+2016-04-02 20:10:11		perl: scripts unloaded
+2016-04-03 10:34:38		perl scripts loaded: buffers, iset
+2016-04-03 10:34:38		python scripts loaded: notify
+2016-04-03 10:34:38		script: 300 scripts for WeeChat 1.4
+2016-04-03 10:34:38		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-04-03 17:44:11		python: scripts unloaded
+2016-04-03 17:44:11		perl: scripts unloaded
+2016-04-04 10:56:42		perl scripts loaded: buffers, iset
+2016-04-04 10:56:42		python scripts loaded: notify
+2016-04-04 10:56:42		script: downloading list of scripts...
+2016-04-04 10:56:42		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2016-04-04 10:56:44		script: 300 scripts for WeeChat 1.4

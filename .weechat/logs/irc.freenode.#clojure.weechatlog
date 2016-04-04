@@ -1,0 +1,1175 @@
+2016-04-02 11:02:41	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #clojure
+2016-04-02 11:02:41	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.8.0: http://bit.ly/clj-changes | See also #clojure-beginners | Discussion: http://groups.google.com/group/clojure"
+2016-04-02 11:02:41	--	Topic set by amalloy (~amalloy@li231-96.members.linode.com) on Wed, 20 Jan 2016 02:47:27
+2016-04-02 11:02:41	--	Channel #clojure: 648 nicks (1 op, 0 voices, 647 normals)
+2016-04-02 11:02:53	--	Channel created on Wed, 12 Dec 2007 01:34:26
+2016-04-02 11:02:59	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-02 11:08:40	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-02 11:10:16	-->	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has joined #clojure
+2016-04-02 11:10:17	-->	hamid (~nithp@unaffiliated/hamid) has joined #clojure
+2016-04-02 11:13:45	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 276 seconds)
+2016-04-02 11:19:10	<--	william-s (~william-s@gateway/vpn/privateinternetaccess/william-s) has quit (Quit: WeeChat 1.4)
+2016-04-02 11:19:30	-->	zipper (~onake@unaffiliated/zipper) has joined #clojure
+2016-04-02 11:19:33	<--	presto (~presto@unaffiliated/presto) has quit (Quit: This computer has gone to sleep)
+2016-04-02 11:22:59	-->	patchwork (~patchwork@137.53.241.254) has joined #clojure
+2016-04-02 11:25:49	<--	zipper (~onake@unaffiliated/zipper) has quit (Ping timeout: 252 seconds)
+2016-04-02 11:27:39	<--	patchwork (~patchwork@137.53.241.254) has quit (Ping timeout: 260 seconds)
+2016-04-02 11:29:15	<--	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 264 seconds)
+2016-04-02 11:33:08	<--	je (~je@x1-6-a0-63-91-f9-d6-1a.cpe.webspeed.dk) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:47:00	-->	hamid (~nithp@unaffiliated/hamid) has joined #clojure
+2016-04-02 11:49:00	-->	alexyakushev_ (~x220@37.57.221.6) has joined #clojure
+2016-04-02 11:52:44	<--	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 260 seconds)
+2016-04-02 11:55:17	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-02 11:55:57	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 11:58:02	-->	zamaterian (~Thomas@x1-6-c0-ff-d4-89-c7-32.cpe.webspeed.dk) has joined #clojure
+2016-04-02 12:01:01	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 252 seconds)
+2016-04-02 12:01:24	-->	rainbyte (~rainbyte@190.191.173.20) has joined #clojure
+2016-04-02 12:04:23	-->	Kajtek (~nope@91.223.167.206) has joined #clojure
+2016-04-02 12:05:40	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-02 12:08:21	<--	dfh (~david@h-84-247.a328.priv.bahnhof.se) has quit (Read error: Connection reset by peer)
+2016-04-02 12:08:31	-->	schmir (~ralf@p4FD39152.dip0.t-ipconnect.de) has joined #clojure
+2016-04-02 12:10:18	<--	zamaterian (~Thomas@x1-6-c0-ff-d4-89-c7-32.cpe.webspeed.dk) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:11:14	-->	alexherbo2 (~alex@109.255.234.251) has joined #clojure
+2016-04-02 12:12:09	-->	dfh (~david@h-84-247.a328.priv.bahnhof.se) has joined #clojure
+2016-04-02 12:12:59	deepakprasanna	I have a function which spits a very long output on the repl.
+2016-04-02 12:13:10	deepakprasanna	How do I silence the output?
+2016-04-02 12:13:26	deepakprasanna	I want to measure the time, using (time expr).
+2016-04-02 12:13:37	<--	marce808 (~marc@pool-96-246-19-186.nycmny.fios.verizon.net) has quit (Remote host closed the connection)
+2016-04-02 12:13:38	luma	(time (f) nil)
+2016-04-02 12:13:50	<--	srruby (~john@50-0-183-66.dedicated.static.sonic.net) has quit (Quit: Leaving)
+2016-04-02 12:13:52	deepakprasanna	I tried (time (do (expr) nil))
+2016-04-02 12:14:11	deepakprasanna	luma: Thanks mate.
+2016-04-02 12:14:29	luma	right, it needs the (do ..)
+2016-04-02 12:14:36	luma	time only takes one expression
+2016-04-02 12:14:41	luma	so (time (do (f) nil))
+2016-04-02 12:14:51	luma	so it returns nil
+2016-04-02 12:15:17	deepakprasanna	luma: ArityException Wrong number of args (2) passed to: core/time  clojure.lang.Compiler.macroexpand1 (Compiler.java:6636)
+2016-04-02 12:15:46	deepakprasanna	luma: If I wrap it with (do ...), the expr is not getting evaluated.
+2016-04-02 12:16:02	-->	marce808 (~marc@pool-96-246-19-186.nycmny.fios.verizon.net) has joined #clojure
+2016-04-02 12:16:09	luma	do evaluates all the expressions inside it
+2016-04-02 12:16:27	luma	is your function returning a lazy sequence?
+2016-04-02 12:16:47	luma	if it is, try (time (do (doall (expr)) nil))
+2016-04-02 12:18:33	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Ping timeout: 240 seconds)
+2016-04-02 12:20:03	deepakprasanna	luma: Worked, thanks,
+2016-04-02 12:23:05	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 12:23:35	<--	schmir (~ralf@p4FD39152.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-04-02 12:24:30	-->	patchwork (~patchwork@137.53.241.254) has joined #clojure
+2016-04-02 12:29:09	<--	patchwork (~patchwork@137.53.241.254) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:30:20	<--	glosoli (~textual@unaffiliated/glosoli) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-02 12:33:12	<--	dsantiago (~dsantiago@cpe-104-175-220-187.socal.res.rr.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 12:33:32	-->	glosoli (~textual@78-56-211-185.static.zebra.lt) has joined #clojure
+2016-04-02 12:33:42	<--	glosoli (~textual@78-56-211-185.static.zebra.lt) has quit (Changing host)
+2016-04-02 12:33:42	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-02 12:34:20	-->	dsantiago (~dsantiago@cpe-104-175-220-187.socal.res.rr.com) has joined #clojure
+2016-04-02 12:37:11	-->	happahappa (~happahapp@chello212186074167.11.vie.surfer.at) has joined #clojure
+2016-04-02 12:37:38	-->	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #clojure
+2016-04-02 12:38:24	-->	je (~je@x1-6-a0-63-91-f9-d6-1a.cpe.webspeed.dk) has joined #clojure
+2016-04-02 12:38:55	<--	chenjf (~chenjf@59.34.23.86) has quit (Read error: Connection reset by peer)
+2016-04-02 12:39:22	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-02 12:40:56	-->	chenjf (~chenjf@219.131.96.95) has joined #clojure
+2016-04-02 12:42:22	<--	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 12:43:57	<--	dsantiago (~dsantiago@cpe-104-175-220-187.socal.res.rr.com) has quit (Ping timeout: 246 seconds)
+2016-04-02 12:44:15	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 264 seconds)
+2016-04-02 12:45:11	-->	xadi1 (~azochniak@185.69.196.120) has joined #clojure
+2016-04-02 12:45:32	-->	alexei_ (~amgarchin@p4FD609E3.dip0.t-ipconnect.de) has joined #clojure
+2016-04-02 12:45:39	-->	narwhal01 (~narwhal01@156.210.218.224) has joined #clojure
+2016-04-02 12:46:36	narwhal01	guys what is the best way to remove maximum key from map?
+2016-04-02 12:48:26	-->	dsantiago (~dsantiago@cpe-104-175-220-187.socal.res.rr.com) has joined #clojure
+2016-04-02 12:49:24	narwhal01	apply max on keys
+2016-04-02 12:49:25	narwhal01	got it
+2016-04-02 12:49:35	luma	why do you want to remove the maximum key?
+2016-04-02 12:50:00	dysfun	what you probably want is an ordered map and to remove the *last* key
+2016-04-02 12:50:01	ridcully	find it and dissoc it
+2016-04-02 12:51:18	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 12:51:58	-->	hamid (~nithp@unaffiliated/hamid) has joined #clojure
+2016-04-02 12:54:16	ane	,(let [m {12 :a 99 :b 3 :c}] (dissoc m (apply max (keys m))))
+2016-04-02 12:54:21	clojurebot	{12 :a, 3 :c}
+2016-04-02 12:55:39	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-02 12:56:34	<--	J_Arcane (~chatzilla@37-219-247-15.nat.bb.dnainternet.fi) has quit (Ping timeout: 252 seconds)
+2016-04-02 12:56:43	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 13:00:46	kwladyka	Did you do OAuth 2 server / client / resource app and can share some experience with me about solutions?
+2016-04-02 13:01:29	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:02:28	<--	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has quit (Read error: Connection reset by peer)
+2016-04-02 13:02:59	-->	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has joined #clojure
+2016-04-02 13:03:59	<--	prohobo (~prohobo@095160157062.dynamic-ra-10.vectranet.pl) has quit (Quit: WeeChat 1.4)
+2016-04-02 13:06:08	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 13:06:46	-->	J_Arcane (~chatzilla@37-219-247-15.nat.bb.dnainternet.fi) has joined #clojure
+2016-04-02 13:07:45	kwladyka	Is any good quality solution in Clojure or i should looking in Java?
+2016-04-02 13:07:53	-->	marr (~ccc@87-205-244-48.adsl.inetia.pl) has joined #clojure
+2016-04-02 13:08:34	-->	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has joined #clojure
+2016-04-02 13:08:45	kwladyka	I found mainly 2 solutions https://github.com/pelle/clauth and https://github.com/ddellacosta/friend-oauth2 but i feel something is wrong with them. Just some intuition, but maybe i am in mistake :)
+2016-04-02 13:09:24	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-02 13:09:28	dysfun	i've used friend, though not with that plugin and it's alright
+2016-04-02 13:10:47	kwladyka	dysfun you use https://github.com/cemerick/friend without https://github.com/ddellacosta/friend-oauth2 ?
+2016-04-02 13:10:56	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-02 13:11:18	dysfun	yes
+2016-04-02 13:11:28	kwladyka	and works like that: client <-> authorisation app ; client <-> resource app without any problem?
+2016-04-02 13:11:53	kwladyka	do you this on github?
+2016-04-02 13:11:56	dysfun	no, i'm merely saying 'friend is alright' and that i can't comment on that friend-oauth2 extension
+2016-04-02 13:11:57	kwladyka	*have
+2016-04-02 13:12:07	kwladyka	oh
+2016-04-02 13:12:34	kwladyka	last commit of this extension is 1 year ago. It is so good or so bad :)
+2016-04-02 13:12:38	-->	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-02 13:12:53	kwladyka	but i see issues from 2015 didn't touched
+2016-04-02 13:13:01	kwladyka	it alerts me a little
+2016-04-02 13:13:17	dysfun	have a read of the code and satisfy yourself. if it doesn't work, are you willing to fix it?
+2016-04-02 13:13:24	kwladyka	oh even from 2014
+2016-04-02 13:13:53	kwladyka	yeah but first i want be sure it is the right solution. Maybe exist something simpler.
+2016-04-02 13:14:01	kwladyka	For example i can use Java library
+2016-04-02 13:14:10	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 252 seconds)
+2016-04-02 13:14:14	kwladyka	or maybe write my own part for OAuth 2 is simpler then i think
+2016-04-02 13:14:23	kwladyka	i don't have experience with OAuth 2
+2016-04-02 13:14:37	kwladyka	so i am not sure what i am doing now :)
+2016-04-02 13:14:54	kwladyka	that the reason why i am looking something ready to learn from that also.
+2016-04-02 13:15:34	-->	mzf (~mzf@unaffiliated/mzf) has joined #clojure
+2016-04-02 13:21:42	-->	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has joined #clojure
+2016-04-02 13:22:48	<--	alexei_ (~amgarchin@p4FD609E3.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2016-04-02 13:25:13	-->	gimagon (~njal_kris@205.175.97.196) has joined #clojure
+2016-04-02 13:26:27	-->	patchwork (~patchwork@137.53.241.254) has joined #clojure
+2016-04-02 13:29:50	-->	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has joined #clojure
+2016-04-02 13:30:01	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 13:31:04	<--	patchwork (~patchwork@137.53.241.254) has quit (Ping timeout: 264 seconds)
+2016-04-02 13:35:32	-->	alexei_ (~amgarchin@p4FD609E3.dip0.t-ipconnect.de) has joined #clojure
+2016-04-02 13:36:21	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-02 13:37:20	-->	slester (~slester@cpe-76-88-5-21.san.res.rr.com) has joined #clojure
+2016-04-02 13:38:42	<--	hive-mind (pranq@mail.bbis.us) has quit (Ping timeout: 276 seconds)
+2016-04-02 13:39:15	-->	hive-mind (pranq@mail.bbis.us) has joined #clojure
+2016-04-02 13:40:39	-->	keyrush (~seb@62.147.155.207) has joined #clojure
+2016-04-02 13:40:40	-->	schaueho (~schaueho@dslb-088-066-049-137.088.066.pools.vodafone-ip.de) has joined #clojure
+2016-04-02 13:41:18	<--	J_Arcane (~chatzilla@37-219-247-15.nat.bb.dnainternet.fi) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:41:49	<--	slester (~slester@cpe-76-88-5-21.san.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 13:43:15	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 13:48:18	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Quit: Leaving.)
+2016-04-02 13:48:22	-->	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has joined #clojure
+2016-04-02 13:49:46	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-02 13:52:34	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 13:54:11	-->	jsmith_ (~jsmith@c-75-69-180-214.hsd1.ma.comcast.net) has joined #clojure
+2016-04-02 13:55:31	-->	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-02 13:56:12	-->	quimrsto_ (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 13:59:30	<--	jsmith_ (~jsmith@c-75-69-180-214.hsd1.ma.comcast.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:00:00	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Client Quit)
+2016-04-02 14:00:24	<--	quimrsto_ (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:00:46	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-02 14:03:45	<--	dfh (~david@h-84-247.a328.priv.bahnhof.se) has quit (Read error: Connection reset by peer)
+2016-04-02 14:06:37	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 14:07:21	-->	dfh (~david@h-84-247.a328.priv.bahnhof.se) has joined #clojure
+2016-04-02 14:08:01	-->	hiberno (~flume@hiberno.net) has joined #clojure
+2016-04-02 14:08:28	-->	zipper (~onake@unaffiliated/zipper) has joined #clojure
+2016-04-02 14:09:25	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Quit: WeeChat 1.3)
+2016-04-02 14:11:40	-->	visof_ (~visof@156.210.218.224) has joined #clojure
+2016-04-02 14:11:54	<--	Zhell (~Zhell@unaffiliated/zhell) has quit (Quit: leaving)
+2016-04-02 14:16:31	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-02 14:17:15	-->	sg2002 (~user@broadband-95-84-209-126.nationalcablenetworks.ru) has joined #clojure
+2016-04-02 14:17:37	<--	visof_ (~visof@156.210.218.224) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:18:34	<--	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has quit (Quit: Leaving.)
+2016-04-02 14:19:06	-->	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has joined #clojure
+2016-04-02 14:20:02	--	Strout is now known as Zhell
+2016-04-02 14:21:03	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 14:21:09	<--	Zhell (~Strout@c83-251-135-135.bredband.comhem.se) has quit (Client Quit)
+2016-04-02 14:21:28	-->	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has joined #clojure
+2016-04-02 14:21:32	--	Strout is now known as Zhell
+2016-04-02 14:21:52	--	Zhell is now known as Strout
+2016-04-02 14:22:06	<--	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has quit (Client Quit)
+2016-04-02 14:23:31	-->	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has joined #clojure
+2016-04-02 14:23:33	<--	zipper (~onake@unaffiliated/zipper) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:24:51	-->	renl (~renl@bb219-75-48-54.singnet.com.sg) has joined #clojure
+2016-04-02 14:26:31	-->	lq (779de5f7@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247) has joined #clojure
+2016-04-02 14:26:38	lq	http://shrinkmy.com/lJn7D5Tq
+2016-04-02 14:26:40	--	lq is now known as Guest3020
+2016-04-02 14:27:33	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-02 14:28:06	-->	J_Arcane (~J_Arcane@mobile-access-6df002-11.dhcp.inet.fi) has joined #clojure
+2016-04-02 14:28:23	-->	patchwork (~patchwork@137.53.241.254) has joined #clojure
+2016-04-02 14:32:06	-->	quimrsto_ (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 14:32:06	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-02 14:32:12	<--	gimagon (~njal_kris@205.175.97.196) has quit (Quit: Leaving)
+2016-04-02 14:32:16	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 252 seconds)
+2016-04-02 14:32:49	<--	patchwork (~patchwork@137.53.241.254) has quit (Ping timeout: 252 seconds)
+2016-04-02 14:33:49	<--	Guest3020 (779de5f7@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.229.247) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2016-04-02 14:34:58	-->	zmack (~zmack@188.25.161.157) has joined #clojure
+2016-04-02 14:35:40	kwladyka	lg spamming bot?
+2016-04-02 14:36:22	<--	je (~je@x1-6-a0-63-91-f9-d6-1a.cpe.webspeed.dk) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:36:54	<--	quimrsto_ (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:38:49	-->	donbonif_ (~donbonifa@109.49.147.232) has joined #clojure
+2016-04-02 14:38:53	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 14:40:06	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:40:59	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 14:43:44	--	Morgawr_ is now known as Morgawr
+2016-04-02 14:44:01	<--	donbonif_ (~donbonifa@109.49.147.232) has quit (Ping timeout: 268 seconds)
+2016-04-02 14:44:01	<--	Morgawr (~morgawr@162.220.240.29) has quit (Changing host)
+2016-04-02 14:44:01	-->	Morgawr (~morgawr@unaffiliated/morgawr) has joined #clojure
+2016-04-02 14:45:21	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:46:57	<--	schaueho (~schaueho@dslb-088-066-049-137.088.066.pools.vodafone-ip.de) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:48:52	<--	J_Arcane (~J_Arcane@mobile-access-6df002-11.dhcp.inet.fi) has quit (Remote host closed the connection)
+2016-04-02 14:49:28	-->	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #clojure
+2016-04-02 14:54:03	<--	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:55:54	<--	narwhal01 (~narwhal01@156.210.218.224) has quit (Ping timeout: 246 seconds)
+2016-04-02 14:57:04	<--	sg2002 (~user@broadband-95-84-209-126.nationalcablenetworks.ru) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:57:24	-->	gimagon (~njal_kris@205.175.97.196) has joined #clojure
+2016-04-02 14:57:33	-->	narwhal01 (~narwhal01@156.211.31.81) has joined #clojure
+2016-04-02 14:57:53	-->	macobo (~macobo@220-98-46-176.dyn.estpak.ee) has joined #clojure
+2016-04-02 14:58:09	<--	gimagon (~njal_kris@205.175.97.196) has quit (Remote host closed the connection)
+2016-04-02 14:58:10	<--	mzf (~mzf@unaffiliated/mzf) has quit (Quit: Leaving)
+2016-04-02 15:00:34	-->	willb_ (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has joined #clojure
+2016-04-02 15:01:13	<--	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has quit (Read error: Connection reset by peer)
+2016-04-02 15:01:20	-->	narwhal01_ (~narwhal01@156.211.3.90) has joined #clojure
+2016-04-02 15:02:27	<--	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has quit (Ping timeout: 250 seconds)
+2016-04-02 15:03:26	<--	narwhal01 (~narwhal01@156.211.31.81) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:10:12	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-02 15:14:15	-->	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-02 15:14:51	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:15:53	-->	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has joined #clojure
+2016-04-02 15:16:16	<--	chenjf (~chenjf@219.131.96.95) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:17:16	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 15:17:42	-->	chenjf (~chenjf@219.131.96.95) has joined #clojure
+2016-04-02 15:18:40	-->	J_Arcane (~J_Arcane@mobile-access-6df002-11.dhcp.inet.fi) has joined #clojure
+2016-04-02 15:18:50	<--	J_Arcane (~J_Arcane@mobile-access-6df002-11.dhcp.inet.fi) has quit (Remote host closed the connection)
+2016-04-02 15:21:00	<--	narwhal01_ (~narwhal01@156.211.3.90) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:21:26	-->	Bronsa (~bronco@90.196.185.10) has joined #clojure
+2016-04-02 15:21:30	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:23:35	-->	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has joined #clojure
+2016-04-02 15:25:39	<--	renl (~renl@bb219-75-48-54.singnet.com.sg) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:26:21	<--	zphds (~zphds@unaffiliated/sudharsh) has quit (Remote host closed the connection)
+2016-04-02 15:30:09	-->	patchwork (~patchwork@137.53.241.254) has joined #clojure
+2016-04-02 15:30:42	-->	quigonjinn (~quigonjin@dsl-aav4z9.dyn.edudsl.gr) has joined #clojure
+2016-04-02 15:34:11	-->	athinggoingon (~athinggoi@c-69-138-25-115.hsd1.va.comcast.net) has joined #clojure
+2016-04-02 15:34:12	-->	narwhal01 (~narwhal01@156.211.3.90) has joined #clojure
+2016-04-02 15:34:33	<--	patchwork (~patchwork@137.53.241.254) has quit (Ping timeout: 240 seconds)
+2016-04-02 15:42:19	<--	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-02 15:45:00	-->	mavbozo (~mavbozo@43.243.140.243) has joined #clojure
+2016-04-02 15:48:46	<--	narwhal01 (~narwhal01@156.211.3.90) has quit (Ping timeout: 268 seconds)
+2016-04-02 15:51:38	<--	glosoli (~textual@unaffiliated/glosoli) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-02 15:53:15	<--	athinggoingon (~athinggoi@c-69-138-25-115.hsd1.va.comcast.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 15:55:10	<--	mavbozo (~mavbozo@43.243.140.243) has quit (Quit: Leaving)
+2016-04-02 15:55:56	-->	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has joined #clojure
+2016-04-02 15:56:38	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Quit: Leaving.)
+2016-04-02 16:00:15	<--	kraft (kraft@gateway/shell/blinkenshell.org/x-olozppqkvuhygtnr) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:00:41	-->	narwhal01 (~narwhal01@156.211.3.90) has joined #clojure
+2016-04-02 16:00:55	-->	tienson (~tienson@li851-208.members.linode.com) has joined #clojure
+2016-04-02 16:04:12	-->	kraft (kraft@gateway/shell/blinkenshell.org/x-sxthkvvwjhymspgu) has joined #clojure
+2016-04-02 16:06:02	<--	tienson (~tienson@li851-208.members.linode.com) has quit (Ping timeout: 268 seconds)
+2016-04-02 16:08:34	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 16:09:00	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 16:09:45	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 246 seconds)
+2016-04-02 16:09:58	-->	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-02 16:10:50	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Client Quit)
+2016-04-02 16:12:09	<--	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:12:24	<--	Bronsa (~bronco@90.196.185.10) has quit (Remote host closed the connection)
+2016-04-02 16:12:44	-->	Bronsa (~bronco@90.196.185.10) has joined #clojure
+2016-04-02 16:13:07	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Ping timeout: 260 seconds)
+2016-04-02 16:14:30	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 248 seconds)
+2016-04-02 16:15:16	-->	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has joined #clojure
+2016-04-02 16:15:21	<--	TEttinger (~notostrac@76-217-26-45.lightspeed.irvnca.sbcglobal.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 16:15:22	-->	irctc (7bc9aad6@gateway/web/freenode/ip.123.201.170.214) has joined #clojure
+2016-04-02 16:15:47	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-02 16:17:19	<--	Bronsa (~bronco@90.196.185.10) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:20:19	<--	irctc (7bc9aad6@gateway/web/freenode/ip.123.201.170.214) has quit (Quit: Page closed)
+2016-04-02 16:20:42	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 16:21:20	-->	meoblast001 (~meoblast@cable-86-56-123-127.cust.telecolumbus.net) has joined #clojure
+2016-04-02 16:21:28	-->	irctc (7bc9aad6@gateway/web/freenode/ip.123.201.170.214) has joined #clojure
+2016-04-02 16:21:39	irctc	join
+2016-04-02 16:25:52	<--	irctc (7bc9aad6@gateway/web/freenode/ip.123.201.170.214) has quit (Ping timeout: 250 seconds)
+2016-04-02 16:30:18	<--	deepakprasanna (~deepak@110.227.236.215) has quit (Ping timeout: 276 seconds)
+2016-04-02 16:31:23	-->	Guest64304 (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has joined #clojure
+2016-04-02 16:31:40	Guest64304	http://oortr.com/YmU5NT
+2016-04-02 16:36:01	-->	Kopfstein (~B@unaffiliated/kopfstein) has joined #clojure
+2016-04-02 16:36:11	<--	Guest64304 (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2016-04-02 16:36:38	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 16:37:58	-->	zmack (~zmack@188.25.161.157) has joined #clojure
+2016-04-02 16:39:52	-->	donbonif_ (~donbonifa@109.49.147.232) has joined #clojure
+2016-04-02 16:42:02	-->	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has joined #clojure
+2016-04-02 16:42:03	<--	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has quit (Remote host closed the connection)
+2016-04-02 16:42:33	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 240 seconds)
+2016-04-02 16:43:43	<--	zerokarmaleft (~zkl@morpheus.net) has quit (Remote host closed the connection)
+2016-04-02 16:44:37	<--	donbonif_ (~donbonifa@109.49.147.232) has quit (Ping timeout: 260 seconds)
+2016-04-02 16:54:03	<--	alexei_ (~amgarchin@p4FD609E3.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-04-02 16:54:04	-->	cdg (~cdg@2602:306:bd5d:2c20:bc72:96e4:77b0:ffeb) has joined #clojure
+2016-04-02 17:00:04	-->	bendavisnc (ad5fb221@gateway/web/cgi-irc/kiwiirc.com/ip.173.95.178.33) has joined #clojure
+2016-04-02 17:06:38	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 17:10:07	<--	macobo (~macobo@220-98-46-176.dyn.estpak.ee) has quit (Ping timeout: 252 seconds)
+2016-04-02 17:10:55	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-02 17:11:34	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 248 seconds)
+2016-04-02 17:11:34	-->	alexei_ (~amgarchin@p4FD609E3.dip0.t-ipconnect.de) has joined #clojure
+2016-04-02 17:12:49	-->	Wild_Cat (~Wild_Cat@69-196-141-185.dsl.teksavvy.com) has joined #clojure
+2016-04-02 17:13:52	<--	mnemnion (~mnemnion@c-98-207-249-139.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2016-04-02 17:14:41	-->	macobo (~macobo@220-98-46-176.dyn.estpak.ee) has joined #clojure
+2016-04-02 17:15:37	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 252 seconds)
+2016-04-02 17:20:46	-->	djcoin (~djcoin@cam44-1-82-67-122-139.fbx.proxad.net) has joined #clojure
+2016-04-02 17:26:50	-->	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has joined #clojure
+2016-04-02 17:28:03	<--	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has quit (Remote host closed the connection)
+2016-04-02 17:29:00	-->	renl (~renl@bb219-75-48-54.singnet.com.sg) has joined #clojure
+2016-04-02 17:31:40	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-02 17:33:10	-->	gon__ (~gon@93-42-155-4.ip87.fastwebnet.it) has joined #clojure
+2016-04-02 17:34:39	<--	narwhal01 (~narwhal01@156.211.3.90) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:35:37	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 17:36:14	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 17:36:26	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 17:37:57	-->	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has joined #clojure
+2016-04-02 17:38:41	-->	zmack (~zmack@188.25.161.157) has joined #clojure
+2016-04-02 17:38:59	-->	slester (~slester@2605:e000:1c0e:812e:517f:6fed:9d93:3bbb) has joined #clojure
+2016-04-02 17:43:13	<--	slester (~slester@2605:e000:1c0e:812e:517f:6fed:9d93:3bbb) has quit (Ping timeout: 250 seconds)
+2016-04-02 17:43:13	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 250 seconds)
+2016-04-02 17:46:53	-->	deepakprasanna (~deepak@110.227.236.215) has joined #clojure
+2016-04-02 17:48:46	-->	Guest42377 (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has joined #clojure
+2016-04-02 17:48:54	Guest42377	http://oortr.com/YmU5NT
+2016-04-02 17:50:54	<--	deadghost (~deadghost@183.171.172.161) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:51:13	-->	liny01 (~liny01@unaffiliated/lsyoyom) has joined #clojure
+2016-04-02 17:52:10	<--	Guest42377 (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has quit (Client Quit)
+2016-04-02 17:55:37	-->	J_Arcane (~chatzilla@37-219-247-15.nat.bb.dnainternet.fi) has joined #clojure
+2016-04-02 18:04:03	<--	meoblast001 (~meoblast@cable-86-56-123-127.cust.telecolumbus.net) has quit (Quit: Leaving)
+2016-04-02 18:04:05	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-02 18:04:34	-->	schaueho (~schaueho@dslb-088-066-049-137.088.066.pools.vodafone-ip.de) has joined #clojure
+2016-04-02 18:05:42	<--	jweiss (~jweiss@cpe-45-37-112-155.nc.res.rr.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:08:04	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 18:08:54	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 18:11:19	<--	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:12:43	justin_smith	(time (do (dorun (f)) nil))
+2016-04-02 18:12:56	justin_smith	oh man I was scrolled back
+2016-04-02 18:13:39	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 276 seconds)
+2016-04-02 18:14:39	-->	bendlas (~user@chello062178064228.22.11.vie.surfer.at) has joined #clojure
+2016-04-02 18:16:27	<--	quimrstorres (~quimrstor@x4e37350e.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-02 18:16:59	-->	brian___ (491a33c7@gateway/web/freenode/ip.73.26.51.199) has joined #clojure
+2016-04-02 18:17:28	<--	brian___ (491a33c7@gateway/web/freenode/ip.73.26.51.199) has quit (Client Quit)
+2016-04-02 18:17:47	-->	narwhal01 (~narwhal01@156.211.3.90) has joined #clojure
+2016-04-02 18:18:13	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-02 18:18:30	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-02 18:20:03	-->	lqlq (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has joined #clojure
+2016-04-02 18:20:16	lqlq	http://oortr.com/YmU5NT
+2016-04-02 18:20:44	<--	lqlq (779d86fe@gateway/web/cgi-irc/kiwiirc.com/ip.119.157.134.254) has quit (Client Quit)
+2016-04-02 18:20:45	-->	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has joined #clojure
+2016-04-02 18:20:48	<--	happahappa (~happahapp@chello212186074167.11.vie.surfer.at) has quit (Ping timeout: 276 seconds)
+2016-04-02 18:22:25	<--	chenjf (~chenjf@219.131.96.95) has quit (Quit: Leaving.)
+2016-04-02 18:26:33	-->	visof_ (~visof@156.211.3.90) has joined #clojure
+2016-04-02 18:26:37	<--	dene14 (~dene14@dene.tcm.by) has quit (Remote host closed the connection)
+2016-04-02 18:27:20	<--	njorth (~pjc@unaffiliated/njorth) has quit (Quit: leaving)
+2016-04-02 18:28:09	-->	pilne (~pilne@75-132-212-62.dhcp.stls.mo.charter.com) has joined #clojure
+2016-04-02 18:29:08	<--	narwhal01 (~narwhal01@156.211.3.90) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:29:58	-->	bmd_ (491a33c7@gateway/web/freenode/ip.73.26.51.199) has joined #clojure
+2016-04-02 18:30:49	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-02 18:33:42	<--	rainbyte (~rainbyte@190.191.173.20) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:33:57	-->	narwhal01 (~narwhal01@156.211.3.90) has joined #clojure
+2016-04-02 18:34:07	-->	rainbyte (~rainbyte@190.191.173.20) has joined #clojure
+2016-04-02 18:35:40	-->	grex (~grex@115.133.65.71) has joined #clojure
+2016-04-02 18:35:40	<--	grex (~grex@115.133.65.71) has quit (Client Quit)
+2016-04-02 18:36:48	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 18:38:00	-->	bmd (~bmd@c-73-26-51-199.hsd1.nm.comcast.net) has joined #clojure
+2016-04-02 18:39:29	-->	zmack (~zmack@188.25.161.157) has joined #clojure
+2016-04-02 18:39:43	<--	bmd_ (491a33c7@gateway/web/freenode/ip.73.26.51.199) has quit (Quit: Page closed)
+2016-04-02 18:42:02	-->	deadghost (~deadghost@183.171.172.161) has joined #clojure
+2016-04-02 18:42:29	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 244 seconds)
+2016-04-02 18:43:55	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 248 seconds)
+2016-04-02 18:45:16	<--	narwhal01 (~narwhal01@156.211.3.90) has quit (Ping timeout: 252 seconds)
+2016-04-02 18:49:34	-->	crazydiamond (~crazydiam@178.141.32.31) has joined #clojure
+2016-04-02 18:49:48	-->	sdegutis (~sdegutis@unaffiliated/sdegutis) has joined #clojure
+2016-04-02 18:49:51	sdegutis	What non-alphanumeric symbols are available to use in Clojure binding names?
+2016-04-02 18:50:00	sdegutis	Thanks in advance. Regards, me.
+2016-04-02 18:50:23	justin_smith	sdegutis: officially, or in practice?
+2016-04-02 18:50:32	sdegutis	In practice.
+2016-04-02 18:51:14	-->	grex (~grex@115.133.65.71) has joined #clojure
+2016-04-02 18:51:14	<--	grex (~grex@115.133.65.71) has quit (Client Quit)
+2016-04-02 18:51:22	justin_smith	everything but #, {, }, [, ], (, ), @ should work
+2016-04-02 18:51:28	justin_smith	oh, and .
+2016-04-02 18:51:52	sdegutis	I have models and presenters for the same thing, so I often create :require-based aliases such as :user-presenter or :user-view, and I'd like to shorten that up a bit with a convention. Perhaps something like user$ for view and user% for presenter, I dunno.
+2016-04-02 18:52:00	justin_smith	my bad, # is valid (just not in the beginning)
+2016-04-02 18:52:02	justin_smith	same as '
+2016-04-02 18:52:38	sdegutis	,(let [x$ 1, x% 2, x* 3, x# 4] [x$ x% x* x#])
+2016-04-02 18:52:43	clojurebot	[1 2 3 4]
+2016-04-02 18:52:48	justin_smith	sdegutis: those are both valid - as would be user# and user'
+2016-04-02 18:55:36	sdegutis	,(let [x$ 1, x% 2, x* 3, x# 4, x' 5, x! 6, x& 7, x+ 8, x- 9, x= 10, x| 11, x? 12] [x$ x% x* x# x'x! x& x+ x- x- x| x?])
+2016-04-02 18:55:37	clojurebot	#error {\n :cause "Unable to resolve symbol: x'x! in this context"\n :via\n [{:type clojure.lang.Compiler$CompilerException\n   :message "java.lang.RuntimeException: Unable to resolve symbol: x'x! in this context, compiling:(NO_SOURCE_PATH:0:0)"\n   :at [clojure.lang.Compiler analyze "Compiler.java" 6688]}\n  {:type java.lang.RuntimeException\n   :message "Unable to resolve symbol: x'x! in this co...
+2016-04-02 18:56:01	justin_smith	sdegutis: you missed whitespace
+2016-04-02 18:56:02	sdegutis	,(let [x$ 1, x% 2, x* 3, x# 4, x' 5, x! 6, x& 7, x+ 8, x- 9, x= 10, x| 11, x? 12] [x$ x% x* x# x' x! x& x+ x- x- x| x?])
+2016-04-02 18:56:03	clojurebot	[1 2 3 4 5 ...]
+2016-04-02 18:56:22	sdegutis	Now it's just a matter of picking three that seem reasonable for presenter, view, and model.
+2016-04-02 18:57:17	<--	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has quit (Remote host closed the connection)
+2016-04-02 18:57:33	-->	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has joined #clojure
+2016-04-02 19:00:00	sdegutis	Presenter should be $ since it usually involves formatting, similar to turning 1234.56 into "$1,234.56"
+2016-04-02 19:02:34	sdegutis	View should be x# since it's just Hiccup which often involves HTML-based #id tags.
+2016-04-02 19:02:59	sdegutis	Hmm, maybe model should be x! since it's just way so exciting?
+2016-04-02 19:03:24	sdegutis	Not x= because that implies some sort of equality checking.
+2016-04-02 19:04:12	sdegutis	Maybe model could be x+ because it represents the superior form of x, in terms of purity.
+2016-04-02 19:06:40	<--	gon__ (~gon@93-42-155-4.ip87.fastwebnet.it) has quit (Quit: This computer has gone to sleep)
+2016-04-02 19:06:57	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 19:07:11	<--	visof_ (~visof@156.211.3.90) has quit (Read error: Connection reset by peer)
+2016-04-02 19:07:22	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 19:08:11	<--	Pupnik_ (~Destro@2001:44b8:41c4:ba00:5596:9243:5566:dfd6) has quit (Read error: Connection reset by peer)
+2016-04-02 19:10:02	sdegutis	https://gist.github.com/sdegutis/dad5e45b905c5161baaf0d96e37a6d63
+2016-04-02 19:11:41	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-02 19:13:49	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-02 19:14:11	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:14:14	<--	bmd (~bmd@c-73-26-51-199.hsd1.nm.comcast.net) has quit (Quit: bmd)
+2016-04-02 19:16:04	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:17:09	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:17:23	sdegutis	Done, x* is chosen for no real reason.
+2016-04-02 19:17:54	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:22:33	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:25:08	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:25:30	sdegutis	justin_smith: thanks
+2016-04-02 19:26:25	-->	ekinmur (~ekinmur@98.204.177.40) has joined #clojure
+2016-04-02 19:26:40	sdegutis	Oh dang, there's also services.
+2016-04-02 19:26:44	sdegutis	But that one makes sense as !
+2016-04-02 19:26:46	<--	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has quit (Remote host closed the connection)
+2016-04-02 19:26:57	sdegutis	(email!/send-email ...)
+2016-04-02 19:27:06	sdegutis	etc
+2016-04-02 19:27:34	-->	gon__ (~gon@93-42-155-4.ip87.fastwebnet.it) has joined #clojure
+2016-04-02 19:28:17	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-02 19:28:23	-->	Malnormalulo (~Malnormal@65-78-116-249.c3-0.tlg-ubr3.atw-tlg.pa.cable.rcn.com) has joined #clojure
+2016-04-02 19:29:15	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Ping timeout: 246 seconds)
+2016-04-02 19:29:16	justin_smith	,(defn *&!%?$#! [] (throw (Exception. "OH FUCK!")))
+2016-04-02 19:29:20	clojurebot	#'sandbox/*&!%?$#!
+2016-04-02 19:29:29	-->	zamaterian (~Thomas@94.191.184.185.mobile.3.dk) has joined #clojure
+2016-04-02 19:29:29	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 19:29:53	<--	ekinmur (~ekinmur@98.204.177.40) has quit (Client Quit)
+2016-04-02 19:29:54	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 19:30:11	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:31:40	-->	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has joined #clojure
+2016-04-02 19:31:42	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 19:32:16	-->	happahappa (~happahapp@mail.schwarzwaelder.at) has joined #clojure
+2016-04-02 19:32:31	-->	jweiss (~jweiss@cpe-45-37-112-155.nc.res.rr.com) has joined #clojure
+2016-04-02 19:32:36	-->	bmd (~bmd@c-73-26-51-199.hsd1.nm.comcast.net) has joined #clojure
+2016-04-02 19:33:26	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:33:42	<--	bmd (~bmd@c-73-26-51-199.hsd1.nm.comcast.net) has quit (Client Quit)
+2016-04-02 19:33:45	sdegutis	,(try (*&!%?$#!) (catch Exception e))
+2016-04-02 19:33:45	clojurebot	sdegutis: Gabh mo leithscéal?
+2016-04-02 19:33:53	sdegutis	wha??
+2016-04-02 19:34:00	sdegutis	,(*&!%?$#!)
+2016-04-02 19:34:01	clojurebot	#error {\n :cause "OH FUCK!"\n :via\n [{:type java.lang.Exception\n   :message "OH FUCK!"\n   :at [sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_ invokeStatic "NO_SOURCE_FILE" -1]}]\n :trace\n [[sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_ invokeStatic "NO_SOURCE_FILE" -1]\n  [sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_ invoke "NO_SOURCE_FILE" -1]\...
+2016-04-02 19:34:03	justin_smith	sdegutis: clojurebot doesn't allow try/catch
+2016-04-02 19:34:08	sdegutis	haha stupid cljdbot
+2016-04-02 19:34:18	justin_smith	oh man, I like the munged name there
+2016-04-02 19:35:18	sdegutis	,sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_
+2016-04-02 19:35:18	-->	rayjenkins (~rayjenkin@cpe-72-177-92-218.austin.res.rr.com) has joined #clojure
+2016-04-02 19:35:19	clojurebot	#error {\n :cause "Unable to resolve symbol: sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_ in this context"\n :via\n [{:type clojure.lang.Compiler$CompilerException\n   :message "java.lang.RuntimeException: Unable to resolve symbol: sandbox$_STAR__AMPERSAND__BANG__PERCENT__QMARK_$_SHARP__BANG_ in this context, compiling:(NO_SOURCE_PATH:0:0)"\n   :at [clojure.lang.Compiler analyze "...
+2016-04-02 19:35:30	sdegutis	justin_smith: is it possible to access it manually?
+2016-04-02 19:36:08	-->	lambda-11235 (~lambda-11@47.208.113.50) has joined #clojure
+2016-04-02 19:36:15	-->	owenjones (~owenjones@c-68-80-101-235.hsd1.pa.comcast.net) has joined #clojure
+2016-04-02 19:36:22	-->	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has joined #clojure
+2016-04-02 19:36:45	<--	jweiss (~jweiss@cpe-45-37-112-155.nc.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:36:57	<--	quigonjinn (~quigonjin@dsl-aav4z9.dyn.edudsl.gr) has quit (Ping timeout: 246 seconds)
+2016-04-02 19:37:07	justin_smith	sdegutis: wow, I don't know - maybe it's private or protected or something?
+2016-04-02 19:37:09	<--	schaueho (~schaueho@dslb-088-066-049-137.088.066.pools.vodafone-ip.de) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:37:23	sdegutis	Like, is it ever possible to do that?
+2016-04-02 19:37:26	 *	sdegutis tries locally
+2016-04-02 19:37:52	-->	soleado_ (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:37:55	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:37:57	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 19:38:15	sdegutis	dunno
+2016-04-02 19:40:12	-->	zmack (~zmack@188.25.161.157) has joined #clojure
+2016-04-02 19:40:50	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-02 19:40:54	<--	ystael (~ystael@209-6-53-93.c3-0.smr-ubr1.sbo-smr.ma.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:42:49	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-02 19:44:33	<--	xadi1 (~azochniak@185.69.196.120) has quit (Ping timeout: 240 seconds)
+2016-04-02 19:44:46	-->	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-02 19:44:48	-->	quigonjinn (~quigonjin@dsl-aauxow.dyn.edudsl.gr) has joined #clojure
+2016-04-02 19:44:52	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 260 seconds)
+2016-04-02 19:45:46	<--	xelxebar (~xelxebar@wcache2.waseda.ac.jp) has quit (Quit: WeeChat 1.4)
+2016-04-02 19:46:06	<--	soleado_ (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:46:30	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Client Quit)
+2016-04-02 19:47:07	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:48:45	-->	Sorella (uid49404@oftn/oswg-member/Sorella) has joined #clojure
+2016-04-02 19:51:18	-->	soleado_ (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:51:43	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:52:16	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-02 19:53:04	<--	gon__ (~gon@93-42-155-4.ip87.fastwebnet.it) has quit (Quit: This computer has gone to sleep)
+2016-04-02 19:54:48	<--	soleado_ (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:55:20	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 19:56:54	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:56:54	<--	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 244 seconds)
+2016-04-02 19:56:55	-->	lasers_in_the_ju (~hetano10@ool-182c9c89.dyn.optonline.net) has joined #clojure
+2016-04-02 19:58:31	-->	hamid (~nithp@unaffiliated/hamid) has joined #clojure
+2016-04-02 19:58:41	-->	gon__ (~gon@93-42-155-4.ip87.fastwebnet.it) has joined #clojure
+2016-04-02 19:59:16	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 19:59:45	-->	ayberkt (~ayberkt@host-143-205.ilcub310.champaign.il.us.clients.pavlovmedia.com) has joined #clojure
+2016-04-02 20:00:46	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 20:02:26	-->	djbkd (~djbkd@98.248.67.209) has joined #clojure
+2016-04-02 20:02:35	<--	ayberkt (~ayberkt@host-143-205.ilcub310.champaign.il.us.clients.pavlovmedia.com) has quit (Remote host closed the connection)
+2016-04-02 20:02:51	<--	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 20:04:33	-->	presto (~presto@unaffiliated/presto) has joined #clojure
+2016-04-02 20:04:42	<--	rayjenkins (~rayjenkin@cpe-72-177-92-218.austin.res.rr.com) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-02 20:04:46	<--	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has quit (Read error: Connection reset by peer)
+2016-04-02 20:06:53	-->	soleado (~soleado@108-71-133-183.lightspeed.cicril.sbcglobal.net) has joined #clojure
+2016-04-02 20:08:15	kwladyka	I send data between APP1 <-> APP2 - what is the best solution in Clojure (or generally) to secure that connection to prevent from read this data?
+2016-04-03 10:34:47	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #clojure
+2016-04-03 10:34:47	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.8.0: http://bit.ly/clj-changes | See also #clojure-beginners | Discussion: http://groups.google.com/group/clojure"
+2016-04-03 10:34:47	--	Topic set by amalloy (~amalloy@li231-96.members.linode.com) on Wed, 20 Jan 2016 02:47:27
+2016-04-03 10:34:47	--	Channel #clojure: 659 nicks (1 op, 0 voices, 658 normals)
+2016-04-03 10:34:58	--	Channel created on Wed, 12 Dec 2007 01:34:26
+2016-04-03 10:36:21	--	amalloy_ is now known as amalloy
+2016-04-03 10:38:58	<--	yedi (~yedi@173.153.6.138) has quit (Remote host closed the connection)
+2016-04-03 10:39:30	ridcully	Lewis: because false is not logical true
+2016-04-03 10:39:34	ridcully	,(doc some)
+2016-04-03 10:39:39	clojurebot	"([pred coll]); Returns the first logical true value of (pred x) for any x in coll, else nil. One common idiom is to use a set as pred, for example this will return :fred if :fred is in the sequence, otherwise nil: (some #{:fred} coll)"
+2016-04-03 10:39:39	ridcully	,(some (partial = false) [false false])
+2016-04-03 10:39:40	clojurebot	true
+2016-04-03 10:39:41	-->	yedi (~yedi@173.153.6.138) has joined #clojure
+2016-04-03 10:40:09	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:40:14	Lewis	ridcully: what does logicaly true mean
+2016-04-03 10:41:44	<--	ecemm (~ecemm@195.142.62.105) has quit (Excess Flood)
+2016-04-03 10:42:06	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:42:06	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:27	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:42:27	Lewis	,(some #{nil} [nil nil nil])
+2016-04-03 10:42:27	clojurebot	nil
+2016-04-03 10:42:28	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:32	ridcully	neither nil nor false
+2016-04-03 10:42:39	Lewis	I see
+2016-04-03 10:42:48	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:42:49	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:06	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:43:07	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:24	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:43:25	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:44	Lewis	ridcully: what book do you advise
+2016-04-03 10:43:45	-->	ecemm (~ecemm@195.142.62.105) has joined #clojure
+2016-04-03 10:43:46	ridcully	,(some (partial contains? #{false nil}) [1 nil false])
+2016-04-03 10:43:46	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:47	clojurebot	true
+2016-04-03 10:44:09	-->	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has joined #clojure
+2016-04-03 10:44:40	<--	yedi (~yedi@173.153.6.138) has quit (Ping timeout: 268 seconds)
+2016-04-03 10:46:11	Lewis	,(some (partial #{false nil}) [1 nil false])
+2016-04-03 10:46:11	clojurebot	nil
+2016-04-03 10:46:18	ridcully	i read two: the joy of clojure and clojure applied.  the first one is a little tougher to chew and the second one is more practical
+2016-04-03 10:46:38	Lewis	,(doc contains?)
+2016-04-03 10:46:39	clojurebot	"([coll key]); Returns true if key is present in the given collection, otherwise returns false. Note that for numerically indexed collections like vectors and Java arrays, this tests if the numeric key is within the range of indexes. 'contains?' operates constant or logarithmic time; it will not perform a linear search for a value. See also 'some'."
+2016-04-03 10:46:59	ridcully	others suggested the "brave" book and the one from Carin Meier (spl?!) for beginners
+2016-04-03 10:47:05	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-03 10:47:48	Lewis	so joy of clojure and clojure applied are for intermediate?
+2016-04-03 10:48:54	Lewis	ridcully: i see.
+2016-04-03 10:49:08	ridcully	i'd say clojure applied is for you, if you have delivered software in other languages
+2016-04-03 10:49:50	ridcully	,(#{1 2 3} 1)
+2016-04-03 10:49:54	clojurebot	1
+2016-04-03 10:50:55	ridcully	the problem with using the set as a function here is, that it returns the element found - which is "the" false
+2016-04-03 10:51:30	ridcully	contains? on the other hand will tell you if the item is in the set
+2016-04-03 10:51:38	-->	ben1 (~ben@108-83-18-252.lightspeed.sntcca.sbcglobal.net) has joined #clojure
+2016-04-03 10:53:07	<--	atyz (~atyz@68-119-45-84.dhcp.spbg.sc.charter.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 10:53:41	-->	xadi (~azochniak@user-188-33-101-117.play-internet.pl) has joined #clojure
+2016-04-03 10:53:47	-->	domokato_ (~domokato@66-215-21-248.static.gldl.ca.charter.com) has joined #clojure
+2016-04-03 10:54:17	Lewis	ridcully: right i think i got it
+2016-04-03 10:54:39	<--	domokato (~domokato@66-215-21-248.static.gldl.ca.charter.com) has quit (Ping timeout: 260 seconds)
+2016-04-03 10:55:43	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-03 10:56:41	-->	brstream_ (~brstream@p4FF84563.dip0.t-ipconnect.de) has joined #clojure
+2016-04-03 10:57:37	-->	spba (~spba@27-32-158-143.static.tpgi.com.au) has joined #clojure
+2016-04-03 10:58:19	<--	Strout (~Strout@unaffiliated/strout) has quit (Ping timeout: 248 seconds)
+2016-04-03 11:00:03	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 240 seconds)
+2016-04-03 11:01:14	-->	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has joined #clojure
+2016-04-03 11:01:14	<--	Strout (~Strout@c83-251-135-135.bredband.comhem.se) has quit (Changing host)
+2016-04-03 11:01:14	-->	Strout (~Strout@unaffiliated/strout) has joined #clojure
+2016-04-03 11:01:37	Lewis	ridcully: what language are you coming from?
+2016-04-03 11:05:19	<--	scottj (~scott@unaffiliated/scottj) has quit (Quit: leaving)
+2016-04-03 11:07:01	<--	Strout (~Strout@unaffiliated/strout) has quit (Quit: leaving)
+2016-04-03 11:07:16	-->	Strout (~Strout@unaffiliated/strout) has joined #clojure
+2016-04-03 11:11:37	<--	zphds (~zphds@unaffiliated/sudharsh) has quit (Remote host closed the connection)
+2016-04-03 11:11:55	<--	lambda-11235 (~lambda-11@47-208-113-50.erkacmtk03.res.dyn.suddenlink.net) has quit (Quit: Bye)
+2016-04-03 11:13:10	<--	backnforth (~backnfort@nwcsnbsc03w-142167048130.dhcp-dynamic.FibreOp.nb.bellaliant.net) has quit (Remote host closed the connection)
+2016-04-03 11:13:39	-->	atyz (~atyz@68-119-45-84.dhcp.spbg.sc.charter.com) has joined #clojure
+2016-04-03 11:13:54	<--	xadi (~azochniak@user-188-33-101-117.play-internet.pl) has quit (Ping timeout: 246 seconds)
+2016-04-03 11:14:48	<--	ben1 (~ben@108-83-18-252.lightspeed.sntcca.sbcglobal.net) has quit (Ping timeout: 276 seconds)
+2016-04-03 11:16:02	<--	noethics (~noethics@gateway/vpn/privateinternetaccess/ebonics) has quit (Ping timeout: 244 seconds)
+2016-04-03 11:17:59	<--	FlyingChicken (uid131586@gateway/web/irccloud.com/x-xpqsfojcglcmpujq) has quit (Quit: Connection closed for inactivity)
+2016-04-03 11:17:59	ridcully	Lewis: groovy on the jvm and  c++, python otherwise
+2016-04-03 11:19:09	Lewis	i see
+2016-04-03 11:19:26	Lewis	ridcully: i dont know anything about the jvm
+2016-04-03 11:22:18	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Ping timeout: 246 seconds)
+2016-04-03 11:22:30	--	amalloy is now known as amalloy_
+2016-04-03 11:25:11	Lewis	,
+2016-04-03 11:25:15	clojurebot	#<RuntimeException java.lang.RuntimeException: EOF while reading>
+2016-04-03 11:25:26	Lewis	,(doc conj)
+2016-04-03 11:25:27	clojurebot	"([coll x] [coll x & xs]); conj[oin]. Returns a new collection with the xs 'added'. (conj nil item) returns (item). The 'addition' may happen at different 'places' depending on the concrete type."
+2016-04-03 11:28:16	<--	djbkd (~djbkd@98.248.67.209) has quit (Quit: Leaving...)
+2016-04-03 11:28:43	<--	william-s (~william-s@109.201.154.246) has quit (Quit: WeeChat 1.4)
+2016-04-03 11:33:39	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-03 11:35:09	-->	backnforth (~backnfort@nwcsnbsc03w-142167048130.dhcp-dynamic.FibreOp.nb.bellaliant.net) has joined #clojure
+2016-04-03 11:36:01	-->	forgottenone (~forgotten@176.40.21.204) has joined #clojure
+2016-04-03 11:38:22	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 252 seconds)
+2016-04-03 11:39:17	<--	atyz (~atyz@68-119-45-84.dhcp.spbg.sc.charter.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 11:40:26	-->	kolko (~kolko@46.48.58.17) has joined #clojure
+2016-04-03 11:42:10	<--	backnforth (~backnfort@nwcsnbsc03w-142167048130.dhcp-dynamic.FibreOp.nb.bellaliant.net) has quit (Quit: Leaving)
+2016-04-03 11:43:03	<--	Lewis (~lewis@99.230.48.49) has quit (Remote host closed the connection)
+2016-04-03 11:43:49	-->	djbkd_ (~djbkd@98.248.67.209) has joined #clojure
+2016-04-03 11:46:54	-->	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has joined #clojure
+2016-04-03 11:50:09	<--	clarkenciel (~clarkenci@cpe-23-243-243-82.socal.res.rr.com) has quit (Remote host closed the connection)
+2016-04-03 11:52:11	<--	donbonifacio (~donbonifa@a95-92-51-56.cpe.netcabo.pt) has quit (Remote host closed the connection)
+2016-04-03 11:53:03	-->	blt (~blt@unaffiliated/swedishfish) has joined #clojure
+2016-04-03 11:57:26	<--	djbkd_ (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 11:57:33	-->	jkogut (~jkogut@176.184.136.252) has joined #clojure
+2016-04-03 12:04:10	-->	firstdayonthejob (~firstdayo@cpc9-croy22-2-0-cust203.19-2.cable.virginm.net) has joined #clojure
+2016-04-03 12:09:17	<--	zodiak (~stef@dhcp-60-a4-4c-a0-df-90.cpe.ezlink.ca) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:10:07	<--	foocraft (~quassel@unaffiliated/foocraft) has quit (Ping timeout: 260 seconds)
+2016-04-03 12:11:34	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 12:11:49	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 12:13:02	-->	hamid (~nithp@unaffiliated/hamid) has joined #clojure
+2016-04-03 12:15:59	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:24:58	<--	piranha (~piranha@178.137.176.10) has quit (Remote host closed the connection)
+2016-04-03 12:31:17	-->	alexyakushev_ (~x220@37.57.221.6) has joined #clojure
+2016-04-03 12:32:16	<--	bsima (~ben@ip70-181-229-65.sd.sd.cox.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 12:32:24	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 12:33:35	-->	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has joined #clojure
+2016-04-03 12:33:58	-->	bsima (~ben@ip70-181-229-65.sd.sd.cox.net) has joined #clojure
+2016-04-03 12:35:40	-->	zphds (~zphds@unaffiliated/sudharsh) has joined #clojure
+2016-04-03 12:36:29	-->	mokuso (~milia@unaffiliated/milia) has joined #clojure
+2016-04-03 12:39:40	-->	schaueho (~schaueho@dslb-088-066-051-168.088.066.pools.vodafone-ip.de) has joined #clojure
+2016-04-03 12:39:40	-->	happahappa (~happahapp@chello212186074167.11.vie.surfer.at) has joined #clojure
+2016-04-03 12:41:49	-->	xphil (~textual@c-73-71-252-163.hsd1.ca.comcast.net) has joined #clojure
+2016-04-03 12:42:06	<--	happahappa (~happahapp@chello212186074167.11.vie.surfer.at) has quit (Client Quit)
+2016-04-03 12:43:56	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-03 12:48:43	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 248 seconds)
+2016-04-03 12:48:50	<--	gem (~gem@106.51.243.175) has quit (Quit: I am going now!)
+2016-04-03 12:49:09	-->	donbonifacio (~donbonifa@114.107.108.93.rev.vodafone.pt) has joined #clojure
+2016-04-03 12:49:51	-->	donbonif_ (~donbonifa@a95-92-51-56.cpe.netcabo.pt) has joined #clojure
+2016-04-03 12:52:19	-->	coldnew (~user@219.85.86.206) has joined #clojure
+2016-04-03 12:53:43	<--	donbonifacio (~donbonifa@114.107.108.93.rev.vodafone.pt) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:55:46	<--	piranha (~piranha@178.137.176.10) has quit (Remote host closed the connection)
+2016-04-03 12:56:51	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 12:56:51	-->	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has joined #clojure
+2016-04-03 13:00:04	-->	piranha1 (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 13:00:11	-->	Ember_ (~niklas@ember.ttek.fi) has joined #clojure
+2016-04-03 13:00:17	--	Ember_ is now known as Empperi
+2016-04-03 13:01:07	<--	piranha (~piranha@178.137.176.10) has quit (Read error: Connection reset by peer)
+2016-04-03 13:05:03	-->	foocraft (~quassel@unaffiliated/foocraft) has joined #clojure
+2016-04-03 13:06:26	<--	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has quit (Quit: hibernating...)
+2016-04-03 13:10:53	-->	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has joined #clojure
+2016-04-03 13:11:47	<--	schaueho (~schaueho@dslb-088-066-051-168.088.066.pools.vodafone-ip.de) has quit (Ping timeout: 244 seconds)
+2016-04-03 13:12:19	-->	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has joined #clojure
+2016-04-03 13:13:21	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 13:14:54	<--	Sorella (uid49404@oftn/oswg-member/Sorella) has quit (Quit: Connection closed for inactivity)
+2016-04-03 13:15:45	<--	forgottenone (~forgotten@176.40.21.204) has quit (Quit: Konversation terminated!)
+2016-04-03 13:16:45	<--	savorywatt_ (~Savorywat@75-170-241-239.desm.qwest.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 13:18:24	<--	zphds (~zphds@unaffiliated/sudharsh) has quit (Remote host closed the connection)
+2016-04-03 13:18:47	-->	schaueho (~schaueho@dslb-088-066-051-168.088.066.pools.vodafone-ip.de) has joined #clojure
+2016-04-03 13:26:36	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 13:34:21	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-03 13:36:10	-->	neoncontrails (~neoncontr@2602:304:cc4e:9410:d935:a7e:4f9b:7836) has joined #clojure
+2016-04-03 13:36:10	-->	shafire (2573d886@gateway/web/freenode/ip.37.115.216.134) has joined #clojure
+2016-04-03 13:36:25	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-03 13:36:52	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-03 13:38:21	<--	terom (tero@aulis.sange.fi) has quit (Remote host closed the connection)
+2016-04-03 13:38:39	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 244 seconds)
+2016-04-03 13:38:48	-->	alexei_ (~amgarchin@p4FD605E4.dip0.t-ipconnect.de) has joined #clojure
+2016-04-03 13:39:06	<--	deepakprasanna (~deepak@110.227.236.215) has quit (Ping timeout: 276 seconds)
+2016-04-03 13:40:10	-->	terom (tero@aulis.sange.fi) has joined #clojure
+2016-04-03 13:41:02	<--	neoncontrails (~neoncontr@2602:304:cc4e:9410:d935:a7e:4f9b:7836) has quit (Ping timeout: 268 seconds)
+2016-04-03 13:41:43	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 276 seconds)
+2016-04-03 13:46:16	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 13:46:20	-->	m_____ (~user@118.211.108.246) has joined #clojure
+2016-04-03 13:47:27	<--	foocraft (~quassel@unaffiliated/foocraft) has quit (Ping timeout: 244 seconds)
+2016-04-03 13:52:04	<--	alexei_ (~amgarchin@p4FD605E4.dip0.t-ipconnect.de) has quit (Ping timeout: 244 seconds)
+2016-04-03 13:53:28	<--	xphil (~textual@c-73-71-252-163.hsd1.ca.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 13:54:15	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-03 13:58:55	<--	schaueho (~schaueho@dslb-088-066-051-168.088.066.pools.vodafone-ip.de) has quit (Ping timeout: 268 seconds)
+2016-04-03 13:59:37	<--	kolko (~kolko@46.48.58.17) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 14:02:25	<--	domokato_ (~domokato@66-215-21-248.static.gldl.ca.charter.com) has quit (Remote host closed the connection)
+2016-04-03 14:02:53	-->	kolko (~kolko@46.48.58.17) has joined #clojure
+2016-04-03 14:05:13	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 14:08:15	<--	kolko (~kolko@46.48.58.17) has quit (Ping timeout: 264 seconds)
+2016-04-03 14:12:43	-->	quimrsto_ (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 14:16:53	<--	quimrsto_ (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Ping timeout: 244 seconds)
+2016-04-03 14:16:59	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 14:20:13	-->	Kajtek (~nope@91.223.167.206) has joined #clojure
+2016-04-03 14:20:34	<--	piranha1 (~piranha@178.137.176.10) has quit (Remote host closed the connection)
+2016-04-03 14:25:57	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 14:29:09	<--	TEttinger (~notostrac@138.229.158.41) has quit (Ping timeout: 276 seconds)
+2016-04-03 14:32:10	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-03 14:32:11	<--	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has quit (Quit: Leaving.)
+2016-04-03 14:33:06	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 14:33:20	-->	quimrsto_ (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 14:35:00	-->	kolko (~kolko@46.48.58.17) has joined #clojure
+2016-04-03 14:37:09	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 268 seconds)
+2016-04-03 14:37:31	<--	quimrsto_ (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:37:49	-->	foocraft (~quassel@85.97.39.132) has joined #clojure
+2016-04-03 14:37:49	<--	foocraft (~quassel@85.97.39.132) has quit (Changing host)
+2016-04-03 14:37:49	-->	foocraft (~quassel@unaffiliated/foocraft) has joined #clojure
+2016-04-03 14:40:47	-->	i-blis (~iblis@p20030084AF6F5601CC246FE33F73743F.dip0.t-ipconnect.de) has joined #clojure
+2016-04-03 14:40:47	<--	i-blis (~iblis@p20030084AF6F5601CC246FE33F73743F.dip0.t-ipconnect.de) has quit (Changing host)
+2016-04-03 14:40:47	-->	i-blis (~iblis@unaffiliated/i-blis) has joined #clojure
+2016-04-03 14:45:02	<--	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has quit (Quit: hibernating...)
+2016-04-03 14:46:31	-->	Bronsa (~bronco@90.196.185.10) has joined #clojure
+2016-04-03 14:50:16	<--	makufiru (uid67373@gateway/web/irccloud.com/x-barglzcwzhpkfviz) has quit (Quit: Connection closed for inactivity)
+2016-04-03 14:57:31	-->	xadi (~azochniak@user-188-33-101-117.play-internet.pl) has joined #clojure
+2016-04-03 15:02:23	<--	Pupnik_ (~Destro@2001:44b8:41c4:ba00:f11b:d143:d1a1:74e0) has quit (Quit: Leaving)
+2016-04-03 15:06:05	-->	alesguzik (~alesguzik@host-176-36-227-89.la.net.ua) has joined #clojure
+2016-04-03 15:12:06	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 248 seconds)
+2016-04-03 15:19:55	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 15:21:28	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 15:22:35	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 15:24:59	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-03 15:26:04	<--	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:26:29	<--	piranha (~piranha@178.137.176.10) has quit (Ping timeout: 260 seconds)
+2016-04-03 15:27:26	-->	skeuomorf (~user@unaffiliated/skeuomorf) has joined #clojure
+2016-04-03 15:30:15	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 276 seconds)
+2016-04-03 15:35:12	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-03 15:35:14	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 15:36:07	<--	mokuso (~milia@unaffiliated/milia) has quit (Quit: leaving)
+2016-04-03 15:36:55	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 15:38:40	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-03 15:39:49	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:39:59	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-03 15:45:12	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 276 seconds)
+2016-04-03 15:47:03	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 15:48:38	-->	mcescher (~mcescher@ip5b408d4b.dynamic.kabel-deutschland.de) has joined #clojure
+2016-04-03 15:49:21	<--	glosoli (~textual@unaffiliated/glosoli) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-03 15:52:22	<--	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 15:56:02	<--	xadi (~azochniak@user-188-33-101-117.play-internet.pl) has quit (Quit: Leaving.)
+2016-04-03 15:57:35	-->	eatsfoobars (~eatsfooba@ppp-94-67-38-148.home.otenet.gr) has joined #clojure
+2016-04-03 16:03:53	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 16:05:51	-->	quimrsto_ (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 16:05:55	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Read error: Connection reset by peer)
+2016-04-03 16:05:58	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-03 16:15:26	<--	shafire (2573d886@gateway/web/freenode/ip.37.115.216.134) has quit (Ping timeout: 250 seconds)
+2016-04-03 16:15:27	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:15:56	-->	sg2002 (~user@broadband-95-84-209-126.nationalcablenetworks.ru) has joined #clojure
+2016-04-03 16:17:44	-->	Bronsa` (~bronco@90.196.185.10) has joined #clojure
+2016-04-03 16:20:07	-->	xadi (~azochniak@static-78-9-150-173.ssp.dialog.net.pl) has joined #clojure
+2016-04-03 16:20:21	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-03 16:20:22	<--	Bronsa (~bronco@90.196.185.10) has quit (Ping timeout: 260 seconds)
+2016-04-03 16:20:57	<--	coldnew (~user@219.85.86.206) has quit (Ping timeout: 276 seconds)
+2016-04-03 16:20:59	<--	xadi (~azochniak@static-78-9-150-173.ssp.dialog.net.pl) has quit (Client Quit)
+2016-04-03 16:22:16	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 16:22:18	-->	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has joined #clojure
+2016-04-03 16:22:49	<--	eatsfoobars (~eatsfooba@ppp-94-67-38-148.home.otenet.gr) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 16:23:04	<--	quimrstorres (~quimrstor@x4e37d509.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-03 16:23:10	-->	eatsfoobars (~eatsfooba@ppp-94-67-38-148.home.otenet.gr) has joined #clojure
+2016-04-03 16:25:00	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-03 16:26:01	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 16:27:22	<--	piranha (~piranha@178.137.176.10) has quit (Ping timeout: 260 seconds)
+2016-04-03 16:36:34	-->	djbkd (~djbkd@98.248.67.209) has joined #clojure
+2016-04-03 16:36:57	-->	FlyingChicken (uid131586@gateway/web/irccloud.com/x-qfqsivprlpmkmsvn) has joined #clojure
+2016-04-03 16:38:12	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-03 16:43:43	-->	zipper (~onake@unaffiliated/zipper) has joined #clojure
+2016-04-03 16:44:47	-->	inhortte (~polaris@109.red-88-15-252.dynamicip.rima-tde.net) has joined #clojure
+2016-04-03 16:45:00	-->	Pupnik_ (~Destro@2001:44b8:41c4:ba00:9469:a1c2:f112:26b2) has joined #clojure
+2016-04-03 16:45:32	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-03 16:46:33	-->	bendavisnc (ad5fb221@gateway/web/cgi-irc/kiwiirc.com/ip.173.95.178.33) has joined #clojure
+2016-04-03 16:47:47	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 16:48:06	-->	cored (~cored@unaffiliated/cored) has joined #clojure
+2016-04-03 16:48:51	<--	bendavisnc (ad5fb221@gateway/web/cgi-irc/kiwiirc.com/ip.173.95.178.33) has quit (Client Quit)
+2016-04-03 16:49:49	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 244 seconds)
+2016-04-03 16:56:17	<--	alesguzik (~alesguzik@host-176-36-227-89.la.net.ua) has quit (Quit: leaving)
+2016-04-03 17:00:30	<--	dene14 (~dene14@dene.tcm.by) has quit (Remote host closed the connection)
+2016-04-03 17:01:06	-->	dene14 (~dene14@dene.tcm.by) has joined #clojure
+2016-04-03 17:02:03	<--	hamid (~nithp@unaffiliated/hamid) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:05:52	<--	dene14 (~dene14@dene.tcm.by) has quit (Remote host closed the connection)
+2016-04-03 17:06:44	-->	dene14 (~dene14@dene.tcm.by) has joined #clojure
+2016-04-03 17:06:52	<--	dene14 (~dene14@dene.tcm.by) has quit (Remote host closed the connection)
+2016-04-03 17:07:37	-->	kjar (~kjar@cpe-45-47-149-103.nycap.res.rr.com) has joined #clojure
+2016-04-03 17:08:03	-->	dene14 (~dene14@dene.tcm.by) has joined #clojure
+2016-04-03 17:08:15	-->	lsyoyom (~liny01@unaffiliated/lsyoyom) has joined #clojure
+2016-04-03 17:09:30	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 17:10:26	-->	ARM9 (~ARM9@46-236-101-75.customer.t3.se) has joined #clojure
+2016-04-03 17:12:41	-->	bendlas (~user@chello062178064228.22.11.vie.surfer.at) has joined #clojure
+2016-04-03 17:13:05	<--	robbyoconnor (~wakawaka@guifications/user/r0bby) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:13:22	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-03 17:16:13	<--	sg2002 (~user@broadband-95-84-209-126.nationalcablenetworks.ru) has quit (Remote host closed the connection)
+2016-04-03 17:21:12	-->	ype (~ype@cpc45-slam6-2-0-cust434.2-4.cable.virginm.net) has joined #clojure
+2016-04-03 17:22:15	-->	lasers_in_the_ju (~hetano10@ool-182c9c89.dyn.optonline.net) has joined #clojure
+2016-04-03 17:22:16	-->	alexei_ (~amgarchin@p4FD605E4.dip0.t-ipconnect.de) has joined #clojure
+2016-04-03 17:22:19	-->	atyz (~atyz@68-119-45-84.dhcp.spbg.sc.charter.com) has joined #clojure
+2016-04-03 17:23:05	-->	piranha (~piranha@178.137.176.10) has joined #clojure
+2016-04-03 17:24:33	-->	grex (~grex@115.133.65.71) has joined #clojure
+2016-04-03 17:24:40	<--	grex (~grex@115.133.65.71) has quit (Read error: Connection reset by peer)
+2016-04-03 17:29:01	--	xeno__ is now known as xeno
+2016-04-03 17:29:15	<--	piranha (~piranha@178.137.176.10) has quit (Ping timeout: 264 seconds)
+2016-04-03 17:31:03	-->	meoblast001 (~meoblast@cable-95-168-151-171.cust.telecolumbus.net) has joined #clojure
+2016-04-03 17:34:19	-->	cat-o-the-thrill (~cat-o-the@ool-2f10e3fc.dyn.optonline.net) has joined #clojure
+2016-04-03 17:35:59	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-03 17:36:47	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-03 17:38:14	<--	foocraft (~quassel@unaffiliated/foocraft) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:40:16	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 252 seconds)
+2016-04-03 17:42:21	ARM9	is there any decent way to leverage the jvm jit compiler to build programs at runtime?
+2016-04-03 17:42:48	ARM9	like say I've got some simpler functions that I'd want to combine into one function based on some input at runtime
+2016-04-03 17:42:57	ARM9	call it dynamic recompilation if you will
+2016-04-03 17:43:13	-->	foocraft (~quassel@85.97.39.132) has joined #clojure
+2016-04-03 17:43:13	<--	foocraft (~quassel@85.97.39.132) has quit (Changing host)
+2016-04-03 17:43:13	-->	foocraft (~quassel@unaffiliated/foocraft) has joined #clojure
+2016-04-04 10:56:51	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #clojure
+2016-04-04 10:56:51	--	Topic for #clojure is "Clojure, the language http://clojure.org | Currently at 1.8.0: http://bit.ly/clj-changes | See also #clojure-beginners | Discussion: http://groups.google.com/group/clojure"
+2016-04-04 10:56:51	--	Topic set by amalloy (~amalloy@li231-96.members.linode.com) on Wed, 20 Jan 2016 02:47:27
+2016-04-04 10:56:51	--	Channel #clojure: 677 nicks (1 op, 0 voices, 676 normals)
+2016-04-04 10:57:03	--	Channel created on Wed, 12 Dec 2007 01:34:26
+2016-04-04 10:59:48	<--	zzamboni (~zzamboni@213.65.0.85.dynamic.wline.res.cust.swisscom.ch) has quit (Read error: Connection reset by peer)
+2016-04-04 11:07:43	<--	daito__ (~daito@203.104.128.122) has quit (Remote host closed the connection)
+2016-04-04 11:08:17	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-04 11:09:22	<--	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has quit (Read error: Connection reset by peer)
+2016-04-04 11:09:48	-->	quimrstorres (~quimrstor@x4db342f2.dyn.telefonica.de) has joined #clojure
+2016-04-04 11:11:01	<--	quimrstorres (~quimrstor@x4db342f2.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-04 11:11:06	<--	firstdayonthejob (~firstdayo@cpc9-croy22-2-0-cust203.19-2.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:11:23	--	amalloy_ is now known as amalloy
+2016-04-04 11:11:28	-->	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has joined #clojure
+2016-04-04 11:13:13	-->	Pupnik_ (~Destro@2001:44b8:41c4:ba00:d15f:3da4:f75c:6b70) has joined #clojure
+2016-04-04 11:14:35	<--	sekrit (charitwo@freenode/staff/c) has quit (Changing host)
+2016-04-04 11:14:35	-->	sekrit (charitwo@freenode/staff/wikimedia.charitwo) has joined #clojure
+2016-04-04 11:14:48	libertytrader	tolstoy cwgem|mac the problem was i needed to call flush
+2016-04-04 11:17:01	<--	zphds (~zphds@unaffiliated/sudharsh) has quit (Remote host closed the connection)
+2016-04-04 11:18:16	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-04 11:20:20	-->	bigkevmcd (~kevin@cpc83611-ruth10-2-0-cust205.14-1.cable.virginm.net) has joined #clojure
+2016-04-04 11:21:35	<--	sobel (~matt@66.219.34.76) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:21:41	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:21:50	<--	deadghost (~deadghost@183.171.172.222) has quit (Remote host closed the connection)
+2016-04-04 11:22:21	-->	jakebasile (uid27892@gateway/web/irccloud.com/x-zcauwonhwznxoqsd) has joined #clojure
+2016-04-04 11:23:39	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:24:41	<--	hamid (~nithp@unaffiliated/hamid) has quit (Quit: leaving)
+2016-04-04 11:25:48	-->	ba3times (~ba@188.252.4.28) has joined #clojure
+2016-04-04 11:27:10	-->	schaueho (~schaueho@dslb-088-066-040-143.088.066.pools.vodafone-ip.de) has joined #clojure
+2016-04-04 11:28:04	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-04 11:29:43	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 11:30:43	<--	neoncontrails (~neoncontr@wsip-174-79-243-9.sd.sd.cox.net) has quit (Remote host closed the connection)
+2016-04-04 11:31:07	<--	radoye (~radoye@c-73-223-104-108.hsd1.ca.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:33:26	<--	tmtwd (~tmtwd@104-247-236-230.cpe.teksavvy.com) has quit (Remote host closed the connection)
+2016-04-04 11:35:08	<--	vsdfs (~vsdfs@155.254.33.177) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:35:33	-->	Bronsa`` (~bronco@90.196.185.10) has joined #clojure
+2016-04-04 11:37:42	<--	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has quit (Quit: hibernating...)
+2016-04-04 11:37:43	-->	sobel (~matt@66.219.34.76) has joined #clojure
+2016-04-04 11:38:31	-->	instilled (~Adium@231.105.104.92.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-04 11:39:44	-->	i-blis (~iblis@islamic-empire.orientalistik.uni-hamburg.de) has joined #clojure
+2016-04-04 11:39:44	<--	i-blis (~iblis@islamic-empire.orientalistik.uni-hamburg.de) has quit (Changing host)
+2016-04-04 11:39:44	-->	i-blis (~iblis@unaffiliated/i-blis) has joined #clojure
+2016-04-04 11:40:37	<--	Bronsa`` (~bronco@90.196.185.10) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:40:38	<--	kolko (~kolko@46.48.58.17) has quit (Read error: Connection reset by peer)
+2016-04-04 11:41:34	<--	alexyakushev_ (~x220@37.57.221.6) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:41:36	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 11:42:06	-->	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has joined #clojure
+2016-04-04 11:42:38	-->	ggenikus (~ggenikus@56-199-52-37.pool.ukrtel.net) has joined #clojure
+2016-04-04 11:43:07	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 11:43:35	-->	prohobo (~prohobo@095160157062.dynamic-ra-10.vectranet.pl) has joined #clojure
+2016-04-04 11:44:58	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 11:45:08	-->	quimrstorres (~quimrstor@x4db342f2.dyn.telefonica.de) has joined #clojure
+2016-04-04 11:46:31	<--	ggenikus (~ggenikus@56-199-52-37.pool.ukrtel.net) has quit (Remote host closed the connection)
+2016-04-04 11:46:44	<--	renl (~std@bb116-14-175-101.singnet.com.sg) has quit (Quit: WeeChat 0.4.2)
+2016-04-04 11:47:44	-->	user_ (~backnfort@nwcsnbsc03w-142167048130.dhcp-dynamic.FibreOp.nb.bellaliant.net) has joined #clojure
+2016-04-04 11:48:22	-->	renl (~std@bb116-14-175-101.singnet.com.sg) has joined #clojure
+2016-04-04 11:48:53	<--	user_ (~backnfort@nwcsnbsc03w-142167048130.dhcp-dynamic.FibreOp.nb.bellaliant.net) has quit (Client Quit)
+2016-04-04 11:49:04	-->	neoncontrails (~neoncontr@wsip-70-166-89-11.sd.sd.cox.net) has joined #clojure
+2016-04-04 11:49:39	<--	quimrstorres (~quimrstor@x4db342f2.dyn.telefonica.de) has quit (Remote host closed the connection)
+2016-04-04 11:50:30	-->	htmldrum (~htmldrum@49.255.234.58) has joined #clojure
+2016-04-04 11:51:09	<--	noethics (~noethics@gateway/vpn/privateinternetaccess/ebonics) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:53:28	<--	libertytrader (~brian@c-67-171-135-106.hsd1.wa.comcast.net) has quit (Quit: Leaving)
+2016-04-04 11:53:29	<--	renl (~std@bb116-14-175-101.singnet.com.sg) has quit (Read error: Connection reset by peer)
+2016-04-04 11:53:36	-->	renl_ (~std@bb116-14-175-101.singnet.com.sg) has joined #clojure
+2016-04-04 11:53:51	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 11:54:16	-->	slester_ (~slester@ip68-107-115-97.sd.sd.cox.net) has joined #clojure
+2016-04-04 11:54:50	slester_	quick question, is there any reason jdbc's query function would require a lazyseq?
+2016-04-04 11:55:12	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:55:43	hiredman	what do you mean by require?
+2016-04-04 11:55:52	slester_	err, return. sorry. late.
+2016-04-04 11:56:15	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-04 11:56:17	hiredman	query's return value isn't actually lazy by default, query calls doall on it
+2016-04-04 11:56:22	slester_	I'm doing a (str (j/query db ["select * from table"])) thing and it prints out LazySeq
+2016-04-04 11:56:47	hiredman	the type is LazySeq, but by default the seq is entirely realized
+2016-04-04 11:57:59	-->	Guest92 (~textual@188.252.4.28) has joined #clojure
+2016-04-04 11:58:07	hiredman	seqs are sort like an iterator in java in that they represent a traversal of something
+2016-04-04 11:58:29	hiredman	so query is return a traversal over the results of the query
+2016-04-04 11:58:43	slester_	sorry, there's also a :row-fn :name in there
+2016-04-04 11:58:50	hiredman	which makes so much sense that I bet whoever wrote it didn't even think about it
+2016-04-04 11:59:16	<--	Guest92 (~textual@188.252.4.28) has quit (Client Quit)
+2016-04-04 11:59:48	hiredman	(if your question is "what is the
+2016-04-04 12:00:26	hiredman	so if your question is literally "what is the reason it returns a seq" the answer is basically "that is the default stance of a clojure programmer"
+2016-04-04 12:02:19	hiredman	if you question is "how do I get a readable printing of a seq" the answer is actually "str doesn't always return readable things, it just calls .toString, if you want to get readable things use the pr and prn family of functions"
+2016-04-04 12:02:44	-->	mattyw (~mattyw@host109-158-81-144.range109-158.btcentralplus.com) has joined #clojure
+2016-04-04 12:03:13	slester_	the latter was it, thanks, I expected str to do the same thing as print
+2016-04-04 12:03:26	-->	ifesdjeen (~ifesdjeen@ppp-46-244-172-81.dynamic.mnet-online.de) has joined #clojure
+2016-04-04 12:03:30	hiredman	not print, pr
+2016-04-04 12:03:57	slester_	well, in my function I had (let [x (j/query..)] (print x) x) and it printed out things
+2016-04-04 12:04:04	<--	ba3times (~ba@188.252.4.28) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:04:22	slester_	but I was doing (str "stuff:" (the-fn)) and it did not do what I thought it would do
+2016-04-04 12:04:40	<--	michaelneale (~textual@ppp121-44-6-78.lns20.syd4.internode.on.net) has quit (Read error: Connection reset by peer)
+2016-04-04 12:05:01	-->	aatifh (~aatifh@106.51.141.171) has joined #clojure
+2016-04-04 12:05:19	-->	michaelneale (~textual@ppp121-44-6-78.lns20.syd4.internode.on.net) has joined #clojure
+2016-04-04 12:05:47	-->	timvishe_ (~tim.vishe@pool-71-185-27-159.phlapa.fios.verizon.net) has joined #clojure
+2016-04-04 12:05:54	-->	Bronsa`` (~bronco@90.196.185.10) has joined #clojure
+2016-04-04 12:06:53	<--	ryanf (~ryan@rfitz.xen.prgmr.com) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:06:53	<--	shymega (~shymega@arch-vile.shymega.org.uk) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:17	-->	aatifh_ (~aatifh@106.51.141.171) has joined #clojure
+2016-04-04 12:07:19	<--	timvisher (~tim.vishe@pool-71-185-27-159.phlapa.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:19	<--	tolstoy (~keith@c-50-139-56-85.hsd1.or.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:50	<--	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	ThePhoeron (~sysop@thephoeron.com) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	jeaye (~jeaye@unaffiliated/jeaye) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	emdashcomma (~ayyub@104.131.17.242) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:08:03	-->	armyriad (~armyriad@198.8.80.73) has joined #clojure
+2016-04-04 12:08:46	-->	ryanf (~ryan@rfitz.xen.prgmr.com) has joined #clojure
+2016-04-04 12:09:03	<--	zph (sid26878@gateway/web/irccloud.com/x-zcwatsnileyajath) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:29	<--	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:30	-->	zph_ (sid26878@gateway/web/irccloud.com/x-bgsyyxprvotinzsw) has joined #clojure
+2016-04-04 12:09:41	<--	aatifh (~aatifh@106.51.141.171) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:41	<--	fsl_ (~fsl@153.ip-51-255-49.eu) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:42	-->	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has joined #clojure
+2016-04-04 12:09:42	-->	lfranchi (~quassel@kde/lfranchi) has joined #clojure
+2016-04-04 12:09:55	<--	lfranchi_ (~quassel@kde/lfranchi) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:10:18	<--	timvishe_ (~tim.vishe@pool-71-185-27-159.phlapa.fios.verizon.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:10:23	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-04 12:10:38	-->	fsl (~fsl@unaffiliated/fsl) has joined #clojure
+2016-04-04 12:10:44	<--	Bronsa`` (~bronco@90.196.185.10) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:10:45	-->	htmldrum (~htmldrum@49.255.234.58) has joined #clojure
+2016-04-04 12:10:52	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-04 12:11:13	<--	omilu (~omilu@iceland.sdf.org) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:11:23	-->	asaleh (Thunderbir@nat/redhat/x-vznbpoiobapzptly) has joined #clojure
+2016-04-04 12:11:39	-->	ThePhoeron (~sysop@thephoeron.com) has joined #clojure
+2016-04-04 12:12:03	-->	omilu (~omilu@iceland.sdf.org) has joined #clojure
+2016-04-04 12:12:37	<--	renl_ (~std@bb116-14-175-101.singnet.com.sg) has quit (Quit: WeeChat 0.4.2)
+2016-04-04 12:12:38	-->	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has joined #clojure
+2016-04-04 12:12:57	-->	engblom (~lasse@unaffiliated/engblom) has joined #clojure
+2016-04-04 12:13:33	-->	quimrstorres (~quimrstor@178.19.216.174) has joined #clojure
+2016-04-04 12:13:43	-->	jeaye (~jeaye@unaffiliated/jeaye) has joined #clojure
+2016-04-04 12:14:39	-->	emdashcomma (~ayyub@104.131.17.242) has joined #clojure
+2016-04-04 12:15:36	-->	pershyn (~mpershyn@HSI-KBW-46-237-207-2.hsi.kabel-badenwuerttemberg.de) has joined #clojure
+2016-04-04 12:15:50	-->	shymega (~shymega@arch-vile.shymega.org.uk) has joined #clojure
+2016-04-04 12:16:11	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:20:29	-->	aspra (~Adium@095-097-072-172.static.chello.nl) has joined #clojure
+2016-04-04 12:25:15	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:27:32	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 12:28:51	-->	aurelian (~aurelian@213.229.148.26) has joined #clojure
+2016-04-04 12:28:52	<--	bcm (~user@2001:8003:262d:7f00:5185:1c9:2cba:5c3) has quit (Read error: Connection reset by peer)
+2016-04-04 12:29:18	-->	bcm (~user@2001:8003:262d:7f00:5185:1c9:2cba:5c3) has joined #clojure
+2016-04-04 12:29:33	<--	bcm (~user@2001:8003:262d:7f00:5185:1c9:2cba:5c3) has left #clojure
+2016-04-04 12:29:42	-->	tmtwd (~tmtwd@104.247.236.230) has joined #clojure
+2016-04-04 12:33:17	-->	meshy (~meshy@46.255.113.66) has joined #clojure
+2016-04-04 12:33:25	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-04 12:33:35	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 12:33:44	-->	Guest92 (~textual@213-241-3-97.static.ip.netia.com.pl) has joined #clojure
+2016-04-04 12:34:30	<--	quimrstorres (~quimrstor@178.19.216.174) has quit (Remote host closed the connection)
+2016-04-04 12:34:50	-->	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has joined #clojure
+2016-04-04 12:34:56	-->	tolstoy- (~keith@c-50-139-56-85.hsd1.or.comcast.net) has joined #clojure
+2016-04-04 12:35:05	<--	tolstoy- (~keith@c-50-139-56-85.hsd1.or.comcast.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-04 12:35:18	-->	tolstoy (~keith@c-50-139-56-85.hsd1.or.comcast.net) has joined #clojure
+2016-04-04 12:35:35	<--	sobel (~matt@66.219.34.76) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:35:39	<--	AimHere (~bod@cpc6-sgyl33-2-0-cust77.sgyl.cable.virginm.net) has quit (Quit: Leaving)
+2016-04-04 12:35:51	-->	quimrstorres (~quimrstor@178.19.216.174) has joined #clojure
+2016-04-04 12:39:31	-->	htmldrum (~htmldrum@49.255.234.58) has joined #clojure
+2016-04-04 12:39:42	-->	piranha (~piranha@mkpix.modnakasta.ua) has joined #clojure
+2016-04-04 12:43:00	-->	sobel (~matt@66.219.34.76) has joined #clojure
+2016-04-04 12:43:33	<--	mcint (~mcint@198.131-78-65.ftth.swbr.surewest.net) has quit (Quit: hibernating...)
+2016-04-04 12:43:44	<--	tomjoro (~tomjoro@81-175-145-58.bb.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-04 12:44:15	-->	donbonifacio (~donbonifa@109.49.147.232) has joined #clojure
+2016-04-04 12:45:09	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:46:32	<--	aatifh_ (~aatifh@106.51.141.171) has quit (Remote host closed the connection)
+2016-04-04 12:46:39	-->	iref (~ferko@81.30.229.109) has joined #clojure
+2016-04-04 12:47:26	-->	meandi (~meandi_4@dyndsl-037-138-018-246.ewe-ip-backbone.de) has joined #clojure
+2016-04-04 12:47:37	<--	jjttjj (~justin@pool-100-40-30-2.prvdri.fios.verizon.net) has quit (Quit: Leaving.)
+2016-04-04 12:48:05	-->	djcoin (~djcoin@cam44-1-82-67-122-139.fbx.proxad.net) has joined #clojure
+2016-04-04 12:48:59	<--	Guest92 (~textual@213-241-3-97.static.ip.netia.com.pl) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:49:39	<--	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has quit (Ping timeout: 264 seconds)
+2016-04-04 12:50:02	<--	armyriad (~armyriad@198.8.80.73) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:50:05	-->	alexyakushev_ (~x220@62.244.14.22) has joined #clojure
+2016-04-04 12:50:22	<--	meandi (~meandi_4@dyndsl-037-138-018-246.ewe-ip-backbone.de) has quit (Read error: Connection reset by peer)
+2016-04-04 12:50:28	-->	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has joined #clojure
+2016-04-04 12:52:06	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 12:52:52	<--	donbonifacio (~donbonifa@109.49.147.232) has quit
+2016-04-04 12:53:16	-->	jkogut (~jkogut@176.184.136.252) has joined #clojure
+2016-04-04 12:53:28	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:53:51	<--	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has quit (Read error: Connection reset by peer)
+2016-04-04 12:53:53	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 12:55:00	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 12:56:48	--	amalloy is now known as amalloy_
+2016-04-04 12:57:29	-->	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has joined #clojure
+2016-04-04 12:57:34	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 12:57:48	<--	blt (~blt@unaffiliated/swedishfish) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:58:18	<--	daito (~daito@203.104.128.123) has quit (Remote host closed the connection)
+2016-04-04 12:58:27	<--	planom (plan@forskningsavd.se) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:58:29	-->	htmldrum (~htmldrum@49.255.234.58) has joined #clojure
+2016-04-04 12:58:58	-->	planom (plan@forskningsavd.se) has joined #clojure
+2016-04-04 12:59:58	-->	inhortte (~polaris@109.Red-88-15-252.dynamicIP.rima-tde.net) has joined #clojure
+2016-04-04 13:00:14	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-04 13:00:56	<--	michaelneale (~textual@ppp121-44-6-78.lns20.syd4.internode.on.net) has quit (Quit: Back later)
+2016-04-04 13:00:57	<--	quigonjinn (~quigonjin@dsl-aauxow.dyn.edudsl.gr) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:01:20	-->	Kajtek (~nope@91.223.167.206) has joined #clojure
+2016-04-04 13:01:41	-->	willb (~willb@104-159-208-186.dhcp.eucl.wi.charter.com) has joined #clojure
+2016-04-04 13:03:51	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:03:51	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 13:04:01	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 13:04:29	<--	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:04:59	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-04 13:06:28	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-04 13:06:57	-->	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has joined #clojure
+2016-04-04 13:07:11	<--	alexherbo2 (~alex@109.255.234.251) has quit (Quit: WeeChat 1.4)
+2016-04-04 13:07:39	<--	planom (plan@forskningsavd.se) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:10:13	-->	blt (~blt@unaffiliated/swedishfish) has joined #clojure
+2016-04-04 13:11:24	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 260 seconds)
+2016-04-04 13:13:27	<--	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 13:14:53	-->	kwladyka (~kwladyka@host-5-133-252-157.wtvk.pl) has joined #clojure
+2016-04-04 13:15:57	<--	m_____ (~user@210.185.124.119) has quit (Ping timeout: 246 seconds)
+2016-04-04 13:16:16	-->	marr (~ccc@87-205-203-209.adsl.inetia.pl) has joined #clojure
+2016-04-04 13:18:58	<--	tmtwd (~tmtwd@104.247.236.230) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:20:31	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 13:23:08	-->	tmtwd (~tmtwd@104.247.236.230) has joined #clojure
+2016-04-04 13:24:11	-->	planom (plan@forskningsavd.se) has joined #clojure
+2016-04-04 13:24:49	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 13:25:32	<--	J_Arcane (~chatzilla@37-219-217-180.nat.bb.dnainternet.fi) has quit (Ping timeout: 268 seconds)
+2016-04-04 13:27:33	-->	jsn (~gsenatore@vpngate.wind.it) has joined #clojure
+2016-04-04 13:27:35	-->	zmack (~zmack@84.117.120.69) has joined #clojure
+2016-04-04 13:29:48	<--	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:31:31	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 13:33:20	-->	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has joined #clojure
+2016-04-04 13:33:28	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:34:21	-->	tomjoro (~tomjoro@drcfnr8jqbks1yd3-dy-4.rev.dnainternet.fi) has joined #clojure
+2016-04-04 13:34:47	-->	ggenikus (~ggenikus@91.225.120.130) has joined #clojure
+2016-04-04 13:35:12	<--	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has quit (Ping timeout: 246 seconds)
+2016-04-04 13:35:31	<--	tmtwd (~tmtwd@104.247.236.230) has quit (Ping timeout: 244 seconds)
+2016-04-04 13:36:17	-->	J_Arcane (~J_Arcane@a91-153-98-205.elisa-laajakaista.fi) has joined #clojure
+2016-04-04 13:36:40	-->	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has joined #clojure
+2016-04-04 13:39:09	<--	jakebasile (uid27892@gateway/web/irccloud.com/x-zcauwonhwznxoqsd) has quit (Quit: Connection closed for inactivity)
+2016-04-04 13:40:07	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 13:40:54	<--	Nahra (~user@unaffiliated/nahra) has quit (Ping timeout: 248 seconds)
+2016-04-04 13:40:58	-->	jweiss (~jweiss@85.195.226.2) has joined #clojure
+2016-04-04 13:41:55	<--	tomjoro (~tomjoro@drcfnr8jqbks1yd3-dy-4.rev.dnainternet.fi) has quit (Remote host closed the connection)
+2016-04-04 13:43:20	-->	phillord (~phillord@janus-nat-128-240-225-60.ncl.ac.uk) has joined #clojure
+2016-04-04 13:43:22	-->	ggenikus_ (~ggenikus@91.225.120.130) has joined #clojure
+2016-04-04 13:46:06	-->	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has joined #clojure
+2016-04-04 13:46:06	<--	ggenikus (~ggenikus@91.225.120.130) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:47:04	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-04 13:47:41	<--	deobalds (~textual@103.227.99.213) has quit (Quit: Computer has gone to sleep.)
+2016-04-04 13:48:33	-->	x-warrior (~x_warrior@187.49.238.202) has joined #clojure
+2016-04-04 13:48:38	<--	x-warrior (~x_warrior@187.49.238.202) has quit (Changing host)
+2016-04-04 13:48:38	-->	x-warrior (~x_warrior@unaffiliated/x-warrior) has joined #clojure
+2016-04-04 13:50:01	-->	quimrsto_ (~quimrstor@x4db342f2.dyn.telefonica.de) has joined #clojure
+2016-04-04 13:50:36	<--	spba (~spba@27-32-158-143.static.tpgi.com.au) has left #clojure ("Leaving")
+2016-04-04 13:51:26	<--	jweiss (~jweiss@85.195.226.2) has quit (Ping timeout: 268 seconds)
+2016-04-04 13:51:47	-->	Saikia81 (~pablo@145.24.226.10) has joined #clojure
+2016-04-04 13:52:15	<--	quimrstorres (~quimrstor@178.19.216.174) has quit (Remote host closed the connection)
+2016-04-04 13:52:46	-->	torleif (~torleif@fob.gandi.net) has joined #clojure
+2016-04-04 13:53:40	-->	quimrstorres (~quimrstor@178.19.216.174) has joined #clojure
+2016-04-04 13:53:48	<--	tdammers (~tdammers@unaffiliated/tdammers) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:54:31	<--	quimrsto_ (~quimrstor@x4db342f2.dyn.telefonica.de) has quit (Ping timeout: 268 seconds)
+2016-04-04 13:55:57	-->	xadi (~azochniak@static-78-9-150-173.ssp.dialog.net.pl) has joined #clojure
+2016-04-04 13:56:21	<--	zmack (~zmack@84.117.120.69) has quit (Remote host closed the connection)
+2016-04-04 13:56:24	<--	ggenikus_ (~ggenikus@91.225.120.130) has quit
+2016-04-04 13:56:36	<--	quimrstorres (~quimrstor@178.19.216.174) has quit (Remote host closed the connection)
+2016-04-04 13:56:56	<--	aurelian (~aurelian@213.229.148.26) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:57:12	-->	quimrstorres (~quimrstor@178.19.216.174) has joined #clojure
+2016-04-04 13:57:43	<--	instilled (~Adium@231.105.104.92.dynamic.wline.res.cust.swisscom.ch) has quit (Quit: Leaving.)
+2016-04-04 13:57:46	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 13:57:50	-->	schmir (~ralf@pd95bf9ab.dip0.t-ipconnect.de) has joined #clojure
+2016-04-04 13:58:13	<--	gon_ (~gon@195.32.84.61) has quit (Ping timeout: 268 seconds)
+2016-04-04 13:58:56	-->	aurelian (~aurelian@213.229.148.26) has joined #clojure
+2016-04-04 13:59:00	<--	Saikia81 (~pablo@145.24.226.10) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:59:36	-->	patrick_star_2 (~patrick_s@93.85.65.38) has joined #clojure
+2016-04-04 14:00:45	<--	schmir (~ralf@pd95bf9ab.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2016-04-04 14:01:21	<--	alcazoid (~n0ne@n0ne.ru) has quit (Quit: suck my balls)
+2016-04-04 14:01:53	-->	Nahra (~user@unaffiliated/nahra) has joined #clojure
+2016-04-04 14:02:09	<--	quimrstorres (~quimrstor@178.19.216.174) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:02:51	<--	patrick_star_3 (~patrick_s@93.84.68.92) has quit (Ping timeout: 264 seconds)
+2016-04-04 14:02:55	<--	Duke- (duke@znc.dank.ninja) has quit (Quit: bye)
+2016-04-04 14:03:32	-->	Duke- (duke@znc.dank.ninja) has joined #clojure
+2016-04-04 14:04:15	-->	Saikia81 (~pablo@145.24.226.10) has joined #clojure
+2016-04-04 14:04:36	<--	gem (gem@nat/redhat/x-nohlhglfvzhyvdbu) has quit (Ping timeout: 246 seconds)
+2016-04-04 14:05:13	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Remote host closed the connection)
+2016-04-04 14:05:46	-->	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 14:11:29	-->	mds (~mds@109.168.32.50) has joined #clojure
+2016-04-04 14:12:02	<--	daito (~daito@203.104.128.123) has quit (Remote host closed the connection)
+2016-04-04 14:14:10	-->	gon_ (~gon@195.32.84.61) has joined #clojure
+2016-04-04 14:16:03	<--	piranha (~piranha@mkpix.modnakasta.ua) has quit (Remote host closed the connection)
+2016-04-04 14:18:48	-->	MJB47_ (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 14:18:48	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 14:18:52	-->	gem (gem@nat/redhat/x-mtnzsqaogrlmpoba) has joined #clojure
+2016-04-04 14:20:08	-->	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has joined #clojure
+2016-04-04 14:20:12	<--	MJB47_ (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 14:20:46	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 14:21:13	<--	cemerick (~cemerick@c-24-34-140-98.hsd1.ma.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 14:26:51	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 14:26:51	-->	MJB47_ (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 14:27:49	<--	meshy (~meshy@46.255.113.66) has quit (Ping timeout: 268 seconds)
+2016-04-04 14:27:54	-->	jweiss (~jweiss@85.195.226.2) has joined #clojure
+2016-04-04 14:32:36	<--	johndau (~user@113.161.95.72) has quit (Quit: ERC (IRC client for Emacs 24.5.1))
+2016-04-04 14:33:54	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:38:19	<--	jweiss (~jweiss@85.195.226.2) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:39:39	-->	zmack (~zmack@84.117.120.69) has joined #clojure
+2016-04-04 14:41:00	<--	TEttinger (~notostrac@138.229.158.41) has quit (Ping timeout: 246 seconds)
+2016-04-04 14:42:18	<--	ba3times (~ba@213-241-3-97.static.ip.netia.com.pl) has quit (Quit: Lost terminal)
+2016-04-04 14:43:00	<--	mnemnion (~mnemnion@c-98-207-249-139.hsd1.ca.comcast.net) has quit (Remote host closed the connection)
+2016-04-04 14:46:11	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #clojure
+2016-04-04 14:47:36	-->	acron^ (uid30438@gateway/web/irccloud.com/x-xoiqmfqnevwynndi) has joined #clojure
+2016-04-04 14:48:22	<--	j-pb (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit (Read error: Connection reset by peer)
+2016-04-04 14:48:28	-->	j-pb_ (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has joined #clojure
+2016-04-04 14:49:49	<--	grex (~grex@2001:e68:65a5:100:97:cd09:ecbf:55fb) has quit (Ping timeout: 250 seconds)
+2016-04-04 14:50:29	<--	mzf (~mzf@unaffiliated/mzf) has quit (Quit: Leaving)
+2016-04-04 14:53:15	<--	dfh (~david@h-84-247.a328.priv.bahnhof.se) has quit (Read error: Connection reset by peer)
+2016-04-04 14:54:17	-->	meshy (~meshy@46.255.113.66) has joined #clojure
+2016-04-04 14:54:43	-->	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has joined #clojure
+2016-04-04 14:56:33	-->	dfh (~david@h-84-247.a328.priv.bahnhof.se) has joined #clojure
+2016-04-04 14:56:59	<--	neoncontrails (~neoncontr@wsip-70-166-89-11.sd.sd.cox.net) has quit (Remote host closed the connection)
+2016-04-04 14:57:06	-->	turbopape (~turbopape@adsl-196-139-192-81.adsl2.iam.net.ma) has joined #clojure
+2016-04-04 14:57:30	<--	zipper (~onake@unaffiliated/zipper) has quit (Ping timeout: 276 seconds)
+2016-04-04 14:59:11	<--	lordB8r (~lordB8r@205-178-101-237.c3-0.stk-ubr1.chi-stk.il.cable.rcn.com) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:01:24	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:04:39	<--	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:07:26	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Remote host closed the connection)
+2016-04-04 15:07:56	-->	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has joined #clojure
+2016-04-04 15:12:36	-->	daito (~daito@203.104.128.123) has joined #clojure
+2016-04-04 15:13:34	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-04 15:15:04	<--	quinoa (~quinoa@24-148-81-106.c3-0.grn-ubr2.chi-grn.il.cable.rcn.com) has quit
+2016-04-04 15:16:45	<--	daito (~daito@203.104.128.123) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:17:25	<--	jbrhbr (~Adium@173-228-17-227.dsl.static.fusionbroadband.com) has quit (Quit: Leaving.)
+2016-04-04 15:18:34	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 260 seconds)
+2016-04-04 15:18:38	<--	zmack (~zmack@84.117.120.69) has quit (Remote host closed the connection)
+2016-04-04 15:18:56	<--	cwgem|mac (~cwgem|mac@cpe-107-185-51-64.socal.res.rr.com) has quit (Read error: Connection reset by peer)
+2016-04-04 15:20:56	-->	deobalds (~textual@106.51.26.49) has joined #clojure
+2016-04-04 15:20:57	-->	instilled (~Adium@231.105.104.92.dynamic.wline.res.cust.swisscom.ch) has joined #clojure
+2016-04-04 15:24:07	-->	zmack (~zmack@84.117.120.69) has joined #clojure
+2016-04-04 15:24:46	-->	neoncontrails (~neoncontr@76-196-233-65.lightspeed.sndgca.sbcglobal.net) has joined #clojure
+2016-04-04 15:24:59	-->	sg2002 (~user@mail.mcruises.ru) has joined #clojure
+2016-04-04 15:27:56	-->	athinggoingon (~athinggoi@c-69-138-25-115.hsd1.va.comcast.net) has joined #clojure
+2016-04-04 15:28:38	<--	zmack (~zmack@84.117.120.69) has quit (Ping timeout: 248 seconds)
+2016-04-04 15:29:33	<--	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has quit (Ping timeout: 240 seconds)
+2016-04-04 15:29:50	<--	neoncontrails (~neoncontr@76-196-233-65.lightspeed.sndgca.sbcglobal.net) has quit (Remote host closed the connection)
+2016-04-04 15:32:36	<--	gem (gem@nat/redhat/x-mtnzsqaogrlmpoba) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:32:56	<--	ype (~ype@cpc45-slam6-2-0-cust434.2-4.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2016-04-04 15:36:30	<--	deobalds (~textual@106.51.26.49) has quit (Quit: Computer has gone to sleep.)
+2016-04-04 15:38:16	<--	glosoli (~textual@unaffiliated/glosoli) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-04 15:39:01	-->	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has joined #clojure
+2016-04-04 15:39:26	-->	schmir (~ralf@pd95bf9ab.dip0.t-ipconnect.de) has joined #clojure
+2016-04-04 15:40:22	-->	mrcnxs (~mrcnxs@115-166-54-35.dyn.iinet.net.au) has joined #clojure
+2016-04-04 15:41:12	<--	ifesdjeen (~ifesdjeen@ppp-46-244-172-81.dynamic.mnet-online.de) has left #clojure
+2016-04-04 15:41:58	-->	zipper (~onake@unaffiliated/zipper) has joined #clojure
+2016-04-04 15:43:59	<--	j-pb_ (~j_pb@5ED2B3A0.cm-7-3c.dynamic.ziggo.nl) has quit
+2016-04-04 15:46:05	-->	gem (gem@nat/redhat/x-gquhzfficemcpero) has joined #clojure
+2016-04-04 15:46:10	-->	piranha (~piranha@mkpix.modnakasta.ua) has joined #clojure
+2016-04-04 15:46:48	<--	Strout (~Strout@unaffiliated/strout) has quit (Ping timeout: 246 seconds)
+2016-04-04 15:46:56	-->	Strout (~Strout@unaffiliated/strout) has joined #clojure
+2016-04-04 15:48:38	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 15:48:38	<--	MJB47_ (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 15:50:51	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 15:50:54	<--	mds (~mds@109.168.32.50) has quit (Ping timeout: 250 seconds)
+2016-04-04 15:51:10	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 15:51:33	<--	piranha (~piranha@mkpix.modnakasta.ua) has quit (Ping timeout: 248 seconds)
+2016-04-04 15:52:38	-->	ustunozgur (~ustunozgu@88.226.52.130) has joined #clojure
+2016-04-04 15:57:04	<--	arpunk (~arpunk@unaffiliated/arpunk) has quit (Ping timeout: 260 seconds)
+2016-04-04 15:57:04	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 15:57:07	-->	MJB47_ (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 15:57:15	-->	Puma (~Puma@mail.simbiotecha.lt) has joined #clojure
+2016-04-04 15:57:28	<--	ustunozgur (~ustunozgu@88.226.52.130) has quit (Ping timeout: 264 seconds)
+2016-04-04 15:58:44	-->	glosoli (~textual@unaffiliated/glosoli) has joined #clojure
+2016-04-04 15:59:42	<--	solvip (~solvip@96-140-209-31.xdsl.hringdu.is) has quit (Ping timeout: 268 seconds)
+2016-04-04 16:00:37	-->	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has joined #clojure
+2016-04-04 16:00:43	-->	piranha (~piranha@mkpix.modnakasta.ua) has joined #clojure
+2016-04-04 16:02:28	-->	Guest65778 (~jweiss@85.195.226.2) has joined #clojure
+2016-04-04 16:02:52	<--	turbopape (~turbopape@adsl-196-139-192-81.adsl2.iam.net.ma) has quit (Quit: This computer has gone to sleep)
+2016-04-04 16:04:34	<--	banana_ (3218a2c5@gateway/web/freenode/ip.50.24.162.197) has quit (Ping timeout: 250 seconds)
+2016-04-04 16:09:33	-->	deobalds (~textual@106.51.26.49) has joined #clojure
+2016-04-04 16:10:22	-->	stoopkid (~stoopkid@unaffiliated/stoopkid) has joined #clojure
+2016-04-04 16:12:55	-->	MJB47 (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 16:12:56	<--	MJB47_ (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 16:14:58	-->	MJB47_ (~MJB47@80.169.33.150) has joined #clojure
+2016-04-04 16:14:58	<--	MJB47 (~MJB47@80.169.33.150) has quit (Read error: Connection reset by peer)
+2016-04-04 16:17:12	<--	Guest65778 (~jweiss@85.195.226.2) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:18:45	<--	athinggoingon (~athinggoi@c-69-138-25-115.hsd1.va.comcast.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:19:27	<--	glosoli (~textual@unaffiliated/glosoli) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-04 16:20:22	-->	atyz (~atyz@cpe-76-182-66-3.nc.res.rr.com) has joined #clojure
+2016-04-04 16:22:26	-->	timvisher (~tim.vishe@pool-71-185-27-159.phlapa.fios.verizon.net) has joined #clojure
+2016-04-04 16:22:29	<--	Puma (~Puma@mail.simbiotecha.lt) has quit
+2016-04-04 16:23:50	<--	M-martinklepsch (martinklep@gateway/shell/matrix.org/x-gmlfnnebbiudkgkm) has quit (Remote host closed the connection)
+2016-04-04 16:23:50	<--	M-gavinjohnnoona (gavinjohnn@gateway/shell/matrix.org/x-aolsyyumfklejxrr) has quit (Remote host closed the connection)
+2016-04-04 16:24:43	<--	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 16:24:54	-->	zmack (~zmack@84.117.120.69) has joined #clojure
+2016-04-04 16:27:04	<--	yedi (~yedi@69.136.110.51) has quit (Remote host closed the connection)
+2016-04-04 16:27:17	-->	yedi (~yedi@69.136.110.51) has joined #clojure
+2016-04-04 16:28:22	<--	J_Arcane (~J_Arcane@a91-153-98-205.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-04 16:28:47	-->	fvaresi (~fvaresi@r167-108-142-248.dialup.mobile.ancel.net.uy) has joined #clojure
+2016-04-04 16:29:07	-->	vendethiel (vendethiel@133.249.29.93.rev.sfr.net) has joined #clojure
+2016-04-04 16:29:34	-->	tdammers (~tdammers@unaffiliated/tdammers) has joined #clojure
+2016-04-04 16:30:03	<--	zmack (~zmack@84.117.120.69) has quit (Ping timeout: 240 seconds)
+2016-04-04 16:30:22	-->	quimrstorres (~quimrstor@178.19.216.174) has joined #clojure
+2016-04-04 16:34:48	<--	Saikia81 (~pablo@145.24.226.10) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:34:50	<--	stoopkid (~stoopkid@unaffiliated/stoopkid) has quit (Read error: Connection reset by peer)
+2016-04-04 16:38:00	-->	mds (~mds@109.168.32.50) has joined #clojure
+2016-04-04 16:38:14	-->	M-martinklepsch (martinklep@gateway/shell/matrix.org/x-marbnarannooodkw) has joined #clojure
+2016-04-04 16:38:50	--	mds is now known as kral
+2016-04-04 16:39:22	Lewix	morning
+2016-04-04 16:39:38	-->	deadghost (~deadghost@183.171.172.222) has joined #clojure
+2016-04-04 16:40:22	<--	quimrstorres (~quimrstor@178.19.216.174) has quit (Remote host closed the connection)

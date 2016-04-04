@@ -1,0 +1,99 @@
+2016-04-02 11:02:41	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #rails-contrib
+2016-04-02 11:02:41	--	Topic for #rails-contrib is "See #rubyonrails for general support. | Contrib Guide http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html | Open Issues https://github.com/rails/rails/issues"
+2016-04-02 11:02:41	--	Topic set by closer (~eV9kqKUNT@jenkins.closure.jp) on Fri, 18 Jul 2014 03:22:12
+2016-04-02 11:02:41	--	Channel #rails-contrib: 20 nicks (0 ops, 0 voices, 20 normals)
+2016-04-02 11:02:57	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-02 11:02:58	--	Channel created on Mon, 21 May 2007 17:46:38
+2016-04-02 11:12:52	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-02 11:17:33	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 11:47:49	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit
+2016-04-02 12:10:52	-->	nachoman (~nachoman@unaffiliated/nachoman) has joined #rails-contrib
+2016-04-02 12:11:57	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit (Client Quit)
+2016-04-02 12:14:08	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-02 12:20:03	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:30:23	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-02 12:57:12	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #rails-contrib
+2016-04-02 13:02:44	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit
+2016-04-02 13:08:22	-->	sadaf2606 (~Thunderbi@103.229.86.50) has joined #rails-contrib
+2016-04-02 13:08:28	<--	sadaf2606 (~Thunderbi@103.229.86.50) has quit (Remote host closed the connection)
+2016-04-02 14:16:09	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-02 14:20:27	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:34:58	-->	zmack (~zmack@188.25.161.157) has joined #rails-contrib
+2016-04-02 14:40:06	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:03:14	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Quit: Zai00)
+2016-04-02 16:37:58	-->	zmack (~zmack@188.25.161.157) has joined #rails-contrib
+2016-04-02 16:42:33	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 240 seconds)
+2016-04-02 17:38:42	-->	zmack (~zmack@188.25.161.157) has joined #rails-contrib
+2016-04-02 17:43:13	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:17:29	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-02 18:22:13	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:33:28	-->	GitHub144 (~GitHub144@192.30.252.41) has joined #rails-contrib
+2016-04-02 18:33:29	GitHub144	[rails] arthurnn pushed 2 new commits to master: https://git.io/vV8ky
+2016-04-02 18:33:29	GitHub144	rails/master e0deec2 yui-knk: Remove not needed including...
+2016-04-02 18:33:29	GitHub144	rails/master aa2cafb Arthur Nogueira Neves: Merge pull request #24398 from yui-knk/remove_not_need_include...
+2016-04-02 18:33:29	<--	GitHub144 (~GitHub144@192.30.252.41) has left #rails-contrib
+2016-04-02 18:39:29	-->	zmack (~zmack@188.25.161.157) has joined #rails-contrib
+2016-04-02 18:43:55	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:07:14	-->	travis-ci (~travis-ci@ec2-54-205-222-0.compute-1.amazonaws.com) has joined #rails-contrib
+2016-04-02 19:07:15	travis-ci	rails/rails#33536 (master - aa2cafb : Arthur Nogueira Neves): The build was fixed.
+2016-04-02 19:07:15	travis-ci	Change view : https://github.com/rails/rails/compare/442207387e62...aa2cafbad6f9
+2016-04-02 19:07:15	travis-ci	Build details : https://travis-ci.org/rails/rails/builds/120282461
+2016-04-02 19:07:15	<--	travis-ci (~travis-ci@ec2-54-205-222-0.compute-1.amazonaws.com) has left #rails-contrib
+2016-04-02 19:40:12	-->	zmack (~zmack@188.25.161.157) has joined #rails-contrib
+2016-04-02 19:44:52	<--	zmack (~zmack@188.25.161.157) has quit (Ping timeout: 260 seconds)
+2016-04-02 19:56:02	-->	houhoulis (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has joined #rails-contrib
+2016-04-03 10:34:47	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #rails-contrib
+2016-04-03 10:34:47	--	Topic for #rails-contrib is "See #rubyonrails for general support. | Contrib Guide http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html | Open Issues https://github.com/rails/rails/issues"
+2016-04-03 10:34:47	--	Topic set by closer (~eV9kqKUNT@jenkins.closure.jp) on Fri, 18 Jul 2014 03:22:12
+2016-04-03 10:34:47	--	Channel #rails-contrib: 19 nicks (0 ops, 0 voices, 19 normals)
+2016-04-03 10:35:02	--	Channel created on Mon, 21 May 2007 17:46:38
+2016-04-03 11:11:31	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-03 11:40:44	-->	sergey_makagon (~sergey_ma@93.75.221.250) has joined #rails-contrib
+2016-04-03 11:47:04	lxsameer	hey folks, who has more experience working on sprockets code ?
+2016-04-03 11:58:07	lxsameer	I wrote a piece of code to enhance some part of sprockets, but i need to talk about it with an expert
+2016-04-03 12:12:00	-->	houhouli_ (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has joined #rails-contrib
+2016-04-03 12:15:22	<--	houhoulis (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 13:00:37	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-03 13:33:19	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 13:38:14	<--	sergey_makagon (~sergey_ma@93.75.221.250) has quit
+2016-04-03 13:40:14	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-03 13:53:51	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-03 14:27:26	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Quit: Zai00)
+2016-04-03 14:54:26	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-03 14:58:56	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-03 15:16:59	<--	houhouli_ (~houhoulis@c-98-217-193-221.hsd1.ma.comcast.net) has quit (Remote host closed the connection)
+2016-04-03 15:32:03	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-03 15:35:30	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 15:39:43	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-03 16:45:56	<--	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has quit (Read error: Connection reset by peer)
+2016-04-03 16:53:15	-->	Zai00 (~Zai00@tvn95-h01-31-38-152-89.dsl.sta.abo.bbox.fr) has joined #rails-contrib
+2016-04-03 16:55:31	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-03 17:00:39	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 244 seconds)
+2016-04-04 10:56:51	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #rails-contrib
+2016-04-04 10:56:51	--	Topic for #rails-contrib is "See #rubyonrails for general support. | Contrib Guide http://guides.rubyonrails.org/contributing_to_ruby_on_rails.html | Open Issues https://github.com/rails/rails/issues"
+2016-04-04 10:56:51	--	Topic set by closer (~eV9kqKUNT@jenkins.closure.jp) on Fri, 18 Jul 2014 03:22:12
+2016-04-04 10:56:51	--	Channel #rails-contrib: 22 nicks (0 ops, 0 voices, 22 normals)
+2016-04-04 10:57:07	--	Channel created on Mon, 21 May 2007 17:46:38
+2016-04-04 11:33:41	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 11:34:15	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #rails-contrib
+2016-04-04 11:39:28	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:42:29	<--	Ropeney (~Ropeney@tank.mindvision.com.au) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 12:09:21	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-04 12:28:43	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #rails-contrib
+2016-04-04 13:09:57	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #rails-contrib
+2016-04-04 13:14:55	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:27:35	-->	zmack (~zmack@84.117.120.69) has joined #rails-contrib
+2016-04-04 13:56:21	<--	zmack (~zmack@84.117.120.69) has quit (Remote host closed the connection)
+2016-04-04 14:39:39	-->	zmack (~zmack@84.117.120.69) has joined #rails-contrib
+2016-04-04 15:14:36	-->	Spami (~Spami@unaffiliated/spami) has joined #rails-contrib
+2016-04-04 15:17:10	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 15:18:38	<--	zmack (~zmack@84.117.120.69) has quit (Remote host closed the connection)
+2016-04-04 15:18:52	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #rails-contrib
+2016-04-04 15:24:08	-->	zmack (~zmack@84.117.120.69) has joined #rails-contrib
+2016-04-04 15:24:09	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:28:38	<--	zmack (~zmack@84.117.120.69) has quit (Ping timeout: 248 seconds)
+2016-04-04 15:36:37	-->	sergey_makagon (~sergey_ma@91.245.223.12) has joined #rails-contrib
+2016-04-04 15:43:00	<--	arthurnn (~arthurnn@159.203.2.15) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:58:04	-->	Ropeney (~Ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has joined #rails-contrib
+2016-04-04 16:24:54	-->	zmack (~zmack@84.117.120.69) has joined #rails-contrib
+2016-04-04 16:30:03	<--	zmack (~zmack@84.117.120.69) has quit (Ping timeout: 240 seconds)

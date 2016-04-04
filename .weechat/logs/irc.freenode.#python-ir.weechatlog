@@ -1,0 +1,102 @@
+2016-04-02 11:02:41	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #python-ir
+2016-04-02 11:02:41	--	Topic for #python-ir is "IrPyCon 2015: http://pycon.ir"
+2016-04-02 11:02:41	--	Topic set by lxsameer (~lxsameer@unaffiliated/lxsameer) on Sat, 07 Mar 2015 10:35:38
+2016-04-02 11:02:41	--	Channel #python-ir: 6 nicks (1 op, 0 voices, 5 normals)
+2016-04-02 11:02:41	--	PvNotice(ChanServ): make sure to read http://gg.gg/IrcBehavior  before any action (If you can read Persian, Just search for "How to behave in IRC")
+2016-04-02 11:02:41	--	Mode #python-ir [+v lxsameer] by ChanServ
+2016-04-02 11:03:00	--	Channel created on Wed, 16 Dec 2009 12:54:14
+2016-04-02 11:11:22	-->	efazati (~efazati@unaffiliated/efazati) has joined #python-ir
+2016-04-02 11:33:41	-->	emzi (~emzi@37.27.59.5) has joined #python-ir
+2016-04-02 11:33:42	<--	emzi (~emzi@37.27.59.5) has quit (Changing host)
+2016-04-02 11:33:42	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-02 12:22:00	<--	dingdangdong (~m@5.112.179.148) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:40:33	<--	emzi (~emzi@unaffiliated/emzi) has quit (Ping timeout: 240 seconds)
+2016-04-02 13:15:34	<--	iraj (~iraj___@91.107.137.140) has quit (Ping timeout: 260 seconds)
+2016-04-02 13:39:14	-->	dingdangdong (~m@5.112.68.198) has joined #python-ir
+2016-04-02 13:58:40	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-02 14:26:24	<--	dingdangdong (~m@5.112.68.198) has quit (Quit: Leaving.)
+2016-04-02 14:46:22	<--	emzi (~emzi@unaffiliated/emzi) has quit (Quit: Konversation terminated!)
+2016-04-02 14:46:38	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-02 15:05:54	<--	emzi (~emzi@unaffiliated/emzi) has quit (Quit: Konversation terminated!)
+2016-04-02 15:15:57	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-02 15:27:07	-->	farooghkz (~farooghkz@5.215.182.187) has joined #python-ir
+2016-04-02 15:32:54	<--	farooghkz (~farooghkz@5.215.182.187) has quit (Quit: used jmIrc)
+2016-04-02 15:34:30	-->	farooghkz (~farooghkz@5.212.126.7) has joined #python-ir
+2016-04-02 15:34:58	-->	pacman256 (~farooghkz@5.212.126.7) has joined #python-ir
+2016-04-02 15:35:09	<--	niman (~niman66@46.209.247.248) has quit (Quit: Leaving.)
+2016-04-02 15:35:56	<--	pacman256 (~farooghkz@5.212.126.7) has quit (Client Quit)
+2016-04-02 15:36:25	-->	faruqkz (~farooghkz@5.212.126.7) has joined #python-ir
+2016-04-02 15:36:55	faruqkz	من دوتا شدم!
+2016-04-02 15:39:30	-->	emzi_ (~emzi@VPN.NOVALAYER.NET) has joined #python-ir
+2016-04-02 15:39:36	<--	farooghkz (~farooghkz@5.212.126.7) has quit (Ping timeout: 276 seconds)
+2016-04-02 15:39:38	<--	faruqkz (~farooghkz@5.212.126.7) has quit (Remote host closed the connection)
+2016-04-02 15:40:03	-->	farooghkz (~farooghkz@5.218.30.102) has joined #python-ir
+2016-04-02 15:40:15	<--	emzi (~emzi@unaffiliated/emzi) has quit (Ping timeout: 276 seconds)
+2016-04-02 15:40:27	<--	emzi_ (~emzi@VPN.NOVALAYER.NET) has quit (Client Quit)
+2016-04-02 15:40:47	<--	farooghkz (~farooghkz@5.218.30.102) has quit (Client Quit)
+2016-04-02 15:41:19	-->	faruqkz (~farooghkz@5.218.62.181) has joined #python-ir
+2016-04-02 15:42:01	<--	faruqkz (~farooghkz@5.218.62.181) has quit (Client Quit)
+2016-04-02 15:43:00	-->	faruqkz (~farooghkz@5.218.62.181) has joined #python-ir
+2016-04-02 15:43:44	--	faruqkz is now known as farooqkz
+2016-04-02 15:44:51	<--	farooqkz (~farooghkz@5.218.62.181) has quit (Client Quit)
+2016-04-02 15:45:17	-->	farooghkz (~farooghkz@5.218.62.181) has joined #python-ir
+2016-04-02 15:45:44	<--	farooghkz (~farooghkz@5.218.62.181) has quit (Client Quit)
+2016-04-02 15:46:21	-->	faruqkz (~farooghkz@5.218.62.181) has joined #python-ir
+2016-04-02 15:46:47	--	faruqkz is now known as _
+2016-04-02 15:47:04	--	_ is now known as __
+2016-04-02 15:47:33	--	__ is now known as Guest93803
+2016-04-02 15:48:11	--	Guest93803 is now known as farooqkz
+2016-04-02 15:49:23	--	farooqkz is now known as [_]
+2016-04-02 15:50:03	--	[_] is now known as mjw
+2016-04-02 15:51:05	--	mjw is now known as __init__
+2016-04-02 15:51:22	--	__init__ is now known as nop
+2016-04-02 15:51:29	<--	nop (~farooghkz@5.218.62.181) has quit (Quit: used jmIrc)
+2016-04-02 16:42:46	<--	efazati (~efazati@unaffiliated/efazati) has quit (Remote host closed the connection)
+2016-04-02 17:00:56	-->	iraj (~iraj___@91.107.143.234) has joined #python-ir
+2016-04-02 17:41:06	-->	faruqkz (~farooghkz@5.215.225.191) has joined #python-ir
+2016-04-02 17:41:46	-->	narsic (~narsic@unaffiliated/narsic) has joined #python-ir
+2016-04-02 17:42:16	<--	narsic (~narsic@unaffiliated/narsic) has quit (Client Quit)
+2016-04-02 17:42:52	-->	narsic (~narsic@unaffiliated/narsic) has joined #python-ir
+2016-04-02 17:50:23	-->	Azitrex (~Azitrex@unaffiliated/azitrex) has joined #python-ir
+2016-04-02 18:16:43	<--	faruqkz (~farooghkz@5.215.225.191) has quit (Quit: used jmIrc)
+2016-04-02 18:17:32	-->	faruqkz (~farooghkz@5.216.210.132) has joined #python-ir
+2016-04-02 18:26:45	<--	narsic (~narsic@unaffiliated/narsic) has quit (Ping timeout: 248 seconds)
+2016-04-02 18:30:40	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-02 18:43:59	<--	faruqkz (~farooghkz@5.216.210.132) has quit (Quit: used jmIrc)
+2016-04-02 18:45:36	-->	faruqkz (~farooghkz@5.213.104.215) has joined #python-ir
+2016-04-03 10:34:47	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #python-ir
+2016-04-03 10:34:47	--	Topic for #python-ir is "IrPyCon 2015: http://pycon.ir"
+2016-04-03 10:34:47	--	Topic set by lxsameer (~lxsameer@unaffiliated/lxsameer) on Sat, 07 Mar 2015 10:35:38
+2016-04-03 10:34:47	--	Channel #python-ir: 7 nicks (1 op, 0 voices, 6 normals)
+2016-04-03 10:34:47	--	PvNotice(ChanServ): make sure to read http://gg.gg/IrcBehavior  before any action (If you can read Persian, Just search for "How to behave in IRC")
+2016-04-03 10:34:47	--	Mode #python-ir [+v lxsameer] by ChanServ
+2016-04-03 10:35:04	--	Channel created on Wed, 16 Dec 2009 12:54:14
+2016-04-03 10:58:59	-->	narsic (~narsic@unaffiliated/narsic) has joined #python-ir
+2016-04-03 11:57:07	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-03 13:12:40	<--	emzi (~emzi@unaffiliated/emzi) has quit (Ping timeout: 268 seconds)
+2016-04-03 13:15:40	-->	emzi (~emzi@37.27.47.48) has joined #python-ir
+2016-04-03 13:15:41	<--	emzi (~emzi@37.27.47.48) has quit (Changing host)
+2016-04-03 13:15:41	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-03 14:29:32	-->	faruqkz (~farooghkz@5.217.152.151) has joined #python-ir
+2016-04-03 14:47:06	-->	Azitrex (~Azitrex@unaffiliated/azitrex) has joined #python-ir
+2016-04-03 16:15:34	<--	iraj (~iraj___@91.107.130.149) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:19:54	-->	CtrlC (~CtrlC@unaffiliated/ctrlc) has joined #python-ir
+2016-04-03 17:19:18	<--	emzi (~emzi@unaffiliated/emzi) has quit (Quit: Konversation terminated!)
+2016-04-03 17:31:03	-->	emzi (~emzi@37.27.47.48) has joined #python-ir
+2016-04-03 17:31:03	<--	emzi (~emzi@37.27.47.48) has quit (Changing host)
+2016-04-03 17:31:03	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-04 10:56:51	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #python-ir
+2016-04-04 10:56:51	--	Topic for #python-ir is "IrPyCon 2015: http://pycon.ir"
+2016-04-04 10:56:51	--	Topic set by lxsameer (~lxsameer@unaffiliated/lxsameer) on Sat, 07 Mar 2015 10:35:38
+2016-04-04 10:56:51	--	Channel #python-ir: 9 nicks (1 op, 0 voices, 8 normals)
+2016-04-04 10:56:51	--	PvNotice(ChanServ): make sure to read http://gg.gg/IrcBehavior  before any action (If you can read Persian, Just search for "How to behave in IRC")
+2016-04-04 10:56:51	--	Mode #python-ir [+v lxsameer] by ChanServ
+2016-04-04 10:57:09	--	Channel created on Wed, 16 Dec 2009 12:54:14
+2016-04-04 11:13:03	<--	emzi (~emzi@unaffiliated/emzi) has quit (Quit: Konversation terminated!)
+2016-04-04 12:34:14	-->	emzi (~emzi@unaffiliated/emzi) has joined #python-ir
+2016-04-04 13:10:34	<--	emzi (~emzi@unaffiliated/emzi) has quit (Quit: Konversation terminated!)
+2016-04-04 13:18:21	-->	iraj (~iraj___@unaffiliated/iraj) has joined #python-ir
+2016-04-04 13:42:04	<--	hos7ein (~hos7ein@46.209.255.168) has quit (Read error: Connection reset by peer)
+2016-04-04 13:42:38	-->	hos7ein (~hos7ein@46.209.255.168) has joined #python-ir
+2016-04-04 15:47:14	<--	iraj (~iraj___@unaffiliated/iraj) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:17:48	<--	dingdangdong (~m@5.116.215.176) has quit (Quit: Leaving.)

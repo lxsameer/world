@@ -1,0 +1,1398 @@
+2016-04-02 11:02:41	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #RubyOnRails
+2016-04-02 11:02:41	--	Topic for #RubyOnRails is "Rules: http://goo.gl/dgSj5 | MINASWAN (Matz is nice and so we are nice) | Can't talk? Register/identify with Nickserv first! | Newest releases: 4.2.6, 4.1.15, 4.0.13 | Guides: http://goo.gl/Drh96 | API Docs: http://goo.gl/ErSVb | Mailing List: http://is.gd/3Euc | Logs at http://goo.gl/uma9x"
+2016-04-02 11:02:41	--	Topic set by baweaver (~baweaver@ruby/staff/baweaver) on Sat, 02 Apr 2016 08:36:34
+2016-04-02 11:02:41	--	Channel #RubyOnRails: 535 nicks (0 ops, 0 voices, 535 normals)
+2016-04-02 11:02:41	--	PvNotice(ChanServ): Please follow the channel rules http://goo.gl/dgSj5 | Register with nickserv in order to talk: https://freenode.net/kb/answer/registration
+2016-04-02 11:02:47	--	Channel created on Mon, 07 Jun 2004 05:27:38
+2016-04-02 11:02:50	-->	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has joined #RubyOnRails
+2016-04-02 11:02:57	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-02 11:02:59	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-02 11:04:21	<--	tvw (~tv@2a02:2028:749:4f01:bd5b:308b:533f:cf50) has quit (Client Quit)
+2016-04-02 11:04:29	-->	tvw (~tv@port-52952.pppoe.wtnet.de) has joined #RubyOnRails
+2016-04-02 11:04:30	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-02 11:04:32	roelof	Does anyone know a good free cloud development for developing in rails ?
+2016-04-02 11:05:36	<--	tvw (~tv@port-52952.pppoe.wtnet.de) has quit (Client Quit)
+2016-04-02 11:06:47	-->	sevenseacat (~sevenseac@CPE-144-136-91-115.pfcz2.cht.bigpond.net.au) has joined #RubyOnRails
+2016-04-02 11:07:58	<--	Technodrome (~textual@unaffiliated/technodrome) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 11:10:24	<--	denaras (~denaras@88-222-14-122.meganet.lt) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:11:12	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-02 11:11:15	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 264 seconds)
+2016-04-02 11:11:16	<--	adavia (~adavia@189.214.5.11.cable.dyn.cableonline.com.mx) has quit (Ping timeout: 268 seconds)
+2016-04-02 11:12:52	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-02 11:13:21	-->	hxegon (~textual@ip24-254-85-40.sb.sd.cox.net) has joined #RubyOnRails
+2016-04-02 11:15:34	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:17:33	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 11:18:35	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 248 seconds)
+2016-04-02 11:18:36	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Remote host closed the connection)
+2016-04-02 11:23:47	-->	akshat (~akshat@unaffiliated/akshat) has joined #RubyOnRails
+2016-04-02 11:24:01	<--	joshhbk (~textual@24-212-136-252.cable.teksavvy.com) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-02 11:25:07	-->	DragonPunch (~textual@c-76-30-233-127.hsd1.tx.comcast.net) has joined #RubyOnRails
+2016-04-02 11:25:14	<--	DragonPunch (~textual@c-76-30-233-127.hsd1.tx.comcast.net) has quit (Client Quit)
+2016-04-02 11:28:42	<--	dpg_ (~sosuniver@149.20.56.4) has quit (Ping timeout: 276 seconds)
+2016-04-02 11:30:13	-->	Inside (~Gary@cpe-173-173-120-11.satx.res.rr.com) has joined #RubyOnRails
+2016-04-02 11:30:13	<--	Inside (~Gary@cpe-173-173-120-11.satx.res.rr.com) has quit (Changing host)
+2016-04-02 11:30:13	-->	Inside (~Gary@unaffiliated/inside) has joined #RubyOnRails
+2016-04-02 11:32:03	<--	akshat (~akshat@unaffiliated/akshat) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 11:32:07	<--	Inside_ (~Gary@cpe-173-173-120-11.satx.res.rr.com) has quit (Ping timeout: 244 seconds)
+2016-04-02 11:33:05	roelof	Does anyone know a good free cloud development for developing in rails ?
+2016-04-02 11:33:24	totimkopf	www.heroku.com
+2016-04-02 11:33:37	-->	truongan (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has joined #RubyOnRails
+2016-04-02 11:34:02	sevenseacat	thats not for development
+2016-04-02 11:34:09	sevenseacat	c9.io might be good
+2016-04-02 11:34:38	totimkopf	oic
+2016-04-02 11:35:00	<--	Inside (~Gary@unaffiliated/inside) has quit (Ping timeout: 246 seconds)
+2016-04-02 11:36:59	<--	joshkovach (~JoshKovac@99-62-252-161.lightspeed.gdrpmi.sbcglobal.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 11:37:20	<--	truongan (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has quit (Quit: leaving)
+2016-04-02 11:38:10	-->	Devalo (~devalo@c3FA65AC1.dhcp.as2116.net) has joined #RubyOnRails
+2016-04-02 11:42:47	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-02 11:43:35	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Max SendQ exceeded)
+2016-04-02 11:44:08	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-02 11:44:56	-->	DragonPunch (~textual@c-76-30-233-127.hsd1.tx.comcast.net) has joined #RubyOnRails
+2016-04-02 11:47:38	-->	truongan_ (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has joined #RubyOnRails
+2016-04-02 11:47:49	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit
+2016-04-02 11:48:27	-->	dpg_ (~sosuniver@h-69-3-190-162.snva.ca.megapath.net) has joined #RubyOnRails
+2016-04-02 11:49:32	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-02 11:54:08	<--	brent_ (uid134494@gateway/web/irccloud.com/x-ybyxsnowzcdqnddn) has quit (Quit: Connection closed for inactivity)
+2016-04-02 11:54:21	<--	rakm (~rakm@c-73-231-5-159.hsd1.ca.comcast.net) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-02 11:54:38	-->	rakm (~rakm@c-73-231-5-159.hsd1.ca.comcast.net) has joined #RubyOnRails
+2016-04-02 11:54:40	<--	truongan_ (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has quit (Quit: Changing server)
+2016-04-02 11:54:46	-->	truongan_ (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has joined #RubyOnRails
+2016-04-02 11:55:23	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 248 seconds)
+2016-04-02 11:56:05	-->	bilu (~leonce@198.224.88.92.rev.sfr.net) has joined #RubyOnRails
+2016-04-02 11:56:18	<--	truongan_ (~truongan@ppp-seco21th2-46-193-160-252.wb.wifirst.net) has quit (Client Quit)
+2016-04-02 11:56:25	-->	mdw (~mdw@92.40.248.195.threembb.co.uk) has joined #RubyOnRails
+2016-04-02 12:02:51	-->	arup_r (~arup_r@116.203.203.252) has joined #RubyOnRails
+2016-04-02 12:05:17	-->	joshkovach (~JoshKovac@99-62-252-161.lightspeed.gdrpmi.sbcglobal.net) has joined #RubyOnRails
+2016-04-02 12:06:44	<--	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has quit (Ping timeout: 250 seconds)
+2016-04-02 12:07:45	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-02 12:10:26	<--	smathy (~smathy@ruby/staff/smathy) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 12:10:52	-->	nachoman (~nachoman@unaffiliated/nachoman) has joined #RubyOnRails
+2016-04-02 12:11:57	<--	nachoman (~nachoman@unaffiliated/nachoman) has quit (Client Quit)
+2016-04-02 12:14:08	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-02 12:15:23	<--	dpg_ (~sosuniver@h-69-3-190-162.snva.ca.megapath.net) has quit (Quit: WeeChat 1.3)
+2016-04-02 12:16:58	<--	arup_r (~arup_r@116.203.203.252) has quit (Remote host closed the connection)
+2016-04-02 12:17:31	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-02 12:18:33	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Ping timeout: 240 seconds)
+2016-04-02 12:19:07	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has joined #RubyOnRails
+2016-04-02 12:20:03	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 276 seconds)
+2016-04-02 12:21:32	<--	bilu (~leonce@198.224.88.92.rev.sfr.net) has left #RubyOnRails
+2016-04-02 12:22:11	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 268 seconds)
+2016-04-02 12:22:36	<--	Devalo (~devalo@c3FA65AC1.dhcp.as2116.net) has quit (Remote host closed the connection)
+2016-04-02 12:29:54	<--	sevenseacat (~sevenseac@CPE-144-136-91-115.pfcz2.cht.bigpond.net.au) has quit (Quit: .)
+2016-04-02 12:31:03	<--	Caerus (caerus@2a01:d0:ffff:4420::10) has quit (Ping timeout: 264 seconds)
+2016-04-02 12:33:29	<--	mdw (~mdw@92.40.248.195.threembb.co.uk) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 12:34:02	-->	workmad3 (~workmad3@cpc71475-bagu13-2-0-cust82.1-3.cable.virginm.net) has joined #RubyOnRails
+2016-04-02 12:36:46	-->	caerus (caerus@2a01:d0:ffff:4420::10) has joined #RubyOnRails
+2016-04-02 12:37:19	-->	sevenseacat (~sevenseac@CPE-144-136-91-115.pfcz2.cht.bigpond.net.au) has joined #RubyOnRails
+2016-04-02 12:37:40	--	caerus is now known as Caerus
+2016-04-02 12:39:38	-->	Ergo (~ergo@91.238.59.144) has joined #RubyOnRails
+2016-04-02 12:39:48	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 12:42:35	<--	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has quit (Excess Flood)
+2016-04-02 12:43:34	-->	darutoko (~Vandal@176.209.250.13) has joined #RubyOnRails
+2016-04-02 12:43:57	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Ping timeout: 246 seconds)
+2016-04-02 12:44:35	-->	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has joined #RubyOnRails
+2016-04-02 12:46:59	<--	eyeamaye (~Adium@2605:e000:354b:7c00:c52a:26e3:74be:8817) has quit (Ping timeout: 260 seconds)
+2016-04-02 12:47:18	-->	eyeamaye (~Adium@2605:e000:354b:7c00:c52a:26e3:74be:8817) has joined #RubyOnRails
+2016-04-02 12:47:58	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 12:51:18	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 12:51:20	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-02 12:53:11	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-02 12:53:59	-->	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has joined #RubyOnRails
+2016-04-02 12:55:09	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #RubyOnRails
+2016-04-02 12:57:07	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 12:57:12	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-02 12:58:23	<--	quazimodo (~quazimodo@155.143.14.28) has quit (Ping timeout: 244 seconds)
+2016-04-02 12:59:43	<--	roelof (524acd6d@gateway/web/freenode/ip.82.74.205.109) has quit (Quit: Page closed)
+2016-04-02 13:01:02	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Ping timeout: 268 seconds)
+2016-04-02 13:02:44	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit
+2016-04-02 13:05:40	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 13:05:57	-->	Lumia930 (Lumia930@1.22.153.231) has joined #RubyOnRails
+2016-04-02 13:06:14	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 13:07:53	-->	marr (~ccc@87-205-244-48.adsl.inetia.pl) has joined #RubyOnRails
+2016-04-02 13:08:22	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-02 13:08:22	-->	sadaf2606 (~Thunderbi@103.229.86.50) has joined #RubyOnRails
+2016-04-02 13:08:28	<--	sadaf2606 (~Thunderbi@103.229.86.50) has quit (Remote host closed the connection)
+2016-04-02 13:08:55	<--	joshkovach (~JoshKovac@99-62-252-161.lightspeed.gdrpmi.sbcglobal.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 13:10:56	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-02 13:11:48	-->	defsdoor (~andy@207.229-252-62.static.virginmediabusiness.co.uk) has joined #RubyOnRails
+2016-04-02 13:12:40	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-02 13:13:47	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 248 seconds)
+2016-04-02 13:17:41	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 268 seconds)
+2016-04-02 13:21:46	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-02 13:22:13	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-02 13:22:25	<--	eyeamaye (~Adium@2605:e000:354b:7c00:c52a:26e3:74be:8817) has quit (Quit: Leaving.)
+2016-04-02 13:28:04	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-02 13:28:22	-->	mdw (~mdw@185.53.226.249) has joined #RubyOnRails
+2016-04-02 13:28:27	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-02 13:32:39	<--	one_zero (~one_zero@ip68-5-177-152.oc.oc.cox.net) has quit
+2016-04-02 13:32:44	-->	arup_r (~arup_r@116.202.198.56) has joined #RubyOnRails
+2016-04-02 13:34:14	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 260 seconds)
+2016-04-02 13:36:22	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-02 13:38:41	<--	darrik (~darrik@unaffiliated/darrik) has quit (Remote host closed the connection)
+2016-04-02 13:38:42	<--	hive-mind (pranq@mail.bbis.us) has quit (Ping timeout: 276 seconds)
+2016-04-02 13:38:57	-->	darrik (~darrik@unaffiliated/darrik) has joined #RubyOnRails
+2016-04-02 13:39:15	-->	hive-mind (pranq@mail.bbis.us) has joined #RubyOnRails
+2016-04-02 13:41:49	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-02 13:44:26	-->	ql6wlld (~Gregory_L@95.148.212.136) has joined #RubyOnRails
+2016-04-02 13:48:22	-->	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has joined #RubyOnRails
+2016-04-02 13:50:45	-->	mhoungbo (~mhoungbo@41.85.189.163) has joined #RubyOnRails
+2016-04-02 13:51:47	-->	FastJack (~fastjack@maciaszek.net) has joined #RubyOnRails
+2016-04-02 13:53:03	<--	syndikate (~syndikate@122.166.139.29) has quit (Ping timeout: 240 seconds)
+2016-04-02 13:55:46	<--	anna` (~m@abjt.uk) has quit (Quit: -)
+2016-04-02 13:56:03	-->	anna` (~m@sochi.st) has joined #RubyOnRails
+2016-04-02 13:58:40	<--	jscheel (~jscheel@drupal.org/user/116197/view) has quit (Quit: jscheel)
+2016-04-02 13:59:09	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has joined #RubyOnRails
+2016-04-02 13:59:54	<--	jfelchner (~jfelchner@96.47.229.59) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:00:47	--	GitGud is now known as DugTig
+2016-04-02 14:04:04	-->	jfelchner (~jfelchner@96.47.229.59) has joined #RubyOnRails
+2016-04-02 14:04:22	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:04:42	<--	beauby (~beauby@vol75-4-82-224-160-73.fbx.proxad.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 14:04:51	arup_r	Can you give some hints, how you code when you need to export ~ 147795 records to CSV? standard approach, like opening a CSV, and then putting one record at a time by iterating via .each AR object seems slow to me. So what is the best optimized way?
+2016-04-02 14:05:50	workmad3	arup_r: one-off export or something you need to do on a regular basis?
+2016-04-02 14:06:16	arup_r	workmad3: yes. I will export each day, and then upload the csv to FTP site
+2016-04-02 14:06:39	workmad3	arup_r: I'd look at doing it directly in postgres then
+2016-04-02 14:06:52	arup_r	you mean postgres `copy` command?
+2016-04-02 14:06:55	workmad3	yup
+2016-04-02 14:07:05	arup_r	I am also thinking like that. That is the fastest..
+2016-04-02 14:07:14	arup_r	ok. cool
+2016-04-02 14:07:30	workmad3	arup_r: if it was a one-off, I'd say screw it and just do it in a loop :)
+2016-04-02 14:07:51	arup_r	because the records will be fetched from 4-5 tables joins, still figuring though
+2016-04-02 14:08:03	arup_r	nah.. it is a regular task
+2016-04-02 14:08:12	arup_r	so `copy` command is fastest..
+2016-04-02 14:08:21	workmad3	arup_r: SELECT blah INTO <temp_table>; COPY ...
+2016-04-02 14:08:27	workmad3	and then remove your temp table
+2016-04-02 14:08:49	arup_r	hm.
+2016-04-02 14:08:52	workmad3	or create a view over your query and COPY the view
+2016-04-02 14:09:21	arup_r	workmad3: good choice is SQL view.
+2016-04-02 14:09:25	<--	DTZUZU (~dexter@S0106bcd1656573c8.vs.shawcable.net) has quit (Quit: WeeChat 1.3)
+2016-04-02 14:09:34	arup_r	But i have a question for that though... Let me ask
+2016-04-02 14:09:36	workmad3	and yeah, I doubt you'll get faster than the database dumping out your CSV in most circumstances...
+2016-04-02 14:10:07	--	hxegon is now known as hxegon_AFK
+2016-04-02 14:10:08	<--	hxegon_AFK (~textual@ip24-254-85-40.sb.sd.cox.net) has quit (Quit: BRB)
+2016-04-02 14:10:46	arup_r	so if I create a view, and then run rake db:reset ( locally ), then view is gone. I have to create it again manually.. So what is the best way to get back those views on db recreations..
+2016-04-02 14:12:09	arup_r	ok.. got one idea https://rietta.com/blog/2015/03/30/adding-rake-db-views-for-sql-views-to-a-rails-project/
+2016-04-02 14:12:43	workmad3	arup_r: scenic gem
+2016-04-02 14:13:04	arup_r	https://blog.pivotal.io/labs/labs/rails-and-sql-views-part-2-migrations or this.
+2016-04-02 14:13:09	arup_r	ok let me look at this
+2016-04-02 14:13:43	workmad3	arup_r: that post is describing what scenic does ;)
+2016-04-02 14:13:55	arup_r	yeah.. :)
+2016-04-02 14:14:32	arup_r	workmad3: scenic gem is the nice way to go.. :) thanks
+2016-04-02 14:16:09	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-02 14:18:14	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #RubyOnRails
+2016-04-02 14:18:37	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-02 14:20:27	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:20:39	<--	rakm (~rakm@c-73-231-5-159.hsd1.ca.comcast.net) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-02 14:23:02	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 248 seconds)
+2016-04-02 14:25:12	<--	GodFodder (~rcccole@71-82-75-229.dhcp.bycy.mi.charter.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 14:29:42	-->	G (njones@unaffiliated/g) has joined #RubyOnRails
+2016-04-02 14:30:52	-->	gingray (~gingray@2a02:2698:7c23:a68a:18c6:d237:10d3:6f97) has joined #RubyOnRails
+2016-04-02 14:33:34	-->	quazimodo (~quazimodo@155.143.14.28) has joined #RubyOnRails
+2016-04-02 14:36:25	<--	arup_r (~arup_r@116.202.198.56) has quit (Remote host closed the connection)
+2016-04-02 14:40:20	-->	hardtail (~jon@unaffiliated/hardtail) has joined #RubyOnRails
+2016-04-02 14:45:52	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-02 14:46:17	-->	pawnbox (~pawnbox@106.51.141.87) has joined #RubyOnRails
+2016-04-02 14:46:43	<--	hardtail (~jon@unaffiliated/hardtail) has quit (Quit: hardtail)
+2016-04-02 14:46:55	<--	mhoungbo (~mhoungbo@41.85.189.163) has quit (Ping timeout: 244 seconds)
+2016-04-02 14:46:59	-->	renegadeandy (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has joined #RubyOnRails
+2016-04-02 14:58:54	-->	mhoungbo (~mhoungbo@iroh.houngbo.net) has joined #RubyOnRails
+2016-04-02 15:00:56	<--	Ergo (~ergo@91.238.59.144) has quit (Quit: WeeChat 1.3)
+2016-04-02 15:01:47	-->	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has joined #RubyOnRails
+2016-04-02 15:03:44	-->	n_e_o (~neo@106.51.130.134) has joined #RubyOnRails
+2016-04-02 15:12:04	-->	arup_r (~arup_r@116.202.198.56) has joined #RubyOnRails
+2016-04-02 15:12:13	<--	mdw (~mdw@185.53.226.249) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 15:13:02	<--	Jasaka (~Jasaka@aftr-37-201-243-177.unity-media.net) has quit (Read error: Connection reset by peer)
+2016-04-02 15:13:29	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-02 15:16:17	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-02 15:17:42	<--	b|ackwolf (~azbshiri@unaffiliated/azbshiri) has quit (Ping timeout: 260 seconds)
+2016-04-02 15:17:55	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:18:55	<--	rogue_koder (~rogue_kod@207.204.117.126) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:20:39	-->	artto (~artto@lk.92.63.16.38.dc.cable.static.lj-kabel.net) has joined #RubyOnRails
+2016-04-02 15:21:14	<--	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has quit (Quit: FooMunki)
+2016-04-02 15:21:26	<--	artto (~artto@lk.92.63.16.38.dc.cable.static.lj-kabel.net) has quit (Client Quit)
+2016-04-02 15:21:57	-->	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has joined #RubyOnRails
+2016-04-02 15:24:14	-->	Rahul_Roy (uid31059@gateway/web/irccloud.com/x-vtuhjrvenpfqatnd) has joined #RubyOnRails
+2016-04-02 15:27:25	<--	G (njones@unaffiliated/g) has quit (Quit: leaving)
+2016-04-02 15:28:07	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-02 15:30:14	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 15:30:18	-->	Devalo_ (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 15:31:23	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:34:20	-->	yottanami (~yottanami@151.247.189.229) has joined #RubyOnRails
+2016-04-02 15:35:18	yottanami	hi folks, I have a syntax error somewhere in my stylesheets, but assets pipeline does not give me a file name, how can I extract it from assets pipeline ?
+2016-04-02 15:35:56	<--	arup_r (~arup_r@116.202.198.56) has quit (Remote host closed the connection)
+2016-04-02 15:36:27	n_e_o	yottanami: y don't u comment out each and find out, ;)
+2016-04-02 15:36:59	yottanami	n_e_o, it's huge
+2016-04-02 15:37:16	n_e_o	:(
+2016-04-02 15:37:25	yottanami	assets pipe line doesn't give me name, just a ruby backtrace
+2016-04-02 15:38:03	-->	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has joined #RubyOnRails
+2016-04-02 15:38:03	<--	Devalo_ (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 15:38:38	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 15:39:06	-->	arup_r (~arup_r@116.202.198.56) has joined #RubyOnRails
+2016-04-02 15:39:29	n_e_o	yottanami: aren't you in dev mode?
+2016-04-02 15:39:35	n_e_o	env
+2016-04-02 15:39:50	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::3e49) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:40:01	yottanami	neanderslob, no production
+2016-04-02 15:40:16	yottanami	n_e_o, the error happens only in production mode
+2016-04-02 15:40:27	arup_r	sometime those syntax error don't come in dev mode.. while you will be compiling then it comes..
+2016-04-02 15:40:38	arup_r	in production mode
+2016-04-02 15:40:40	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 264 seconds)
+2016-04-02 15:40:44	-->	mdw (~mdw@94.119.65.2) has joined #RubyOnRails
+2016-04-02 15:40:49	n_e_o	hmm..
+2016-04-02 15:40:51	arup_r	yottanami: try to compile it locally
+2016-04-02 15:40:57	sevenseacat	syntax errors dont pick and choose which mode to display errors in
+2016-04-02 15:41:21	arup_r	sevenseacat: what do you mean?
+2016-04-02 15:42:05	sevenseacat	it cant be a syntax error in production and not development
+2016-04-02 15:42:09	sevenseacat	thats not how code works
+2016-04-02 15:42:23	n_e_o	:)
+2016-04-02 15:42:32	arup_r	sevenseacat: it happened many times for me. It just worked ok locally. But while I am compiling it is throwing error.. Yes, that is not environment.
+2016-04-02 15:42:52	arup_r	yes.. in production mode wrong word...
+2016-04-02 15:43:34	yottanami	arup_r, I'm doing it right now but i need a filename to fix it
+2016-04-02 15:43:39	arup_r	just do rake assets:precompile locally.. and it will tell you from which code it is coming yottanami. And then you can go and fix it locally
+2016-04-02 15:44:00	yottanami	sevenseacat, yeah, but sprockets should now, shouldn't it ?
+2016-04-02 15:44:11	sevenseacat	should what?
+2016-04-02 15:44:29	-->	PedramT (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-02 15:44:44	yottanami	arup_r, the problem is that i don't have the same issue on development env
+2016-04-02 15:45:04	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-02 15:45:07	yottanami	sevenseacat, sprockets compile these assets right? so it should not which file caused the syntax error
+2016-04-02 15:45:09	arup_r	Are you able to precompile locally without error?
+2016-04-02 15:45:28	sevenseacat	yes, sprockets is what powers the asset pipeline
+2016-04-02 15:45:33	yottanami	arup_r, on development yes, but not on production ( production env on local machine)
+2016-04-02 15:46:30	arup_r	yottanami: paste the error in a gist now :) Let me see if I can help
+2016-04-02 15:46:44	yottanami	arup_r, ok sure thanks
+2016-04-02 15:46:53	arup_r	I remember the error has small clue
+2016-04-02 15:47:34	yottanami	arup_r, http://dpaste.com/3DK4PJH
+2016-04-02 15:47:49	arup_r	locally, if you run rake assets:precomplie locally all is fine. but rake assets:precomplie RAILS_ENV=production .. errors right? just confirming myself :)
+2016-04-02 15:48:19	arup_r	give me that big error please yottanami :)
+2016-04-02 15:48:27	sevenseacat	"see full trace by..."
+2016-04-02 15:48:37	yottanami	arup_r, ok wait
+2016-04-02 15:48:54	<--	PedramT (~pedramt@80.66.191.249) has quit (Ping timeout: 248 seconds)
+2016-04-02 15:49:08	arup_r	yottanami: see it says the error is in this declaration ... ` content: '`
+2016-04-02 15:49:29	arup_r	so you can look for the CSS files for `content` key declaration
+2016-04-02 15:49:37	arup_r	and then you will see it
+2016-04-02 15:49:39	yottanami	http://dpaste.com/1WKT979
+2016-04-02 15:50:05	yottanami	arup_r, i see but i have more than 40 files that match such condition
+2016-04-02 15:52:36	<--	gingray (~gingray@2a02:2698:7c23:a68a:18c6:d237:10d3:6f97) has quit (Remote host closed the connection)
+2016-04-02 15:52:57	<--	mdw (~mdw@94.119.65.2) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 15:55:31	<--	mhoungbo (~mhoungbo@iroh.houngbo.net) has quit (Quit: Quitte)
+2016-04-02 15:56:39	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 244 seconds)
+2016-04-02 15:56:54	workmad3	yottanami: do `grep -R "';" app/assets/stylesheets`
+2016-04-02 15:56:58	<--	nibbo (nibbo@gateway/shell/blinkenshell.org/x-uxjjikibenhfrwab) has quit (Ping timeout: 252 seconds)
+2016-04-02 15:57:49	-->	moep (~marcules@unaffiliated/marcules) has joined #RubyOnRails
+2016-04-02 15:57:53	workmad3	(and what this most likely is, is a file that's being precompiled but isn't actually pulled in with anything you've tested locally)
+2016-04-02 16:00:04	arup_r	yottanami: You can try this link http://stackoverflow.com/a/19371813/2767755
+2016-04-02 16:00:07	yottanami	workmad3, I get more than 200 entries for above command
+2016-04-02 16:00:44	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has joined #RubyOnRails
+2016-04-02 16:04:04	workmad3	yottanami: check to see if any cross over with the `content` results
+2016-04-02 16:04:26	yottanami	ok thanks
+2016-04-02 16:05:25	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Ping timeout: 268 seconds)
+2016-04-02 16:05:41	-->	nibbo (nibbo@gateway/shell/blinkenshell.org/x-xoxywcnpyzncyecq) has joined #RubyOnRails
+2016-04-02 16:07:01	-->	gingray_ (~gingray@2a02:2698:7c23:a68a:1973:e862:afb6:49b5) has joined #RubyOnRails
+2016-04-02 16:08:35	<--	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has quit (Remote host closed the connection)
+2016-04-02 16:10:31	-->	AzaToth (~azatoth@wikipedia/AzaToth) has joined #RubyOnRails
+2016-04-02 16:11:18	-->	ZerGabriel (~ZerGabrie@darkmachine.org) has joined #RubyOnRails
+2016-04-02 16:11:20	<--	ZerGabriel (~ZerGabrie@darkmachine.org) has quit (Excess Flood)
+2016-04-02 16:13:05	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-02 16:19:14	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-02 16:20:18	<--	phredus (~paco@2605:e000:910a:df00:222:19ff:feff:8257) has quit (Remote host closed the connection)
+2016-04-02 16:21:21	-->	meoblast001 (~meoblast@cable-86-56-123-127.cust.telecolumbus.net) has joined #RubyOnRails
+2016-04-02 16:21:23	-->	mdw (~mdw@94.119.66.207) has joined #RubyOnRails
+2016-04-02 16:21:42	-->	phredus (~paco@2605:e000:910a:df00:222:19ff:feff:8257) has joined #RubyOnRails
+2016-04-02 16:23:45	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 246 seconds)
+2016-04-02 16:27:03	<--	mdw (~mdw@94.119.66.207) has quit (Quit: Sleeping Zzzzz)
+2016-04-02 16:30:14	-->	tk__ (~tk@i118-17-24-160.s41.a022.ap.plala.or.jp) has joined #RubyOnRails
+2016-04-02 16:32:12	-->	shibly (~shibly@unaffiliated/shibly) has joined #RubyOnRails
+2016-04-02 16:33:41	-->	BaNzounet (~alex@ns360855.ip-91-121-165.eu) has joined #RubyOnRails
+2016-04-02 16:35:28	<--	DragonPunch (~textual@c-76-30-233-127.hsd1.tx.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 16:36:51	<--	BaNzounet (~alex@ns360855.ip-91-121-165.eu) has quit (Read error: Connection reset by peer)
+2016-04-02 16:37:32	<--	tk__ (~tk@i118-17-24-160.s41.a022.ap.plala.or.jp) has quit (Quit: ばいばい)
+2016-04-02 16:37:47	shibly	Hi
+2016-04-02 16:39:01	arup_r	yottanami: you figured out ? :)
+2016-04-02 16:39:05	-->	Megamos (~Nils@31.210.249.31) has joined #RubyOnRails
+2016-04-02 16:39:32	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:40:16	<--	gingray_ (~gingray@2a02:2698:7c23:a68a:1973:e862:afb6:49b5) has quit (Remote host closed the connection)
+2016-04-02 16:40:33	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 244 seconds)
+2016-04-02 16:40:43	-->	someish (~someish@STCTON11-1176061483.sdsl.bell.ca) has joined #RubyOnRails
+2016-04-02 16:43:04	<--	shibly (~shibly@unaffiliated/shibly) has left #RubyOnRails
+2016-04-02 16:43:05	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 16:43:37	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 16:43:52	<--	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has quit (Quit: FooMunki)
+2016-04-02 16:44:12	n_e_o	Hey.. I'm trying to setup a simple blog with embedded multimedia content. What's is the usual way of handling this? I meant, how is the asset reference within content of a blog is done?
+2016-04-02 16:46:31	-->	georgedrummond (~georgedru@cpe-24-193-34-249.nyc.res.rr.com) has joined #RubyOnRails
+2016-04-02 16:47:12	n_e_o	I've checked out some blog gems like publify etc, but nothing seems to add any sort of asset content like image or videos into the main content
+2016-04-02 16:47:56	n_e_o	Can someone give some heads up how to handle this kinda rqmts.. Thanks :)
+2016-04-02 16:53:10	-->	c355e3b (uid82600@gateway/web/irccloud.com/x-awyqynmjpteldxdr) has joined #RubyOnRails
+2016-04-02 16:53:31	-->	magikid (~Chris@pool-173-67-10-18.bltmmd.fios.verizon.net) has joined #RubyOnRails
+2016-04-02 16:55:32	<--	Lumia930 (Lumia930@1.22.153.231) has quit (Ping timeout: 250 seconds)
+2016-04-02 17:06:27	<--	arup_r (~arup_r@116.202.198.56) has quit (Remote host closed the connection)
+2016-04-02 17:08:29	-->	cac (~textual@88.247.145.166) has joined #RubyOnRails
+2016-04-02 17:09:05	<--	someish (~someish@STCTON11-1176061483.sdsl.bell.ca) has quit (Quit: someish)
+2016-04-02 17:10:19	-->	tk__ (~tk@i223-216-143-41.s41.a022.ap.plala.or.jp) has joined #RubyOnRails
+2016-04-02 17:11:10	<--	sandstrom (~sandstrom@unaffiliated/sandstrom) has quit (Quit: My computer has gone to sleep.)
+2016-04-02 17:12:27	<--	JonasOSDever (~jp@play2win.io) has quit (Ping timeout: 250 seconds)
+2016-04-02 17:12:30	<--	cac (~textual@88.247.145.166) has quit (Client Quit)
+2016-04-02 17:19:36	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-02 17:22:47	-->	Lumia930 (~Lumia930@106.208.26.79) has joined #RubyOnRails
+2016-04-02 17:23:35	-->	hardtail (~jon@unaffiliated/hardtail) has joined #RubyOnRails
+2016-04-02 17:24:43	-->	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has joined #RubyOnRails
+2016-04-02 17:26:18	-->	The_Phoenix1 (~Nibras@113.59.209.23) has joined #RubyOnRails
+2016-04-02 17:26:21	-->	Abhijit (~abhijit@unaffiliated/abhijit) has joined #RubyOnRails
+2016-04-02 17:26:23	Abhijit	hi
+2016-04-02 17:26:32	<--	The_Phoenix (~Nibras@unaffiliated/thephoenix/x-126492) has quit (Ping timeout: 244 seconds)
+2016-04-02 17:26:56	Abhijit	whats the correct way to deploy a single app using just git? whenever i chechkout it from repo to /var/www/dir it overwrites and i have to bundle install each time
+2016-04-02 17:26:59	Abhijit	how can i avoid that?
+2016-04-02 17:27:16	-->	SteenJobs (~jesiegel@cpe-72-229-23-46.nyc.res.rr.com) has joined #RubyOnRails
+2016-04-02 17:27:26	Abhijit	will capistrano solve that problem? shall i use capistrano for just one app on one vps?
+2016-04-02 17:27:51	<--	SteenJobs (~jesiegel@cpe-72-229-23-46.nyc.res.rr.com) has quit (Client Quit)
+2016-04-02 17:30:00	-->	_lazarevsky (36f0c5e1@gateway/web/freenode/ip.54.240.197.225) has joined #RubyOnRails
+2016-04-02 17:30:08	_lazarevsky	hello all
+2016-04-02 17:30:12	_lazarevsky	a quick question
+2016-04-02 17:30:36	_lazarevsky	I created this migration -> 20160104100545_add_start_date_to_capacity_projects.rb
+2016-04-02 17:30:46	_lazarevsky	but I must have forgotten to add any content to it.. when I open the file, it's empty
+2016-04-02 17:31:01	_lazarevsky	class AddStartDateToCapacityProjects < ActiveRecord::Migration   def change   end end
+2016-04-02 17:31:16	_lazarevsky	so my team mate wrote a migration which actually adds the column to the table
+2016-04-02 17:31:40	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-02 17:31:40	_lazarevsky	what I'm getting now when I try this new migration is == 20160307144719 FixedAddStartDateToCapacityProjects: migrating ============== -- add_column(:capacity_projects, :start_date, :date) rake aborted! An error has occurred, this and all later migrations canceled:  SQLite3::SQLException: duplicate column name: start_date: ALTER TABLE "capacity_projects" ADD "start_date" date
+2016-04-02 17:31:44	_lazarevsky	what the hell?!
+2016-04-02 17:32:07	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-02 17:32:30	_lazarevsky	could it be that rails was smart enough to infer from the migration name that it should add a new attribute called start_date of type date to the capacity projects table?
+2016-04-02 17:33:12	-->	arup_r (~arup_r@116.202.198.56) has joined #RubyOnRails
+2016-04-02 17:35:10	-->	jero_ (~jero@ppp-94-65-225-44.home.otenet.gr) has joined #RubyOnRails
+2016-04-02 17:35:56	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-02 17:38:37	sevenseacat	no.
+2016-04-02 17:39:10	sevenseacat	you screwed something up, likely running a migration and then deleting it, or something similar.
+2016-04-02 17:39:11	<--	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 17:40:09	-->	mikecmpbll (~mikecmpbl@ruby/staff/mikecmpbll) has joined #RubyOnRails
+2016-04-02 17:41:09	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 276 seconds)
+2016-04-02 17:42:14	_lazarevsky	sevenseacat: so this is the spiel. I have a migration called AddStartDateToCapacityProjects which is empty, and then further down another migration called FixedStartDateToCapacityProjects which actually adds the start_date field to capacity_projects
+2016-04-02 17:42:19	_lazarevsky	the later is failing
+2016-04-02 17:42:23	_lazarevsky	because I have that field already
+2016-04-02 17:42:28	_lazarevsky	how do I go about it? :/
+2016-04-02 17:42:30	chridal	Anyone going to RailsConf? If so, what days are you headed over there?
+2016-04-02 17:42:41	chridal	day * (as in date)
+2016-04-02 17:42:51	sevenseacat	easiest way? reset your database
+2016-04-02 17:43:44	chridal	_lazarevsky: if you can afford to lose the data; `rake db:reset db:create db:migrate`
+2016-04-02 17:44:18	_lazarevsky	:/
+2016-04-02 17:44:18	<--	Devalo (~devalo@ti0016a400-3755.bb.online.no) has quit (Read error: Connection reset by peer)
+2016-04-02 17:44:18	_lazarevsky	sevenseacat and chridal: I must certainly can't afford to lose production data, no
+2016-04-02 17:44:31	sevenseacat	_lazarevsky: you're using sqlite in production?
+2016-04-02 17:44:32	chridal	Are you using SQLite in prod?
+2016-04-02 17:44:40	_lazarevsky	sevenseacat: no this is development
+2016-04-02 17:44:45	sevenseacat	then why does it matter?
+2016-04-02 17:44:48	_lazarevsky	but the two said migrations are already in prod
+2016-04-02 17:44:52	-->	Devalo (~devalo@ti0016a400-3755.bb.online.no) has joined #RubyOnRails
+2016-04-02 17:44:58	_lazarevsky	I tried adding a new migration for a new feature I was working on
+2016-04-02 17:45:02	sevenseacat	who says production has the same problem?
+2016-04-02 17:45:02	_lazarevsky	ran it
+2016-04-02 17:45:11	chridal	_lazarevsky: Do you have the commit history?
+2016-04-02 17:45:17	sevenseacat	if it does, you have a serious serious failing somewhere
+2016-04-02 17:45:26	_lazarevsky	and it bombed out at the FixedStartDate migration :/
+2016-04-02 17:45:52	chridal	_lazarevsky: Because if you do, you could just rollback to that commit where you haven't deleted the migration, do a rollback and then migrate
+2016-04-02 17:45:58	Abhijit	is this correct? config.secret_key = ENV["DEVISE_SECRET_KEY"]
+2016-04-02 17:46:02	Abhijit	or i need to put <%
+2016-04-02 17:46:15	chridal	Abhijit: <% is a part of template language
+2016-04-02 17:46:20	Abhijit	ok
+2016-04-02 17:46:26	Abhijit	will put it.
+2016-04-02 17:46:26	chridal	ERB for instance uses that to interpret Ruby inside templates
+2016-04-02 17:46:35	chridal	you don't need it inside *.rb files
+2016-04-02 17:46:47	Abhijit	oh
+2016-04-02 17:46:48	<--	georgedrummond (~georgedru@cpe-24-193-34-249.nyc.res.rr.com) has quit (Remote host closed the connection)
+2016-04-02 17:46:48	chridal	because they are ran through the Ruby interpreter, and not a separate interpreter like ERB.
+2016-04-02 17:47:01	sevenseacat	!since Abhijit
+2016-04-02 17:47:03	helpa	I first saw Abhijit on 2013-03-27. They've been around now for 1102 days.
+2016-04-02 17:47:18	chridal	Cool feature.
+2016-04-02 17:47:20	chridal	!since chridal
+2016-04-02 17:47:22	Abhijit	okdas, so i have tried to set devise secret as above, but it still asks me to manually write the secret instead of variable
+2016-04-02 17:47:29	Abhijit	!since sevenseacat
+2016-04-02 17:47:35	sevenseacat	!since sevenseacat
+2016-04-02 17:47:36	helpa	I first saw sevenseacat on 2012-09-01. They've been around now for 1309 days. However, this was the first day I started logging, so they could've been around longer than that.
+2016-04-02 17:47:47	chridal	sevenseacat: Can you do my nick too?
+2016-04-02 17:47:53	sevenseacat	!since chridal
+2016-04-02 17:47:54	Abhijit	2012 and only 1309 days?
+2016-04-02 17:47:56	helpa	I first saw chridal on 2014-03-03. They've been around now for 761 days.
+2016-04-02 17:47:57	chridal	Thanks!
+2016-04-02 17:47:59	_lazarevsky	sevenseacat: can you do me?
+2016-04-02 17:48:05	Abhijit	:-p
+2016-04-02 17:48:06	sevenseacat	!since _lazarevsky
+2016-04-02 17:48:09	helpa	I first saw _lazarevsky on 2014-01-18. They've been around now for 805 days.
+2016-04-02 17:48:11	_lazarevsky	;)
+2016-04-02 17:48:42	_lazarevsky	ok enough of this nonsense
+2016-04-02 17:48:46	-->	IrishGringo (~chatzilla@2601:586:c200:6eaa:8db6:f58:d085:cd34) has joined #RubyOnRails
+2016-04-02 17:48:55	_lazarevsky	lemme drop my DB locally and see what happens
+2016-04-02 17:48:55	chridal	:-D
+2016-04-02 17:49:00	Abhijit	chridal, whats the correct way to use env var in devise.rb?
+2016-04-02 17:49:05	_lazarevsky	you're right - this problem may not be present in prod
+2016-04-02 17:49:17	sevenseacat	Abhijit: exactly like that.
+2016-04-02 17:49:39	chridal	Abhijit: I don't know how Devise works to be honest. But ENV vars are the environment variables in a UNIX environment. These are variables that are available to the UNIX process once it is started.
+2016-04-02 17:50:13	chridal	So that means that the ENV variable DEVISE_SECRET_KEY must be set in the environment that actually runs the rails server for it to work
+2016-04-02 17:50:21	n_e_o	can i ask again?
+2016-04-02 17:50:22	sevenseacat	have you verified that ENV['DEVISE_SECRET_KEY'] is set?
+2016-04-02 17:50:23	Abhijit	sevenseacat, then i have that env var set in my ubuntu and still it asks me to set it manually by actually putting the key in config.secret_key=''? why?
+2016-04-02 17:50:33	Abhijit	chridal, ^
+2016-04-02 17:50:34	sevenseacat	Abhijit: !debug
+2016-04-02 17:50:35	helpa	Abhijit: You have not provided enough information to debug your problem. Please provide this information: https://gist.github.com/radar/5384431
+2016-04-02 17:50:36	-->	_Tariq (~tariq_ali@c-73-136-168-39.hsd1.tx.comcast.net) has joined #RubyOnRails
+2016-04-02 17:50:43	chridal	This could be done in the following way for instance `DEVICE_SECRET_KEY=my_secret_key rails server`
+2016-04-02 17:50:51	Abhijit	sevenseacat, yes echo $DEVISE_SECRET_KEY is there and set properly
+2016-04-02 17:50:55	chridal	Abhijit: if you run that it will set the ENV var before running `rails server`
+2016-04-02 17:51:03	chridal	What is the error?
+2016-04-02 17:51:05	-->	sergio__ (~sergio@181.115.140.123) has joined #RubyOnRails
+2016-04-02 17:51:23	Abhijit	no error. it just asks me to Devise.secret_key was not set. Please add the following to your Devise initializer:
+2016-04-02 17:51:29	chridal	Abhijit: But remember doing ECHO in another terminal does not make sure that it is loaded in the same terminal
+2016-04-02 17:51:29	<--	_Tariq (~tariq_ali@c-73-136-168-39.hsd1.tx.comcast.net) has quit (Remote host closed the connection)
+2016-04-02 17:51:30	chridal	I mean TTY
+2016-04-02 17:51:46	chridal	Abhijit: Did you try to shut down the rails server process in the same TTY to run echo there?
+2016-04-02 17:51:56	Abhijit	i am doing this through post-receive.
+2016-04-02 17:52:03	Abhijit	chridal, no.
+2016-04-02 17:52:46	chridal	Abhijit: Because say if you add some ENV var to your .bash_profile, .zshrc and start a new term session (tty) this won't be set for the current terminal (tty)
+2016-04-02 17:53:03	chridal	for that you'd have to source the profile, or for instance use something like `export ENV_VAR=SOMETHING`
+2016-04-02 17:53:17	<--	sergio__ (~sergio@181.115.140.123) has left #RubyOnRails
+2016-04-02 17:53:18	chridal	Abhijit: But what is the error and the code?
+2016-04-02 17:54:31	-->	smatico (~sergio@181.115.140.123) has joined #RubyOnRails
+2016-04-02 17:54:52	Abhijit	ok
+2016-04-02 17:55:02	Abhijit	chridal, there is no error.
+2016-04-02 17:55:23	Abhijit	i now manually put env vars inside post-receive and that seems to work.
+2016-04-02 17:55:42	chridal	So that might indicate that the ENV vars are not being loaded properly?
+2016-04-02 17:55:56	chridal	Or even set properly.
+2016-04-02 17:56:07	chridal	So you'll have to make sure that the ENV vars have the data that you expect to be in them
+2016-04-02 17:56:15	Abhijit	yeah.
+2016-04-02 17:56:39	chridal	Try using something like pry to check that the vars have the expected value
+2016-04-02 17:56:57	Abhijit	"pry"?
+2016-04-02 17:56:58	Abhijit	whats that?
+2016-04-02 17:57:09	chridal	So for instance; throw `binding.pry` just before using ENV[''], and then inside there write `ENV` and you an see all the env vars
+2016-04-02 17:57:23	chridal	Abhijit: http://pryrepl.org/
+2016-04-02 17:57:36	chridal	you'll want to learn that tool. I suggest spending some time with it, it'll make your life a lot easier.
+2016-04-02 17:57:41	Abhijit	ok
+2016-04-02 17:57:48	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-02 17:57:55	Abhijit	chridal, thats very nice. thanks.
+2016-04-02 17:58:39	chridal	So.. Anyone going to RailsConf? :-)
+2016-04-02 18:01:20	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has joined #RubyOnRails
+2016-04-02 18:01:21	<--	renegadeandy (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has quit (Ping timeout: 268 seconds)
+2016-04-02 18:04:03	<--	meoblast001 (~meoblast@cable-86-56-123-127.cust.telecolumbus.net) has quit (Quit: Leaving)
+2016-04-02 18:06:17	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Ping timeout: 268 seconds)
+2016-04-02 18:06:24	-->	georgedrummond (~georgedru@2604:2000:e204:d600:84d1:3425:bba4:c615) has joined #RubyOnRails
+2016-04-02 18:11:13	<--	Lumia930 (~Lumia930@106.208.26.79) has quit (Ping timeout: 268 seconds)
+2016-04-02 18:13:04	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:14:10	-->	JonasOSDever (~jp@priv.play2win.io) has joined #RubyOnRails
+2016-04-02 18:17:29	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-02 18:17:29	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-02 18:18:45	-->	_Tariq (~tariq_ali@2601:2c0:8000:40b4:490f:79fc:8ac1:483c) has joined #RubyOnRails
+2016-04-02 18:19:51	<--	adskfhasdf (~Pinnacle@14-203-92-244.static.tpgi.com.au) has quit (Ping timeout: 268 seconds)
+2016-04-02 18:20:11	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-02 18:21:24	<--	Cervajz_ (~Cervajz@opensuse/member/Cervajz) has quit
+2016-04-02 18:22:13	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:22:16	-->	n1lo (~n1lo@CPEf0f24941de23-CMf0f24941de20.cpe.net.cable.rogers.com) has joined #RubyOnRails
+2016-04-02 18:22:39	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:24:55	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 252 seconds)
+2016-04-02 18:26:09	-->	JonasOSDever_ (~jp@priv.play2win.io) has joined #RubyOnRails
+2016-04-02 18:26:51	<--	JonasOSDever (~jp@priv.play2win.io) has quit (Ping timeout: 264 seconds)
+2016-04-02 18:27:45	-->	PedramT (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-02 18:27:50	<--	jero_ (~jero@ppp-94-65-225-44.home.otenet.gr) has quit (Ping timeout: 248 seconds)
+2016-04-02 18:28:07	<--	PedramT (~pedramt@80.66.191.249) has quit (Remote host closed the connection)
+2016-04-02 18:28:37	<--	georgedrummond (~georgedru@2604:2000:e204:d600:84d1:3425:bba4:c615) has quit (Remote host closed the connection)
+2016-04-02 18:28:44	-->	PedramT (~pedramt@188.118.90.162) has joined #RubyOnRails
+2016-04-02 18:34:23	-->	JonasOSDever (~jp@priv.play2win.io) has joined #RubyOnRails
+2016-04-02 18:35:12	<--	JonasOSDever_ (~jp@priv.play2win.io) has quit (Ping timeout: 250 seconds)
+2016-04-02 18:37:28	-->	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has joined #RubyOnRails
+2016-04-02 18:37:53	-->	JonasOSDever_ (~jp@priv.play2win.io) has joined #RubyOnRails
+2016-04-02 18:38:09	<--	Aherin (~Aherin@092-111-239-066.static.chello.nl) has quit (Ping timeout: 260 seconds)
+2016-04-02 18:39:13	<--	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has quit (Read error: Connection reset by peer)
+2016-04-02 18:39:24	<--	JonasOSDever (~jp@priv.play2win.io) has quit (Ping timeout: 244 seconds)
+2016-04-02 18:39:27	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-02 18:40:11	-->	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has joined #RubyOnRails
+2016-04-02 18:42:31	arup_r	So, here I see I can call `shipping_rates` on Order object ( https://github.com/spree/spree/blob/2-0-stable/frontend/app/views/spree/checkout/_delivery.html.erb#L40 ).. but in rails console, I see error as `NoMethodError: undefined method `shipping_rates' for #<Spree::Order:0x007fd963b58080>`, when doing Spree::Order.last.shipping_rates
+2016-04-02 18:42:36	arup_r	what am I missing ?
+2016-04-02 18:43:34	<--	darkxploit (~darkxploi@197.224.142.127) has quit (Ping timeout: 244 seconds)
+2016-04-02 18:44:17	-->	HenriettaSalt (~Henrietta@eduroam-160-36.dyn.carleton.edu) has joined #RubyOnRails
+2016-04-02 18:45:20	<--	tk__ (~tk@i223-216-143-41.s41.a022.ap.plala.or.jp) has quit (Quit: ばいばい)
+2016-04-02 18:47:10	<--	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has quit (Remote host closed the connection)
+2016-04-02 18:50:10	-->	beauby (~beauby@vol75-4-82-224-160-73.fbx.proxad.net) has joined #RubyOnRails
+2016-04-02 18:51:09	-->	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has joined #RubyOnRails
+2016-04-02 18:51:47	-->	smoitra_ (~smoitra@113.21.69.151) has joined #RubyOnRails
+2016-04-02 18:51:56	<--	smoitra_ (~smoitra@113.21.69.151) has quit (Client Quit)
+2016-04-02 18:52:00	<--	arup_r (~arup_r@116.202.198.56) has quit (Remote host closed the connection)
+2016-04-02 18:53:14	<--	Palsson (~Palsson@pc-193-235-91-227.norrkoping.se) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-02 18:55:40	<--	smoitra (~smoitra@113.21.70.56) has quit (Ping timeout: 264 seconds)
+2016-04-02 18:56:41	-->	darkxploit (~darkxploi@197.226.232.112) has joined #RubyOnRails
+2016-04-02 18:58:21	-->	arup_r (~arup_r@116.202.198.56) has joined #RubyOnRails
+2016-04-02 18:58:25	-->	georgedrummond (~georgedru@2604:2000:e204:d600:205f:ad2c:3b23:32a) has joined #RubyOnRails
+2016-04-02 18:58:30	-->	Ergo (~ergo@91.238.59.144) has joined #RubyOnRails
+2016-04-02 18:59:41	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #RubyOnRails
+2016-04-02 19:00:16	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-02 19:01:19	<--	cpruitt (~cpruitt@97-106-171-149.res.bhn.net) has quit (Quit: cpruitt)
+2016-04-02 19:01:47	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Client Quit)
+2016-04-02 19:03:04	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #RubyOnRails
+2016-04-02 19:04:21	<--	johnflux (~johnflux@konversation/developer/JohnFlux) has quit (Ping timeout: 276 seconds)
+2016-04-02 19:07:37	-->	jonathanwallace_ (~jonathanw@47-32-109-79.dhcp.gwnt.ga.charter.com) has joined #RubyOnRails
+2016-04-02 19:07:54	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Quit: Leaving)
+2016-04-02 19:08:02	pwnd_nsfw	arup_r, it's not for order, it's for shipment I believe
+2016-04-02 19:08:05	pwnd_nsfw	Just my guess though
+2016-04-02 19:08:14	-->	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has joined #RubyOnRails
+2016-04-02 19:08:29	<--	greg__ (~greg@cpe-70-92-167-252.wi.res.rr.com) has quit (Client Quit)
+2016-04-02 19:08:50	arup_r	pwnd_nsfw: it is Order object, https://github.com/spree/spree/blob/2-0-stable/frontend/app/views/spree/checkout/edit.html.erb#L11
+2016-04-02 19:09:38	pwnd_nsfw	the first partial you linked, its for shipment
+2016-04-02 19:10:09	arup_r	hm
+2016-04-02 19:11:30	arup_r	pwnd_nsfw: it renders the partial by the order state, and render the partial.. https://github.com/spree/spree/blob/2-0-stable/frontend/app/views/spree/checkout/edit.html.erb#L18 ..
+2016-04-02 19:11:54	pwnd_nsfw	https://github.com/spree/spree/blob/2-0-stable/frontend/app/views/spree/checkout/_delivery.html.erb#L5
+2016-04-02 19:12:20	arup_r	yes.. that is ok.
+2016-04-02 19:12:40	arup_r	it is a nested form, .. it is called on Order object.
+2016-04-02 19:12:44	pwnd_nsfw	What it boils down to.... is there's no shipping_rates for Order
+2016-04-02 19:13:07	arup_r	yeah.. true.
+2016-04-02 19:13:41	arup_r	I just overlooked ,, that above one.. Many many partials... thanks pwnd_nsfw
+2016-04-02 19:15:43	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-02 19:15:50	<--	darkxploit (~darkxploi@197.226.232.112) has quit (Read error: Connection reset by peer)
+2016-04-02 19:17:10	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #RubyOnRails
+2016-04-02 19:18:01	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #RubyOnRails
+2016-04-02 19:19:53	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #RubyOnRails
+2016-04-02 19:20:03	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 240 seconds)
+2016-04-02 19:25:17	-->	greengriminal (~greengrim@TOROON633VW-LP130-02-1177974009.dsl.bell.ca) has joined #RubyOnRails
+2016-04-02 19:26:22	-->	ekinmur (~ekinmur@98.204.177.40) has joined #RubyOnRails
+2016-04-02 19:28:10	<--	yottanami (~yottanami@151.247.189.229) has quit (Quit: Leaving)
+2016-04-02 19:28:17	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-02 19:29:53	<--	ekinmur (~ekinmur@98.204.177.40) has quit (Client Quit)
+2016-04-02 19:30:20	-->	adavia (~adavia@189.214.5.11.cable.dyn.cableonline.com.mx) has joined #RubyOnRails
+2016-04-02 19:31:16	-->	darkxploit (~darkxploi@197.224.138.82) has joined #RubyOnRails
+2016-04-02 19:32:29	Abhijit	i have a non root user "abhijit" on ubuntu 14.04. passenger gives error that it cant set the devise key using ENV['DEVISE_ENV'] because it cant find the env. but i manually checked and the env var is there. my proj dir is /var/www/proj and the passenger tries to run it as uid, gid and group everything as user "abhijit" how can i make it run as user root, which might solve the problem?
+2016-04-02 19:32:32	-->	DragonPunch (~textual@c-76-30-233-127.hsd1.tx.comcast.net) has joined #RubyOnRails
+2016-04-02 19:33:26	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 248 seconds)
+2016-04-02 19:35:39	workmad3	Abhijit: https://www.phusionpassenger.com/library/config/nginx/reference/#passenger_env_var
+2016-04-02 19:36:01	workmad3	Abhijit: also, don't run your app as root... it's a horrendous security hole
+2016-04-02 19:36:15	-->	owenjones (~owenjones@c-68-80-101-235.hsd1.pa.comcast.net) has joined #RubyOnRails
+2016-04-02 19:36:29	<--	n1lo (~n1lo@CPEf0f24941de23-CMf0f24941de20.cpe.net.cable.rogers.com) has quit (Ping timeout: 260 seconds)
+2016-04-02 19:36:32	Abhijit	workmad3, the passenger is running my app as "non root" user only.
+2016-04-02 19:36:52	workmad3	Abhijit: which is good... you were asking how to run as root, and I'm saying don't do that :P
+2016-04-02 19:39:02	<--	georgedrummond (~georgedru@2604:2000:e204:d600:205f:ad2c:3b23:32a) has quit (Remote host closed the connection)
+2016-04-02 19:39:56	Abhijit	workmad3, That Works! yay! :-D
+2016-04-02 19:43:45	<--	_Tariq (~tariq_ali@2601:2c0:8000:40b4:490f:79fc:8ac1:483c) has quit (Remote host closed the connection)
+2016-04-02 19:44:20	<--	ropeney (~ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has quit (Ping timeout: 268 seconds)
+2016-04-02 19:45:57	<--	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has quit (Remote host closed the connection)
+2016-04-02 19:46:35	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-02 19:47:15	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 276 seconds)
+2016-04-02 19:48:10	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #RubyOnRails
+2016-04-02 19:51:33	-->	Mattx (~mplabs@unaffiliated/mplabs) has joined #RubyOnRails
+2016-04-02 19:52:21	Mattx	How do you set "with timezone" for all datetime columns in a migration?
+2016-04-02 19:52:40	-->	johnflux (~johnflux@konversation/developer/JohnFlux) has joined #RubyOnRails
+2016-04-02 19:53:01	Mattx	(including but not limited to created_at and updated_on)
+2016-04-02 19:53:31	-->	mdw (~mdw@188.29.164.106.threembb.co.uk) has joined #RubyOnRails
+2016-04-02 19:56:57	-->	ropeney (~ropeney@1.124.48.156) has joined #RubyOnRails
+2016-04-02 19:57:52	<--	mdw (~mdw@188.29.164.106.threembb.co.uk) has quit (Client Quit)
+2016-04-02 19:58:27	<--	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has quit (Remote host closed the connection)
+2016-04-02 19:59:41	-->	rubie (~rubie@108-94-27-24.lightspeed.sntcca.sbcglobal.net) has joined #RubyOnRails
+2016-04-02 20:00:36	-->	tvw (~tv@176.2.68.112) has joined #RubyOnRails
+2016-04-02 20:01:29	-->	Lumia930 (~Lumia930@106.208.26.79) has joined #RubyOnRails
+2016-04-02 20:02:13	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has joined #RubyOnRails
+2016-04-02 20:02:26	-->	djbkd (~djbkd@98.248.67.209) has joined #RubyOnRails
+2016-04-02 20:03:46	-->	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has joined #RubyOnRails
+2016-04-02 20:06:27	<--	PedramT (~pedramt@188.118.90.162) has quit (Ping timeout: 260 seconds)
+2016-04-02 20:06:39	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:602d:1343:1e40:29eb) has quit (Ping timeout: 250 seconds)
+2016-04-03 10:34:46	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #RubyOnRails
+2016-04-03 10:34:46	--	Topic for #RubyOnRails is "Rules: http://goo.gl/dgSj5 | MINASWAN (Matz is nice and so we are nice) | Can't talk? Register/identify with Nickserv first! | Newest releases: 4.2.6, 4.1.15, 4.0.13 | Guides: http://goo.gl/Drh96 | API Docs: http://goo.gl/ErSVb | Mailing List: http://is.gd/3Euc | Logs at http://goo.gl/uma9x"
+2016-04-03 10:34:46	--	Topic set by baweaver (~baweaver@ruby/staff/baweaver) on Sat, 02 Apr 2016 08:36:34
+2016-04-03 10:34:47	--	Channel #RubyOnRails: 526 nicks (0 ops, 0 voices, 526 normals)
+2016-04-03 10:34:47	--	PvNotice(ChanServ): Please follow the channel rules http://goo.gl/dgSj5 | Register with nickserv in order to talk: https://freenode.net/kb/answer/registration
+2016-04-03 10:34:52	--	Channel created on Mon, 07 Jun 2004 05:27:38
+2016-04-03 10:35:15	-->	trifling-jest (~puerile@112.209.53.138) has joined #RubyOnRails
+2016-04-03 10:35:21	-->	blackhuey (~james@203-206-160-195.perm.iinet.net.au) has joined #RubyOnRails
+2016-04-03 10:35:43	trifling-jest	hi guys. any idea how to make the prompt in the terminal colored?
+2016-04-03 10:35:55	trifling-jest	i modified the prompt to display the current branch
+2016-04-03 10:36:00	trifling-jest	it disable the color of the prompt
+2016-04-03 10:36:05	trifling-jest	how do i get the coloring back?
+2016-04-03 10:36:06	-->	_Sypheren (~Sypheren@139.78.252.0) has joined #RubyOnRails
+2016-04-03 10:36:13	sevenseacat	seems unrelated to rails
+2016-04-03 10:37:27	trifling-jest	a little bit :P
+2016-04-03 10:38:07	matt_d	trifling-jest: need a little more info; to which prompt are you referring?
+2016-04-03 10:39:01	matt_d	trifling-jest: when you say 'current branch,' i'm assuming zsh with oh-my-zsh? :)
+2016-04-03 10:39:03	<--	Sypheren (~Sypheren@139.78.252.0) has quit (Ping timeout: 276 seconds)
+2016-04-03 10:39:34	<--	benlieb (~benlieb@2602:306:32eb:3400:e46f:5161:d8bd:3e8e) has quit (Quit: benlieb)
+2016-04-03 10:40:46	trifling-jest	hang on. i'll paste the link
+2016-04-03 10:41:08	trifling-jest	https://www.learnenough.com/git-tutorial#sec-prompt_branches_and_tab_completion
+2016-04-03 10:41:09	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:41:11	trifling-jest	that one
+2016-04-03 10:41:29	trifling-jest	i followed the instructions there then it disable my colored prompt in the terminal
+2016-04-03 10:41:35	trifling-jest	how do i get back the colored prompt
+2016-04-03 10:41:44	<--	ecemm (~ecemm@195.142.62.105) has quit (Excess Flood)
+2016-04-03 10:42:06	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:42:06	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:27	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:42:28	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:42:48	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:42:49	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:06	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:43:07	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:24	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:43:25	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:45	-->	ecemm (~ecemm@195.142.62.105) has joined #RubyOnRails
+2016-04-03 10:43:46	<--	ecemm (~ecemm@195.142.62.105) has quit (Max SendQ exceeded)
+2016-04-03 10:43:47	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-03 10:47:06	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-03 10:47:46	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 252 seconds)
+2016-04-03 10:47:50	matt_d	trifling-jest: it appears you have any color codes in your PS1 variable, if you followed that tutorial
+2016-04-03 10:48:00	matt_d	*don't have any
+2016-04-03 10:48:11	trifling-jest	i see
+2016-04-03 10:48:13	trifling-jest	what can i do?
+2016-04-03 10:48:23	matt_d	trifling-jest: add color codes
+2016-04-03 10:48:37	trifling-jest	do ijust get the color codes from the .bashrc file?
+2016-04-03 10:49:00	trifling-jest	that's where i enabled the force color prompt
+2016-04-03 10:49:36	-->	SteenJobs (~jesiegel@cpe-72-229-23-46.nyc.res.rr.com) has joined #RubyOnRails
+2016-04-03 10:50:06	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 10:55:02	<--	hxegon (~textual@ip24-254-85-40.sb.sd.cox.net) has quit (Quit: BRB)
+2016-04-03 10:55:14	matt_d	trifling-jest: too much to explain in here. check out: http://www.understudy.net/custom.html#color_prompts
+2016-04-03 10:55:44	matt_d	trifling-jest: when you look at your .bash_profile, you'll see that you have no color escape codes in your PS1 variable.
+2016-04-03 10:56:01	matt_d	trifling-jest: customize away
+2016-04-03 10:56:11	trifling-jest	i see. do i just follow the instructions on the site you pasted?
+2016-04-03 10:57:11	matt_d	trifling-jest: it's more of an example and chart of colors you can use
+2016-04-03 10:57:19	trifling-jest	ok
+2016-04-03 10:57:29	trifling-jest	i wil just make it work from the site you've given
+2016-04-03 10:57:34	trifling-jest	thanks matt_d! :)
+2016-04-03 10:58:58	-->	arup_r (~arup_r@180.215.71.163) has joined #RubyOnRails
+2016-04-03 10:59:21	matt_d	trifling-jest: you're just adding "escape codes." think of it kind of like an open html tag setting a color.
+2016-04-03 11:00:39	trifling-jest	ok understood. thanks! :)
+2016-04-03 11:02:17	--	joshkovach[away] is now known as joshkovach
+2016-04-03 11:02:19	--	joshkovach is now known as joshkovach[away]
+2016-04-03 11:02:19	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-03 11:06:45	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 244 seconds)
+2016-04-03 11:11:21	<--	agit0 (~textual@95.111.18.140) has quit (Quit: zzzZZZ….)
+2016-04-03 11:11:31	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-03 11:14:10	-->	DoubleMalt (~DoubleMal@213-240-93-74.adsl.highway.telekom.at) has joined #RubyOnRails
+2016-04-03 11:26:08	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-03 11:28:16	<--	djbkd (~djbkd@98.248.67.209) has quit (Quit: Leaving...)
+2016-04-03 11:31:07	<--	joshkovach[away] (~JoshKovac@99-62-252-161.lightspeed.gdrpmi.sbcglobal.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 11:31:32	<--	Tempesta (Tempesta@61.74.200.211) has quit (Ping timeout: 244 seconds)
+2016-04-03 11:32:00	-->	Tempesta (Tempesta@61.74.200.211) has joined #RubyOnRails
+2016-04-03 11:32:16	<--	Tempesta (Tempesta@61.74.200.211) has quit (Client Quit)
+2016-04-03 11:32:27	<--	SteenJobs (~jesiegel@cpe-72-229-23-46.nyc.res.rr.com) has quit (Quit: peaceee)
+2016-04-03 11:35:20	-->	apotry (~textual@cpc1-live26-2-0-cust227.17-2.cable.virginm.net) has joined #RubyOnRails
+2016-04-03 11:35:35	-->	moeabdol (~moeabdol@136.0.0.150) has joined #RubyOnRails
+2016-04-03 11:36:29	-->	quazimodo (~quazimodo@155.143.14.28) has joined #RubyOnRails
+2016-04-03 11:37:00	-->	Tempesta (Tempesta@61.74.200.211) has joined #RubyOnRails
+2016-04-03 11:40:31	<--	Tempesta (Tempesta@61.74.200.211) has quit (Read error: Connection reset by peer)
+2016-04-03 11:40:44	-->	sergey_makagon (~sergey_ma@93.75.221.250) has joined #RubyOnRails
+2016-04-03 11:41:06	-->	Tempesta (Tempesta@61.74.200.211) has joined #RubyOnRails
+2016-04-03 11:43:43	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 11:43:49	-->	djbkd_ (~djbkd@98.248.67.209) has joined #RubyOnRails
+2016-04-03 11:46:51	-->	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-03 11:47:07	-->	agit0 (~textual@lan.initlab.org) has joined #RubyOnRails
+2016-04-03 11:49:10	<--	agit0 (~textual@lan.initlab.org) has quit (Read error: Connection reset by peer)
+2016-04-03 11:51:26	<--	eyeamaye (~Adium@2605:e000:354b:7c00:8c9:76d5:4547:4bf6) has quit (Quit: Leaving.)
+2016-04-03 11:53:10	-->	vale_tudo (~valetudo@cpe-75-190-176-87.carolina.res.rr.com) has joined #RubyOnRails
+2016-04-03 11:53:12	<--	blackmesa (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 11:53:23	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has quit (Remote host closed the connection)
+2016-04-03 11:55:11	<--	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 11:56:01	-->	LowLifePerv (~GitGud@unaffiliated/gitgud) has joined #RubyOnRails
+2016-04-03 11:56:40	<--	GitGud (~GitGud@unaffiliated/gitgud) has quit (Killed (leguin.freenode.net (Nickname regained by services)))
+2016-04-03 11:56:40	--	LowLifePerv is now known as gitgud
+2016-04-03 11:57:26	<--	djbkd_ (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 11:58:03	-->	itkin (~itkin@unaffiliated/itkin) has joined #RubyOnRails
+2016-04-03 11:58:57	<--	itkin- (~itkin@fr.anco.is) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 11:59:16	--	gitgud is now known as SpikeSpiegel
+2016-04-03 11:59:30	--	SpikeSpiegel is now known as GitGud
+2016-04-03 12:01:48	<--	arup_r (~arup_r@180.215.71.163) has quit (Remote host closed the connection)
+2016-04-03 12:06:29	<--	AntiSpamMeta (~MetaBot@AntiSpamMeta/.) has quit (Excess Flood)
+2016-04-03 12:06:50	-->	AntiSpamMeta (~MetaBot@AntiSpamMeta/.) has joined #RubyOnRails
+2016-04-03 12:07:05	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-03 12:07:31	<--	sleungcy (~sleungcy@node-1w7jr9qm1k7mc42alugjav3dd.ipv6.telus.net) has quit (Remote host closed the connection)
+2016-04-03 12:08:31	-->	gingray (~gingray@2a02:2698:7c23:a68a:f1a8:e8fe:2b06:a698) has joined #RubyOnRails
+2016-04-03 12:08:35	<--	GitGud (~GitGud@unaffiliated/gitgud) has quit (Excess Flood)
+2016-04-03 12:08:52	-->	solars (~solars@84-115-247-2.cable.dynamic.surfer.at) has joined #RubyOnRails
+2016-04-03 12:08:58	-->	GitGud (~GitGud@unaffiliated/gitgud) has joined #RubyOnRails
+2016-04-03 12:11:51	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 244 seconds)
+2016-04-03 12:13:08	-->	arup_r (~arup_r@180.215.71.163) has joined #RubyOnRails
+2016-04-03 12:15:15	<--	melonstorm (~mel@unaffiliated/melonstorm) has quit (Ping timeout: 276 seconds)
+2016-04-03 12:17:51	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 276 seconds)
+2016-04-03 12:18:54	-->	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has joined #RubyOnRails
+2016-04-03 12:32:18	-->	futilegames (~futilegam@146.185.20.156) has joined #RubyOnRails
+2016-04-03 12:33:35	-->	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has joined #RubyOnRails
+2016-04-03 12:37:15	<--	futilegames (~futilegam@146.185.20.156) has quit (Quit: futilegames)
+2016-04-03 12:38:41	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #RubyOnRails
+2016-04-03 12:39:39	<--	sevenseacat (~sevenseac@CPE-144-136-91-115.pfcz2.cht.bigpond.net.au) has quit (Quit: .)
+2016-04-03 12:40:30	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:40:56	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #RubyOnRails
+2016-04-03 12:40:59	-->	sevenseacat (~sevenseac@CPE-144-136-91-115.pfcz2.cht.bigpond.net.au) has joined #RubyOnRails
+2016-04-03 12:42:36	<--	arup_r (~arup_r@180.215.71.163) has quit (Remote host closed the connection)
+2016-04-03 12:43:51	<--	gingray (~gingray@2a02:2698:7c23:a68a:f1a8:e8fe:2b06:a698) has quit (Ping timeout: 246 seconds)
+2016-04-03 12:44:03	-->	darutoko (~Vandal@176.209.201.106) has joined #RubyOnRails
+2016-04-03 12:44:06	<--	itkin (~itkin@unaffiliated/itkin) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 12:45:25	<--	_Sypheren (~Sypheren@139.78.252.0) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2016-04-03 12:46:22	-->	itkin (~itkin@coinman-01.coinman.eu) has joined #RubyOnRails
+2016-04-03 12:46:51	-->	jkahn (~jkahn@209.197.20.216) has joined #RubyOnRails
+2016-04-03 12:48:11	-->	rlf (~rlf@77.70.13.80) has joined #RubyOnRails
+2016-04-03 12:48:11	<--	rlf (~rlf@77.70.13.80) has quit (Changing host)
+2016-04-03 12:48:11	-->	rlf (~rlf@unaffiliated/rlf) has joined #RubyOnRails
+2016-04-03 12:48:55	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Disconnected by services)
+2016-04-03 12:49:05	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #RubyOnRails
+2016-04-03 12:49:12	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:49:36	-->	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #RubyOnRails
+2016-04-03 12:49:54	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-03 12:49:57	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Disconnected by services)
+2016-04-03 12:50:17	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #RubyOnRails
+2016-04-03 12:54:12	<--	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has quit (Remote host closed the connection)
+2016-04-03 12:54:53	<--	DoubleMalt (~DoubleMal@213-240-93-74.adsl.highway.telekom.at) has quit (Remote host closed the connection)
+2016-04-03 12:56:12	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 260 seconds)
+2016-04-03 12:56:26	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-03 12:56:39	<--	tildes_ (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Remote host closed the connection)
+2016-04-03 12:56:57	-->	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #RubyOnRails
+2016-04-03 12:57:01	-->	pawnbox (~pawnbox@106.51.141.87) has joined #RubyOnRails
+2016-04-03 12:59:38	-->	arup_r (~arup_r@180.215.71.163) has joined #RubyOnRails
+2016-04-03 13:00:21	<--	pawnbox (~pawnbox@106.51.141.87) has quit (Remote host closed the connection)
+2016-04-03 13:00:34	-->	pawnbox (~pawnbox@106.51.141.87) has joined #RubyOnRails
+2016-04-03 13:03:29	-->	foucist (~foobala@180.183.1.57) has joined #RubyOnRails
+2016-04-03 13:06:32	<--	jkahn (~jkahn@209.197.20.216) has quit (Remote host closed the connection)
+2016-04-03 13:07:43	FooBarWidget	are there any passenger users here?
+2016-04-03 13:07:55	FooBarWidget	could anybody tell me what they think about the Passenger Library?
+2016-04-03 13:08:35	<--	foucist (~foobala@180.183.1.57) has quit (Quit: leaving)
+2016-04-03 13:09:00	<--	Jasaka (~Jasaka@aftr-37-201-243-145.unity-media.net) has quit (Read error: Connection reset by peer)
+2016-04-03 13:17:33	<--	PlasmaStar (Plasma@unaffiliated/plasmastar) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:22:34	-->	PlasmaStar (Plasma@unaffiliated/plasmastar) has joined #RubyOnRails
+2016-04-03 13:23:44	tbuehlmann	hey FooBarWidget, used it for a project some years ago. finding the right apache directives for the ruby version being used and other things wasn't hard, just a bit intimidating because of the long one-page-has-it-all-documentation. it worked for me, but I didn't feel too well with it since I didn't know anything about its implementation and integration with apache. by the time I somehow
+2016-04-03 13:23:44	tbuehlmann	switched to thin, then later to puma because they were more, let's say, tangible to me
+2016-04-03 13:25:41	tbuehlmann	I also had the feeling that it's a one-person-project (maintained by you) and that it's therefore risky to use it. but that's the case with other web application server, too. so I don't give too much about that argument these days
+2016-04-03 13:27:00	FooBarWidget	thanks for the feedback. on the documentation side we've improved that a lot. take a look at www.phusionpassenger.com/library :)
+2016-04-03 13:27:43	tbuehlmann	yeah, I read about it in here some weeks ago I guess
+2016-04-03 13:27:45	FooBarWidget	we realized that the one-long-page documentation had reached its limits so we switched to something friendlier. there are now even end-to-end tutorials that cover everything from installing ruby, spinning up digital ocean and deploying rails itself
+2016-04-03 13:28:06	FooBarWidget	ironically I'm getting complaints from people who are used to the one-long-page style
+2016-04-03 13:28:38	FooBarWidget	they are used to Ctrl-F to search what they need so they now complain that it's *not* one-long-page. I'm trying to reach out to one of those people (I don't know who they are) to see how I can improve the library
+2016-04-03 13:29:04	workmad3	FooBarWidget: heh :) that's how I used to find the bits of doc I needed when I used passenger
+2016-04-03 13:29:18	tbuehlmann	yea, I can understand that
+2016-04-03 13:29:43	tbuehlmann	having a good search in place is worth a lot
+2016-04-03 13:29:47	FooBarWidget	workmad3: what do you think of it now? I've added various tweaks to accomodate the people who are used to the old style?
+2016-04-03 13:30:27	workmad3	FooBarWidget: just taking a look
+2016-04-03 13:30:28	FooBarWidget	tbuehlmann: as for internals, we have lots of internals documentation these days. the entire architecture is documented, how the integration with apache works is documentation
+2016-04-03 13:31:09	workmad3	FooBarWidget: I think I'd be happy with the reference listing if I were to use passenger again :)
+2016-04-03 13:31:09	FooBarWidget	about 5 years ago it was mostly a one-person-project. nowadays we have more people. we even have a new engineer hire in the pipeline, hopefully for next month
+2016-04-03 13:32:31	FooBarWidget	but I'm kind of confused by that. puma and unicorn are *also* one-man projects, so how did they differ?
+2016-04-03 13:33:16	tbuehlmann	as said, I don't give too much about that argument these days
+2016-04-03 13:33:25	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 13:34:55	tbuehlmann	or do you specifically refer to "these days"? well, I wouldn't know better years ago
+2016-04-03 13:35:51	<--	dnewkerk (~dnewkerk@108-212-133-154.lightspeed.irvnca.sbcglobal.net) has quit (Quit: dnewkerk)
+2016-04-03 13:35:59	FooBarWidget	puma and unicorn have always been one-man projects
+2016-04-03 13:36:28	FooBarWidget	passenger has always been a company-backed project, though until 4 years ago the development was effectively one-employee-backed
+2016-04-03 13:38:06	tbuehlmann	right, that was a false impression by some-years-ago-me, but that went mistakenly into consideration
+2016-04-03 13:38:13	tbuehlmann	just trying to be honest here
+2016-04-03 13:38:14	<--	sergey_makagon (~sergey_ma@93.75.221.250) has quit
+2016-04-03 13:38:20	-->	darkxploit (~darkxploi@197.224.151.239) has joined #RubyOnRails
+2016-04-03 13:39:22	-->	andya_ (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has joined #RubyOnRails
+2016-04-03 13:40:14	<--	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has quit (Excess Flood)
+2016-04-03 13:43:05	-->	dgncn (~trance@1.ipv4.lennon.mtbnc.us) has joined #RubyOnRails
+2016-04-03 13:43:54	<--	ropeney (~ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has quit (Remote host closed the connection)
+2016-04-03 13:45:02	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 13:46:03	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #RubyOnRails
+2016-04-03 13:46:45	-->	futilegames (~futilegam@146.185.20.156) has joined #RubyOnRails
+2016-04-03 13:47:05	<--	rogue_koder (~rogue_kod@207.204.117.126) has quit (Quit: Konversation terminated!)
+2016-04-03 13:47:29	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-03 13:52:51	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-03 13:53:51	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-03 13:54:35	-->	rrawlins (~rrawlins@robertrawlins.plus.com) has joined #RubyOnRails
+2016-04-03 13:58:17	<--	d0nn1e (~d0nn1e@cpe-75-183-8-113.triad.res.rr.com) has quit (Ping timeout: 250 seconds)
+2016-04-03 13:59:06	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 246 seconds)
+2016-04-03 13:59:10	<--	rrawlins (~rrawlins@robertrawlins.plus.com) has quit (Ping timeout: 252 seconds)
+2016-04-03 14:00:36	-->	d0nn1e (~d0nn1e@cpe-75-183-8-113.triad.res.rr.com) has joined #RubyOnRails
+2016-04-03 14:04:52	-->	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has joined #RubyOnRails
+2016-04-03 14:11:36	<--	futilegames (~futilegam@146.185.20.156) has quit (Quit: futilegames)
+2016-04-03 14:12:12	<--	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-03 14:13:38	-->	hightower2 (~hightower@78-0-4-76.adsl.net.t-com.hr) has joined #RubyOnRails
+2016-04-03 14:15:41	-->	Meow-J (uid69628@gateway/web/irccloud.com/x-esozcdxxhixjfmrj) has joined #RubyOnRails
+2016-04-03 14:17:17	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:18:00	-->	Lumia930 (~Lumia930@122.164.36.230) has joined #RubyOnRails
+2016-04-03 14:18:06	<--	FooBarWidget (~FooBarWid@li506-205.members.linode.com) has quit (Ping timeout: 276 seconds)
+2016-04-03 14:18:52	-->	DoubleMalt (~DoubleMal@mail.check-point.at) has joined #RubyOnRails
+2016-04-03 14:19:43	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-03 14:20:27	<--	eljimador (~James@24-52-219-146.cable.teksavvy.com) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:20:27	<--	eljimmy (~jimador@24-52-219-146.cable.teksavvy.com) has quit (Ping timeout: 248 seconds)
+2016-04-03 14:21:13	-->	eljimmy (~James@24-52-219-146.cable.teksavvy.com) has joined #RubyOnRails
+2016-04-03 14:21:37	<--	one_zero (~one_zero@ip68-5-177-152.oc.oc.cox.net) has quit
+2016-04-03 14:22:50	-->	eljimbo (~jimador@24-52-219-146.cable.teksavvy.com) has joined #RubyOnRails
+2016-04-03 14:23:33	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-03 14:24:04	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 260 seconds)
+2016-04-03 14:27:07	-->	scyth (~scyth@109-93-120-206.dynamic.isp.telekom.rs) has joined #RubyOnRails
+2016-04-03 14:32:04	-->	FooBarWidget (~FooBarWid@li506-205.members.linode.com) has joined #RubyOnRails
+2016-04-03 14:34:12	-->	AzaToth (~azatoth@wikipedia/AzaToth) has joined #RubyOnRails
+2016-04-03 14:34:15	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 14:38:26	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-03 14:38:34	<--	arup_r (~arup_r@180.215.71.163) has left #RubyOnRails
+2016-04-03 14:38:51	-->	arup_r (~arup_r@180.215.71.163) has joined #RubyOnRails
+2016-04-03 14:39:03	<--	andya_ (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2016-04-03 14:43:19	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 268 seconds)
+2016-04-03 14:43:41	-->	PedramT (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-03 14:52:27	<--	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 14:52:34	-->	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has joined #RubyOnRails
+2016-04-03 14:53:35	-->	ak_ (~ak@p5B264F21.dip0.t-ipconnect.de) has joined #RubyOnRails
+2016-04-03 14:53:53	-->	mdw (~mdw@94.119.65.2) has joined #RubyOnRails
+2016-04-03 14:54:26	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-03 14:55:19	<--	trifling-jest (~puerile@112.209.53.138) has quit (Quit: Leaving)
+2016-04-03 14:55:27	-->	G (~njones@unaffiliated/g) has joined #RubyOnRails
+2016-04-03 14:55:40	<--	ak_ (~ak@p5B264F21.dip0.t-ipconnect.de) has quit (Quit: Verlassend)
+2016-04-03 14:58:37	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-03 14:58:56	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-03 14:59:49	<--	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Ping timeout: 250 seconds)
+2016-04-03 15:05:26	-->	akshat (~akshat@unaffiliated/akshat) has joined #RubyOnRails
+2016-04-03 15:08:02	-->	n_e_o (~neo@106.51.130.134) has joined #RubyOnRails
+2016-04-03 15:08:38	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 15:08:44	<--	User458764 (~textual@62.147.220.187) has quit (Max SendQ exceeded)
+2016-04-03 15:09:13	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 15:15:04	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:15:10	<--	akshat (~akshat@unaffiliated/akshat) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 15:16:06	<--	PedramT (~pedramt@80.66.191.249) has quit (Remote host closed the connection)
+2016-04-03 15:16:32	-->	akshat (~akshat@unaffiliated/akshat) has joined #RubyOnRails
+2016-04-03 15:21:07	-->	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has joined #RubyOnRails
+2016-04-03 15:21:29	-->	PedramT (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-03 15:23:47	-->	renegadeandy (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has joined #RubyOnRails
+2016-04-03 15:26:04	<--	marr (~ccc@xdsl-5903.wroclaw.dialog.net.pl) has quit (Ping timeout: 252 seconds)
+2016-04-03 15:26:08	<--	akshat (~akshat@unaffiliated/akshat) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-03 15:26:14	--	zz_denym_ is now known as denym_
+2016-04-03 15:29:09	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 15:30:50	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 15:31:33	<--	workmad3 (~workmad3@cpc71475-bagu13-2-0-cust82.1-3.cable.virginm.net) has quit (Ping timeout: 240 seconds)
+2016-04-03 15:34:03	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 264 seconds)
+2016-04-03 15:44:00	-->	PedramT_ (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-03 15:44:40	<--	PedramT (~pedramt@80.66.191.249) has quit (Read error: Connection reset by peer)
+2016-04-03 15:45:21	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-03 15:47:16	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #RubyOnRails
+2016-04-03 15:47:16	<--	renegadeandy (~renegadea@cpc65578-sgyl33-2-0-cust815.18-2.cable.virginm.net) has quit (Quit: renegadeandy)
+2016-04-03 15:47:18	-->	PedramT (~pedramt@80.66.191.250) has joined #RubyOnRails
+2016-04-03 15:48:52	<--	PedramT_ (~pedramt@80.66.191.249) has quit (Ping timeout: 260 seconds)
+2016-04-03 15:51:39	<--	PedramT (~pedramt@80.66.191.250) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:01:51	<--	gheegh (~textual@pool-96-255-20-180.washdc.ftas.verizon.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-03 16:11:33	<--	neanderslob (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has quit (Read error: Connection reset by peer)
+2016-04-03 16:14:33	-->	Megamos (~Nils@31.210.249.31) has joined #RubyOnRails
+2016-04-03 16:15:27	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:15:33	<--	darkxploit (~darkxploi@197.224.151.239) has quit (Ping timeout: 240 seconds)
+2016-04-03 16:15:34	<--	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has quit (Ping timeout: 252 seconds)
+2016-04-03 16:17:51	-->	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has joined #RubyOnRails
+2016-04-03 16:21:36	-->	user_9876 (779f1550@gateway/web/cgi-irc/kiwiirc.com/ip.119.159.21.80) has joined #RubyOnRails
+2016-04-03 16:22:59	-->	o (779f1550@gateway/web/cgi-irc/kiwiirc.com/ip.119.159.21.80) has joined #RubyOnRails
+2016-04-03 16:23:14	--	o is now known as Guest3822
+2016-04-03 16:24:04	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-03 16:25:52	<--	Guest3822 (779f1550@gateway/web/cgi-irc/kiwiirc.com/ip.119.159.21.80) has quit (Client Quit)
+2016-04-03 16:25:56	<--	user_9876 (779f1550@gateway/web/cgi-irc/kiwiirc.com/ip.119.159.21.80) has quit (Quit: http://www.kiwiirc.com/ - A hand crafted IRC client)
+2016-04-03 16:29:04	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::caa4) has quit (Ping timeout: 250 seconds)
+2016-04-03 16:29:05	-->	darkxploit (~darkxploi@197.224.133.178) has joined #RubyOnRails
+2016-04-03 16:31:25	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:31:54	-->	darkxploit (~darkxploi@197.224.133.178) has joined #RubyOnRails
+2016-04-03 16:32:58	-->	scepticulous (~dsivia@x4e32f6cb.dyn.telefonica.de) has joined #RubyOnRails
+2016-04-03 16:34:14	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:34:33	<--	User458764 (~textual@62.147.220.187) has quit (Quit: My iMac has gone to sleep. ZZZzzz…)
+2016-04-03 16:34:42	-->	darkxploit (~darkxploi@197.224.133.178) has joined #RubyOnRails
+2016-04-03 16:35:40	tildes	If I have a controller, that will not render views is it still reasonable to inherit ActionController::Base?
+2016-04-03 16:36:34	-->	djbkd (~djbkd@98.248.67.209) has joined #RubyOnRails
+2016-04-03 16:37:03	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:37:32	-->	darkxploit (~darkxploi@197.224.133.178) has joined #RubyOnRails
+2016-04-03 16:39:33	<--	mdw (~mdw@94.119.65.2) has quit (Quit: Sleeping Zzzzz)
+2016-04-03 16:39:54	<--	darkxploit (~darkxploi@197.224.133.178) has quit (Max SendQ exceeded)
+2016-04-03 16:40:12	<--	peteykun (~Petey@14.139.128.19) has quit (Quit: Leaving)
+2016-04-03 16:41:15	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 264 seconds)
+2016-04-03 16:41:25	tbuehlmann	tildes: what does it do if not rendering?
+2016-04-03 16:42:10	tildes	tbuehlmann: well, I need something (perhaps a controller), that can have a route, can take in parameters, and respond, most likely with json
+2016-04-03 16:42:38	tildes	but it would not have any views of its own, rather, another view would use it (I can get more specific, if helpful)
+2016-04-03 16:42:59	-->	mdw (~mdw@94.119.66.57) has joined #RubyOnRails
+2016-04-03 16:43:56	tildes	and I was just thinking, rails being quite modular, perhaps I should do something else, than just inherit ActionController::Base, as with my other controllers
+2016-04-03 16:44:16	tildes	(I'm in this why, why, what, what phase with rails apparently...)
+2016-04-03 16:44:35	tbuehlmann	still not sure I understand. so it's backed by a route, takes parameters and responds with json? sounds like a typical controller to me
+2016-04-03 16:45:14	tildes	tbuehlmann: but it will not have views. ok, if there is no issue really, then I'll just go ahead
+2016-04-03 16:46:30	<--	scepticulous (~dsivia@x4e32f6cb.dyn.telefonica.de) has quit (Ping timeout: 248 seconds)
+2016-04-03 16:46:38	tbuehlmann	you still have to render a result, and that's where the controller comes into play
+2016-04-03 16:46:54	tbuehlmann	so it really sounds like just a controller to me
+2016-04-03 16:47:47	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-03 16:47:57	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #RubyOnRails
+2016-04-03 16:51:27	--	GitGud is now known as GG
+2016-04-03 16:55:04	-->	aloneintheworld (~WhatTheRa@pc-40-87-214-201.cm.vtr.net) has joined #RubyOnRails
+2016-04-03 16:55:05	-->	tk__ (~tk@i223-216-16-224.s41.a022.ap.plala.or.jp) has joined #RubyOnRails
+2016-04-03 16:55:31	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-03 16:58:58	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-03 16:58:58	<--	scyth (~scyth@109-93-120-206.dynamic.isp.telekom.rs) has quit (Read error: Connection reset by peer)
+2016-04-03 16:59:16	-->	User458764 (~textual@62.147.220.187) has joined #RubyOnRails
+2016-04-03 16:59:18	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-03 17:00:39	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:03:32	<--	marcules (~marcules@unaffiliated/marcules) has quit (Ping timeout: 260 seconds)
+2016-04-03 17:04:31	<--	nodejunkie (~nodejunki@S0106001c102395a9.vc.shawcable.net) has quit (Ping timeout: 252 seconds)
+2016-04-03 17:05:35	<--	aloneintheworld (~WhatTheRa@pc-40-87-214-201.cm.vtr.net) has quit (Quit: aloneintheworld)
+2016-04-03 17:07:41	--	GG is now known as timeup
+2016-04-03 17:09:48	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:09:49	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-03 17:10:23	<--	IrishGringo (~chatzilla@2601:586:c200:6eaa:8db6:f58:d085:cd34) has quit (Remote host closed the connection)
+2016-04-03 17:11:08	<--	camilasan (~quassel@ip5b42f499.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2016-04-03 17:11:19	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 268 seconds)
+2016-04-03 17:11:37	--	timeup is now known as GitGud
+2016-04-03 17:12:43	-->	camilasan (~quassel@ip5b42f499.dynamic.kabel-deutschland.de) has joined #RubyOnRails
+2016-04-03 17:13:05	<--	robbyoconnor (~wakawaka@guifications/user/r0bby) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:14:06	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 244 seconds)
+2016-04-03 17:15:27	--	denym_ is now known as zz_denym_
+2016-04-03 17:16:03	-->	denaras (~denaras@88-222-14-122.meganet.lt) has joined #RubyOnRails
+2016-04-03 17:16:12	-->	renegadeandy (~renegadea@195.11.164.221) has joined #RubyOnRails
+2016-04-03 17:17:48	-->	akshat (~akshat@unaffiliated/akshat) has joined #RubyOnRails
+2016-04-03 17:18:39	-->	IrishGringo (~chatzilla@2601:586:c200:6eaa:b49e:4133:96b7:1765) has joined #RubyOnRails
+2016-04-03 17:19:22	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-03 17:21:24	<--	quazimodo (~quazimodo@155.143.14.28) has quit (Ping timeout: 276 seconds)
+2016-04-03 17:24:29	-->	marcules (~marcules@unaffiliated/marcules) has joined #RubyOnRails
+2016-04-03 17:27:21	<--	tildes (~tildes@a91-154-177-52.elisa-laajakaista.fi) has quit (Ping timeout: 246 seconds)
+2016-04-03 17:31:03	-->	meoblast001 (~meoblast@cable-95-168-151-171.cust.telecolumbus.net) has joined #RubyOnRails
+2016-04-03 17:31:43	-->	mdw_ (~mdw@188.29.165.183.threembb.co.uk) has joined #RubyOnRails
+2016-04-03 17:32:15	-->	PedramT (~pedramt@80.66.191.249) has joined #RubyOnRails
+2016-04-03 17:33:02	-->	mdw__ (~mdw@188.29.165.33.threembb.co.uk) has joined #RubyOnRails
+2016-04-03 17:34:41	-->	jetpack_joe (~textual@198.8.80.179) has joined #RubyOnRails
+2016-04-03 17:34:50	-->	someish (~someish@STCTON11-1176061483.sdsl.bell.ca) has joined #RubyOnRails
+2016-04-03 17:35:21	-->	mdw___ (~mdw@94.119.66.57) has joined #RubyOnRails
+2016-04-03 17:35:24	<--	mdw (~mdw@94.119.66.57) has quit (Ping timeout: 260 seconds)
+2016-04-03 17:36:15	<--	mdw_ (~mdw@188.29.165.183.threembb.co.uk) has quit (Ping timeout: 250 seconds)
+2016-04-03 17:36:30	<--	renegadeandy (~renegadea@195.11.164.221) has quit (Quit: renegadeandy)
+2016-04-03 17:36:33	<--	PedramT (~pedramt@80.66.191.249) has quit (Ping timeout: 240 seconds)
+2016-04-03 17:36:37	<--	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 17:37:43	<--	mdw__ (~mdw@188.29.165.33.threembb.co.uk) has quit (Ping timeout: 248 seconds)
+2016-04-03 17:38:34	-->	shinnya (~shinnya@103.182.128.101.dy.bbexcite.jp) has joined #RubyOnRails
+2016-04-03 17:40:15	<--	jonathanwallace_ (~jonathanw@47-32-109-79.dhcp.gwnt.ga.charter.com) has quit (Quit: ZNC - http://znc.in)
+2016-04-03 17:44:06	-->	GodFather (~rcc@71-82-75-229.dhcp.bycy.mi.charter.com) has joined #RubyOnRails
+2016-04-03 17:44:11	-->	daytime (0days@freenode/staff/uptime) has joined #RubyOnRails
+2016-04-04 10:56:51	-->	lxsameer (~lxsameer@unaffiliated/lxsameer) has joined #RubyOnRails
+2016-04-04 10:56:51	--	Topic for #RubyOnRails is "Rules: http://goo.gl/dgSj5 | MINASWAN (Matz is nice and so we are nice) | Can't talk? Register/identify with Nickserv first! | Newest releases: 4.2.6, 4.1.15, 4.0.13 | Guides: http://goo.gl/Drh96 | API Docs: http://goo.gl/ErSVb | Mailing List: http://is.gd/3Euc | Logs at http://goo.gl/uma9x"
+2016-04-04 10:56:51	--	Topic set by baweaver (~baweaver@ruby/staff/baweaver) on Sat, 02 Apr 2016 08:36:34
+2016-04-04 10:56:51	--	Channel #RubyOnRails: 523 nicks (0 ops, 0 voices, 523 normals)
+2016-04-04 10:56:51	--	PvNotice(ChanServ): Please follow the channel rules http://goo.gl/dgSj5 | Register with nickserv in order to talk: https://freenode.net/kb/answer/registration
+2016-04-04 10:56:55	sevenseacat	check the issues and see if its a known issue
+2016-04-04 10:56:57	--	Channel created on Mon, 07 Jun 2004 05:27:38
+2016-04-04 10:57:30	-->	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has joined #RubyOnRails
+2016-04-04 10:59:14	emilkarl	Yep, will do
+2016-04-04 10:59:34	-->	brt (~brt@87.116.18.16) has joined #RubyOnRails
+2016-04-04 11:00:30	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:8850:e16d:945f:1c4) has quit (Read error: Connection reset by peer)
+2016-04-04 11:01:07	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:8850:e16d:945f:1c4) has joined #RubyOnRails
+2016-04-04 11:01:09	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Remote host closed the connection)
+2016-04-04 11:01:33	<--	alfie_max15 (~alfie@115.118.69.112) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:03:38	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:04:45	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-04 11:05:06	-->	thorgi (~thorgi@oceanic.wsisiz.edu.pl) has joined #RubyOnRails
+2016-04-04 11:05:09	-->	comrad (~britter@freecnc/comrad) has joined #RubyOnRails
+2016-04-04 11:05:42	-->	neanderslob_ (~quassel@c-50-168-247-73.hsd1.ut.comcast.net) has joined #RubyOnRails
+2016-04-04 11:07:01	<--	brt (~brt@87.116.18.16) has quit (Quit: peace)
+2016-04-04 11:07:45	emilkarl	Change from cookie_store to activerecord-session_store solved the issue.
+2016-04-04 11:09:25	<--	thorgi (~thorgi@oceanic.wsisiz.edu.pl) has quit (Ping timeout: 248 seconds)
+2016-04-04 11:10:13	-->	thorgi (~thorgi@oceanic.wsisiz.edu.pl) has joined #RubyOnRails
+2016-04-04 11:13:10	<--	Cohedrin (~textual@c-50-131-222-27.hsd1.ca.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:14:35	<--	sekrit (charitwo@freenode/staff/c) has quit (Changing host)
+2016-04-04 11:14:35	-->	sekrit (charitwo@freenode/staff/wikimedia.charitwo) has joined #RubyOnRails
+2016-04-04 11:16:36	-->	alfie_max15 (~alfie@122.164.123.16) has joined #RubyOnRails
+2016-04-04 11:16:40	<--	edwinvdgraaf (~edwinvdgr@095-096-024-193.static.chello.nl) has quit (Remote host closed the connection)
+2016-04-04 11:17:30	-->	RubyPadawan_ (~RubyPadaw@121.121.81.77) has joined #RubyOnRails
+2016-04-04 11:17:41	-->	Dimik (~Dimik@pool-108-41-42-179.nycmny.fios.verizon.net) has joined #RubyOnRails
+2016-04-04 11:17:57	--	RubyPadawan_ is now known as RubyJedi-ing
+2016-04-04 11:19:33	<--	Lumia930 (~Lumia930@1.22.153.28) has quit (Ping timeout: 248 seconds)
+2016-04-04 11:20:56	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #RubyOnRails
+2016-04-04 11:21:02	<--	sandstrom (~sandstrom@unaffiliated/sandstrom) has quit (Client Quit)
+2016-04-04 11:21:41	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:24:16	<--	ramfjord (~tramfjord@c-98-210-111-57.hsd1.ca.comcast.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:24:38	<--	sudoubuntu (~textual@c-68-61-224-245.hsd1.mi.comcast.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:25:28	<--	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has quit (Quit: cheerio)
+2016-04-04 11:25:57	-->	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has joined #RubyOnRails
+2016-04-04 11:27:48	rubyonrailed	hello
+2016-04-04 11:28:59	Ropeney	g'day
+2016-04-04 11:29:57	sevenseacat	bonan tagon
+2016-04-04 11:31:32	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 11:31:55	-->	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has joined #RubyOnRails
+2016-04-04 11:32:07	-->	pawnbox (~pawnbox@106.51.37.116) has joined #RubyOnRails
+2016-04-04 11:32:08	-->	akshat_ (~akshat@unaffiliated/akshat) has joined #RubyOnRails
+2016-04-04 11:32:51	-->	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has joined #RubyOnRails
+2016-04-04 11:33:41	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 11:34:15	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-04 11:34:24	<--	cd-rum (~textual@167.160.116.61) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2016-04-04 11:35:08	<--	vsdfs (~vsdfs@155.254.33.177) has quit (Ping timeout: 244 seconds)
+2016-04-04 11:35:21	<--	akshat (~akshat@unaffiliated/akshat) has quit (Ping timeout: 276 seconds)
+2016-04-04 11:36:15	-->	dionysus69 (~Icedove@unaffiliated/dionysus69) has joined #RubyOnRails
+2016-04-04 11:36:59	<--	apotry (~textual@cpc1-live26-2-0-cust227.17-2.cable.virginm.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:38:17	<--	fedexo (~quassel@2602:30a:c021:5bf0:85e8:b498:1dd8:f795) has quit (Ping timeout: 250 seconds)
+2016-04-04 11:39:28	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:39:28	<--	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 11:41:14	-->	Ergo (~ergo@h-213.61.129.43.host.de.colt.net) has joined #RubyOnRails
+2016-04-04 11:41:52	-->	johnflux (~johnflux@konversation/developer/JohnFlux) has joined #RubyOnRails
+2016-04-04 11:42:23	-->	sandstrom (~sandstrom@unaffiliated/sandstrom) has joined #RubyOnRails
+2016-04-04 11:42:29	<--	Ropeney (~Ropeney@tank.mindvision.com.au) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:44:23	--	GitGud is now known as GG
+2016-04-04 11:44:47	 *	arup_r searching in his dictionary ..
+2016-04-04 11:45:22	-->	mark2 (~petruilie@62.231.92.162) has joined #RubyOnRails
+2016-04-04 11:46:15	rubyonrailed	3:02]
+2016-04-04 11:46:15	rubyonrailed	So say I have a channel, and it has many entries.  Daily that channel can have entries for many users.  I want to be able to report how many entries there were during the week, but I only want to show how many days a entry was created.  So I don’t want to show how many entries were created that week, just how many days an entry happened
+2016-04-04 11:47:48	sevenseacat	that question looks familiar
+2016-04-04 11:48:00	mwlang	rubyonrailed: so….’select count(distinct entry_date) from channel_entries where entry_date between X and Y?
+2016-04-04 11:48:08	sevenseacat	oh right, slack cross-post
+2016-04-04 11:48:14	rubyonrailed	lol
+2016-04-04 11:48:36	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 11:48:38	rubyonrailed	sevenseacat: everyone is asleep there
+2016-04-04 11:48:52	-->	mhoungbo (~mhoungbo@41.85.189.161) has joined #RubyOnRails
+2016-04-04 11:48:58	-->	pwnd_nsfw (~pwnd_@2606:a000:f884:fa00:1938:9271:2dbb:27a4) has joined #RubyOnRails
+2016-04-04 11:49:00	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 11:49:14	-->	pawnbox (~pawnbox@106.51.37.116) has joined #RubyOnRails
+2016-04-04 11:49:17	sevenseacat	i dont find it a very useful slack community, must be said
+2016-04-04 11:49:38	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-04 11:50:07	rubyonrailed	There are some people there that work hard and keeping it a positive place.  No negatives from me.
+2016-04-04 11:50:20	rubyonrailed	at*
+2016-04-04 11:50:30	-->	htmldrum (~htmldrum@49.255.234.58) has joined #RubyOnRails
+2016-04-04 11:50:51	sevenseacat	sure it's positive, just not useful to me :P
+2016-04-04 11:52:31	-->	syndikate (~syndikate@125.16.167.50) has joined #RubyOnRails
+2016-04-04 11:53:30	<--	mwlang (~mwlang@ip72-199-114-191.sd.sd.cox.net) has quit (Quit: mwlang)
+2016-04-04 11:54:11	sevenseacat	controller namespaces - singular or plural?
+2016-04-04 11:54:56	<--	berserk_ren (~berserk_r@217.117.18.139) has quit (Remote host closed the connection)
+2016-04-04 11:55:12	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 11:57:10	-->	sp1rs (~sp1rs@182.73.28.50) has joined #RubyOnRails
+2016-04-04 11:57:30	sevenseacat	this is like the second or third time I've come across this in recent projects - wanting to have eg. a User model and also a User controller namespace and major asplosions occur
+2016-04-04 11:58:50	-->	David_H_Smith (~dhsmith@206-212-235-34.dynamic.onlinenw.com) has joined #RubyOnRails
+2016-04-04 11:59:23	--	zz_denym_ is now known as denym_
+2016-04-04 12:00:27	<--	dnewkerk (~dnewkerk@23.240.6.98) has quit (Quit: dnewkerk)
+2016-04-04 12:01:03	<--	David_H__ (~dhsmith@206-212-235-34.dynamic.onlinenw.com) has quit (Ping timeout: 240 seconds)
+2016-04-04 12:03:19	-->	defsdoor (~andy@207.229-252-62.static.virginmediabusiness.co.uk) has joined #RubyOnRails
+2016-04-04 12:05:40	-->	arBmind1 (~Andreas@x4db3b317.dyn.telefonica.de) has joined #RubyOnRails
+2016-04-04 12:05:54	<--	Papierkorb (papierkorb@endless-aerospace.de) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:06:53	<--	duderonomy (~duderonom@c-73-189-177-212.hsd1.ca.comcast.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:06:53	<--	gremly (~gremly@190.85.36.58) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:13	<--	apeiros (~apeiros@ruby/staff/apeiros) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:19	<--	swav (~swav@198.211.120.158) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:07:50	<--	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	arBmind (~Andreas@x4db3b317.dyn.telefonica.de) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:50	<--	scope2229 (~scope@slb-101-88.tm.net.my) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:07:56	-->	RubyJedi-ing_ (~RubyJedii@121.121.81.77) has joined #RubyOnRails
+2016-04-04 12:08:03	-->	armyriad (~armyriad@198.8.80.73) has joined #RubyOnRails
+2016-04-04 12:09:21	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Remote host closed the connection)
+2016-04-04 12:09:29	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:29	<--	speakingcode (~unknown@173-12-244-146-memphis.hfc.comcastbusiness.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:29	<--	masscrx (~marek@146.185.150.180) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:09:36	-->	masscrx (~marek@146.185.150.180) has joined #RubyOnRails
+2016-04-04 12:09:41	<--	RubyJedi-ing (~RubyPadaw@121.121.81.77) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:09:41	<--	djellemah (~djellemah@dsl-197-245-182-26.voxdsl.co.za) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:10:09	-->	Papierkorb (papierkorb@endless-aerospace.de) has joined #RubyOnRails
+2016-04-04 12:10:21	-->	Macaveli (~Macaveli@94-226-221-176.access.telenet.be) has joined #RubyOnRails
+2016-04-04 12:10:45	-->	htmldrum (~htmldrum@49.255.234.58) has joined #RubyOnRails
+2016-04-04 12:10:52	<--	djbkd (~djbkd@98.248.67.209) has quit (Remote host closed the connection)
+2016-04-04 12:11:13	<--	Denarii (~WinNT@pool-100-15-140-38.washdc.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 12:11:29	<--	AntiSpamMeta (~MetaBot@AntiSpamMeta/.) has quit (Remote host closed the connection)
+2016-04-04 12:11:29	-->	Denarii (~WinNT@pool-100-15-140-38.washdc.fios.verizon.net) has joined #RubyOnRails
+2016-04-04 12:11:31	-->	speakingcode (~unknown@173-12-244-146-memphis.hfc.comcastbusiness.net) has joined #RubyOnRails
+2016-04-04 12:11:51	-->	AntiSpamMeta (~MetaBot@AntiSpamMeta/.) has joined #RubyOnRails
+2016-04-04 12:12:59	-->	swav (~swav@198.211.120.158) has joined #RubyOnRails
+2016-04-04 12:13:05	-->	djellemah (~djellemah@dsl-197-245-182-26.voxdsl.co.za) has joined #RubyOnRails
+2016-04-04 12:13:10	-->	apeiros (~apeiros@ruby/staff/apeiros) has joined #RubyOnRails
+2016-04-04 12:13:22	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-04 12:13:41	-->	gremly (~gremly@190.85.36.58) has joined #RubyOnRails
+2016-04-04 12:13:51	-->	scope2229 (~scope@slb-101-88.tm.net.my) has joined #RubyOnRails
+2016-04-04 12:14:00	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:8850:e16d:945f:1c4) has quit (Remote host closed the connection)
+2016-04-04 12:14:09	-->	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-04 12:16:18	<--	beauby (~beauby@vol75-4-82-224-160-73.fbx.proxad.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:17:36	<--	alfie_max15 (~alfie@122.164.123.16) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:18:19	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:19:33	<--	swav (~swav@198.211.120.158) has quit (Ping timeout: 268 seconds)
+2016-04-04 12:20:18	<--	adre (~adre@88.96.237.217) has quit (Remote host closed the connection)
+2016-04-04 12:20:36	-->	adre (~adre@88.96.237.217) has joined #RubyOnRails
+2016-04-04 12:21:30	-->	swav (~swav@198.211.120.158) has joined #RubyOnRails
+2016-04-04 12:22:03	-->	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has joined #RubyOnRails
+2016-04-04 12:22:15	-->	edwinvdgraaf (~edwinvdgr@31.223.173.138) has joined #RubyOnRails
+2016-04-04 12:24:06	-->	timmyBsd (~timmyBsd@peter.moo.gl) has joined #RubyOnRails
+2016-04-04 12:25:15	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 248 seconds)
+2016-04-04 12:28:43	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-04 12:30:38	<--	arup_r (~arup_r@116.203.221.19) has quit (Remote host closed the connection)
+2016-04-04 12:32:07	-->	ferr (~ferr@81-7-68-230.static.zebra.lt) has joined #RubyOnRails
+2016-04-04 12:35:01	-->	moeabdol (~moeabdol@2.91.133.165) has joined #RubyOnRails
+2016-04-04 12:35:24	<--	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has quit (Quit: benlieb)
+2016-04-04 12:35:47	-->	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has joined #RubyOnRails
+2016-04-04 12:35:59	-->	tildes (~tildes@nblzone-210-136.nblnetworks.fi) has joined #RubyOnRails
+2016-04-04 12:36:00	<--	benlieb (~benlieb@99-46-179-64.lightspeed.sntcca.sbcglobal.net) has quit (Client Quit)
+2016-04-04 12:36:59	tildes	I use detect to find a specific record in a table (based on ActiveRecord), but I would actually get the last (by database id), rather than the first occurrence. Any ideas?
+2016-04-04 12:38:10	tildes	Ok. maybe with MyModel.order(id: :desc).detect ... I'll try
+2016-04-04 12:38:11	sevenseacat	define
+2016-04-04 12:38:17	sevenseacat	"last"
+2016-04-04 12:38:39	<--	rakm (~rakm@c-73-231-5-159.hsd1.ca.comcast.net) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-04 12:39:30	<--	sp1rs (~sp1rs@182.73.28.50) has quit (Remote host closed the connection)
+2016-04-04 12:39:30	tildes	Suppose I have ten records, ids from 1 to 10. Records 2, 4, 7 satisfy my condition. (but this can change over time, and over time there will be more records). I would like to have a query, that would return 7 instead of 2, in style of detect
+2016-04-04 12:39:31	-->	htmldrum (~htmldrum@49.255.234.58) has joined #RubyOnRails
+2016-04-04 12:39:46	tildes	as of now, with the current data
+2016-04-04 12:40:23	-->	moep (~marcules@unaffiliated/marcules) has joined #RubyOnRails
+2016-04-04 12:41:30	tildes	MyModel.order(id: :desc).detect(&:returns_truthy) seems to cut it
+2016-04-04 12:41:38	sevenseacat	"style of detect" is bad, because it means you have to load the entire set from the db just to get one
+2016-04-04 12:41:47	-->	sp1rs (~sp1rs@182.71.49.122) has joined #RubyOnRails
+2016-04-04 12:41:47	<--	Skelz0r (delmaire20@perso.iiens.net) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:41:55	<--	sp1rs (~sp1rs@182.71.49.122) has quit (Remote host closed the connection)
+2016-04-04 12:41:55	sevenseacat	what is "my condition"
+2016-04-04 12:41:58	tildes	any better suggestions are *more* than *welcome*
+2016-04-04 12:42:51	tildes	A person can have many employment_relationships. Also there can be a lot of persons (people) without one. I want to find one person, with a 'current' employment_relationship
+2016-04-04 12:43:23	tildes	so 'my condition' means: person, who has a employment relationship, that is valid for the queried date
+2016-04-04 12:43:47	sevenseacat	sounds like a SQL join and where clause, or an AR merge
+2016-04-04 12:43:56	sevenseacat	if you gist up your current code, we can see what we can do
+2016-04-04 12:43:57	-->	yardenbar (~yarden@82.166.98.41) has joined #RubyOnRails
+2016-04-04 12:44:57	<--	arBmind1 (~Andreas@x4db3b317.dyn.telefonica.de) has quit (Quit: Leaving.)
+2016-04-04 12:45:09	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 260 seconds)
+2016-04-04 12:45:53	tildes	sevenseacat it might take a while to clean up, there is a lot of code already in this instance. I appreciate the help and offer to take a look however
+2016-04-04 12:46:14	<--	_Sypheren_ (~Sypheren@139.78.252.0) has quit (Quit: Going offline, see ya! (www.adiirc.com))
+2016-04-04 12:46:27	sevenseacat	ok. this might help you: http://guides.rubyonrails.org/active_record_querying.html#specifying-conditions-on-the-joined-tables
+2016-04-04 12:46:47	gambl0re	hows glendalough stn?
+2016-04-04 12:47:03	sevenseacat	join the relationships, then filter by date and by 'current'
+2016-04-04 12:47:17	sevenseacat	gambl0re: you tell me
+2016-04-04 12:47:22	-->	darutoko (~Vandal@176.209.195.234) has joined #RubyOnRails
+2016-04-04 12:47:34	gambl0re	havent been there in a while
+2016-04-04 12:48:06	tildes	sevenseacat: indeed it might! thanks a lot
+2016-04-04 12:48:32	sevenseacat	yw :)
+2016-04-04 12:48:58	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-04 12:50:02	<--	armyriad (~armyriad@198.8.80.73) has quit (Ping timeout: 244 seconds)
+2016-04-04 12:50:28	-->	armyriad (~armyriad@71-83-188-91.dhcp.lnbh.ca.charter.com) has joined #RubyOnRails
+2016-04-04 12:50:49	-->	apotry (~textual@cpc1-live26-2-0-cust227.17-2.cable.virginm.net) has joined #RubyOnRails
+2016-04-04 12:51:01	<--	smathy (~smathy@ruby/staff/smathy) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 12:53:47	-->	Skelz0r (delmaire20@perso.iiens.net) has joined #RubyOnRails
+2016-04-04 12:53:52	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 264 seconds)
+2016-04-04 12:55:08	-->	finnnnnnnnnnn (~finbar.sh@78.25.240.221) has joined #RubyOnRails
+2016-04-04 12:58:29	-->	htmldrum (~htmldrum@49.255.234.58) has joined #RubyOnRails
+2016-04-04 12:58:34	<--	Dimik (~Dimik@pool-108-41-42-179.nycmny.fios.verizon.net) has quit (Ping timeout: 276 seconds)
+2016-04-04 12:58:43	<--	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has quit (Quit: Tony has left the building)
+2016-04-04 12:59:48	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:03:14	-->	ql6wlld (~Gregory_L@164.39.190.210) has joined #RubyOnRails
+2016-04-04 13:03:51	<--	htmldrum (~htmldrum@49.255.234.58) has quit (Ping timeout: 276 seconds)
+2016-04-04 13:05:04	-->	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has joined #RubyOnRails
+2016-04-04 13:05:45	<--	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has quit (Client Quit)
+2016-04-04 13:06:21	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-04 13:06:44	-->	rakm (~rakm@17.115.48.111) has joined #RubyOnRails
+2016-04-04 13:07:55	-->	duderonomy (~duderonom@c-73-189-177-212.hsd1.ca.comcast.net) has joined #RubyOnRails
+2016-04-04 13:08:37	-->	Palsson (~Palsson@m37-196-209-140.cust.tele2.se) has joined #RubyOnRails
+2016-04-04 13:09:50	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #RubyOnRails
+2016-04-04 13:09:57	-->	baweaver (~baweaver@ruby/staff/baweaver) has joined #RubyOnRails
+2016-04-04 13:10:40	-->	Palsson_ (~Palsson@h-242-85.a163.corp.bahnhof.se) has joined #RubyOnRails
+2016-04-04 13:11:48	<--	Palsson_ (~Palsson@h-242-85.a163.corp.bahnhof.se) has quit (Client Quit)
+2016-04-04 13:12:32	<--	rakm (~rakm@17.115.48.111) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-04 13:12:48	<--	Palsson (~Palsson@m37-196-209-140.cust.tele2.se) has quit (Ping timeout: 246 seconds)
+2016-04-04 13:12:53	-->	TheRokh (~Sam@ppp203-122-193-214.static.internode.on.net) has joined #RubyOnRails
+2016-04-04 13:13:52	-->	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has joined #RubyOnRails
+2016-04-04 13:14:03	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:14:21	-->	eyeamaye (~Adium@2605:e000:354b:7c00:1477:cde9:d3b2:ab85) has joined #RubyOnRails
+2016-04-04 13:14:39	-->	rubyonrailed (~rubyonrai@2601:41:4101:b7df:55b:d13c:3209:25da) has joined #RubyOnRails
+2016-04-04 13:14:41	-->	rakm (~rakm@17.115.48.111) has joined #RubyOnRails
+2016-04-04 13:14:55	<--	baweaver (~baweaver@ruby/staff/baweaver) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:15:13	-->	ruid (~ruid@unaffiliated/ruid) has joined #RubyOnRails
+2016-04-04 13:16:07	-->	arBmind (~Andreas@x4e3768c2.dyn.telefonica.de) has joined #RubyOnRails
+2016-04-04 13:16:16	-->	marr (~ccc@87-205-203-209.adsl.inetia.pl) has joined #RubyOnRails
+2016-04-04 13:16:40	-->	dbugger (~dbugger@pd95cb7dd.dip0.t-ipconnect.de) has joined #RubyOnRails
+2016-04-04 13:17:03	-->	n_e_o (~neo@106.51.130.134) has joined #RubyOnRails
+2016-04-04 13:17:36	dbugger	Hey everyone. I want to make an instance method in a model, that updates a timestamp. it has just one instruction, like this: "released_at = DateTime.now if released_at.nil?" but apparently it is not preserving the changes in the DB. did I miss something?
+2016-04-04 13:19:34	sevenseacat	dbugger: two things - 1) setting the attribute, and 2) saving it
+2016-04-04 13:20:36	<--	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has quit (Remote host closed the connection)
+2016-04-04 13:20:59	<--	rubyonrailed (~rubyonrai@2601:41:4101:b7df:55b:d13c:3209:25da) has quit (Remote host closed the connection)
+2016-04-04 13:22:18	-->	benlieb (~benlieb@2602:306:32eb:3400:c1a:5c36:7e6e:c8f2) has joined #RubyOnRails
+2016-04-04 13:22:27	sevenseacat	your method sets a local variable inside the method called released_at, but thats about it
+2016-04-04 13:23:16	-->	Palsson (~Palsson@h-242-85.a163.corp.bahnhof.se) has joined #RubyOnRails
+2016-04-04 13:24:17	-->	spygame (67ff0517@gateway/web/cgi-irc/kiwiirc.com/ip.103.255.5.23) has joined #RubyOnRails
+2016-04-04 13:25:59	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-04 13:28:04	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 264 seconds)
+2016-04-04 13:28:58	-->	moeabdol1 (~moeabdol@136.0.0.214) has joined #RubyOnRails
+2016-04-04 13:30:22	-->	arup_r (~arup_r@116.203.160.104) has joined #RubyOnRails
+2016-04-04 13:31:03	<--	moeabdol (~moeabdol@2.91.133.165) has quit (Ping timeout: 240 seconds)
+2016-04-04 13:31:16	<--	benlieb (~benlieb@2602:306:32eb:3400:c1a:5c36:7e6e:c8f2) has quit (Quit: benlieb)
+2016-04-04 13:33:05	<--	pawnbox (~pawnbox@106.51.37.116) has quit (Remote host closed the connection)
+2016-04-04 13:33:50	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-04 13:34:00	<--	timmyBsd (~timmyBsd@peter.moo.gl) has quit (Quit: WeeChat 1.4)
+2016-04-04 13:34:59	-->	sp1rs (~sp1rs@182.73.28.50) has joined #RubyOnRails
+2016-04-04 13:36:43	-->	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has joined #RubyOnRails
+2016-04-04 13:40:54	<--	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has quit (Ping timeout: 250 seconds)
+2016-04-04 13:43:43	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-04 13:45:35	<--	rakm (~rakm@17.115.48.111) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2016-04-04 13:46:19	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 13:47:05	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-04 13:48:03	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 240 seconds)
+2016-04-04 13:49:25	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-04 13:50:00	<--	krz (~foo@unaffiliated/krz) has quit (Read error: Connection reset by peer)
+2016-04-04 13:50:12	-->	Snowy (~Snowy@unaffiliated/snowy) has joined #RubyOnRails
+2016-04-04 13:52:29	<--	Snowy (~Snowy@unaffiliated/snowy) has quit (Remote host closed the connection)
+2016-04-04 13:52:44	-->	Snowy (~Snowy@unaffiliated/snowy) has joined #RubyOnRails
+2016-04-04 13:52:44	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-04 13:53:54	<--	srinidhi (~srinidhi@opensuse/member/srinidhi) has quit (Ping timeout: 268 seconds)
+2016-04-04 13:55:13	<--	finnnnnnnnnnn (~finbar.sh@78.25.240.221) has quit (Quit: finnnnnnnnnnn)
+2016-04-04 13:56:29	-->	pawnbox (~pawnbox@106.51.37.116) has joined #RubyOnRails
+2016-04-04 13:56:52	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-04 13:59:34	-->	patrick_star_2 (~patrick_s@93.85.65.38) has joined #RubyOnRails
+2016-04-04 13:59:50	-->	srinidhi (~srinidhi@opensuse/member/srinidhi) has joined #RubyOnRails
+2016-04-04 13:59:53	-->	smoitra (~smoitra@113.21.71.252) has joined #RubyOnRails
+2016-04-04 14:01:41	<--	yfeldblum (~yfeldblum@2620:10d:c090:180::2669) has quit (Ping timeout: 248 seconds)
+2016-04-04 14:02:27	-->	finnnnnnnnnnn (~finbar.sh@78.25.240.221) has joined #RubyOnRails
+2016-04-04 14:02:51	<--	patrick_star_3 (~patrick_s@93.84.68.92) has quit (Ping timeout: 264 seconds)
+2016-04-04 14:04:14	-->	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has joined #RubyOnRails
+2016-04-04 14:07:19	-->	RubyJedi-ing (~RubyJedii@121.121.81.167) has joined #RubyOnRails
+2016-04-04 14:10:37	<--	RubyJedi-ing_ (~RubyJedii@121.121.81.77) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:13:04	<--	emilkarl (~emilkarl@217-211-53-110-no218.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 14:14:44	<--	duncannz (~duncannz@118-93-145-40.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 14:19:11	<--	eyeamaye (~Adium@2605:e000:354b:7c00:1477:cde9:d3b2:ab85) has quit (Ping timeout: 268 seconds)
+2016-04-04 14:23:04	-->	blackhuey (~james@203-206-160-195.perm.iinet.net.au) has joined #RubyOnRails
+2016-04-04 14:23:52	<--	smoitra (~smoitra@113.21.71.252) has quit (Quit: Leaving)
+2016-04-04 14:25:03	<--	TvL2386 (~tom@185.24.48.180) has quit (Ping timeout: 240 seconds)
+2016-04-04 14:27:38	-->	timmyBsd (~timmyBsd@peter.moo.gl) has joined #RubyOnRails
+2016-04-04 14:31:39	-->	TvL2386 (~tom@185.24.48.180) has joined #RubyOnRails
+2016-04-04 14:33:14	-->	tvw (~tv@212.79.9.150) has joined #RubyOnRails
+2016-04-04 14:33:17	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 14:33:17	<--	rogue_koder (~rogue_kod@207.204.117.126) has quit (Quit: Konversation terminated!)
+2016-04-04 14:33:24	<--	one_zero (~one_zero@ip68-5-177-152.oc.oc.cox.net) has quit
+2016-04-04 14:33:54	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:34:46	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-04 14:35:05	-->	smoitra (~smoitra@113.21.71.252) has joined #RubyOnRails
+2016-04-04 14:41:48	-->	blackhuey1 (~james@203-206-160-195.perm.iinet.net.au) has joined #RubyOnRails
+2016-04-04 14:41:50	<--	finnnnnnnnnnn (~finbar.sh@78.25.240.221) has quit (Quit: finnnnnnnnnnn)
+2016-04-04 14:42:39	<--	n008f4g_ (~jacek1234@89-70-176-170.dynamic.chello.pl) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:42:51	-->	bronson (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has joined #RubyOnRails
+2016-04-04 14:43:47	<--	blackhuey (~james@203-206-160-195.perm.iinet.net.au) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:43:50	-->	quazimodo (~quazimodo@1.144.96.196) has joined #RubyOnRails
+2016-04-04 14:44:44	<--	bronson_ (~bronson@50-0-66-230.dsl.dynamic.fusionbroadband.com) has quit (Ping timeout: 244 seconds)
+2016-04-04 14:46:07	-->	diegoaguilar (~diegoagui@187-163-194-96.static.axtel.net) has joined #RubyOnRails
+2016-04-04 14:46:11	-->	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has joined #RubyOnRails
+2016-04-04 14:49:49	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #RubyOnRails
+2016-04-04 14:50:31	-->	jsrn_ (~jsrn@host213-120-101-76.in-addr.btopenworld.com) has joined #RubyOnRails
+2016-04-04 14:52:24	-->	voidDotClass (~ali@103.255.5.41) has joined #RubyOnRails
+2016-04-04 14:54:17	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 260 seconds)
+2016-04-04 14:54:41	voidDotClass	I have a scenario where I have 1) A user table / model, 2) An exam table / model, 3) A question table / model. Each exam has a bunch of questions. And each user has done a bunch of exams. What I need is to separately track the answers the user has given for each question. Any ideas how to model this second 'answers' scenario? here each answer belongs to a question, and just adds a string 'answer' field to it
+2016-04-04 14:55:03	<--	moep (~marcules@unaffiliated/marcules) has quit (Read error: Connection reset by peer)
+2016-04-04 14:55:50	workmad3	voidDotClass: an answer should probably belong to both a question and a user
+2016-04-04 14:56:23	voidDotClass	 so i should  make a separate table / model for the answers?
+2016-04-04 14:57:04	workmad3	voidDotClass: that's generally how you'd do it, yes
+2016-04-04 14:57:13	voidDotClass	Right now exam has_many questions, so its easy to show the questions of a particular exam when i view an exam. how will i fetch the user's answers for questions to a particular exam?
+2016-04-04 15:00:08	--	elaptics`away is now known as elaptics
+2016-04-04 15:00:38	-->	dANOKELOFF (~danokelof@AMontsouris-654-1-128-42.w90-2.abo.wanadoo.fr) has joined #RubyOnRails
+2016-04-04 15:01:24	<--	htmldrum (~htmldrum@124-149-34-22.dyn.iinet.net.au) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:05:12	<--	quazimodo (~quazimodo@1.144.96.196) has quit (Read error: Connection reset by peer)
+2016-04-04 15:05:28	-->	finnnnnnnnnnn (~finbar.sh@78.25.240.221) has joined #RubyOnRails
+2016-04-04 15:07:18	-->	fernandomm (~ff@177.92.39.59) has joined #RubyOnRails
+2016-04-04 15:08:39	<--	dionysus69 (~Icedove@unaffiliated/dionysus69) has quit (Ping timeout: 246 seconds)
+2016-04-04 15:13:11	voidDotClass	workmad3, ?
+2016-04-04 15:13:49	-->	bollullera (~anuxi@84.120.65.127.dyn.user.ono.com) has joined #RubyOnRails
+2016-04-04 15:14:29	<--	jmignault (~jmignault@pool-173-56-23-236.nycmny.fios.verizon.net) has quit (Ping timeout: 260 seconds)
+2016-04-04 15:14:36	-->	Spami (~Spami@unaffiliated/spami) has joined #RubyOnRails
+2016-04-04 15:15:51	lxsameer	hey people, is it possible to require an assets manifest inside an other manifest ?
+2016-04-04 15:16:14	<--	krz (~foo@unaffiliated/krz) has quit (Ping timeout: 250 seconds)
+2016-04-04 15:16:22	-->	drptbl (~drptbl@213-241-25-178.static.ip.netia.com.pl) has joined #RubyOnRails
+2016-04-04 15:17:00	sevenseacat	did you try it?
+2016-04-04 15:17:10	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Remote host closed the connection)
+2016-04-04 15:17:35	-->	quazimodo (~quazimodo@155.143.14.28) has joined #RubyOnRails
+2016-04-04 15:17:51	<--	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has quit (Ping timeout: 264 seconds)
+2016-04-04 15:18:52	-->	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has joined #RubyOnRails
+2016-04-04 15:21:58	-->	dipnlik (~dipnlik@189.38.236.80) has joined #RubyOnRails
+2016-04-04 15:22:17	<--	jtdowney (~jtdowney@unaffiliated/jtdowney) has quit (Quit: ZNC)
+2016-04-04 15:23:30	<--	RubyJedi-ing (~RubyJedii@121.121.81.167) has quit (Ping timeout: 244 seconds)
+2016-04-04 15:24:09	<--	ur5us (~ur5us@118-92-128-122.dsl.dyn.ihug.co.nz) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:24:15	quazimodo	so I can't decide if i should carry on using form objects to set 'archived_at' flags on things manually if they have an _archive flag set to true (much like how rails automatically does it with _destroy) or if I should implement a 'marked_for_archival' and make it work exactly how allow_destroy: true works
+2016-04-04 15:24:19	<--	nodejunkie (~nodejunki@S0106001c102395a9.vc.shawcable.net) has quit (Ping timeout: 252 seconds)
+2016-04-04 15:24:37	-->	emilkarl (~emilkarl@213.115.244.180) has joined #RubyOnRails
+2016-04-04 15:31:50	<--	dANOKELOFF (~danokelof@AMontsouris-654-1-128-42.w90-2.abo.wanadoo.fr) has quit
+2016-04-04 15:31:56	-->	rodfersou (~RoADRuNNE@189.115.38.51) has joined #RubyOnRails
+2016-04-04 15:34:07	-->	weckl (~weckl@124.231.28.37.rev.vodafone.pt) has joined #RubyOnRails
+2016-04-04 15:36:37	-->	sergey_makagon (~sergey_ma@91.245.223.12) has joined #RubyOnRails
+2016-04-04 15:37:21	-->	Rickmasta (~Rick@pool-98-116-225-120.nycmny.fios.verizon.net) has joined #RubyOnRails
+2016-04-04 15:38:01	-->	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has joined #RubyOnRails
+2016-04-04 15:41:06	<--	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2016-04-04 15:41:33	-->	Detch (~uriel@unaffiliated/detch) has joined #RubyOnRails
+2016-04-04 15:42:25	-->	sandelius (~textual@81-226-132-78-no69.tbcn.telia.com) has joined #RubyOnRails
+2016-04-04 15:43:00	<--	arthurnn (~arthurnn@159.203.2.15) has quit (Ping timeout: 276 seconds)
+2016-04-04 15:43:03	<--	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has quit (Ping timeout: 268 seconds)
+2016-04-04 15:45:19	<--	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has quit (Quit: cheerio)
+2016-04-04 15:45:52	-->	skislak (~serge@77.94.56.2) has joined #RubyOnRails
+2016-04-04 15:49:17	<--	dipnlik (~dipnlik@189.38.236.80) has quit (Quit: dipnlik)
+2016-04-04 15:51:32	<--	sp1rs (~sp1rs@182.73.28.50) has quit (Remote host closed the connection)
+2016-04-04 15:53:32	-->	GodFather (~rcc@96.92.43.9) has joined #RubyOnRails
+2016-04-04 15:54:57	-->	dipnlik (~dipnlik@189.38.236.80) has joined #RubyOnRails
+2016-04-04 15:55:47	scope2229	i cant seam to find spec/models/user_spec.rb
+2016-04-04 15:56:02	scope2229	i use db migrate
+2016-04-04 15:56:41	sevenseacat	maybe you didnt make it yet?
+2016-04-04 15:56:54	scope2229	do i have to make that one myself
+2016-04-04 15:57:15	scope2229	the tutorial doesnt mention anything
+2016-04-04 15:57:18	sevenseacat	or generate it
+2016-04-04 15:58:04	-->	Ropeney (~Ropeney@CPE-58-170-97-78.lns3.way.bigpond.net.au) has joined #RubyOnRails
+2016-04-04 15:58:32	-->	ldnunes (~ldnunes_@187.23.154.250) has joined #RubyOnRails
+2016-04-04 16:00:12	scope2229	rails generate model User name:string email:string
+2016-04-04 16:00:25	scope2229	this is supposed to create the file but it doest
+2016-04-04 16:00:31	sevenseacat	then if your app is configured to use rspec, it will generate the spec file
+2016-04-04 16:01:09	-->	flashpoint9 (~flashpoin@2601:199:2:14d2:c83f:a4c3:acdf:934) has joined #RubyOnRails
+2016-04-04 16:02:45	<--	ldnunes (~ldnunes_@187.23.154.250) has quit (Client Quit)
+2016-04-04 16:03:10	scope2229	thats another fault with the tutorial nowhere does it say use rspec
+2016-04-04 16:03:10	-->	ldnunes (~ldnunes_@187.23.154.250) has joined #RubyOnRails
+2016-04-04 16:04:13	<--	TvL2386 (~tom@185.24.48.180) has quit (Quit: Ex-Chat)
+2016-04-04 16:04:49	sevenseacat	well if you're not using rspec, then you're not going to get an rspec file generated
+2016-04-04 16:04:58	sevenseacat	the tutorial is likely using minitest
+2016-04-04 16:04:58	-->	krz (~foo@unaffiliated/krz) has joined #RubyOnRails
+2016-04-04 16:06:35	scope2229	yer it is but why suddenly want you to use rspec
+2016-04-04 16:07:21	sevenseacat	dont look at me, i dont even know what tutorial you're talking about.
+2016-04-04 16:08:01	pwnd_nsfw	THE tutorial
+2016-04-04 16:09:57	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #RubyOnRails
+2016-04-04 16:13:09	sevenseacat	there can be only one.
+2016-04-04 16:13:22	<--	pwnd_nsfw (~pwnd_@2606:a000:f884:fa00:1938:9271:2dbb:27a4) has left #RubyOnRails ("Leaving")
+2016-04-04 16:13:35	-->	blackmes1 (~blackmesa@aftr-37-201-225-176.unity-media.net) has joined #RubyOnRails
+2016-04-04 16:14:22	-->	pwnd_nsfw (~pwnd_@2606:a000:f884:fa00:1938:9271:2dbb:27a4) has joined #RubyOnRails
+2016-04-04 16:14:47	<--	ruid (~ruid@unaffiliated/ruid) has quit (Ping timeout: 260 seconds)
+2016-04-04 16:15:29	-->	Chagel (~mike@222.67.96.147) has joined #RubyOnRails
+2016-04-04 16:15:37	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Ping timeout: 250 seconds)
+2016-04-04 16:16:45	-->	Lumia930 (~Lumia930@182.75.241.134) has joined #RubyOnRails
+2016-04-04 16:20:22	-->	mauro1254 (c3b0b2b8@gateway/web/freenode/ip.195.176.178.184) has joined #RubyOnRails
+2016-04-04 16:20:24	<--	Chagel (~mike@222.67.96.147) has quit (Ping timeout: 260 seconds)
+2016-04-04 16:21:48	-->	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has joined #RubyOnRails
+2016-04-04 16:22:04	<--	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has quit (Remote host closed the connection)
+2016-04-04 16:22:17	-->	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has joined #RubyOnRails
+2016-04-04 16:22:39	-->	trinaldi (~note1zaez@unaffiliated/trinaldi) has joined #RubyOnRails
+2016-04-04 16:22:39	-->	King_Rex (~King_Rex@unaffiliated/king-rex/x-3258444) has joined #RubyOnRails
+2016-04-04 16:23:09	scope2229	haha michael harts
+2016-04-04 16:23:43	<--	Lumia930 (~Lumia930@182.75.241.134) has quit (Ping timeout: 252 seconds)
+2016-04-04 16:23:44	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #RubyOnRails
+2016-04-04 16:23:46	<--	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has quit (Max SendQ exceeded)
+2016-04-04 16:23:50	<--	M-shine (shinematri@gateway/shell/matrix.org/x-uhswrqswkcovldcx) has quit (Remote host closed the connection)
+2016-04-04 16:23:56	scope2229	how would i use rspec then jus gem 'rspec'
+2016-04-04 16:24:13	sevenseacat	thats one of the better ones out there. if youre having such big problems with it, you've likely skipped or missed parts.
+2016-04-04 16:24:17	-->	dvinciguerra_ (~dvincigue@187-55-194-175.bnut3700.dsl.brasiltelecom.net.br) has joined #RubyOnRails
+2016-04-04 16:24:40	-->	FooMunki (~FooMunki_@79-68-148-75.dynamic.dsl.as9105.com) has joined #RubyOnRails
+2016-04-04 16:25:21	-->	sp1rs (~sp1rs@182.73.28.50) has joined #RubyOnRails
+2016-04-04 16:26:00	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #RubyOnRails
+2016-04-04 16:26:02	<--	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has quit (Max SendQ exceeded)
+2016-04-04 16:26:08	sevenseacat	there's no mention of rspec in section 6 because the tutorial is using minitest
+2016-04-04 16:26:24	sevenseacat	so it generates a test/models/user_test.rb
+2016-04-04 16:26:50	sevenseacat	https://www.railstutorial.org/book/modeling_users#code-generate_user_model
+2016-04-04 16:27:02	scope2229	but then tells you to edit and modify spec/model
+2016-04-04 16:27:20	-->	Lumia930 (~Lumia930@182.75.241.134) has joined #RubyOnRails
+2016-04-04 16:27:20	scope2229	i just did a search for RSPEC to see if i had missed something
+2016-04-04 16:27:33	sevenseacat	no it doesnt
+2016-04-04 16:27:36	scope2229	box 1.1 is the only mention and its about eliminating it
+2016-04-04 16:27:43	sevenseacat	theres no mention of rspec in the entire chapter
+2016-04-04 16:28:37	-->	crameth (~crameth@bb115-66-74-207.singnet.com.sg) has joined #RubyOnRails
+2016-04-04 16:28:52	-->	adlerdias (~adlerdias@179.156.150.207) has joined #RubyOnRails
+2016-04-04 16:29:04	scope2229	er
+2016-04-04 16:29:07	scope2229	there is
+2016-04-04 16:29:25	scope2229	listing 6.4
+2016-04-04 16:29:48	scope2229	listing 6.5
+2016-04-04 16:29:49	sevenseacat	shows a minitest test
+2016-04-04 16:29:55	scope2229	using rspec
+2016-04-04 16:29:55	sevenseacat	also shows a minitest test
+2016-04-04 16:30:18	sevenseacat	https://www.railstutorial.org/book/modeling_users#code-default_user_test ?
+2016-04-04 16:31:12	scope2229	yer the name of the file i dont have because im not using rspec
+2016-04-04 16:31:21	scope2229	i have all the minitest
+2016-04-04 16:31:43	<--	dipnlik (~dipnlik@189.38.236.80) has quit (Quit: dipnlik)
+2016-04-04 16:31:48	sevenseacat	again, this tutorial has nothing to do with rspec, it does not use it
+2016-04-04 16:31:49	sevenseacat	there is no mention of it
+2016-04-04 16:32:04	scope2229	whah yours is a different book ?????
+2016-04-04 16:32:07	pwnd_nsfw	scope2229, you should just buy Rails 4 in Action bro
+2016-04-04 16:32:13	-->	dipnlik (~dipnlik@189.38.236.80) has joined #RubyOnRails
+2016-04-04 16:32:22	scope2229	http://rails-4-0.railstutorial.org/book/modeling_users#code-generate_user_model
+2016-04-04 16:32:38	sevenseacat	yeah thats a really old version
+2016-04-04 16:32:44	scope2229	is any better than michaels
+2016-04-04 16:32:48	sevenseacat	that does use rspec it seems
+2016-04-04 16:32:49	sevenseacat	its the same book
+2016-04-04 16:32:59	pwnd_nsfw	scope2229, you should just buy Rails 4 in Action bro
+2016-04-04 16:33:01	scope2229	its 3rd gen
+2016-04-04 16:33:11	scope2229	i refuse to give up
+2016-04-04 16:33:24	scope2229	oncxe i finish it again i will
+2016-04-04 16:33:48	scope2229	seven cast so which book to follow yours or mine hahaha
+2016-04-04 16:34:04	sevenseacat	the one i linked is the current version, using the current version of rails.
+2016-04-04 16:34:12	sevenseacat	the version of rails in yours is no longer supported.
+2016-04-04 16:34:25	scope2229	but its 4.0
+2016-04-04 16:34:33	sevenseacat	yes, i know.
+2016-04-04 16:34:33	scope2229	im still using 4.2.6
+2016-04-04 16:34:41	sevenseacat	then you're doing things quite wrong
+2016-04-04 16:34:48	scope2229	pmsl
+2016-04-04 16:34:54	sevenseacat	and no wonder you keep running into problems
+2016-04-04 16:35:00	scope2229	man i never had these problems with python
+2016-04-04 16:35:20	pwnd_nsfw	Am I muted or something?
+2016-04-04 16:35:27	sevenseacat	if you followed a python 2 tutorial while using python 3, you certainly would have these problems
+2016-04-04 16:35:32	-->	antgel (~topdog@82.166.98.41) has joined #RubyOnRails
+2016-04-04 16:35:33	sevenseacat	pwnd_nsfw: i can see you :P
+2016-04-04 16:35:33	scope2229	pwnd_nsfw
+2016-04-04 16:35:47	scope2229	i can see i just dont want to give up on the tutorial
+2016-04-04 16:35:57	sevenseacat	also, comparing a framework and a language doesnt really make much sense
+2016-04-04 16:35:59	pwnd_nsfw	Yous hould give up on it
+2016-04-04 16:36:03	pwnd_nsfw	and get R4IA
+2016-04-04 16:36:18	sevenseacat	but to each their own i guess
+2016-04-04 16:37:12	-->	delgiudices (~delgiudic@179.52.246.169) has joined #RubyOnRails
+2016-04-04 16:38:54	-->	sleungcy (~sleungcy@node-1w7jr9qm1k7m9uswrfqkcoean.ipv6.telus.net) has joined #RubyOnRails
+2016-04-04 16:39:10	antgel	Hi all. Hope it's not OT to talk about CI / tests here. Our org grew and we're suffering. We use Jenkins to run minitests on every branch that a developer wants to submit to staging. The whole process including deploying to staging if successful, takes 20 minutes, which adds up when you have 5-6 developers in the queue (and even then their deploy may not succeed)
+2016-04-04 16:39:28	-->	chipotle (~chipotle@cpe-69-204-131-71.nycap.res.rr.com) has joined #RubyOnRails
+2016-04-04 16:40:05	antgel	Interested to hear any tips / strategies that people have used for finding a good balance between maintaining code quality, and minimizing time that developers have to wait to get feedback, and that Product Owners have to wait to see their features on staging
+2016-04-04 16:40:28	<--	quazimodo (~quazimodo@155.143.14.28) has quit (Ping timeout: 244 seconds)
+2016-04-04 16:40:37	<--	rake_db_migrate (~rake_db_m@2604:2000:f14c:4900:70bf:e035:39ab:41cb) has quit (Remote host closed the connection)
+2016-04-04 16:40:37	<--	Ergo (~ergo@h-213.61.129.43.host.de.colt.net) has quit (Ping timeout: 248 seconds)
+2016-04-04 16:40:40	<--	voidDotClass (~ali@103.255.5.41) has quit (Ping timeout: 264 seconds)
