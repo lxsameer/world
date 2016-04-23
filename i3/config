@@ -24,7 +24,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -38,6 +38,7 @@ bindsym $mod+d exec dmenu_run
 
 # change focus
 bindsym $mod+j focus left
+bindsym $mod+Tab focus left
 bindsym $mod+k focus down
 bindsym $mod+i focus up
 bindsym $mod+l focus right
@@ -65,6 +66,7 @@ bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+bindsym $mod+t split t
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -87,28 +89,28 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1:Web
+bindsym $mod+2 workspace 2:FG42
+bindsym $mod+3 workspace 3:Term1
+bindsym $mod+4 workspace 4:Term2
+bindsym $mod+5 workspace 5:Music
+bindsym $mod+6 workspace 6:Proxy
+bindsym $mod+7 workspace 7:Misc1
+bindsym $mod+8 workspace 8:Misc2
+bindsym $mod+9 workspace 9:IRC
+bindsym $mod+0 workspace 0:Mail
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 11:Web
+bindsym $mod+Shift+2 move container to workspace 2:FG42
+bindsym $mod+Shift+3 move container to workspace 3:Term1
+bindsym $mod+Shift+4 move container to workspace 4:Term2
+bindsym $mod+Shift+5 move container to workspace 5:Music
+bindsym $mod+Shift+6 move container to workspace 6:Proxy
+bindsym $mod+Shift+7 move container to workspace 7:Misc1
+bindsym $mod+Shift+8 move container to workspace 8:Misc2
+bindsym $mod+Shift+9 move container to workspace 9:IRC
+bindsym $mod+Shift+0 move container to workspace 0:Mail
 
 # reload the configuration file
 bindsym $mod+Shift+q reload
@@ -145,14 +147,59 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+# bar {
+#     i3bar_command i3bar
+#     position top
+#     status_command python /home/lxsameer/.pyenv/versions/2.7.11/lib/python2.7/site-packages/powerline/bindings/i3/powerline-i3.py
+#     font pango:PowerlineFont 12
+# }
 bar {
-        status_command i3status
+  status_command i3blocks
+  position top
+  font pango:DejaVu Sans Mono 8, FontAwesome 10
+
+  colors {
+    separator #AAAAAA
+    background #1f2326
+    statusline #FFFFFF
+    focused_workspace #9FCA56 #9FCA56 #151718
+    active_workspace #DCCD69 #DCCD69 #151718
+    inactive_workspace #1f2326 #1f2326 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
+  }
 }
 
-font pango:Terminus 11px
-new_window pixel 1
 
-bindsym $mod+m exec kuso
-bindsym $mod+c exec chromium
-bindsym $mod+p exec pcmanfm
-bindsym $mod+t exec /home/lxsameer/bin/thunderbird/thunderbird
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+font pango:Terminus 11px
+new_window pixel 0
+
+bindsym $mod+Shift+m exec fg42
+#bindsym $mod+c exec chromium
+bindsym $mod+Shift+p exec pcmanfm
+bindsym $mod+Shift+t exec evolution
+bindsym $mod+Shift+b exec chromium
+
+# Executions
+exec xrdb -merge ~/.Xdefaults
+exec xset b off
+exec setxkbmap -rules evdev -model pc105 -layout "us,ir" -option "grp:alt_caps_toggle"
+
+exec ~/.xinitrc
+client.focused #4F99D3 #4F99D3 #151718 #9FCA56
+client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
+client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
+
+assign [class="google-chrome"] 1:Web
+assign [class="FG42"] 2:FG42
+assign [class="Mail"] 0:Mail
+
+exec google-chrome
+exec fg42
+exec /home/lxsameer/bin/thunderbird/thunderbird
