@@ -24,7 +24,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec st -e tmux
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -203,4 +203,3 @@ assign [class="Mail"] 10
 
 exec chromium
 exec fg42
-exec /home/lxsameer/bin/thunderbird/thunderbird
