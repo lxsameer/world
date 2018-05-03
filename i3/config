@@ -24,7 +24,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -e tmux
+bindsym $mod+Return exec st -f "Hack:size=12:antialias=true:autohint=true" -e tmux
 
 # kill focused window
 bindsym $mod+Shift+c kill
