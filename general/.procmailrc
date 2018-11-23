@@ -1,17 +1,17 @@
-PATH=/bin:/usr/bin
-MAILDIR=$HOME/.mail
-DEFAULT=$HOME/.mail/gnu
+PATH=/bin:/usr/bin:/usr/local/bin
+MAILDIR=$HOME/.mail/
+DEFAULT=$HOME/.mail/gnu/inbox
 LOGFILE=/dev/null
-SHELL=/usr/bin/zsh
+SHELL=/usr/local/bin/zsh
 VERBOSE=yes
 
 # Filters
 :0:
 * ^From:.*notifications@github.com
 * ^Subject:.*udemy.*
-Udemy
+$MAILDIR/gnu/Udemy
 
-:1:
+:0:
 * ^From:.*lxsameeer.*
 * ^Subject:.*sam.*
-Mine
+$MAILDIR/gnu/Mine
