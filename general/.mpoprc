@@ -1,0 +1,14 @@
+defaults
+tls on
+tls_starttls off
+delivery mda /usr/bin/procmail -f '%F' -d $USER
+
+
+account gnu
+host fencepost.gnu.org
+auth on
+port 995
+user lxsameer
+passwordeval echo $(gpg -d ~/.mpop.password.gpg 2> /dev/null)
+tls_fingerprint 93:59:52:1D:A6:95:13:31:7C:81:ED:DB:A5:BA:B5:2B:C8:BC:38:3E:71:A5:DF:8C:80:46:C1:E0:5D:2D:F4:E3
+account default : gnu

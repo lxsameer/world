@@ -1,0 +1,17 @@
+PATH=/bin:/usr/bin
+MAILDIR=$HOME/.mail
+DEFAULT=$HOME/.mail/gnu
+LOGFILE=/dev/null
+SHELL=/usr/bin/zsh
+VERBOSE=yes
+
+# Filters
+:0:
+* ^From:.*notifications@github.com
+* ^Subject:.*udemy.*
+Udemy
+
+:1:
+* ^From:.*lxsameeer.*
+* ^Subject:.*sam.*
+Mine

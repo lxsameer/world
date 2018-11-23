@@ -1,0 +1,27 @@
+# vim: filetype=neomuttrc
+# muttrc file for account gnu
+set realname = "Sameer Rahmani"
+set from = "lxsameer@gnu.org"
+set sendmail = "/usr/bin/msmtp -a gnu"
+set folder = "~/.mail/gnu"
+set header_cache = ~/.config/mutt/accounts/gnu/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/gnu/cache/bodies
+# set certificate_file = ~/.config/mutt/accounts/gnu/certificates
+source "~/.config/mutt/credentials/getmuttpass gnu |"
+
+alias me Sameer Rahmani <lxsameer@gnu.org>
+
+set mbox_type = Maildir
+#set ssl_starttls = yes
+#set ssl_force_tls = yes
+
+#bind index,pager gg noop
+#bind index,pager g noop
+#bind index gg first-entry
+#macro l 'set folder="~/.mail/Mine"'
+unmailboxes *
+mailboxes =gnu =-------------------
+set spoolfile = ""
+set record = ""
+set postponed = ""
+set trash = ""

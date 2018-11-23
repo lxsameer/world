@@ -1,0 +1,2 @@
+macro index,pager i1 '<sync-mailbox><enter-command>source "/home/lxsameer/.config/mutt"/accounts/gnu.muttrc<enter><change-folder>!<enter>;<check-stats>'
+source /home/lxsameer/.config/mutt/accounts/gnu.muttrc
