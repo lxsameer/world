@@ -3,8 +3,8 @@
 set realname = "Sameer Rahmani"
 set from = "lxsameer@gnu.org"
 set sendmail = "/usr/bin/msmtp -a gnu"
-set folder = "~/.mail/gnu"
-set header_cache = ~/.config/mutt/accounts/gnu/cache/headers
+set folder = "~/.mail/gnu/inbox"
+#set header_cache = ~/.config/mutt/accounts/gnu/cache/headers
 set message_cachedir = ~/.config/mutt/accounts/gnu/cache/bodies
 # set certificate_file = ~/.config/mutt/accounts/gnu/certificates
 source "~/.config/mutt/credentials/getmuttpass gnu |"
@@ -20,7 +20,12 @@ set mbox_type = Maildir
 #bind index gg first-entry
 #macro l 'set folder="~/.mail/Mine"'
 unmailboxes *
-mailboxes =gnu =-------------------
+#mailboxes =gnu =-------------------
+mailboxes `find ~/.mail '(' -type d '(' -name 'cur' -o -name 'new' ')' -prune -printf '%h ' ')' -o '(' -type f -printf '%p ' ')'`
+# mailboxes +GNU -------------- \
+#           +gnu/inbox \
+#           +gnu/Udemy
+
 set spoolfile = ""
 set record = ""
 set postponed = ""
